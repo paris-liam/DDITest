@@ -8,7 +8,8 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
   }
-  toggleNav() {
+  toggleNav(e) {
+    e.preventDefault();
     const siteWrap = document.querySelector('#site-wrapper');
     siteWrap.classList.toggle('show-nav');
     const ham = document.querySelector('.hamburger-menu');
@@ -20,7 +21,7 @@ class Header extends React.Component {
         <Logo to="/">
           <Img sizes={this.props.logo.sizes} />
         </Logo>
-        <HamburgerIcon><div className="hamburger-menu" onClick={this.toggleNav} /></HamburgerIcon>
+        <HamburgerIcon><div /><div className="burger-container" onClick={this.toggleNav}><div className="hamburger-menu" /></div></HamburgerIcon>
         <HamburgerContent>
           <Contact>
             <Envelope><i className="fa fa-envelope" /></Envelope>

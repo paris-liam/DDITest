@@ -174,28 +174,28 @@ export const HamburgerContent = styled.div`
 `;
 export const HamburgerIcon = styled.div`
   display:grid;
-  grid-template-columns:auto;
-  grid-template-rows:auto;
-  align-content:center;
-  justify-content:right;
-  padding-right:1.5rem;
-  padding-bottom:.75rem;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:100%;
   color: ${blue};
   grid-area:hamburgericon;
-  div, div::after, div:before{
+  .burger-container{
+    display:grid;
+    align-content:center;
+    justify-content:center;
+  }
+  .hamburger-menu, .hamburger-menu::after, .hamburger-menu:before{
     width: ${barWidth};
 	  height: ${barHeight};
   }
-  div{
-    position: relative;
+  .hamburger-menu{
     transform: translateY(${barSpacing});
-  background: ${blue};
+    background: ${blue};
     transition: all 0ms 300ms;
     &.animate {
       background: rgba(255, 255, 255, 0);
     }
   }
-  div:before {
+  .hamburger-menu:before {
 	  content: "";
 	  position: absolute;
 	  left: 0;
@@ -203,7 +203,7 @@ export const HamburgerIcon = styled.div`
   background: ${blue};
 	  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  div:after {
+  .hamburger-menu:after {
 	  content: "";
 	  position: absolute;
 	  left: 0;
@@ -211,13 +211,13 @@ export const HamburgerIcon = styled.div`
   background: ${blue};
 	  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  div.animate:after {
+  .hamburger-menu.animate:after {
 	  top: 0;
 	  transform: rotate(45deg);
 	  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
   }
 
-  div.animate:before {
+  .hamburger-menu.animate:before {
 	  bottom: 0;
 	  transform: rotate(-45deg);
 	  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
