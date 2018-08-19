@@ -8,8 +8,13 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
   }
-  toggleNav(e) {
-    e.preventDefault();
+  componentDidMount() {
+    const siteWrap = document.querySelector('#site-wrapper');
+    siteWrap.classList.remove('show-nav');
+    const ham = document.querySelector('.hamburger-menu');
+    ham.classList.remove('animate');
+  }
+  toggleNav() {
     const siteWrap = document.querySelector('#site-wrapper');
     siteWrap.classList.toggle('show-nav');
     const ham = document.querySelector('.hamburger-menu');
@@ -21,7 +26,16 @@ class Header extends React.Component {
         <Logo to="/">
           <Img sizes={this.props.logo.sizes} />
         </Logo>
-        <HamburgerIcon><div /><div className="burger-container" onClick={this.toggleNav}><div className="hamburger-menu" /></div></HamburgerIcon>
+        <HamburgerIcon><div /><div className="burger-container" onClick={this.toggleNav}><div
+className="hamburger-menu"
+style={{
+    position: 'absolute',
+    top: '30%',
+    left: '30%',
+        }}
+        />
+                              </div>
+        </HamburgerIcon>
         <HamburgerContent>
           <Contact>
             <Envelope><i className="fa fa-envelope" /></Envelope>

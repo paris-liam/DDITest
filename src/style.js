@@ -182,6 +182,7 @@ export const HamburgerIcon = styled.div`
     display:grid;
     align-content:center;
     justify-content:center;
+    position:relative
   }
   .hamburger-menu, .hamburger-menu::after, .hamburger-menu:before{
     width: ${barWidth};
