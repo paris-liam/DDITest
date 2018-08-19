@@ -24,9 +24,8 @@ export const HeadGrid = styled.div`
   @media screen and (min-width: 1025px){
     grid-template-rows:auto;
     grid-template-columns: 3fr 2fr 2fr;
-    grid-template-areas: 'headImg . hamburgercontent'
+    grid-template-areas: 'headImg . hamburgercontent';
   }
-
 `;
 export const Logo = styled(Link)`
   grid-area: headImg;

@@ -6,51 +6,66 @@ import { PayBillsButton } from '../style';
 
 const IndexGrid = styled.div`
   display:grid;
-  grid-template-rows: 60vh auto auto auto auto;
+  grid-template-rows: 90vh auto auto auto auto;
   grid-template-columns: auto;
+  @media screen and (min-width:1025px) {
+    grid-template-rows: 70vh auto auto auto auto;
+  }
 `;
 const CoverHold = styled.div`
   font-family:'Lato';
   color:white;
   overflow:hidden;
   position:relative;
+  display:grid;
 `;
 const CoverText = styled.div`
+  font-size:20px;
+  width:100%;
+  z-index:2;
   position: absolute;
-  z-index:100;
-  top:40%;
+  top:20%;
+  display:grid;
   text-align:center;
   align-self:center;
   justify-self:center;
-  grid-auto-columns:60%;
-  grid-auto-rows:auto auto
+  grid-template-columns:auto;
+  grid-template-rows:auto auto auto;
   & > *{
-    display:inline-block;
+    display:block;
     margin-left:auto;
     margin-right:auto;
   }
-  & > p{
-    width:40%;
-    font-weight:500;
-    font-size:1.25vw
+  h1{
+    font-size: 2.5rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+  @media screen and (min-width:1025px) {
+    top:40%;
+    h1{
+      font-size: 3rem;
+    }
+    p{
+      font-size: 1.25rem;
+    }
+    width:70%;
   }
 `;
 const LearnMore = styled.div`
-    position:absolute;
-    bottom:10vh;
-    left:45%;
+    margin-top:10vh;
     align-self:center;
-    width:30%;
 `;
 const IndexPage = data => (
   <IndexGrid>
     <CoverHold>
-      <IMG sizes={data.data.cover.sizes} position="absolute" />
+      <IMG sizes={data.data.cover.sizes} style={{ height: '100%' }} />
       <CoverText>
-        <h1>DDI Capital is your Independent Trusted Advisor </h1> <br />
+        <h1>DDI Capital is your Independent Trusted Advisor </h1>
         <p>Whether you are just starting out, or ready to bring your current organization to a new level of growth – DDI Capital offers you the most innovative financial strategies allowing you to acquire and finance technology solutions at the best possible price.</p>
+        <LearnMore><PayBillsButton> Learn More <i className="fa fa-arrow-alt-circle-down" /></PayBillsButton></LearnMore>
       </CoverText>
-      <LearnMore><PayBillsButton> Learn More <i className="fa fa-arrow-alt-circle-down" /></PayBillsButton></LearnMore>
     </CoverHold>
     <div>
       <h1>Focused on You – Where you work</h1>

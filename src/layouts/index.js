@@ -34,9 +34,6 @@ const Layout = ({ children, data }) => (
     <Header siteTitle={data.site.siteMetadata.title} logo={data.head} />
     <div
       id="site-wrapper"
-      style={{
-      height: '100vh',
-      }}
     >
       <div id="site-canvas">
         <div id="site-menu">
