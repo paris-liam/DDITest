@@ -223,11 +223,110 @@ export const HamburgerIcon = styled.div`
 	  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
   }
 
-
-
   @media screen and (min-width: 1025px){
     display:none;
   }
+`;
 
+export const IndexGrid = styled.div`
+  display:grid;
+  grid-template-rows: 90vh auto auto auto auto;
+  grid-template-columns: auto;
+  @media screen and (min-width:1025px) {
+    grid-template-rows: 70vh auto auto auto auto;
+  }
+`;
+export const CoverHold = styled.div`
+  font-family:'Lato';
+  color:white;
+  overflow:hidden;
+  position:relative;
+  display:grid;
+`;
+export const CoverText = styled.div`
+  font-size:20px;
+  width:80%;
+  z-index:2;
+  position: absolute;
+  display:grid;
+  text-align:center;
+  align-self:center;
+  justify-self:center;
+  grid-template-columns:auto;
+  grid-template-rows:auto auto auto;
+  & > *{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+  p{
+    font-size: 1.25rem;
+  }
+  @media screen and (min-width:1025px) {
+    top:40%;
+    h1{
+      font-size: 3rem;
+    }
+    p{
+      font-size: 1.5rem;
+    }
+    width:70%;
+  }
+`;
+export const LearnMore = styled.div`
+    margin-top:5vh;
+    align-self:center;
+    button{
+      padding:10px;
+      font-size:1rem;
+      border-radius:30px;
+      background-color:${blue};
+      color:white;
+      outline:none;
+      border:none;
+    }
+`;
+
+export const Sidebar = styled.div`
+    font-family: ${font};
+    padding-top:5px;
+`;
+export const SidebarItem = styled.ul`
+list-style:none;
+h2{
+  margin-bottom:5px;
+}
+li{
+  margin-bottom:5px;
+}
+`;
+export const SidebarDropdown = styled.ul`
+list-style:none;
+  & > *:hover{
+    color:${grey};
+  }
+`;
+export const SidebarContact = styled.ul`
+    list-style:none;
+    font-size: 1.25rem;
+
+    & > .sideenv:hover{
+      color:${grey};
+    }
+    .sidebill{
+      border-radius:30px;
+      color:white;
+      background-color:${grey};
+      outline:none;
+      border:none;
+      padding:8px;
+    }
+    .sidebill:hover{
+      background-color:${magenta};
+
+    }
 
 `;

@@ -2,61 +2,9 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import IMG from 'gatsby-image';
-import { PayBillsButton } from '../style';
+import { IndexGrid, CoverHold, CoverText, LearnMore } from '../style';
 
-const IndexGrid = styled.div`
-  display:grid;
-  grid-template-rows: 90vh auto auto auto auto;
-  grid-template-columns: auto;
-  @media screen and (min-width:1025px) {
-    grid-template-rows: 70vh auto auto auto auto;
-  }
-`;
-const CoverHold = styled.div`
-  font-family:'Lato';
-  color:white;
-  overflow:hidden;
-  position:relative;
-  display:grid;
-`;
-const CoverText = styled.div`
-  font-size:20px;
-  width:100%;
-  z-index:2;
-  position: absolute;
-  top:20%;
-  display:grid;
-  text-align:center;
-  align-self:center;
-  justify-self:center;
-  grid-template-columns:auto;
-  grid-template-rows:auto auto auto;
-  & > *{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-  }
-  h1{
-    font-size: 2.5rem;
-  }
-  p{
-    font-size: 1rem;
-  }
-  @media screen and (min-width:1025px) {
-    top:40%;
-    h1{
-      font-size: 3rem;
-    }
-    p{
-      font-size: 1.25rem;
-    }
-    width:70%;
-  }
-`;
-const LearnMore = styled.div`
-    margin-top:10vh;
-    align-self:center;
-`;
+
 const IndexPage = data => (
   <IndexGrid>
     <CoverHold>
@@ -64,7 +12,7 @@ const IndexPage = data => (
       <CoverText>
         <h1>DDI Capital is your Independent Trusted Advisor </h1>
         <p>Whether you are just starting out, or ready to bring your current organization to a new level of growth – DDI Capital offers you the most innovative financial strategies allowing you to acquire and finance technology solutions at the best possible price.</p>
-        <LearnMore><PayBillsButton> Learn More <i className="fa fa-arrow-alt-circle-down" /></PayBillsButton></LearnMore>
+        <LearnMore><button> Learn More <i className="fa fa-arrow-alt-circle-down" /></button></LearnMore>
       </CoverText>
     </CoverHold>
     <div>
@@ -79,7 +27,7 @@ const IndexPage = data => (
     </div>
     <div><h1>Whether you’re a startup or a Fortune 100 company
 DDI has the appropriate solutions to help you finance your growth
-         </h1>
+    </h1>
       <h2>no idea</h2>
     </div>
     <div>

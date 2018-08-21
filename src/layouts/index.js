@@ -5,7 +5,7 @@ import IMG from 'gatsby-image';
 import Header from '../components/header';
 import './index.css';
 import favicon from '../images/favicon.ico';
-import { Contact, Envelope, PhoneNumber, PayBillsButton } from '../style';
+import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact, Envelope, PhoneNumber, PayBillsButton } from '../style';
 
 const Layout = ({ children, data }) => (
   <div>
@@ -36,30 +36,31 @@ const Layout = ({ children, data }) => (
       id="site-wrapper"
     >
       <div id="site-canvas">
-        <div id="site-menu">
-          <ul>
+        <Sidebar id="site-menu">
+          <SidebarItem>
+            <h2>About</h2>
+            <SidebarDropdown>
+              <li>Who We Are</li>
+              <li>Why DDI</li>
+              <li>Equiptment Financed</li>
+              <li>Meet The Team</li>
+            </SidebarDropdown>
+          </SidebarItem>
+          <SidebarItem>
+            <h2>Leasing Solutions </h2>
+            <SidebarDropdown>
+              <li>Client Offerings</li>
+              <li>Vendor Programs</li>
+            </SidebarDropdown>
+          </SidebarItem>
+          <SidebarContact>
+            <li className="sideenv"><i className="fa fa-envelope" /></li>
+            <li className="sidephone"><i className="fa fa-phone-square" />  (908)-781-9300</li>
             <li>
-              <h2>About</h2>
-              <ul />
+              <button className="sidebill">Pay Bills Online</button>
             </li>
-            <li>
-              <h2>Leasing Solutions</h2>
-              <ul />
-            </li>
-            <li>
-              <h2>Contact</h2>
-              <ul />
-            </li>
-          </ul>
-          <Contact>
-            <Envelope><i className="fa fa-envelope" /></Envelope>
-            <PhoneNumber><i className="fa fa-phone-square" />  (908)-781-9300</PhoneNumber>
-            <li style={{ marginRight: '.5rem', marginLeft: '.75rem' }}>
-              <PayBillsButton>Pay Bills Online</PayBillsButton>
-            </li>
-          </Contact>
-
-        </div>
+          </SidebarContact>
+        </Sidebar>
         {children()}
       </div>
     </div>
