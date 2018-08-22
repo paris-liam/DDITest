@@ -30,7 +30,6 @@ const IndexPage = data => (
         Whether you’re a startup or a Fortune 100 company
         DDI has the appropriate solutions to help you finance your growth
       </h1>
-      <h2>no idea</h2>
     </SolutionsSlide>
     <NefaSlide>
       <IMG sizes={data.data.nefa.sizes} />
