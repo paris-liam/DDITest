@@ -29,6 +29,17 @@ const Layout = ({ children, data }) => (
           integrity: 'sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6',
           crossorigin: 'anonymous',
         },
+        {
+          rel: 'stylesheet',
+          type: 'text/css',
+          charset: 'UTF-8',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css',
+        },
+        {
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css',
+        },
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} logo={data.head} />

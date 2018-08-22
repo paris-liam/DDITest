@@ -27,14 +27,14 @@ class Header extends React.Component {
           <Img sizes={this.props.logo.sizes} />
         </Logo>
         <HamburgerIcon><div /><div className="burger-container" onClick={this.toggleNav}><div
-className="hamburger-menu"
-style={{
+          className="hamburger-menu"
+          style={{
     position: 'absolute',
     top: '30%',
     left: '30%',
         }}
         />
-                              </div>
+        </div>
         </HamburgerIcon>
         <HamburgerContent>
           <Contact>
@@ -50,7 +50,7 @@ style={{
               <ul>
                 <li>Who We Are</li>
                 <li>Why DDI</li>
-                <li>Equiptment Financed</li>
+                <li>Equipment Financed</li>
                 <li>Meet The Team</li>
               </ul>
             </DropdownContent>

@@ -386,6 +386,15 @@ export const FocusedBody = styled.div`
 `;
 export const SolutionsSlide = styled.div`
     background-color: ${blue};
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 9fr;
+    div{
+      justify-self:center;
+      align-self:center;
+      position:relative;
+      width:30%;
+    }
 `;
 export const NefaSlide = styled.div`
   position:relative;

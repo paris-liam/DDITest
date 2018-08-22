@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import IMG from 'gatsby-image';
 import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide } from '../style';
 
-
 const IndexPage = data => (
   <IndexGrid>
     <CoverHold>
@@ -30,6 +29,7 @@ const IndexPage = data => (
         Whether you’re a startup or a Fortune 100 company
         DDI has the appropriate solutions to help you finance your growth
       </h1>
+      <div />
     </SolutionsSlide>
     <NefaSlide>
       <IMG sizes={data.data.nefa.sizes} />
