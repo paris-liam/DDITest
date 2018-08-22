@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import IMG from 'gatsby-image';
-import { IndexGrid, CoverHold, CoverText, LearnMore } from '../style';
+import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide } from '../style';
 
 
 const IndexPage = data => (
@@ -15,26 +15,28 @@ const IndexPage = data => (
         <LearnMore><button> Learn More <i className="fa fa-arrow-alt-circle-down" /></button></LearnMore>
       </CoverText>
     </CoverHold>
-    <div>
+    <FocusedSlide>
       <h1>Focused on You – Where you work</h1>
       <p>We know your challenges, understand your technology options and aren’t satisfied until we recommend a solution that exceeds your expectations.</p>
-      <div>
+      <FocusedBody>
         <div><i className="fa fa-money-check-alt" /><p>DDI will work closely with you to customize a financing plan that best suits your budget, cash flow and technology requirements.</p></div>
         <div><i className="fa fa-anchor" /><p>Our team’s collective experience, industry contacts and collaborative, consultative work process insure that you will get the best possible solution with each lease transaction.</p></div>
         <div><i className="fa fa-hands-helping" /><p>We view our clients as business partners and approach each deal with a long term focus. Each and every one of our DDI professionals is acutely aware of the relationship between the growth of your business and ours.</p></div>
         <div><i className="fa fa-hdd" /><p>Our professionals know more than leasing – they are familiar with the technology that you use – and they are willing to spend the time with you to put it to maximum advantage.</p></div>
-      </div>
-    </div>
-    <div><h1>Whether you’re a startup or a Fortune 100 company
-DDI has the appropriate solutions to help you finance your growth
-    </h1>
+      </FocusedBody>
+    </FocusedSlide>
+    <SolutionsSlide>
+      <h1>
+        Whether you’re a startup or a Fortune 100 company
+        DDI has the appropriate solutions to help you finance your growth
+      </h1>
       <h2>no idea</h2>
-    </div>
-    <div>
+    </SolutionsSlide>
+    <NefaSlide>
       <IMG sizes={data.data.nefa.sizes} />
-      <h1>Proud Member of <span>NEFA</span></h1>
-    </div>
-    <div>
+      <h1>Proud Members of <span>NEFA</span></h1>
+    </NefaSlide>
+    <InterestedSlide>
       <div>
         <h1>Interested</h1>
         <button>Vendor Opportunities</button>
@@ -53,7 +55,7 @@ DDI has the appropriate solutions to help you finance your growth
           <li>Project Management</li>
         </ul>
       </div>
-    </div>
+    </InterestedSlide>
   </IndexGrid>
 );
 
@@ -66,8 +68,8 @@ export const query = graphql`
         ... GatsbyImageSharpSizes
       }
     }
-    nefa: imageSharp(id:{regex: "/landing2.jpg/"}){
-      sizes(maxWidth:4000){
+    nefa: imageSharp(id:{regex: "/CoverNefa.jpg/"}){
+      sizes(maxWidth:1800){
         ... GatsbyImageSharpSizes
       }
     }

@@ -148,8 +148,18 @@ ul{
   list-style:none;
   padding:0px;
   margin:0px;
+  & > li:first-child:hover{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  & > li:last-child:hover{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }
 li{
+  margin-left:0px;
+  margin-right:0px;
   width:100%;
   text-align:center;
   padding: .5em .25em .5em .25em
@@ -233,15 +243,15 @@ export const IndexGrid = styled.div`
   grid-template-rows: 90vh auto auto auto auto;
   grid-template-columns: auto;
   @media screen and (min-width:1025px) {
-    grid-template-rows: 70vh auto auto auto auto;
+    grid-template-rows: 80vh auto 50vh 25vh auto;
   }
 `;
 export const CoverHold = styled.div`
   font-family:'Lato';
   color:white;
-  overflow:hidden;
   position:relative;
   display:grid;
+  overflow:hidden;
 `;
 export const CoverText = styled.div`
   font-size:20px;
@@ -329,4 +339,83 @@ export const SidebarContact = styled.ul`
 
     }
 
+`;
+
+export const FocusedSlide = styled.div`
+  padding: 0px 2.5rem 0px 2.5rem;
+  display:grid;
+  grid-template-columns: auto;
+  height:auto;
+  grid-template-rows: 1fr 1fr 8fr;
+  text-align:center;
+  font-family:${font};
+  font-size:14px;
+  h1{
+    font-size: 3rem;
+  }
+  p{
+    font-size:1.75rem;
+  }
+`;
+
+export const FocusedBody = styled.div`
+  padding: 0px .5rem 0px .5rem;
+  text-align:left;
+  display:grid;
+  grid-column-gap: .25rem;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  @media screen and (min-width:1025px){
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+  font-size:1.5rem;
+  color:${blue};
+  & > div{
+    display:flex;
+    p{
+      line-height:2rem;
+    }
+    i{
+      display:block;
+    font-size: 3rem;
+    margin-right:20px;
+  }
+  }
+
+`;
+export const SolutionsSlide = styled.div`
+    background-color: ${blue};
+`;
+export const NefaSlide = styled.div`
+  position:relative;
+  display:grid;
+  overflow:hidden;
+  h1{
+    font-size:3rem;
+    color:white;
+    align-self:center;
+    justify-self:center;
+    z-index:2;
+    position:absolute;
+    text-align:center;
+    font-weight:bold;
+    span{
+      font-family:'Ubuntu Mono';
+      font-size:6rem;
+      font-weight:100;
+      display:block;
+      padding-top:5px;
+    }
+
+  }
+
+`;
+
+export const InterestedSlide = styled.div`
+  background-color:${blue};
+  color:white;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows: auto;
 `;

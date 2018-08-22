@@ -11,6 +11,7 @@ module.exports = {
       options: {
         fonts: [
           'Lato',
+          'Ubuntu Mono',
         ],
       },
     },
