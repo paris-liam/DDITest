@@ -23,7 +23,7 @@ export const HeadGrid = styled.div`
   grid-template-rows:auto;
   grid-template-columns: 2fr 1fr 2fr;
   grid-template-areas: 'headImg . hamburgercontent';
-  @media screen and (max-width:1400px){
+  @media screen and (max-width:1550px){
     font-size:13px;
   }
   /*phone*/
