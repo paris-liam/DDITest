@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import IMG from 'gatsby-image';
-import Header from '../components/header';
+import Header from '../components/Header';
 import './index.css';
 import favicon from '../images/favicon.ico';
 import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact, Envelope, PhoneNumber, PayBillsButton } from '../style';
@@ -12,8 +12,9 @@ const Layout = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'DDI Captial' },
+        { name: 'keywords', content: 'DDI, Capital, Techonology Leasing, Leasing, New Jersey' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ]}
       link={[
         { rel: 'shortcut icon', type: 'image/png', href: favicon },
@@ -28,7 +29,7 @@ const Layout = ({ children, data }) => (
           href: 'https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css',
           integrity: 'sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6',
           crossorigin: 'anonymous',
-        },
+        }, /*
         {
           rel: 'stylesheet',
           type: 'text/css',
@@ -39,7 +40,7 @@ const Layout = ({ children, data }) => (
           rel: 'stylesheet',
           type: 'text/css',
           href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css',
-        },
+        }, */
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} logo={data.head} />
@@ -65,7 +66,7 @@ const Layout = ({ children, data }) => (
             </SidebarDropdown>
           </SidebarItem>
           <SidebarContact>
-            <li className="sideenv"><i className="fa fa-envelope" /></li>
+            <li className="sideenv"><i className="fa fa-envelope" />&nbsp;test@ddi.com</li>
             <li className="sidephone"><i className="fa fa-phone-square" />  (908)-781-9300</li>
             <li>
               <button className="sidebill">Pay Bills Online</button>

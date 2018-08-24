@@ -15,54 +15,127 @@ const barSpacing = '.75rem';
 export const HeadGrid = styled.div`
   color: ${blue};
   font-family: ${font};
-  margin-top:1vh;
-  margin-bottom: 0.5vh;
+  font-size:17px;
   display:grid;
-  grid-template-rows:5rem;
-  grid-template-columns: 4fr 2fr;
-  grid-template-areas: 'headImg hamburgericon';
-  @media screen and (min-width: 1025px){
-    grid-template-rows:auto;
-    grid-template-columns: 3fr 2fr 2fr;
-    grid-template-areas: 'headImg . hamburgercontent';
+  /*desktop*/
+  margin-top: 2vh;
+  margin-bottom:1vh;
+  grid-template-rows:auto;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-areas: 'headImg . hamburgercontent';
+  @media screen and (max-width:1400px){
+    font-size:13px;
+  }
+  /*phone*/
+  @media screen and (max-width: 1025px){
+    grid-template-rows:10vh;
+    grid-template-columns: 4fr 2fr;
+    grid-template-areas: 'headImg hamburgericon';
   }
 `;
+
 export const Logo = styled(Link)`
+  padding-top:.5vh;
+  padding-bottom:.5vh
+  padding-left:1.5vw;
   grid-area: headImg;
   align-self:center;
 `;
-export const Nav = styled.ul`
+
+export const HamburgerContent = styled.div`
+  /*desktop*/
+  padding-right:2vw
+  display:grid;
+  grid-template-columns: 100%;
+  grid-template-rows:75% 25%;
+  grid-area:hamburgercontent;
+  grid-template-areas: 'contact' 'nav';
+  /*phone*/
+  @media screen and (max-width: 1025px){
+    display:none;
+  }
+`;
+
+export const Contact = styled.div`
+  list-style:none;
+  grid-area: contact;
+  text-align:right;
+  display:grid;
+  grid-template-rows:auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  li{
+    padding-top:.5vh;
+    i{
+      font-size:1.25em;
+    }
+    p{
+      padding:0;
+      margin: 0
+      font-size:1em;
+      display:inline;
+    }
+  }
+`;
+
+export const Envelope = styled.li`
+  &:hover{
+    color:${grey};
+  }
+`;
+export const PhoneNumber = styled.li``;
+export const PayBillsButton = styled.li`
+  /*desktop*/
+  padding-top:0!important;
+  & > button{
+    width:80%;
+    padding: .5vh 0 .5vh 0
+    background-color:${blue};
+    color:white;
+    outline:none;
+    border:none;
+    border-radius:30px;
+    font-family: ${font};
+    &:hover{
+      background-color:${grey};
+    }
+  }
+  /*phone*/
+  @media screen and (max-width: 1025px){
+    & > button{
+      background-color:${grey};
+    }
+    & > button:hover{
+      background-color:${magenta};
+    }
+  }
+`;
+
+export const Nav = styled.div`
+  font-size:1.5em;
   grid-area: nav;
-  display:inline-flex;
-  justify-content:space-evenly;
+  display:grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows:auto;
   list-style:none;
   color: black;
-  margin-left:0px;
-  margin-bottom:0px;
-  font-size:1.5vw;
   position:relative;
+  text-align:right;
   li{
-  margin-left: .1rem;
-  margin-right:.1rem;
-  vertical-align:bottom;
-  margin-bottom:0px;
-  }
-  li:hover{
-    color:${light_purp};
+    margin:0;
+    vertical-align:bottom;
+    &:hover{
+      color:${light_purp};
+    }
+    &:nth-child(5){
+      text-align:right;
+    }
   }
   li.aboutDrop:hover + div.aboutContent{
-    visibility:visible;
-  };
-  li.aboutDrop:focus + div.aboutContent{
     visibility:visible;
   };
   li.leasingDrop:hover + div.leasingContent{
     visibility:visible;
   };
-  li.leasingDrop:focus + div.leasingContent{
-    visibility:visible;
-  };
-
   div.aboutContent:hover{
     visibility:visible;
   }
@@ -70,117 +143,65 @@ export const Nav = styled.ul`
     visibility:visible;
   }
 `;
-export const Contact = styled.ul`
-  display:inline-flex;
-  justify-content:flex-end;
-  list-style:none;
-  margin-left:0px;
-  margin-bottom:.75rem;
-  grid-area: contact;
-  grid-template-row:auto;
-  grid-template-columns: auto auto auto;
 
-`;
-export const Envelope = styled.li`
-  font-size:1.25vw
-  margin-right:1rem;
-  padding-top:.2rem;
-  &:hover{
-    color:${grey};
-  }
-`;
-export const PhoneNumber = styled.li`
-  font-size:1.25vw
-  margin-right:1rem;
-  padding-top:.2rem;
-`;
-export const PayBillsButton = styled.button`
-    background-color:${grey};
-    color:white;
-    outline:none;
-    border:none;
-    border-radius:1rem;
-    padding:.3vw;
-    font-size:1vw;
-    font-family: ${font}
-    &:hover{
-      background-color:${magenta};
-    }
-    @media screen and (min-width: 1025px){
-    background-color:${blue};
-    &:hover{
-      background-color:${grey};
-    }
-    }
-`;
 export const DropdownContent = styled.div`
-color:white;
-font-size:.8em;
-visibility: hidden;
-transition:visibility 100ms linear;
-position: absolute;
-background-color: #f9f9f9;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-padding:0px;
-z-index: 1;
-background-color:${grey};
-border-radius:5px;
-&.aboutContent{
-  left: 0rem;
-  top: 4vh;
-}
-&.leasingContent{
-  top:4vh;
-}
-&:before {
-    content:"";
-    position: absolute;
-    right: 50%;
-    top: -10px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent ${grey} transparent;
-    z-index:9999;
-}
-ul{
-  list-style:none;
-  padding:0px;
-  margin:0px;
-  & > li:first-child:hover{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  & > li:last-child:hover{
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-}
-li{
-  margin-left:0px;
-  margin-right:0px;
-  width:100%;
-  text-align:center;
-  padding: .5em .25em .5em .25em
-}
-li:hover{
-  background-color:${light_purp};
   color:white;
-}
-`;
-export const HamburgerContent = styled.div`
-  display:none;
-  @media screen and (min-width: 1025px){
-    display:grid;
-    grid-template-columns: auto;
-    grid-template-rows:auto auto;
-    grid-area:hamburgercontent;
-    grid-template-areas: 'contact' 'nav'
+  visibility: hidden;
+  transition:visibility 100ms linear;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding:0px;
+  z-index: 1;
+  background-color:${grey};
+  border-radius:5px;
+  &.aboutContent{
+    left: 1em;
+    top: 4vh;
   }
-
-
+  &.leasingContent{
+    left:40%;
+    top:4vh;
+  }
+  &:before {
+      content:"";
+      position: absolute;
+      right: 50%;
+      top: -10px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent ${grey} transparent;
+      z-index:9999;
+  }
+  ul{
+    list-style:none;
+    padding:0px;
+    margin:0px;
+    & > li:first-child:hover{
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    & > li:last-child:hover{
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    & > li{
+    font-size:.75em;
+    margin-left:0px;
+    margin-right:0px;
+    width:100%;
+    text-align:center;
+    padding: .5em .25em .5em .25em
+    &:hover{
+      background-color:${light_purp};
+      color:white;
+    }
+    }
+  }
 `;
+
 export const HamburgerIcon = styled.div`
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -237,6 +258,51 @@ export const HamburgerIcon = styled.div`
     display:none;
   }
 `;
+
+/* hamburger sidebar */
+export const Sidebar = styled.div`
+    font-family: ${font};
+    padding-top:5px;
+`;
+export const SidebarItem = styled.ul`
+margin-left:1.5vh;
+margin-bottom:1.5vh;
+list-style:none;
+h2{
+  margin-bottom:5px;
+}
+li{
+  margin-bottom:5px;
+}
+`;
+export const SidebarDropdown = styled.ul`
+list-style:none;
+  & > *:hover{
+    color:${grey};
+  }
+`;
+export const SidebarContact = styled.ul`
+    margin-left:1.5vh;
+    list-style:none;
+    font-size: 1.25rem;
+    & > .sideenv:hover{
+      color:${grey};
+    }
+    .sidebill{
+      border-radius:30px;
+      color:white;
+      background-color:${grey};
+      outline:none;
+      border:none;
+      padding:8px;
+    }
+    .sidebill:hover{
+      background-color:${magenta};
+
+    }
+
+`;
+/* Index Page Slides */
 
 export const IndexGrid = styled.div`
   display:grid;
@@ -299,48 +365,6 @@ export const LearnMore = styled.div`
       border:none;
     }
 `;
-
-export const Sidebar = styled.div`
-    font-family: ${font};
-    padding-top:5px;
-`;
-export const SidebarItem = styled.ul`
-list-style:none;
-h2{
-  margin-bottom:5px;
-}
-li{
-  margin-bottom:5px;
-}
-`;
-export const SidebarDropdown = styled.ul`
-list-style:none;
-  & > *:hover{
-    color:${grey};
-  }
-`;
-export const SidebarContact = styled.ul`
-    list-style:none;
-    font-size: 1.25rem;
-
-    & > .sideenv:hover{
-      color:${grey};
-    }
-    .sidebill{
-      border-radius:30px;
-      color:white;
-      background-color:${grey};
-      outline:none;
-      border:none;
-      padding:8px;
-    }
-    .sidebill:hover{
-      background-color:${magenta};
-
-    }
-
-`;
-
 export const FocusedSlide = styled.div`
   padding: 0px 2.5rem 0px 2.5rem;
   display:grid;

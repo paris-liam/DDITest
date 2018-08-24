@@ -68,7 +68,7 @@ export const query = graphql`
       }
     }
     nefa: imageSharp(id:{regex: "/CoverNefa.jpg/"}){
-      sizes(maxWidth:1800){
+      sizes(maxWidth:2000){
         ... GatsbyImageSharpSizes
       }
     }
