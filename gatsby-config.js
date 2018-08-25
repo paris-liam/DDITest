@@ -6,6 +6,8 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-netlify',
+    'gatsby-plugin-netlify-cache',
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
