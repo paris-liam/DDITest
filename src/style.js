@@ -11,11 +11,19 @@ const barWidth = '2rem';
 const barHeight = '.25rem';
 const barSpacing = '.75rem';
 
+export const gatsbyImgStyle = {
+  top: 0,
+  left: 0,
+  position: 'absolute',
+  width: '100%',
+  height: '100%',
+};
+
 /* header */
 export const HeadGrid = styled.div`
   color: ${blue};
   font-family: ${font};
-  font-size:17px;
+  font-size:1vw;
   display:grid;
   /*desktop*/
   margin-top: 2vh;
@@ -23,9 +31,6 @@ export const HeadGrid = styled.div`
   grid-template-rows:auto;
   grid-template-columns: 2fr 1fr 2fr;
   grid-template-areas: 'headImg . hamburgercontent';
-  @media screen and (max-width:1550px){
-    font-size:13px;
-  }
   /*phone*/
   @media screen and (max-width: 1025px){
     grid-template-rows:10vh;
@@ -60,9 +65,8 @@ export const Contact = styled.div`
   list-style:none;
   grid-area: contact;
   text-align:right;
-  display:grid;
-  grid-template-rows:auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  display:flex;
+  justify-content:space-around
   li{
     padding-top:.5vh;
     i{
@@ -87,8 +91,6 @@ export const PayBillsButton = styled.li`
   /*desktop*/
   padding-top:0!important;
   & > button{
-    width:80%;
-    padding: .5vh 0 .5vh 0
     background-color:${blue};
     color:white;
     outline:none;
@@ -113,9 +115,10 @@ export const PayBillsButton = styled.li`
 export const Nav = styled.div`
   font-size:1.5em;
   grid-area: nav;
-  display:grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows:auto;
+  display:flex;
+  justify-content:space-around;
+  /*grid-template-columns: auto auto auto;
+  grid-template-rows:auto;*/
   list-style:none;
   color: black;
   position:relative;
@@ -284,7 +287,7 @@ list-style:none;
 export const SidebarContact = styled.ul`
     margin-left:1.5vh;
     list-style:none;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     & > .sideenv:hover{
       color:${grey};
     }
@@ -302,28 +305,26 @@ export const SidebarContact = styled.ul`
     }
 
 `;
-/* Index Page Slides */
 
+/* Index Page Slides */
 export const IndexGrid = styled.div`
   display:grid;
-  grid-template-rows: 90vh auto auto auto auto;
+  grid-template-rows: 70vh auto auto auto auto;
   grid-template-columns: auto;
-  @media screen and (min-width:1025px) {
-    grid-template-rows: 80vh auto 50vh 25vh auto;
-  }
+  font-family:${font};
+  color:white;
 `;
 export const CoverHold = styled.div`
-  font-family:'Lato';
-  color:white;
   position:relative;
+  background-color:black;
   display:grid;
-  overflow:hidden;
+  grid-template-rows:1px 99%;
+  font-size:1vw;
 `;
 export const CoverText = styled.div`
-  font-size:20px;
-  width:80%;
+  position:relative;
   z-index:2;
-  position: absolute;
+  width:100%;
   display:grid;
   text-align:center;
   align-self:center;
@@ -336,26 +337,18 @@ export const CoverText = styled.div`
     margin-right:auto;
   }
   h1{
-    font-size: 2.5rem;
+    font-size:calc(2.5em + 10px);
   }
   p{
-    font-size: 1.25rem;
-  }
-  @media screen and (min-width:1025px) {
-    top:40%;
-    h1{
-      font-size: 3rem;
-    }
-    p{
-      font-size: 1.5rem;
-    }
     width:70%;
+    font-size: calc(1em + 10px);
+    line-height:1.5
   }
 `;
 export const LearnMore = styled.div`
-    margin-top:5vh;
     align-self:center;
     button{
+      margin-top:3vh;
       padding:10px;
       font-size:1rem;
       border-radius:30px;
@@ -366,43 +359,61 @@ export const LearnMore = styled.div`
     }
 `;
 export const FocusedSlide = styled.div`
-  padding: 0px 2.5rem 0px 2.5rem;
+  color:${grey};
+  background-color:white;
+  font-size:calc(1vw + 10px);
+  padding: 5vh 1.5em 3vh 1.5em;
   display:grid;
   grid-template-columns: auto;
   height:auto;
   grid-template-rows: 1fr 1fr 8fr;
+  @media screen and (max-width:1025px){
+    grid-template-rows: auto auto auto;
+  }
   text-align:center;
   font-family:${font};
-  font-size:14px;
   h1{
-    font-size: 3rem;
+    font-size:1.5em;
+    margin-bottom:.5em;
   }
-  p{
-    font-size:1.75rem;
+  div.Focusedsubtitle{
+    display:flex;
+    justify-content:center;
+    p{
+      width:60%;
+      font-size:1em ;
+      margin:0;
+      line-height:1.2;
+      @media screen and (max-width:1025px){
+        width:80%;
+      }
+   }
   }
 `;
 
 export const FocusedBody = styled.div`
-  padding: 0px .5rem 0px .5rem;
+  font-size:1em;
+  color:${blue};
+  padding: 1em 1.5em 0px 1.5em;
   text-align:left;
   display:grid;
-  grid-column-gap: .25rem;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto auto;
-  @media screen and (min-width:1025px){
-    grid-template-columns: auto auto;
+  grid-column-gap: .5em;
+  grid-template-columns: auto auto;
     grid-template-rows: auto auto;
+  @media screen and (max-width:1025px){
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-row-gap:.2em
   }
-  font-size:1.5rem;
-  color:${blue};
   & > div{
     display:flex;
     p{
+      font-size:1em
       line-height:2rem;
     }
     i{
       display:block;
-    font-size: 3rem;
+    font-size: 2.5em;
     margin-right:20px;
   }
   }

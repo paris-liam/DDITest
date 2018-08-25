@@ -34,11 +34,11 @@ class Header extends React.Component {
     left: '30%',
         }}
         />
-        </div>
+                              </div>
         </HamburgerIcon>
         <HamburgerContent>
           <Contact>
-            <Envelope><i className="fa fa-envelope" /><p>&nbsp;&nbsp;Test@DDILeasing.com</p></Envelope>
+            <Envelope><i className="fa fa-envelope" /><p>&nbsp;&nbsp; Test@DDILeasing.com</p></Envelope>
             <PhoneNumber><i className="fa fa-phone-square" /><p>&nbsp;&nbsp;(908)-781-9300</p></PhoneNumber>
             <PayBillsButton>
               <button>Pay Bills Online</button>

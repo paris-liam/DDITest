@@ -1,13 +1,19 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
-import IMG from 'gatsby-image';
-import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide } from '../style';
+import Img from 'gatsby-image';
+import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide, gatsbyImgStyle } from '../style';
+
 
 const IndexPage = data => (
   <IndexGrid>
     <CoverHold>
-      <IMG sizes={data.data.cover.sizes} style={{ height: '100%' }} />
+      <Img
+        sizes={data.data.cover.sizes}
+        outerWrapperClassName="coverOuter"
+        position="absolute"
+        style={gatsbyImgStyle}
+      />
       <CoverText>
         <h1>DDI Capital is your Independent Trusted Advisor </h1>
         <p>Whether you are just starting out, or ready to bring your current organization to a new level of growth – DDI Capital offers you the most innovative financial strategies allowing you to acquire and finance technology solutions at the best possible price.</p>
@@ -16,7 +22,7 @@ const IndexPage = data => (
     </CoverHold>
     <FocusedSlide>
       <h1>Focused on You – Where you work</h1>
-      <p>We know your challenges, understand your technology options and aren’t satisfied until we recommend a solution that exceeds your expectations.</p>
+      <div className="Focusedsubtitle"><p>We know your challenges, understand your technology options and aren’t satisfied until we recommend a solution that exceeds your expectations.</p></div>
       <FocusedBody>
         <div><i className="fa fa-money-check-alt" /><p>DDI will work closely with you to customize a financing plan that best suits your budget, cash flow and technology requirements.</p></div>
         <div><i className="fa fa-anchor" /><p>Our team’s collective experience, industry contacts and collaborative, consultative work process insure that you will get the best possible solution with each lease transaction.</p></div>
@@ -32,7 +38,7 @@ const IndexPage = data => (
       <div />
     </SolutionsSlide>
     <NefaSlide>
-      <IMG sizes={data.data.nefa.sizes} />
+      <Img sizes={data.data.nefa.sizes} />
       <h1>Proud Members of <span>NEFA</span></h1>
     </NefaSlide>
     <InterestedSlide>
