@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import { HeadGrid, Contact, Nav, Envelope, PhoneNumber, PayBillsButton, Logo, AboutContent, DropdownContent, HamburgerContent, HamburgerIcon } from '../style.js';
 
 
-class Header extends React.Component {
+class TopHeader extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -34,7 +34,7 @@ class Header extends React.Component {
     left: '30%',
         }}
         />
-                              </div>
+        </div>
         </HamburgerIcon>
         <HamburgerContent>
           <Contact>
@@ -70,4 +70,4 @@ class Header extends React.Component {
 }
 
 
-export default Header;
+export default TopHeader;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Header from '../components/Header';
+import TopHeader from '../components/TopHeader';
 import Slide from '../components/Slide';
 import './index.css';
 import favicon from '../images/favicon.ico';
@@ -43,7 +43,7 @@ const Layout = ({ children, data }) => (
         }, */
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} logo={data.head} />
+    <TopHeader siteTitle={data.site.siteMetadata.title} logo={data.head} />
     <div
       id="site-wrapper"
     >
