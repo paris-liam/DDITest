@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import IMG from 'gatsby-image';
-import Header from '../components/Header';
+import Header from '../components/Header.js';
 import './index.css';
 import favicon from '../images/favicon.ico';
 import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact, Envelope, PhoneNumber, PayBillsButton } from '../style';
