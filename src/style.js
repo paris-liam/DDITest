@@ -338,7 +338,7 @@ export const CoverText = styled.div`
     margin-right:auto;
   }
   h1{
-    font-size:calc(2.5em + 10px);
+    font-size:calc(2.5em + 6px);
   }
   p{
     width:70%;
@@ -350,7 +350,7 @@ export const LearnMore = styled.div`
     align-self:center;
     button{
       margin-top:3vh;
-      padding: 1em
+      padding:.5em 1.25em .5em 1.25em
       font-size:1.5em;
       border-radius:30px;
       background-color:${blue};
@@ -435,6 +435,9 @@ export const SolutionsSlide = styled.div`
       align-self:center;
       position:relative;
       width:90vw;
+      @media screen and (max-width: 1025px){
+        width:80vw;
+      }
     }
 `;
 export const NefaSlide = CoverHold.extend`

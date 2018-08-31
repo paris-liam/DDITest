@@ -92,7 +92,7 @@ const info = [
     body: '  In the most rapidly evolving landscape, establish, expand and reinvent your business with the latest technologies to ensure your customers will not look elsewhere. DDI offers the solutions to keep your technology current and help your business to thrive.',
   },
   {
-    icon: 'sun',
+    icon: 'bed',
     title: 'Hospitality',
     body: 'Leading hospitality brands depend on DDI to help them connect with guests and improve operational efficiencies so they can deliver the best possible experiences to their customers.',
   },
