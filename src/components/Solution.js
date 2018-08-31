@@ -1,28 +1,14 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-
-const Title = styled.div`
-  font-size: 1em;
-  padding-bottom:10px;
-`;
-const Body = styled.div`
-  font-size: 1rem;
-  color:white;
-  width:70%;
-  margin: 0 auto 0 auto;
-`;
-const Icon = styled.div`
-  font-size: 3.25rem;
-`;
+import { SolTitle, SolBody, SolIcon } from '../style';
 
 const Solution = solution => (
   <div style={{
       textAlign: 'center',
   }}
   >
-    <Icon><i className={`fa fa-${solution.solution.icon}`} /></Icon>
-    <Title><h1>{solution.solution.title}</h1></Title>
-    <Body><p>{solution.solution.body}</p></Body>
+    <SolIcon><i className={`fa fa-${solution.solution.icon}`} /></SolIcon>
+    <SolTitle><h1>{solution.solution.title}</h1></SolTitle>
+    <SolBody><p>{solution.solution.body}</p></SolBody>
   </div>
 );
 

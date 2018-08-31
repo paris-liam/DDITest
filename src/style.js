@@ -33,9 +33,12 @@ export const HeadGrid = styled.div`
   grid-template-areas: 'headImg . hamburgercontent';
   /*phone*/
   @media screen and (max-width: 1025px){
-    grid-template-rows:auto;
+    grid-template-rows:10vh;
     grid-template-columns: 4fr 2fr;
     grid-template-areas: 'headImg hamburgericon';
+  }
+  @media screen and (max-width: 1025px) and (orientation: landscape){
+    grid-template-rows:auto;
   }
 `;
 
@@ -309,9 +312,9 @@ export const SidebarContact = styled.ul`
 /* Index Page Slides */
 export const IndexGrid = styled.div`
   display:grid;
-  grid-template-rows: 70vh auto auto 30vh auto;
+  grid-template-rows: 70vh min-content auto 45vh auto;
   grid-template-columns: auto;
-  font-family:${font};
+  font-family:${font} !important;
   color:white;
   font-size:calc(1vw + 10px);
 `;
@@ -325,47 +328,98 @@ export const CoverHold = styled.div`
 export const CoverText = styled.div`
   position:relative;
   z-index:2;
-  width:100%;
+  width:90%;
   display:grid;
-  text-align:center;
+  text-align:left;
   align-self:center;
   justify-self:center;
   grid-template-columns:auto;
   grid-template-rows:auto auto auto;
-  & > *{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-  }
+  margin-left:25vw;
+  margin-top:5vw;
   h1{
-    font-size:calc(2.5em + 6px);
+    font-size:calc(2.5em + 5px);
+    font-family:${font} !important;
   }
   p{
     width:70%;
-    font-size: calc(1em + 10px);
+    font-size: calc(1.25em + 5px);
     line-height:1.5
+    font-family:${font} !important;
+  }
+  @media screen and (max-width:1024px){
+    text-align:center;
+    margin-left:0;
+    margin-top:10vw;
+    h1{
+      font-size:4em;
+    }
+    p{
+      margin-left:auto;
+      margin-right:auto;
+      font-size: 2em;
+    }
+  }
+  @media screen and (max-width:600px){
+    h1{
+      font-size:6.5em;
+    }
+    p{
+      width:100%;
+      margin-left:auto;
+      margin-right:auto;
+      font-size: 4em;
+    }
+  }
+  @media screen and (max-width:700px) and (orientation:landscape){
+    margin-top:0vh;
+    h1{
+      font-size:3.5em;
+    }
+    p{
+      width:100%;
+      margin-left:auto;
+      margin-right:auto;
+      font-size: 2em;
+    }
   }
 `;
 export const LearnMore = styled.div`
-    align-self:center;
     button{
       margin-top:3vh;
-      padding:.5em 1.25em .5em 1.25em
+      margin-left: 25vw;
+      padding:.75em 1.25em .75em 1.25em
       font-size:1.5em;
       border-radius:30px;
       background-color:${blue};
       color:white;
       outline:none;
       border:none;
+      @media screen and (max-width:1024px){
+        margin-left:auto;
+        margin-right:auto;
+        font-size:3em;
+      }
+      @media screen and (max-width:600px){
+        margin-left:auto;
+        margin-right:auto;
+        font-size:4em;
+      }
+      @media screen and (max-width:700px) and (orientation:landscape){
+        margin-left:auto;
+        margin-right:auto;
+        font-size:2em;
+        padding:.25em .75em .25em .75em
+      }
     }
 `;
 export const FocusedSlide = styled.div`
   color:${grey};
   background-color:white;
-  padding: 5vh 1.5em 3vh 1.5em;
+  padding: 5vh 1.5em 10vh 1.5em;
   display:grid;
   grid-template-columns: auto;
-  height:auto;
+  height:min-content;
   grid-template-rows: 1fr 1fr 8fr;
   @media screen and (max-width:1025px){
     grid-template-rows: auto auto auto;
@@ -373,8 +427,9 @@ export const FocusedSlide = styled.div`
   text-align:center;
   font-family:${font};
   h1{
-    font-size:1.5em;
+    font-size:2em;
     margin-bottom:.5em;
+    font-family: ${font} !important;
   }
   div.Focusedsubtitle{
     display:flex;
@@ -384,6 +439,7 @@ export const FocusedSlide = styled.div`
       font-size:1em ;
       margin:0;
       line-height:1.2;
+      font-family:${font} !important;
       @media screen and (max-width:1025px){
         width:80%;
       }
@@ -394,28 +450,44 @@ export const FocusedSlide = styled.div`
 export const FocusedBody = styled.div`
   font-size:1em;
   color:${blue};
-  padding: 1em 1.5em 0px 1.5em;
+  padding: 0 1.5em 0px 1.5em;
   text-align:left;
   display:grid;
-  grid-column-gap: .5em;
+  grid-column-gap: 1.5em;
   grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+  grid-template-rows: min-content min-content;
+  grid-row-gap:3em;
   @media screen and (max-width:1025px){
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
-    grid-row-gap:.2em
+    grid-row-gap:.2em;
+    padding-top:1em;
   }
   & > div{
     display:flex;
     p{
       font-size:1em
-      line-height:2;
+      line-height:1.5;
+      margin-top:auto;
+      margin-bottom:auto;
     }
     i{
       display:block;
-    font-size: 2.5em;
-    margin-right:20px;
-  }
+      font-size: 2.5em;
+      margin-right:20px;
+      margin-top:auto;
+      margin-bottom:auto;
+    }
+    @media screen and (max-width:1025px){
+
+      p{
+      margin-top:0;
+      }
+      i{
+      margin-bottom:0;
+      }
+
+    }
   }
 
 `;
@@ -424,11 +496,19 @@ export const SolutionsSlide = styled.div`
     display:grid;
     grid-template-columns: auto;
     grid-template-rows: auto 70vh;
+    @media screen and (max-width: 700px) and (orientation: landscape){
+        grid-template-rows: auto min-content;
+      }
     h1{
       padding-top:3vh;
-      margin: 0 20% 0 20%;
+      margin: 0 2% 0 2%;
       text-align:center;
-      font-size:1.25em;
+      font-size:1.75em;
+      font-family:${font} !important;
+      line-height:1.25;
+      @media screen and (max-width: 700px) and (orientation: landscape){
+        font-size:1em;
+      }
     }
     & > div{
       justify-self:center;
@@ -438,11 +518,41 @@ export const SolutionsSlide = styled.div`
       @media screen and (max-width: 1025px){
         width:80vw;
       }
+      @media screen and (max-width: 700px) and (orientation: landscape){
+        padding-top:2vh;
+        width:60vw;
+      }
     }
+`;
+export const SolTitle = styled.div`
+  font-size: 1.25em;
+  padding-bottom:10px;
+`;
+export const SolBody = styled.div`
+  font-size: 1rem;
+  color:white;
+  width:70%;
+  margin: 0 auto 0 auto;
+  @media screen and (max-width: 1025px){
+    font-size:.75rem;
+  }
+  @media screen and (max-width: 700px) and (orientation: landscape){
+    font-size:.75rem;
+    line-height:1.2;
+  }
+`;
+export const SolIcon = styled.div`
+  font-size: 3.25rem;
+  @media screen and (max-width: 1025px){
+    font-size: 2.25rem;
+  }
+  @media screen and (max-width: 700px) and (orientation: landscape){
+    font-size: 1.75rem;
+  }
 `;
 export const NefaSlide = CoverHold.extend`
   h1{
-    font-size:2.5rem;
+    font-size:3.5rem;
     color:white;
     align-self:center;
     justify-self:center;
@@ -450,15 +560,23 @@ export const NefaSlide = CoverHold.extend`
     position:absolute;
     text-align:center;
     font-weight:bold;
+    font-family:${font};
     span{
       font-family:'Ubuntu Mono';
-      font-size:4rem;
+      font-size:6rem;
       font-weight:100;
       display:block;
       padding-top:5px;
     }
   }
-
+  @media screen and (max-width: 700px) and (orientation: landscape){
+    h1{
+      font-size:2rem;
+      span{
+        font-size:3rem;
+      }
+    }
+  }
 `;
 
 export const InterestedSlide = styled.div`
@@ -473,7 +591,7 @@ export const InterestedSlide = styled.div`
   @media screen and (max-width: 1025px){
     grid-template-columns:auto;
     grid-template-rows: auto auto 5%;
-    grid-template-areas: 'interested' 'offerings' 'copyright';
+    grid-template-areas: 'offerings' 'interested' 'copyright';
   }
   p.copyright{
   margin:5vh 0 0 0;
@@ -491,7 +609,6 @@ export const Offerings = styled.div`
   @media screen and (max-width: 1025px){
     margin-top:2vh;
     border-left:none;
-    border-top: 1px solid white;
     h1{
       padding-top:.5vh
       text-align:center;
@@ -506,13 +623,14 @@ export const Offerings = styled.div`
 `;
 
 export const Interested = styled.div`
+  font-family:${font};
   grid-area: interested;
   text-align:center;
   display:grid;
   grid-template-columns: auto;
   grid-template-rows: 10% 40% 40%;
   div{
-    padding-top:3vh;
+    padding-top:5vh;
     button{
       font-size: .75em;
       background-color: ${grey};
@@ -526,4 +644,5 @@ export const Interested = styled.div`
       background-color:${magenta};
     }
   }
+
 `;

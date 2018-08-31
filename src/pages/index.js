@@ -17,7 +17,7 @@ const IndexPage = data => (
       <CoverText>
         <h1>DDI Capital is your Independent Trusted Advisor </h1>
         <p>Whether you are just starting out, or ready to bring your current organization to a new level of growth – DDI Capital offers you the most innovative financial strategies allowing you to acquire and finance technology solutions at the best possible price.</p>
-        <LearnMore><button> Learn More <i className="fa fa-arrow-alt-circle-down" /></button></LearnMore>
+        <LearnMore><button> Learn More &nbsp;&nbsp;<i className="fa fa-arrow-alt-circle-down" /></button></LearnMore>
       </CoverText>
     </CoverHold>
     <FocusedSlide>
@@ -32,10 +32,10 @@ const IndexPage = data => (
     </FocusedSlide>
     <SolutionsSlide>
       <h1>
-        Whether you’re a startup or a Fortune 100 company
+        Whether you’re a startup or a Fortune 100 company<br />
         DDI has the appropriate solutions to help you finance your growth
       </h1>
-      <SimpleSlider><div>1</div><div>2</div><div>1</div><div>2</div></SimpleSlider>
+      <SimpleSlider />
     </SolutionsSlide>
     <NefaSlide>
       <Img
