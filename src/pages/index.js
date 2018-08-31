@@ -64,7 +64,7 @@ const IndexPage = data => (
           <li>Project Management</li>
         </ul>
       </Offerings>
-      <p className="copyright">site designed by ©Liam Paris</p>
+      <p className="copyright">site designed by Liam Paris</p>
     </InterestedSlide>
   </IndexGrid>
 );

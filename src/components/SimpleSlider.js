@@ -4,7 +4,7 @@ import Solution from './Solution';
 
 const responsiveArray = [
   {
-    breakpoint: 1024,
+    breakpoint: 1300,
     settings: {
       slidesToShow: 2,
       slidesToScroll: 1,
@@ -17,7 +17,7 @@ const responsiveArray = [
     },
   },
   {
-    breakpoint: 800,
+    breakpoint: 950,
     settings: {
       dots: false,
       slidesToShow: 1,

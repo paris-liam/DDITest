@@ -33,7 +33,7 @@ export const HeadGrid = styled.div`
   grid-template-areas: 'headImg . hamburgercontent';
   /*phone*/
   @media screen and (max-width: 1025px){
-    grid-template-rows:10vh;
+    grid-template-rows:auto;
     grid-template-columns: 4fr 2fr;
     grid-template-areas: 'headImg hamburgericon';
   }
