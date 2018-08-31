@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import TopHeader from '../components/TopHeader';
-import Slide from '../components/Slide';
-import './index.css';
+import TopHeader from '../components/TopHeader'; import './index.css';
 import favicon from '../images/favicon.ico';
-import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact, Envelope, PhoneNumber, PayBillsButton } from '../style';
+import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact } from '../style';
 
 const Layout = ({ children, data }) => (
   <div>
@@ -29,18 +27,16 @@ const Layout = ({ children, data }) => (
           href: 'https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css',
           integrity: 'sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6',
           crossorigin: 'anonymous',
-        }, /*
-        {
-          rel: 'stylesheet',
-          type: 'text/css',
-          charset: 'UTF-8',
-          href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css',
         },
         {
-          rel: 'stylesheet',
-          type: 'text/css',
-          href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css',
-        }, */
+
+        },
+        {
+          rel: 'stylesheet', type: 'text/css', charset: 'UTF-8', href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css',
+        },
+        {
+rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css',
+        },
       ]}
     />
     <TopHeader siteTitle={data.site.siteMetadata.title} logo={data.head} />

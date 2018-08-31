@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide, gatsbyImgStyle } from '../style';
+import SimpleSlider from '../components/SimpleSlider';
+import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide, gatsbyImgStyle, Offerings, Interested } from '../style';
 
 
 const IndexPage = data => (
@@ -35,19 +35,23 @@ const IndexPage = data => (
         Whether you’re a startup or a Fortune 100 company
         DDI has the appropriate solutions to help you finance your growth
       </h1>
-      <div />
+      <SimpleSlider><div>1</div><div>2</div><div>1</div><div>2</div></SimpleSlider>
     </SolutionsSlide>
     <NefaSlide>
-      <Img sizes={data.data.nefa.sizes} />
+      <Img
+        sizes={data.data.nefa.sizes}
+        position="absolute"
+        style={gatsbyImgStyle}
+      />
       <h1>Proud Members of <span>NEFA</span></h1>
     </NefaSlide>
     <InterestedSlide>
-      <div>
-        <h1>Interested</h1>
-        <button>Vendor Opportunities</button>
-        <button> Customer Information</button>
-      </div>
-      <div>
+      <Interested>
+        <h1>Interested? Let's Talk!</h1>
+        <div><button>Vendor Opportunities</button></div>
+        <div><button> Customer Information</button></div>
+      </Interested>
+      <Offerings>
         <h1>Offerings Include:</h1>
         <ul>
           <li>Software Only Financing</li>
@@ -59,7 +63,8 @@ const IndexPage = data => (
           <li>Network Integration and Consulting</li>
           <li>Project Management</li>
         </ul>
-      </div>
+      </Offerings>
+      <p className="copyright">site designed by ©Liam Paris</p>
     </InterestedSlide>
   </IndexGrid>
 );
@@ -74,7 +79,7 @@ export const query = graphql`
       }
     }
     nefa: imageSharp(id:{regex: "/CoverNefa.jpg/"}){
-      sizes(maxWidth:2000){
+      sizes(maxWidth:1900){
         ... GatsbyImageSharpSizes
       }
     }

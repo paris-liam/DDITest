@@ -1,3 +1,4 @@
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -655,4 +656,29 @@ pre tt:after {
   #site-menu {
     display:none;
   }
+}
+
+.new-slick-prev {
+  left: -25px;
+}
+.new-slick-next{
+  right:-25px;
+}
+.new-slick-next, .new-slick-prev {
+  font-size: 3rem;
+  line-height: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  cursor: pointer;
+  color:white;
+  border: none;
+  outline: 0;
+  background: 0 0;
+  position: absolute;
+  display: block;
+  padding: 0;
 }

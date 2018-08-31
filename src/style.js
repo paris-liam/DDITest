@@ -309,10 +309,11 @@ export const SidebarContact = styled.ul`
 /* Index Page Slides */
 export const IndexGrid = styled.div`
   display:grid;
-  grid-template-rows: 70vh auto auto auto auto;
+  grid-template-rows: 70vh auto auto 30vh auto;
   grid-template-columns: auto;
   font-family:${font};
   color:white;
+  font-size:calc(1vw + 10px);
 `;
 export const CoverHold = styled.div`
   position:relative;
@@ -349,8 +350,8 @@ export const LearnMore = styled.div`
     align-self:center;
     button{
       margin-top:3vh;
-      padding:10px;
-      font-size:1rem;
+      padding: 1em
+      font-size:1.5em;
       border-radius:30px;
       background-color:${blue};
       color:white;
@@ -361,7 +362,6 @@ export const LearnMore = styled.div`
 export const FocusedSlide = styled.div`
   color:${grey};
   background-color:white;
-  font-size:calc(1vw + 10px);
   padding: 5vh 1.5em 3vh 1.5em;
   display:grid;
   grid-template-columns: auto;
@@ -409,7 +409,7 @@ export const FocusedBody = styled.div`
     display:flex;
     p{
       font-size:1em
-      line-height:2rem;
+      line-height:2;
     }
     i{
       display:block;
@@ -423,20 +423,23 @@ export const SolutionsSlide = styled.div`
     background-color: ${blue};
     display:grid;
     grid-template-columns: auto;
-    grid-template-rows: 1fr 9fr;
-    div{
+    grid-template-rows: auto 70vh;
+    h1{
+      padding-top:3vh;
+      margin: 0 20% 0 20%;
+      text-align:center;
+      font-size:1.25em;
+    }
+    & > div{
       justify-self:center;
       align-self:center;
       position:relative;
-      width:30%;
+      width:90vw;
     }
 `;
-export const NefaSlide = styled.div`
-  position:relative;
-  display:grid;
-  overflow:hidden;
+export const NefaSlide = CoverHold.extend`
   h1{
-    font-size:3rem;
+    font-size:2.5rem;
     color:white;
     align-self:center;
     justify-self:center;
@@ -446,20 +449,78 @@ export const NefaSlide = styled.div`
     font-weight:bold;
     span{
       font-family:'Ubuntu Mono';
-      font-size:6rem;
+      font-size:4rem;
       font-weight:100;
       display:block;
       padding-top:5px;
     }
-
   }
 
 `;
 
 export const InterestedSlide = styled.div`
+  padding: 5vh 5vh 0 5vh
   background-color:${blue};
   color:white;
   display:grid;
   grid-template-columns:1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: auto 5%;
+  grid-template-areas: 'interested offerings' 'copyright copyright';
+  /*phone*/
+  @media screen and (max-width: 1025px){
+    grid-template-columns:auto;
+    grid-template-rows: auto auto 5%;
+    grid-template-areas: 'interested' 'offerings' 'copyright';
+  }
+  p.copyright{
+  margin:5vh 0 0 0;
+    grid-area:copyright;
+    text-align:center;
+    font-size:.5em;
+    vertical-align:bottom;
+  }
+`;
+
+export const Offerings = styled.div`
+  grid-area:offerings
+  border-left: 1px solid white;
+  /*phone*/
+  @media screen and (max-width: 1025px){
+    margin-top:2vh;
+    border-left:none;
+    border-top: 1px solid white;
+    h1{
+      padding-top:.5vh
+      text-align:center;
+    }
+  }
+  *{
+    margin-left:3vw
+  }
+  ul{
+    font-size: 1em;
+  }
+`;
+
+export const Interested = styled.div`
+  grid-area: interested;
+  text-align:center;
+  display:grid;
+  grid-template-columns: auto;
+  grid-template-rows: 10% 40% 40%;
+  div{
+    padding-top:3vh;
+    button{
+      font-size: .75em;
+      background-color: ${grey};
+      color:white;
+      outline:none;
+      border:none;
+      border-radius:50px;
+      padding:1em;
+    }
+    button:hover{
+      background-color:${magenta};
+    }
+  }
 `;
