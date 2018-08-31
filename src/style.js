@@ -312,7 +312,7 @@ export const SidebarContact = styled.ul`
 /* Index Page Slides */
 export const IndexGrid = styled.div`
   display:grid;
-  grid-template-rows: 70vh auto auto 45vh auto;
+  grid-template-rows: 70vh max-content max-content 50vh max-content;
   grid-template-columns: auto;
   font-family:${font} !important;
   color:white;
@@ -458,10 +458,28 @@ export const FocusedBody = styled.div`
   grid-template-rows: min-content min-content;
   grid-row-gap:3em;
   @media screen and (max-width:1025px){
+    display:grid;
     grid-template-columns: auto;
-    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-rows: auto auto auto auto;
     grid-row-gap:1.75em;
     padding-top:1em;
+    height: calc(auto + 10vh;)
+    & > div{
+    display:flex;
+    p{
+      font-size:1em
+      line-height:1.5;
+      margin-top:auto;
+      margin-bottom:auto;
+    }
+    i{
+      display:block;
+      font-size: 2.5em;
+      margin-right:20px;
+      margin-top:auto;
+      margin-bottom:auto;
+    }
+  }
   }
   & > div{
     display:flex;
