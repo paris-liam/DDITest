@@ -422,7 +422,7 @@ export const FocusedSlide = styled.div`
   height:min-content;
   grid-template-rows: 1fr 1fr 8fr;
   @media screen and (max-width:1025px){
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto max-content;
   }
   text-align:center;
   font-family:${font};
@@ -485,9 +485,14 @@ export const SolutionsSlide = styled.div`
     background-color: ${blue};
     display:grid;
     grid-template-columns: auto;
-    grid-template-rows: auto 70vh;
+    grid-template-rows: auto calc(max-content + 5vh);
+    grid-row-gap:2em;
+    @media screen and (max-width: 1025px){
+        grid-row-gap:3em
+      }
     @media screen and (max-width: 700px) and (orientation: landscape){
-        grid-template-rows: auto min-content;
+        grid-template-rows: auto max-content;
+        grid-row-gap:2em;
       }
     h1{
       padding-top:3vh;
@@ -505,6 +510,7 @@ export const SolutionsSlide = styled.div`
       align-self:center;
       position:relative;
       width:90vw;
+      height:max-content;
       @media screen and (max-width: 1025px){
         width:80vw;
       }
@@ -515,7 +521,7 @@ export const SolutionsSlide = styled.div`
     }
 `;
 export const SolTitle = styled.div`
-  font-size: 1.25em;
+  font-size: 1em;
   padding-bottom:10px;
 `;
 export const SolBody = styled.div`
@@ -523,7 +529,7 @@ export const SolBody = styled.div`
   color:white;
   width:70%;
   margin: 0 auto 0 auto;
-  @media screen and (max-width: 1025px){
+  @media screen and (max-width: 1300px){
     font-size:.75rem;
   }
   @media screen and (max-width: 700px) and (orientation: landscape){
@@ -532,8 +538,8 @@ export const SolBody = styled.div`
   }
 `;
 export const SolIcon = styled.div`
-  font-size: 3.25rem;
-  @media screen and (max-width: 1025px){
+  font-size: 3.5rem;
+  @media screen and (max-width: 1300px){
     font-size: 2.25rem;
   }
   @media screen and (max-width: 700px) and (orientation: landscape){
