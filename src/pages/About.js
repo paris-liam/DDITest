@@ -1,18 +1,19 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
+import { Row, Grid, Col } from 'react-bootstrap';
 
 const About = data => (
-  <div>
-    <h1>About cover</h1>
-    <h1>Who we are</h1>
-    <h1>Why DDI</h1>
-    <h1>Equiptment Financed</h1>
-    <h1>meet the team</h1>
-    <h1>interested?</h1>
-
+  <Grid>
+    <Row>
+    <Col sm={6} md={3}>1</Col>
+    <Col sm={6} md={3}>2</Col>
+    <Col sm={6} md={2}>3</Col>
+  </Row>
+    <Row>
     <Link to="/">Go back to the homepage</Link>
-  </div>
+  </Row>
+  </Grid>
 );
 
 export default About;

@@ -11,7 +11,6 @@ const responsiveArray = [
       infinite: true,
       dots: false,
       swipeToSlide: true,
-      adaptiveHeight: true,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
     },
@@ -24,7 +23,6 @@ const responsiveArray = [
       slidesToScroll: 1,
       infinite: true,
       swipeToSlide: true,
-      adaptiveHeight: true,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
     },
@@ -88,8 +86,8 @@ const info = [
   },
   {
     icon: 'bullhorn',
-    title: 'Managed Service Providers',
-    body: '  In the most rapidly evolving landscape, establish, expand and reinvent your business with the latest technologies to ensure your customers will not look elsewhere. DDI offers the solutions to keep your technology current and help your business to thrive.',
+    title: 'Managed Service \n Providers',
+    body: 'In the most rapidly evolving landscape, establish, expand and reinvent your business with the latest technologies to ensure your customers will not look elsewhere. DDI offers the solutions to keep your technology current and help your business to thrive.',
   },
   {
     icon: 'bed',

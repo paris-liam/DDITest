@@ -5,7 +5,7 @@ import TopHeader from '../components/TopHeader'; import './index.css';
 import favicon from '../images/favicon.ico';
 import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact } from '../style';
 
-const Layout = ({ children, data }) => (
+const Layout = ({ data, children }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
@@ -29,24 +29,23 @@ const Layout = ({ children, data }) => (
           crossorigin: 'anonymous',
         },
         {
-
+          rel: 'stylesheet',
+          type: 'text/css',
+          charset: 'UTF-8',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css',
         },
         {
-          rel: 'stylesheet', type: 'text/css', charset: 'UTF-8', href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css',
+          rel: 'stylesheet',
+          type: 'text/css',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css',
         },
-        {
-rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css',
-        },
-      ]}
+    ]}
     />
-    <TopHeader siteTitle={data.site.siteMetadata.title} logo={data.head} />
-    <div
-      id="site-wrapper"
-    >
+    <div id="site-wrapper">
       <div id="site-canvas">
         <Sidebar id="site-menu">
           <SidebarItem>
-            <h2>About</h2>
+            <h3>About</h3>
             <SidebarDropdown>
               <li>Who We Are</li>
               <li>Why DDI</li>
@@ -55,7 +54,7 @@ rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/li
             </SidebarDropdown>
           </SidebarItem>
           <SidebarItem>
-            <h2>Leasing Solutions </h2>
+            <h3>Leasing Solutions </h3>
             <SidebarDropdown>
               <li>Client Offerings</li>
               <li>Vendor Programs</li>
@@ -69,6 +68,7 @@ rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/li
             </li>
           </SidebarContact>
         </Sidebar>
+        <TopHeader siteTitle={data.site.siteMetadata.title} logo={data.head} />
         {children()}
       </div>
     </div>
@@ -89,7 +89,7 @@ export const query = graphql`
       }
     }
     head: imageSharp(id:{regex: "/HeadLogo.png/"}){
-      sizes(maxWidth:1000){
+      sizes(maxWidth:800){
         ... GatsbyImageSharpSizes
       }
     }

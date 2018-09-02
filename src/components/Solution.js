@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
-import { SolTitle, SolBody, SolIcon } from '../style';
+import { SolTitle, SolBody, SolIcon } from '../style-index';
 
 const Solution = solution => (
   <div style={{
       textAlign: 'center',
   }}
   >
-    <SolIcon><i className={`fa fa-${solution.solution.icon}`} /></SolIcon>
-    <SolTitle><h1>{solution.solution.title}</h1></SolTitle>
-    <SolBody><p>{solution.solution.body}</p></SolBody>
+    <SolIcon><h1><i className={`fa fa-${solution.solution.icon}`} /></h1></SolIcon>
+    <SolTitle>  {solution.solution.title.split('\n').map((item, key) => (
+      <h3 key={key}>
+        {item}
+        <br/>
+      </h3>
+    ))}
+    </SolTitle>
+    <SolBody>  {solution.solution.body.split('\n').map((item, key) => (
+      <p key={key}>
+        {item}
+        <br/>
+      </p>
+    ))}
+    </SolBody>
   </div>
 );
 

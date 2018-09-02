@@ -12,11 +12,18 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'Lato',
           'Ubuntu Mono',
+          'Lato',
+          'Open Sans',
         ],
       },
     },
+    /* {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography',
+      },
+    }, */
     {
       resolve: 'gatsby-source-filesystem',
       options: {
