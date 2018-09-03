@@ -10,3 +10,12 @@ const Contact = () => (
 
 export default Contact;
 
+/*export const query = graphql`
+  query ContactQuery {
+    contactHeader: imageSharp(id:{regex:}){
+      sizes(maxWidth:1900){
+        ... GatsbyImageSharpSizes
+      }
+    }
+  }
+`;*/

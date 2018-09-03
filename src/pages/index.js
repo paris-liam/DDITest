@@ -2,10 +2,13 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import SimpleSlider from '../components/SimpleSlider';
-import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide, Offerings, Interested } from '../style-index';
+import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide, Offerings, Interested } from '../style-index';
 import {gatsbyImgStyle} from '../style'
 import { Grid, Row, Col } from 'react-bootstrap';
 
+const learnScroll = function(){
+  window.scrollTo( {top:690,behavior:'smooth'} );
+}
 const IndexPage = data => (
   <IndexGrid>
     <CoverHold>
@@ -18,12 +21,14 @@ const IndexPage = data => (
       <CoverText>
         <h1>DDI Capital is your Independent Trusted Advisor </h1>
         <p>Whether you are just starting out, or ready to bring your current organization to a new level of growth DDI Capital offers you the most innovative financial strategies allowing you to acquire and finance technology solutions at the best possible price.</p>
-        <LearnMore><button> Learn More &nbsp;&nbsp;<i className="fa fa-arrow-alt-circle-down" /></button></LearnMore>
+        <LearnMore><button onClick={learnScroll}> Learn More &nbsp;&nbsp;<i className="fa fa-arrow-alt-circle-down" /></button></LearnMore>
       </CoverText>
     </CoverHold>
     <FocusedSlide>
-      <h1>Focused on You – Where you work</h1>
-      <div className="Focusedsubtitle"><p>We know your challenges, understand your technology options and aren’t satisfied  until we recommend a solution that exceeds your expectations.</p></div>
+      <FocusedTitle>
+        <h1>Focused on You – Where you work</h1>
+        <p>We know your challenges, understand your technology options and aren’t satisfied  until we recommend a solution that exceeds your expectations.</p>
+      </FocusedTitle>
       <FocusedBody>
         <div><h1><i className="fa fa-money-check-alt" /></h1><p>DDI will work closely with you to customize a financing plan that  best suits your budget, cash flow and technology requirements.</p></div>
         <div><h1><i className="fa fa-anchor" /></h1><p>Our team’s collective experience, industry contacts and collaborative,  consultative work process insure that you will get the best possible solution with each lease transaction.</p></div>
@@ -48,22 +53,23 @@ const IndexPage = data => (
     </NefaSlide>
     <InterestedSlide>
       <Interested>
-        <h1>Interested? Let's Talk!</h1>
-        <div><button>Vendor Opportunities</button></div>
-        <div><button> Customer Information</button></div>
+        <h1>Interested?<br/> Let's Talk!</h1>
+        <div><Link to='/Vendors'><button>Vendor Opportunities</button></Link></div>
+        <div><Link to='/Customers'><button> Customer Information</button></Link></div>
       </Interested>
       <Offerings>
         <h1>Offerings Include:</h1>
-        <ul>
-          <li>Software Only Financing</li>
-          <li>Capital and Operating Leases</li>
-          <li>Master Lease Agreements</li>
-          <li>Lease Lines</li>
-          <li>Purchase Leaseback Structures</li>
-          <li>Asset Management</li>
-          <li>Network Integration and Consulting</li>
-          <li>Project Management</li>
+        <ul className='fa-ul'>
+          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Software Only Financing</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Capital and Operating Leases</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Master Lease Agreements</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Lease Lines</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Purchase Leaseback Structures</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Asset Management</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Network Integration and Consulting</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Project Management</li>
         </ul>
+
       </Offerings>
       <p className="copyright">site designed by Liam Paris</p>
     </InterestedSlide>

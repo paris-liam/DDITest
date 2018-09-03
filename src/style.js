@@ -35,6 +35,13 @@ list-style:none;
 padding-top:1vh;
 padding-left:4vw;
 padding-bottom: .25vh;
+a{
+  text-decoration:none;
+  color:white;
+}
+a:hover{
+  color:${colorsAndFont.grey};
+}
 `;
 export const SidebarDropdown = styled.ul`
 list-style:none;

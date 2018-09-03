@@ -11,3 +11,12 @@ const Customers = data => (
 
 export default Customers;
 
+export const query = graphql`
+  query CustomerQuery {
+    cover: imageSharp(id:{regex: "/CoverCustomers.jpg/"}){
+      sizes(maxWidth:1900){
+        ... GatsbyImageSharpSizes
+      }
+    }
+  }
+`;

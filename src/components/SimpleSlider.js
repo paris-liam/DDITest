@@ -4,18 +4,6 @@ import Solution from './Solution';
 
 const responsiveArray = [
   {
-    breakpoint: 1300,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      infinite: true,
-      dots: false,
-      swipeToSlide: true,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
-    },
-  },
-  {
     breakpoint: 950,
     settings: {
       dots: false,
@@ -86,7 +74,7 @@ const info = [
   },
   {
     icon: 'bullhorn',
-    title: 'Managed Service \n Providers',
+    title: 'Managed Service Providers',
     body: 'In the most rapidly evolving landscape, establish, expand and reinvent your business with the latest technologies to ensure your customers will not look elsewhere. DDI offers the solutions to keep your technology current and help your business to thrive.',
   },
   {
@@ -96,7 +84,7 @@ const info = [
   },
 ];
 const SimpleSlider = () => (
-  <Slider infinite slidesToShow={3} slidesToScroll={1} responsive={responsiveArray} nextArrow={<SampleNextArrow />} prevArrow={<SamplePrevArrow />}>
+  <Slider infinite slidesToShow={2} slidesToScroll={1} responsive={responsiveArray} nextArrow={<SampleNextArrow />} prevArrow={<SamplePrevArrow />}>
     {
     info.map(solution => <Solution key={solution.title} solution={solution} />)
     }

@@ -1,19 +1,43 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
-import { Row, Grid, Col } from 'react-bootstrap';
-
 const About = data => (
-  <Grid>
-    <Row>
-    <Col sm={6} md={3}>1</Col>
-    <Col sm={6} md={3}>2</Col>
-    <Col sm={6} md={2}>3</Col>
-  </Row>
-    <Row>
-    <Link to="/">Go back to the homepage</Link>
-  </Row>
-  </Grid>
+  <div style={{
+    display:'grid',
+    gridTemplateRows:'60vh 60vh 60vh 60vh',
+  }}>
+    <div id='Who'>
+      <h1>Who</h1>
+      <Link to="/">Go back to the homepage</Link>
+    </div>
+    <div id='Why'>
+      <h1>Why</h1>
+      <Link to="/">Go back to the homepage</Link>
+    </div>
+    <div id='Equipt'>
+      <h1>Equipt</h1>
+      <Link to="/">Go back to the homepage</Link>
+    </div>
+    <div id='Team'>
+      <h1>Team</h1>
+      <Link to="/">Go back to the homepage</Link>
+    </div>
+  </div>
 );
 
 export default About;
+
+export const query = graphql`
+  query AboutQuery {
+    cover: imageSharp(id:{regex: "/CoverAbout.jpg/"}){
+      sizes(maxWidth:1900){
+        ... GatsbyImageSharpSizes
+      }
+    }
+
+  }
+`;
+/*
+get the other images
+*/
+

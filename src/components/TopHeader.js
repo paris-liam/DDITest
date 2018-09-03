@@ -4,20 +4,26 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import {colorsAndFont} from '../style.js'
 
+const toggleNav = function(){
+  const siteWrap = document.querySelector('#site-wrapper');
+  siteWrap.classList.toggle('show-nav');
+  const ham = document.querySelector('.hamburger-menu');
+  ham.classList.toggle('animate');
+};
 const HeadGrid = styled.div`
   color: ${colorsAndFont.blue};
-  font-size:.75rem;
   display:grid;
   /*desktop*/
   grid-template-rows:auto;
-  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr 3fr;
   grid-template-areas: 'headImg . hamburgercontent';
-  margin: 3vh .25vh 1.5vh .25vh;
+  margin: 3vh .5vh .25vh .5vh;
   /*phone*/
   @media screen and (max-width: 1025px){
     grid-template-rows:10vh;
     grid-template-columns: 4fr 2fr;
     grid-template-areas: 'headImg hamburgericon';
+    margin-top:2vh;
   }
   @media screen and (max-width: 1025px) and (orientation: landscape){
     grid-template-rows:auto;
@@ -31,10 +37,11 @@ const HeadGrid = styled.div`
  const HamburgerContent = styled.div`
   /*desktop*/
   display:grid;
-  grid-template-columns: 100%;
-  grid-template-rows:75% 25%;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows:1fr 2fr;
+  grid-row-gap:3vh;
   grid-area:hamburgercontent;
-  grid-template-areas: 'contact' 'nav';
+  grid-template-areas: '. contact' 'nav nav';
   /*phone*/
   @media screen and (max-width: 1025px){
     display:none;
@@ -42,6 +49,10 @@ const HeadGrid = styled.div`
 `;
 
  const Contact = styled.div`
+  font-size:.75em;
+  @media screen and (max-width:1200px){
+    font-size:.55em;
+  }
   list-style:none;
   grid-area: contact;
   text-align:right;
@@ -69,7 +80,7 @@ const HeadGrid = styled.div`
     color:white;
     outline:none;
     border:none;
-    border-radius:30px;
+    border-radius:30em;
     /*font-family: ${colorsAndFont.font};*/
     &:hover{
       background-color:${colorsAndFont.grey};
@@ -89,17 +100,25 @@ const HeadGrid = styled.div`
  const Nav = styled.div`
   grid-area: nav;
   display:flex;
-  justify-content:space-around;
-  /*grid-template-columns: auto auto auto;
-  grid-template-rows:auto;*/
+  justify-content:space-evenly;
   list-style:none;
-  color: black;
   position:relative;
   text-align:right;
+  color: black;
+  @media screen and (max-width:1200px){
+    font-size:.8em;
+  }
   li{
-    &:hover{
-      color:${colorsAndFont.light_purp};
-    }
+    font-size:1.25em;
+      a{
+        color:black;
+      }
+      a:hover{
+       color:${colorsAndFont.lightPurp};
+      }
+  }
+  li:hover{
+    color:${colorsAndFont.lightPurp};
   }
   li.aboutDrop:hover + div.aboutContent{
     visibility:visible;
@@ -116,6 +135,7 @@ const HeadGrid = styled.div`
 `;
 
  const DropdownContent = styled.div`
+  font-size:.75em;
   color:white;
   visibility: hidden;
   transition:visibility 100ms linear;
@@ -123,14 +143,14 @@ const HeadGrid = styled.div`
   background-color: #f9f9f9;
   z-index: 1;
   background-color:${colorsAndFont.grey};
-  border-radius:5px;
+  border-radius:.5em;
   &.aboutContent{
-    left: 1em;
-    top: 3.5vh;
+    left: 10%;
+    top: 100%;
   }
   &.leasingContent{
     left:40%;
-    top:3.5vh;
+    top:100%;
   }
   &:before {
       content:"";
@@ -146,21 +166,28 @@ const HeadGrid = styled.div`
   }
   ul{
     list-style:none;
+    margin:0;
+    padding:0;
     & > li:first-child:hover{
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      border-top-left-radius: .5em;
+      border-top-right-radius: .5em;
     }
     & > li:last-child:hover{
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: .5em;
+      border-bottom-right-radius: .5em;
     }
     & > li{
     width:100%;
     text-align:center;
-    padding: .5em .1em
+    padding: .5em .1em;
+    a{
+      color: white;
+    }
     &:hover{
       background-color:${colorsAndFont.lightPurp};
-      color:white;
+      a{
+        color:white;
+      }
       }
     }
   }
@@ -233,19 +260,14 @@ class TopHeader extends React.Component {
     const ham = document.querySelector('.hamburger-menu');
     ham.classList.remove('animate');
   }
-  toggleNav() {
-    const siteWrap = document.querySelector('#site-wrapper');
-    siteWrap.classList.toggle('show-nav');
-    const ham = document.querySelector('.hamburger-menu');
-    ham.classList.toggle('animate');
-  }
+
   render() {
     return (
       <HeadGrid>
         <Logo to="/">
           <Img sizes={this.props.logo.sizes} />
         </Logo>
-        <HamburgerIcon><div /><div className="burger-container" onClick={this.toggleNav}><div
+        <HamburgerIcon><div /><div className="burger-container" onClick={toggleNav}><div
           className="hamburger-menu"
           style={{
     position: 'absolute',
@@ -264,23 +286,23 @@ class TopHeader extends React.Component {
             </PayBillsButton>
           </Contact>
           <Nav>
-            <li className="aboutDrop">About</li>
+            <li className="aboutDrop"><Link to='/About'>About</Link></li>
             <DropdownContent className="aboutContent">
               <ul>
-                <li>Who We Are</li>
-                <li>Why DDI</li>
-                <li>Equipment Financed</li>
-                <li>Meet The Team</li>
+                <li><Link to='/About#Who'>Who We Are</Link></li>
+                <li><Link to='/About#Why'>Why DDI</Link></li>
+                <li><Link to='/About#Equipt'>Equipment Financed</Link></li>
+                <li><Link to='/About#Team'>Meet The Team</Link></li>
               </ul>
             </DropdownContent>
             <li className="leasingDrop">Leasing Solutions</li>
             <DropdownContent className="leasingContent">
               <ul>
-                <li>Client Offerings</li>
-                <li>Vendor Programs</li>
+                <li><Link to='/Customers'>Client Offerings</Link></li>
+                <li><Link to='/Vendors'>Vendor Programs</Link></li>
               </ul>
             </DropdownContent>
-            <li>Contact</li>
+            <li><Link to='/Contact'>Contact</Link></li>
           </Nav>
         </HamburgerContent>
       </HeadGrid>
