@@ -4,7 +4,6 @@ import Img from 'gatsby-image';
 import SimpleSlider from '../components/SimpleSlider';
 import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide, Offerings, Interested } from '../style/style-index';
 import { gatsbyImgStyle } from '../style/style';
-import { Grid, Row, Col } from 'react-bootstrap';
 
 const learnScroll = function () {
   window.scrollTo({ top: 690, behavior: 'smooth' });
@@ -69,7 +68,6 @@ const IndexPage = data => (
           <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Network Integration and Consulting</li>
           <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Project Management</li>
         </ul>
-
       </Offerings>
       <p className="copyright">site designed by Liam Paris</p>
     </InterestedSlide>

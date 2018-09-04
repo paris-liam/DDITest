@@ -27,13 +27,14 @@ export const CoverText = styled.div`
   h1{
     width: 95%;
     margin: 0 auto .5em auto;
-    font-size:2.25em;
+    font-size:2.5em;
   }
   p{
     width:80%;
     text-align:center;
     margin-left:auto;
     margin-right:auto;
+    font-size:1.25em;
   }
 `;
 export const LearnMore = styled.div`
@@ -114,7 +115,7 @@ export const FocusedSlide = styled.div`
 export const FocusedTitle = styled.div`
   margin: 0 auto 0 auto;
   h1{
-    font-size:2.5em;
+    font-size:2.3em;
   }
   p{
     display:flex;
@@ -124,6 +125,7 @@ export const FocusedTitle = styled.div`
       @media screen and (max-width:1025px){
         width:80%;
       }
+    font-size:1.25em;
    }
 `;
 export const FocusedBody = styled.div`
@@ -169,9 +171,9 @@ export const SolutionsSlide = styled.div`
     height:auto;
     h1.title{
       text-align:center;
-      width:80%;
+      width:95%;
       margin: 0 auto;
-      font-size:1.5em;
+      font-size:2.3em;
     }
     & > div{
       justify-self:center;

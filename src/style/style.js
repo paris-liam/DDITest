@@ -2,18 +2,18 @@ import styled from 'styled-components';
 import Link from 'gatsby-link';
 
 export const colorsAndFont = {
- blue: '#585B8C',
- magenta: '#775997',
- lightPurp: '#888DD8',
- grey: '#292A3E',
- lightGrey: '#535358',
- font: 'Lato',
- barWidth: '2rem',
- barHeight: '.25rem',
- barSpacing: '.75rem',
- tabletBreak: "@media screen and (max-width:1025px)",
- phoneBreak:"@media screen and (max-width:600px)",
-}
+  blue: '#585B8C',
+  magenta: '#775997',
+  lightPurp: '#888DD8',
+  grey: '#292A3E',
+  lightGrey: '#535358',
+  font: 'Lato',
+  barWidth: '2rem',
+  barHeight: '.25rem',
+  barSpacing: '.75rem',
+  tabletBreak: '@media screen and (max-width:1025px)',
+  phoneBreak: '@media screen and (max-width:600px)',
+};
 
 export const gatsbyImgStyle = {
   top: 0,
@@ -33,7 +33,7 @@ font-size:1.25rem;
 export const SidebarItem = styled.ul`
 list-style:none;
 padding-top:1vh;
-padding-left:4vw;
+padding-left:2vw;
 padding-bottom: .25vh;
 a{
   text-decoration:none;
@@ -46,6 +46,7 @@ a:hover{
 export const SidebarDropdown = styled.ul`
 list-style:none;
 padding-left:2vw;
+margin-bottom:3vh;
   & > *:hover{
     color:${colorsAndFont.grey};
   }
@@ -55,8 +56,9 @@ padding-left:2vw;
 `;
 export const SidebarContact = styled.ul`
     list-style:none;
+    margin-top:3vh;
     padding-top:1vh;
-    padding-left:4vw;
+    padding-left:2vw;
     & > *{
       padding-bottom: .75vh;
     }
