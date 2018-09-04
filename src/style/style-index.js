@@ -50,6 +50,57 @@ export const LearnMore = styled.div`
       }
     }
 `;
+
+/*
+export const IndexGrid = styled.div`
+  display:grid;
+  grid-template-rows: 45vh auto auto 30vh auto;
+  grid-template-columns: auto;
+  color:white;
+`;
+export const CoverHold = styled.div`
+  position:relative;
+  background-color:black;
+  display:grid;
+  grid-template-rows:1px 99%;
+
+`;
+export const CoverText = styled.div`
+  position:relative;
+  z-index:2;
+  display:grid;
+  text-align:left;
+  align-self:left;
+  justify-self:center;
+  grid-template-columns:auto;
+  grid-template-rows:auto auto 10vh;
+  margin-left: 5vw;
+  h1{
+    width: 100%;
+    margin: 10vh auto 0 auto;
+    font-size:2.25em;
+  }
+  p{
+    width:80%;
+    text-align:justify;
+    margin-right:auto;
+  }
+`;
+export const LearnMore = styled.div`
+    button{
+      margin-top: 2vh;
+      border-radius:3em;
+      background-color:${colorsAndFont.blue};
+      color:white;
+      outline:none;
+      border:none;
+      padding:.5em 1em;
+      &:hover{
+          background-color:${colorsAndFont.grey}
+      }
+    }
+`;
+*/
 export const FocusedSlide = styled.div`
   color:${colorsAndFont.grey};
   background-color:white;

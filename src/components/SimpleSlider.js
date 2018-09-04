@@ -73,7 +73,7 @@ const info = [
     body: 'In no other industry is the “Internal Rate of Return” dynamic more evident. DDI’s flexible and creative solutions allow financial institutions to keep their capital for operations, rather than solving technology problems, all while fitting cleanly into allocated budgets.',
   },
   {
-    icon: 'bullhorn',
+    icon: 'laptop',
     title: 'Managed Service Providers',
     body: 'In the most rapidly evolving landscape, establish, expand and reinvent your business with the latest technologies to ensure your customers will not look elsewhere. DDI offers the solutions to keep your technology current and help your business to thrive.',
   },
