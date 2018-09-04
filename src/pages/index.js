@@ -2,13 +2,13 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import SimpleSlider from '../components/SimpleSlider';
-import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide, Offerings, Interested } from '../style-index';
-import {gatsbyImgStyle} from '../style'
+import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide, Offerings, Interested } from '../style/style-index';
+import { gatsbyImgStyle } from '../style/style';
 import { Grid, Row, Col } from 'react-bootstrap';
 
-const learnScroll = function(){
-  window.scrollTo( {top:690,behavior:'smooth'} );
-}
+const learnScroll = function () {
+  window.scrollTo({ top: 690, behavior: 'smooth' });
+};
 const IndexPage = data => (
   <IndexGrid>
     <CoverHold>
@@ -37,7 +37,7 @@ const IndexPage = data => (
       </FocusedBody>
     </FocusedSlide>
     <SolutionsSlide>
-      <h1 className='title'>
+      <h1 className="title">
         Whether you’re a startup or a Fortune 100 company
         DDI has the appropriate solutions to help you finance your growth
       </h1>
@@ -53,21 +53,21 @@ const IndexPage = data => (
     </NefaSlide>
     <InterestedSlide>
       <Interested>
-        <h1>Interested?<br/> Let's Talk!</h1>
-        <div><Link to='/Vendors'><button>Vendor Opportunities</button></Link></div>
-        <div><Link to='/Customers'><button> Customer Information</button></Link></div>
+        <h1>Interested?<br /> Let's Talk!</h1>
+        <div><Link to="/Vendors"><button>Vendor Opportunities</button></Link></div>
+        <div><Link to="/Customers"><button> Customer Information</button></Link></div>
       </Interested>
       <Offerings>
         <h1>Offerings Include:</h1>
-        <ul className='fa-ul'>
-          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Software Only Financing</li>
-          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Capital and Operating Leases</li>
-          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Master Lease Agreements</li>
-          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Lease Lines</li>
-          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Purchase Leaseback Structures</li>
-          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Asset Management</li>
-          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Network Integration and Consulting</li>
-          <li><span className="fa-li" ><i className="fas fa-check-circle"></i></span>Project Management</li>
+        <ul className="fa-ul">
+          <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Software Only Financing</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Capital and Operating Leases</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Master Lease Agreements</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Lease Lines</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Purchase Leaseback Structures</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Asset Management</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Network Integration and Consulting</li>
+          <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Project Management</li>
         </ul>
 
       </Offerings>

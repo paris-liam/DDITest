@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {colorsAndFont} from './style.js'
+import { colorsAndFont } from './style.js';
 
 /* Index Page Slides */
 export const IndexGrid = styled.div`
@@ -27,6 +27,7 @@ export const CoverText = styled.div`
   h1{
     width: 95%;
     margin: 0 auto .5em auto;
+    font-size:2.25em;
   }
   p{
     width:80%;
@@ -73,7 +74,7 @@ export const FocusedTitle = styled.div`
         width:80%;
       }
    }
-`
+`;
 export const FocusedBody = styled.div`
   border-top: 1px solid ${colorsAndFont.blue};
   color:${colorsAndFont.blue};
@@ -196,9 +197,11 @@ export const Offerings = styled.div`
   display:grid;
   grid-template-rows: auto auto;
   border-right: 1px solid white;
+  margin-left: 10%;
   h1{
     font-size:2.25em;
     margin: auto 0;
+    text-transform: uppercase;
   }
   ul{
     margin-left: 2em;
@@ -225,6 +228,7 @@ export const Interested = styled.div`
   grid-template-columns: auto;
   grid-template-rows: 2fr 3fr 3fr;
   height: 80%;
+  text-transform:uppercase;
   h1{
     font-size:2.25em;
   }

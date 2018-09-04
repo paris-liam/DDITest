@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SolTitle, SolBody, SolIcon } from '../style-index';
+import { SolTitle, SolBody, SolIcon } from '../style/style-index';
 
 const Solution = solution => (
   <div style={{
@@ -10,14 +10,14 @@ const Solution = solution => (
     <SolTitle>  {solution.solution.title.split('\n').map((item, key) => (
       <h3 key={key}>
         {item}
-        <br/>
+        <br />
       </h3>
     ))}
     </SolTitle>
     <SolBody>  {solution.solution.body.split('\n').map((item, key) => (
       <p key={key}>
         {item}
-        <br/>
+        <br />
       </p>
     ))}
     </SolBody>

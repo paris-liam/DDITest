@@ -4,9 +4,9 @@ import Helmet from 'react-helmet';
 import TopHeader from '../components/TopHeader'; import './index.css';
 import favicon from '../images/favicon.ico';
 import Link from 'gatsby-link';
-import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact } from '../style';
+import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact } from '../style/style';
 
-const toggleNav = function(){
+const toggleNav = function () {
   const siteWrap = document.querySelector('#site-wrapper');
   siteWrap.classList.toggle('show-nav');
   const ham = document.querySelector('.hamburger-menu');
@@ -53,19 +53,19 @@ const Layout = ({ data, children }) => (
       <div id="site-canvas">
         <Sidebar id="site-menu">
           <SidebarItem>
-            <Link to='/About' onClick={toggleNav}><h3>About</h3></Link>
+            <Link to="/About" onClick={toggleNav}><h3>About</h3></Link>
             <SidebarDropdown>
-              <li><Link to='/About#Who' onClick={toggleNav}>Who We Are</Link></li>
-              <li><Link to='/About#Why' onClick={toggleNav}>Why DDI</Link></li>
-              <li><Link to='/About#Equipt' onClick={toggleNav}>Equiptment Financed</Link></li>
-              <li><Link to='/About#Team' onClick={toggleNav}>Meet The Team</Link></li>
+              <li><Link to="/About#Who" onClick={toggleNav}>Who We Are</Link></li>
+              <li><Link to="/About#Why" onClick={toggleNav}>Why DDI</Link></li>
+              <li><Link to="/About#Equipt" onClick={toggleNav}>Equiptment Financed</Link></li>
+              <li><Link to="/About#Team" onClick={toggleNav}>Meet The Team</Link></li>
             </SidebarDropdown>
           </SidebarItem>
           <SidebarItem>
             <h3>Leasing Solutions </h3>
             <SidebarDropdown>
-              <li><Link to='/Customers'>Client Offerings</Link></li>
-              <li><Link to='/Vendors'>Vendor Programs</Link></li>
+              <li><Link to="/Customers">Client Offerings</Link></li>
+              <li><Link to="/Vendors">Vendor Programs</Link></li>
             </SidebarDropdown>
           </SidebarItem>
           <SidebarContact>

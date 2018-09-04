@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import {colorsAndFont} from '../style.js'
+import { colorsAndFont } from '../style/style.js';
 
-const toggleNav = function(){
+const toggleNav = function () {
   const siteWrap = document.querySelector('#site-wrapper');
   siteWrap.classList.toggle('show-nav');
   const ham = document.querySelector('.hamburger-menu');
@@ -29,12 +29,12 @@ const HeadGrid = styled.div`
     grid-template-rows:auto;
   }
 `;
- const Logo = styled(Link)`
+const Logo = styled(Link)`
   grid-area: headImg;
   align-self:center;
   width:75%;
 `;
- const HamburgerContent = styled.div`
+const HamburgerContent = styled.div`
   /*desktop*/
   display:grid;
   grid-template-columns: 1fr 3fr;
@@ -48,7 +48,7 @@ const HeadGrid = styled.div`
   }
 `;
 
- const Contact = styled.div`
+const Contact = styled.div`
   font-size:.75em;
   @media screen and (max-width:1200px){
     font-size:.55em;
@@ -67,13 +67,13 @@ const HeadGrid = styled.div`
   }
 `;
 
- const Envelope = styled.li`
+const Envelope = styled.li`
   &:hover{
     color:${colorsAndFont.grey};
   }
 `;
- const PhoneNumber = styled.li``;
- const PayBillsButton = styled.li`
+const PhoneNumber = styled.li``;
+const PayBillsButton = styled.li`
   /*desktop*/
   & > button{
     background-color:${colorsAndFont.blue};
@@ -97,7 +97,7 @@ const HeadGrid = styled.div`
   }
 `;
 
- const Nav = styled.div`
+const Nav = styled.div`
   grid-area: nav;
   display:flex;
   justify-content:space-evenly;
@@ -134,7 +134,7 @@ const HeadGrid = styled.div`
   }
 `;
 
- const DropdownContent = styled.div`
+const DropdownContent = styled.div`
   font-size:.75em;
   color:white;
   visibility: hidden;
@@ -193,7 +193,7 @@ const HeadGrid = styled.div`
   }
 `;
 
- const HamburgerIcon = styled.div`
+const HamburgerIcon = styled.div`
   display:grid;
   grid-template-columns:1fr 1fr;
   grid-template-rows:100%;
@@ -275,7 +275,7 @@ class TopHeader extends React.Component {
     left: '30%',
         }}
         />
-        </div>
+                              </div>
         </HamburgerIcon>
         <HamburgerContent>
           <Contact>
@@ -286,23 +286,23 @@ class TopHeader extends React.Component {
             </PayBillsButton>
           </Contact>
           <Nav>
-            <li className="aboutDrop"><Link to='/About'>About</Link></li>
+            <li className="aboutDrop"><Link to="/About">About</Link></li>
             <DropdownContent className="aboutContent">
               <ul>
-                <li><Link to='/About#Who'>Who We Are</Link></li>
-                <li><Link to='/About#Why'>Why DDI</Link></li>
-                <li><Link to='/About#Equipt'>Equipment Financed</Link></li>
-                <li><Link to='/About#Team'>Meet The Team</Link></li>
+                <li><Link to="/About">Who We Are</Link></li>
+                <li><Link to="/About#Why">Why DDI</Link></li>
+                <li><Link to="/About#Equipt">Equipment Financed</Link></li>
+                <li><Link to="/About#Team">Meet The Team</Link></li>
               </ul>
             </DropdownContent>
             <li className="leasingDrop">Leasing Solutions</li>
             <DropdownContent className="leasingContent">
               <ul>
-                <li><Link to='/Customers'>Client Offerings</Link></li>
-                <li><Link to='/Vendors'>Vendor Programs</Link></li>
+                <li><Link to="/Customers">Client Offerings</Link></li>
+                <li><Link to="/Vendors">Vendor Programs</Link></li>
               </ul>
             </DropdownContent>
-            <li><Link to='/Contact'>Contact</Link></li>
+            <li><Link to="/Contact">Contact</Link></li>
           </Nav>
         </HamburgerContent>
       </HeadGrid>
