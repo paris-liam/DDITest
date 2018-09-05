@@ -1,14 +1,14 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
-
+import styled from 'styled-components'
 import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, Offerings } from '../style/style-index';
 import { gatsbyImgStyle } from '../style/style';
 
 const CustGrid = IndexGrid.extend`
-  grid-template-rows: 70 auto;
+  grid-template-rows: 40vh auto;
 `;
-const CustBody = FocusedBody.extend`
+const CustBody = styled.div`
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto;
 `;

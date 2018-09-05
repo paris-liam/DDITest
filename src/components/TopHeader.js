@@ -17,13 +17,14 @@ const HeadGrid = styled.div`
   grid-template-rows:auto;
   grid-template-columns: 2fr 1fr 3fr;
   grid-template-areas: 'headImg . hamburgercontent';
-  margin: 3vh .5vh .25vh .5vh;
+  margin: 1.5em 2em .5em 4em;
   /*phone*/
   @media screen and (max-width: 1025px){
     grid-template-rows:10vh;
     grid-template-columns: 4fr 2fr;
     grid-template-areas: 'headImg hamburgericon';
     margin-top:2vh;
+    margin-left: 2em;
   }
   @media screen and (max-width: 1025px) and (orientation: landscape){
     grid-template-rows:auto;
@@ -41,7 +42,7 @@ const HamburgerContent = styled.div`
   grid-template-rows:1fr 2fr;
   grid-row-gap:3vh;
   grid-area:hamburgercontent;
-  grid-template-areas: '. contact' 'nav nav';
+  grid-template-areas: '. contact' '. nav';
   /*phone*/
   @media screen and (max-width: 1025px){
     display:none;
@@ -50,6 +51,7 @@ const HamburgerContent = styled.div`
 
 const Contact = styled.div`
   font-size:.75em;
+
   @media screen and (max-width:1200px){
     font-size:.55em;
   }
@@ -63,6 +65,7 @@ const Contact = styled.div`
     }
     p{
       display:inline;
+      font-weight:400 !important;
     }
   }
 `;
@@ -145,7 +148,7 @@ const DropdownContent = styled.div`
   background-color:${colorsAndFont.grey};
   border-radius:.5em;
   &.aboutContent{
-    left: 10%;
+    left: 0%;
     top: 100%;
   }
   &.leasingContent{

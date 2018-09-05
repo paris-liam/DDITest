@@ -6,27 +6,38 @@ import { CoverHold, CoverText } from '../style/style-index';
 import { gatsbyImgStyle, colorsAndFont } from '../style/style';
 
 const VendorGrid = styled.div`
-  grid-template-rows: 50vh auto;
+  grid-template-rows: 35vh auto;
   display:grid;
   grid-template-columns: auto;
   color:white;
-  height:100%;
 `;
 const VendorSlide = styled.div`
   background-color:${colorsAndFont.blue};
   height:auto;
+  display:grid;
 `;
 const VendorBody = styled.div`
   display:grid;
   grid-template-columns: 3fr 2fr;
+  grid-column-gap:5vw;
   grid-template-rows: auto;
   color:white;
   padding: 2vh 1vh;
-  width:100%;
-  height:100%;
+  margin: 2vh 3vw 0 1vw;
   @media screen and (max-width:1025px){
     grid-template-columns: auto;
     grid-template-rows: auto auto;
+  }
+`;
+const Following = styled.div`
+  p{
+    padding-bottom:1em;
+  }
+  ul{
+    li{
+      padding-bottom:2em;
+      line-height:1.5;
+    }
   }
 `;
 const Vendors = data => (
@@ -48,14 +59,14 @@ const Vendors = data => (
     </CoverHold>
     <VendorSlide>
       <VendorBody>
-        <div>
+        <Following>
           <p> We Offer the following:</p>
           <ul className="fa-ul">
-            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span> Flexibility – DDI Capital will help you structure deals of any size and with multiple suppliers. We are a truly independent lessor and we will make your offering more attractive by structuring either operating and / or capital leases for your client.</li>
-            <li><span className="fa-li"><i className="fas fa-check-circle" /></span>Creativity – In today’s complex IT environment, not all deals are easy to close. DDI’s extensive experience, aggressive funding resources and creative leasing professionals can help you overcome the toughest challenges. We’ll get the deal done.</li>
-            <li><span className="fa-li"><i className="fas fa-check-circle" /></span>Convenience – Our ability to bundle hard and soft costs together into one low monthly payment not only simplifies the acquisition process for your customers – it makes doing business more affordable.</li>
+            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span><strong>Flexibility</strong> – DDI Capital will help you structure deals of any size and with multiple suppliers. We are a truly independent lessor and we will make your offering more attractive by structuring either operating and / or capital leases for your client.</li>
+            <li><span className="fa-li"><i className="fas fa-check-circle" /></span><strong>Creativity </strong>– In today’s complex IT environment, not all deals are easy to close. DDI’s extensive experience, aggressive funding resources and creative leasing professionals can help you overcome the toughest challenges. We’ll get the deal done.</li>
+            <li><span className="fa-li"><i className="fas fa-check-circle" /></span><strong>Convenience</strong> – Our ability to bundle hard and soft costs together into one low monthly payment not only simplifies the acquisition process for your customers – it makes doing business more affordable.</li>
           </ul>
-        </div>
+        </Following>
         <div style={{ position: 'relative' }}>
           <IMG sizes={data.data.body.sizes} style={gatsbyImgStyle} />
         </div>

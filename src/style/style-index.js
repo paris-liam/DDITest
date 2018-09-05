@@ -4,7 +4,7 @@ import { colorsAndFont } from './style.js';
 /* Index Page Slides */
 export const IndexGrid = styled.div`
   display:grid;
-  grid-template-rows: 70vh auto auto 30vh auto;
+  grid-template-rows: 70vh auto auto 25vh auto;
   grid-template-columns: auto;
   color:white;
 `;
@@ -108,7 +108,8 @@ export const FocusedSlide = styled.div`
   display:grid;
   grid-template-columns: auto;
   height:auto;
-  grid-template-rows: 2fr 8fr;
+  grid-template-rows: 2fr auto;
+  padding-bottom: 5vh;
   text-align:center;
   margin: 3vh 6vw;
 `;
@@ -120,7 +121,7 @@ export const FocusedTitle = styled.div`
   p{
     display:flex;
     justify-content:center;
-    margin: 3vh auto 3vh auto
+    margin: 1.5vh auto 1.5vh auto
       width:60%;
       @media screen and (max-width:1025px){
         width:80%;
@@ -136,12 +137,12 @@ export const FocusedBody = styled.div`
   grid-template-columns: auto auto;
   grid-column-gap: 5vh;
   grid-row-gap: 5vh;
-  grid-template-rows: auto auto;
-  padding: 2vh 1vh;
+  grid-template-rows: max-content max-content;
+  padding: 1vh .5vh;
   @media screen and (max-width:1025px){
     display:grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: max-content max-content max-content max-content;
   }
   & > div{
     display:flex;
@@ -173,7 +174,7 @@ export const SolutionsSlide = styled.div`
       text-align:center;
       width:95%;
       margin: 0 auto;
-      font-size:2.3em;
+      font-size:1.75em;
     }
     & > div{
       justify-self:center;
@@ -213,11 +214,11 @@ export const NefaSlide = CoverHold.extend`
     position:absolute;
     text-align:center;
     line-height:1;
-    font-size:2.25em;
+    font-size:2em;
     span{
       font-family:'Ubuntu Mono';
       display:block;
-      font-size:3.25em;
+      font-size:3em;
     }
   }
 `;
@@ -252,13 +253,13 @@ export const Offerings = styled.div`
   border-right: 1px solid white;
   margin-left: 10%;
   h1{
-    font-size:2.25em;
+    font-size:1.75em;
     margin: auto 0;
     text-transform: uppercase;
   }
   ul{
     margin-left: 2em;
-    font-size:1.1em;
+    font-size:1em;
     li{
       padding-bottom: .5vh;
     }
@@ -269,6 +270,9 @@ export const Offerings = styled.div`
     }
     ul{
       font-size:.75em;
+      li{
+      padding-bottom: 1vh;
+      }
     }
   }
 
@@ -283,7 +287,7 @@ export const Interested = styled.div`
   height: 80%;
   text-transform:uppercase;
   h1{
-    font-size:2.25em;
+    font-size:1.75em;
   }
   div{
     display:grid;
@@ -293,11 +297,12 @@ export const Interested = styled.div`
     }
     button{
       background-color: ${colorsAndFont.grey};
-      font-size:1.25em;
+      font-size:1em;
       color:white;
       outline:none;
       border:none;
-      padding: 2.5vh;
+      padding: 3vh;
+      border-radius: 3em;
     }
     button:hover{
       background-color:${colorsAndFont.magenta};
@@ -309,8 +314,8 @@ export const Interested = styled.div`
       font-size: 1.75em;
     }
     div > a > button{
-        padding: .75vh;
-        font-size: 1em;
+        padding: 1vh;
+        font-size: 1.25em;
     }
       }
 `;
