@@ -17,7 +17,7 @@ const HeadGrid = styled.div`
   grid-template-rows:auto;
   grid-template-columns: 2fr 1fr 3fr;
   grid-template-areas: 'headImg . hamburgercontent';
-  margin: 1.5em 2em .5em 4em;
+  margin: 1.5em 2em .5em 8em;
   /*phone*/
   @media screen and (max-width: 1025px){
     grid-template-rows:10vh;
@@ -33,7 +33,7 @@ const HeadGrid = styled.div`
 const Logo = styled(Link)`
   grid-area: headImg;
   align-self:center;
-  width:75%;
+  width:90%;
 `;
 const HamburgerContent = styled.div`
   /*desktop*/
