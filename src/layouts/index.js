@@ -64,8 +64,8 @@ const Layout = ({ data, children }) => (
           <SidebarItem>
             <h3>Leasing Solutions </h3>
             <SidebarDropdown>
-              <li><Link to="/Customers">Client Offerings</Link></li>
-              <li><Link to="/Vendors">Vendor Programs</Link></li>
+              <li><Link to="/Customers" onClick={toggleNav}>Client Offerings</Link></li>
+              <li><Link to="/Vendors" onClick={toggleNav}>Vendor Programs</Link></li>
             </SidebarDropdown>
           </SidebarItem>
           <SidebarContact>

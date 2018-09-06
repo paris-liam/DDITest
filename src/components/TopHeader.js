@@ -144,7 +144,7 @@ const DropdownContent = styled.div`
   transition:visibility 100ms linear;
   position: absolute;
   background-color: #f9f9f9;
-  z-index: 1;
+  z-index: 100;
   background-color:${colorsAndFont.grey};
   border-radius:.5em;
   &.aboutContent{

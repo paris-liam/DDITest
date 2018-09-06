@@ -11,8 +11,6 @@ export const colorsAndFont = {
   barWidth: '2rem',
   barHeight: '.25rem',
   barSpacing: '.75rem',
-  tabletBreak: '@media screen and (max-width:1025px)',
-  phoneBreak: '@media screen and (max-width:600px)',
 };
 
 export const gatsbyImgStyle = {
@@ -78,7 +76,6 @@ export const SidebarContact = styled.ul`
     }
     .sidebill:hover{
       background-color:${colorsAndFont.magenta};
-
     }
 
 `;

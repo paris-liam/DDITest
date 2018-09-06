@@ -6,7 +6,7 @@ import { CoverHold, CoverText } from '../style/style-index';
 import { gatsbyImgStyle, colorsAndFont } from '../style/style';
 
 const VendorGrid = styled.div`
-  grid-template-rows: 35vh auto;
+  grid-template-rows: 45vh auto;
   display:grid;
   grid-template-columns: auto;
   color:white;
@@ -26,17 +26,20 @@ const VendorBody = styled.div`
   margin: 2vh 3vw 0 1vw;
   @media screen and (max-width:1025px){
     grid-template-columns: auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto 30vh;
+    margin:0;
   }
 `;
 const Following = styled.div`
   p{
     padding-bottom:1em;
+    font-weight:400;
   }
   ul{
     li{
       padding-bottom:2em;
       line-height:1.5;
+      font-weight:300;
     }
   }
 `;
@@ -85,7 +88,7 @@ export const query = graphql`
       }
     }
     body: imageSharp(id:{regex: "/bodyVendor.jpg/"}){
-      sizes(maxWidth:700){
+      sizes(maxWidth:900){
         ... GatsbyImageSharpSizes
       }
     }

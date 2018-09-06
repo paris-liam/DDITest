@@ -3,15 +3,39 @@ import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
 import styled from 'styled-components'
 import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, Offerings } from '../style/style-index';
-import { gatsbyImgStyle } from '../style/style';
+import { colorsAndFont,gatsbyImgStyle } from '../style/style';
 
 const CustGrid = IndexGrid.extend`
   grid-template-rows: 40vh auto;
 `;
+const CustCoverText = CoverText.extend`
+  grid-template-rows:auto;
+  h1{
+    width:100%;
+  }
+`
 const CustBody = styled.div`
+  display:grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto;
+  grid-template-areas: 'reqs custOff';
 `;
+
+const Requirements = styled.div`
+  grid-area: reqs;
+`
+const CustOff = Offerings.extend`
+  grid-area: custOff;
+`
+const CustSlide = FocusedSlide.extend`
+  background-color:${colorsAndFont.blue};
+  color:white;
+  padding:0;
+  margin: 0;
+`
+const CustTitle = FocusedTitle.extend`
+ width:80%;
+`
 const Customers = data => (
   <CustGrid>
     <CoverHold>
@@ -21,17 +45,17 @@ const Customers = data => (
         position="absolute"
         style={gatsbyImgStyle}
       />
-      <CoverText>
+      <CustCoverText>
         <h1>Focused on You – Where you work</h1>
-      </CoverText>
+      </CustCoverText>
     </CoverHold>
-    <FocusedSlide>
-      <FocusedTitle>
+    <CustSlide>
+      <CustTitle>
         <h2>DDI will work closely with you to customize a financing plan that best suits your budget, cash flow and technology requirements.</h2>
         <p>Our professionals know more than leasing – they are familiar with the technology that you use – and they are willing to spend the time with you to put it to maximum advantage.</p>
-      </FocusedTitle>
+      </CustTitle>
       <CustBody>
-        <div>
+        <Requirements>
           <ul className="fa-ul">
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Software Only Financing</li>
             <ul>
@@ -52,8 +76,8 @@ const Customers = data => (
               <li>End of Lease Options – Purchase, Renew or Return Equipment</li>
             </ul>
           </ul>
-        </div>
-        <Offerings>
+        </Requirements>
+        <CustOff>
           <h1>Offerings Include:</h1>
           <ul className="fa-ul">
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Software Only Financing</li>
@@ -65,9 +89,9 @@ const Customers = data => (
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Network Integration and Consulting</li>
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Project Management</li>
           </ul>
-        </Offerings>
+        </CustOff>
       </CustBody>
-    </FocusedSlide>
+    </CustSlide>
   </CustGrid>
 );
 export default Customers;
