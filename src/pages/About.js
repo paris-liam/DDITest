@@ -4,6 +4,10 @@ import IMG from 'gatsby-image';
 import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide, Offerings, Interested } from '../style/style-index';
 import { gatsbyImgStyle } from '../style/style';
 
+const AboutGrid = IndexGrid.extend`
+ grid-row-templates: 40vh auto auto auto auto;
+`
+
 const About = data => (
   <IndexGrid>
     <CoverHold>
@@ -11,7 +15,7 @@ const About = data => (
 sizes={data.data.cover.sizes}
 outerWrapperClassName="coverOuter"
         position="absolute"
-        style={gatsbyImgStyle} 
+        style={gatsbyImgStyle}
       />
       <CoverText>
         <h1>

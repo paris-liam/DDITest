@@ -10,6 +10,7 @@ const toggleNav = function () {
   const ham = document.querySelector('.hamburger-menu');
   ham.classList.toggle('animate');
 };
+
 const HeadGrid = styled.div`
   color: ${colorsAndFont.blue};
   display:grid;
@@ -17,7 +18,7 @@ const HeadGrid = styled.div`
   grid-template-rows:auto;
   grid-template-columns: 2fr 1fr 3fr;
   grid-template-areas: 'headImg . hamburgercontent';
-  margin: 1.5em 2em .5em 8em;
+  margin: 1.5em 2em .5em 4em;
   /*phone*/
   @media screen and (max-width: 1025px){
     grid-template-rows:10vh;
@@ -148,12 +149,12 @@ const DropdownContent = styled.div`
   background-color:${colorsAndFont.grey};
   border-radius:.5em;
   &.aboutContent{
-    left: 0%;
     top: 100%;
+    left:-4%;
   }
   &.leasingContent{
-    left:40%;
     top:100%;
+    left:35%;
   }
   &:before {
       content:"";

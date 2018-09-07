@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colorsAndFont } from './style.js';
+import { colorsAndFont } from './style';
 
 /* Index Page Slides */
 export const IndexGrid = styled.div`
@@ -121,8 +121,8 @@ export const FocusedTitle = styled.div`
   p{
     display:flex;
     justify-content:center;
-    margin: 1.5vh auto 1.5vh auto
-      width:60%;
+    margin: 1.5vh auto 1.5vh auto;
+    width:60%;
       @media screen and (max-width:1025px){
         width:80%;
       }
@@ -202,7 +202,7 @@ export const SolBody = styled.div`
   font-size: 1em;
 `;
 export const SolIcon = styled.div`
-  font-size:2.25em
+  font-size:2.25em;
 
 `;
 export const NefaSlide = CoverHold.extend`
@@ -283,8 +283,7 @@ export const Interested = styled.div`
   text-align:center;
   display:grid;
   grid-template-columns: auto;
-  grid-template-rows: 2fr 3fr 3fr;
-  height: 80%;
+  grid-template-rows: auto auto auto;
   text-transform:uppercase;
   h1{
     font-size:1.75em;
@@ -301,7 +300,7 @@ export const Interested = styled.div`
       color:white;
       outline:none;
       border:none;
-      padding: 3vh;
+      padding: 1em;
       border-radius: 3em;
     }
     button:hover{

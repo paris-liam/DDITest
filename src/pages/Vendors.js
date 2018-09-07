@@ -11,6 +11,9 @@ const VendorGrid = styled.div`
   grid-template-columns: auto;
   color:white;
 `;
+const VendorCoverText = CoverText.extend`
+  grid-template-rows: auto auto;
+`
 const VendorSlide = styled.div`
   background-color:${colorsAndFont.blue};
   height:auto;
@@ -31,10 +34,6 @@ const VendorBody = styled.div`
   }
 `;
 const Following = styled.div`
-  p{
-    padding-bottom:1em;
-    font-weight:400;
-  }
   ul{
     li{
       padding-bottom:2em;
@@ -52,18 +51,17 @@ const Vendors = data => (
         position="absolute"
         style={gatsbyImgStyle}
       />
-      <CoverText>
+      <VendorCoverText>
         <h1>Getting it Done – Simply</h1>
         <p>Team with DDI and gain a competitive advantage that results
         in increased revenue and growing market share.
         Our objective is to create a relationship of trust between you, your client and the DDI team.
         </p>
-      </CoverText>
+      </VendorCoverText>
     </CoverHold>
     <VendorSlide>
       <VendorBody>
         <Following>
-          <p> We Offer the following:</p>
           <ul className="fa-ul">
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span><strong>Flexibility</strong> – DDI Capital will help you structure deals of any size and with multiple suppliers. We are a truly independent lessor and we will make your offering more attractive by structuring either operating and / or capital leases for your client.</li>
             <li><span className="fa-li"><i className="fas fa-check-circle" /></span><strong>Creativity </strong>– In today’s complex IT environment, not all deals are easy to close. DDI’s extensive experience, aggressive funding resources and creative leasing professionals can help you overcome the toughest challenges. We’ll get the deal done.</li>

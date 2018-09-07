@@ -16,13 +16,22 @@ const CustCoverText = CoverText.extend`
 `
 const CustBody = styled.div`
   display:grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: 'reqs custOff';
+  text-align:left;
+
 `;
 
 const Requirements = styled.div`
   grid-area: reqs;
+  ul > ul{
+    list-style:none;
+    margin-left:2vh;
+    li{
+      padding-bottom:.25em;
+    }
+  }
 `
 const CustOff = Offerings.extend`
   grid-area: custOff;
@@ -33,8 +42,7 @@ const CustSlide = FocusedSlide.extend`
   padding:0;
   margin: 0;
 `
-const CustTitle = FocusedTitle.extend`
- width:80%;
+const CustTitle = styled.div`
 `
 const Customers = data => (
   <CustGrid>
