@@ -6,10 +6,10 @@ import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, 
 import { colorsAndFont,gatsbyImgStyle } from '../style/style';
 
 const CustGrid = IndexGrid.extend`
-  grid-template-rows: 40vh auto;
+  grid-template-rows: 45vh auto;
 `;
 const CustCoverText = CoverText.extend`
-  grid-template-rows:auto;
+  grid-template-rows: auto auto;
   h1{
     width:100%;
   }
@@ -20,7 +20,14 @@ const CustBody = styled.div`
   grid-template-rows: auto;
   grid-template-areas: 'reqs custOff';
   text-align:left;
-
+  padding-bottom:1vh;
+  width:90%;
+  margin: 0 auto;
+  @media screen and (max-width:1024px){
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'reqs' 'custOff';
+  }
 `;
 
 const Requirements = styled.div`
@@ -34,15 +41,36 @@ const Requirements = styled.div`
   }
 `
 const CustOff = Offerings.extend`
+  margin: 0 auto;
+  @media screen and (max-width:1024px){
+    padding-top:4vh;
+    margin:0 0 0 3vw;
+  }
   grid-area: custOff;
+  font-size:1.1em;
+  grid-template-rows: min-content auto;
+  h1{
+    margin-top:0;
+    margin-bottom: 1vh;
+  }
+  li{
+    margin-bottom:1.5vh;
+  }
+  border:none;
 `
 const CustSlide = FocusedSlide.extend`
   background-color:${colorsAndFont.blue};
   color:white;
-  padding:0;
   margin: 0;
 `
 const CustTitle = styled.div`
+  padding-top:3vh;
+  padding-bottom:3vh;
+  text-align:center;
+  *{
+    width:80%;
+    margin: 1vh auto 0 auto;
+  }
 `
 const Customers = data => (
   <CustGrid>
@@ -55,12 +83,12 @@ const Customers = data => (
       />
       <CustCoverText>
         <h1>Focused on You – Where you work</h1>
+        <p>Our professionals know more than leasing – they are familiar with the technology that you use – and they are willing to spend the time with you to put it to maximum advantage.</p>
       </CustCoverText>
     </CoverHold>
     <CustSlide>
       <CustTitle>
-        <h2>DDI will work closely with you to customize a financing plan that best suits your budget, cash flow and technology requirements.</h2>
-        <p>Our professionals know more than leasing – they are familiar with the technology that you use – and they are willing to spend the time with you to put it to maximum advantage.</p>
+        <h1>DDI will work closely with you to customize a financing plan that best suits your budget, cash flow and technology requirements.</h1>
       </CustTitle>
       <CustBody>
         <Requirements>
