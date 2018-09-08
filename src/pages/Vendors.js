@@ -13,7 +13,7 @@ const VendorGrid = styled.div`
 `;
 const VendorCoverText = CoverText.extend`
   grid-template-rows: auto auto;
-`
+`;
 const VendorSlide = styled.div`
   background-color:${colorsAndFont.blue};
   height:auto;
@@ -27,10 +27,18 @@ const VendorBody = styled.div`
   color:white;
   padding: 2vh 1vh;
   margin: 2vh 3vw 0 1vw;
+  .handshakeImage{
+      margin: 0 auto;
+      width:100%;
+    }
   @media screen and (max-width:1025px){
     grid-template-columns: auto;
     grid-template-rows: auto 30vh;
     margin:0;
+    .handshakeImage{
+      margin: 0 auto;
+      width:70%;
+    }
   }
 `;
 const Following = styled.div`
@@ -68,7 +76,7 @@ const Vendors = data => (
             <li><span className="fa-li"><i className="fas fa-check-circle" /></span><strong>Convenience</strong> – Our ability to bundle hard and soft costs together into one low monthly payment not only simplifies the acquisition process for your customers – it makes doing business more affordable.</li>
           </ul>
         </Following>
-        <div style={{ position: 'relative' }}>
+        <div className="handshakeImage" style={{ position: 'relative' }}>
           <IMG sizes={data.data.body.sizes} style={gatsbyImgStyle} />
         </div>
       </VendorBody>

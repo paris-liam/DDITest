@@ -68,6 +68,9 @@ const Layout = ({ data, children }) => (
               <li><Link to="/Vendors" onClick={toggleNav}>Vendor Programs</Link></li>
             </SidebarDropdown>
           </SidebarItem>
+          <SidebarItem>
+            <Link to="/Contact" onClick={toggleNav}><h3>Contact</h3></Link>
+          </SidebarItem>
           <SidebarContact>
             <li className="sideenv"><i className="fa fa-envelope" />&nbsp;test@ddi.com</li>
             <li className="sidephone"><i className="fa fa-phone-square" />  (908)-781-9300</li>
