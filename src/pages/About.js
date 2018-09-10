@@ -1,39 +1,11 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
-import { IndexGrid, CoverHold, CoverText, Interested } from '../style/style-index';
-import { gatsbyImgStyle, colorsAndFont } from '../style/style';
-import styled from 'styled-components';
+import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, EquiptmentFinanced, MeetTheTeam } from '../style/style-about';
 
-const AboutGrid = styled.div`
- display:grid;
- grid-template-rows: 45vh auto auto auto auto auto;
- grid-template-columns:auto;
- background-color: ${colorsAndFont.blue};
- color:white;
- grid-template-areas: 'AboutCover' 'Who' 'Why' 'Equipt' 'Meet' 'Interested';
-`;
-const AboutCoverText = CoverText.extend`
-  grid-template-rows: auto auto;
-`;
-const WhoWeAre = styled.div`
-  grid-area:'Who';
-`;
-const WhyDDI = styled.div`
-  grid-area:'Why';
-  color:${colorsAndFont.blue};
-  background-color:white;
-`;
-const EquiptmentFinanced = styled.div`
-  grid-area:'Equipt';
-`;
-const MeetTheTeam = styled.div`
-  grid-area:'Meet';
-  background-color: ${colorsAndFont.grey};
-`;
 const About = data => (
   <AboutGrid>
-    <CoverHold style={{gridArea:'AboutCover'}}>
+    <CoverHold style={{ gridArea: 'AboutCover' }}>
       <IMG
         sizes={data.data.cover.sizes}
         outerWrapperClassName="coverOuter"
@@ -70,11 +42,11 @@ const About = data => (
     </WhoWeAre>
     <WhyDDI id="Why">
       <h1>Why</h1>
-        <div>Experience: DDI has been an innovator in the leasing industry for over 25 years. Our professionals are experts in technology and have extensive relationships to help you source the right solution for your needs.</div>
-        <div>Rates: DDI consistently delivers the lowest rates in the industry. Our payment solutions are affordable, flexible and easy to manage.</div>
-        <div>Speed and Convenience: We turn around proposals, approvals and lease documents in hours, not days. From start to finish, no leasing firm is more efficient than DDI.</div>
-        <div>Creativity: Every end-user is unique: your leasing solution should be too. DDI works side by side with our partners to design the most effective and efficient financing plans to fit your business model and help your company grow.</div>
-        <div>Adaptability: From the design of your financing solution, to mid-lease options to end-of-term flexibility, DDI works with you to adapt your financing program as your budget, cash flow and technology requirements change over time.</div>
+      <div>Experience: DDI has been an innovator in the leasing industry for over 25 years. Our professionals are experts in technology and have extensive relationships to help you source the right solution for your needs.</div>
+      <div>Rates: DDI consistently delivers the lowest rates in the industry. Our payment solutions are affordable, flexible and easy to manage.</div>
+      <div>Speed and Convenience: We turn around proposals, approvals and lease documents in hours, not days. From start to finish, no leasing firm is more efficient than DDI.</div>
+      <div>Creativity: Every end-user is unique: your leasing solution should be too. DDI works side by side with our partners to design the most effective and efficient financing plans to fit your business model and help your company grow.</div>
+      <div>Adaptability: From the design of your financing solution, to mid-lease options to end-of-term flexibility, DDI works with you to adapt your financing program as your budget, cash flow and technology requirements change over time.</div>
     </WhyDDI>
     <EquiptmentFinanced id="Equipt">
       <div>
@@ -90,7 +62,7 @@ const About = data => (
           outerWrapperClassName="coverOuter"
           position="absolute"
           style={gatsbyImgStyle}
-          />
+        />
         <CoverText>
           <ul>
             <li>Storage Products</li>
@@ -123,13 +95,13 @@ const About = data => (
       <div>
         <h1>MEET THE TEAM</h1>
         <div>We deliver high-integrity, convenience-based financing solutions our technology partners can provide to their customers. Here’s the people that make this happen.</div>
-        <div><i className='fa fa-angle-down' /></div>
+        <div><i className="fa fa-angle-down" /></div>
       </div>
     </MeetTheTeam>
-    <Interested style={{gridArea:'Interested'}}>
-        <h1>Interested?<br /> Checkout Specific Information for:</h1>
-        <div><Link to="/Vendors"><button>Vendors</button></Link></div>
-        <div><Link to="/Customers"><button> Customers</button></Link></div>
+    <Interested style={{ gridArea: 'Interested' }}>
+      <h1>Interested?<br /> Checkout Specific Information for:</h1>
+      <div><Link to="/Vendors"><button>Vendors</button></Link></div>
+      <div><Link to="/Customers"><button> Customers</button></Link></div>
     </Interested>
   </AboutGrid>
 );
