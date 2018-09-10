@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, Offerings } from '../style/style-index';
-import { colorsAndFont,gatsbyImgStyle } from '../style/style';
+import { colorsAndFont, gatsbyImgStyle } from '../style/style';
 
 const CustGrid = IndexGrid.extend`
   grid-template-rows: 45vh auto;
@@ -13,7 +13,7 @@ const CustCoverText = CoverText.extend`
   h1{
     width:100%;
   }
-`
+`;
 const CustBody = styled.div`
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -35,11 +35,13 @@ const Requirements = styled.div`
   ul > ul{
     list-style:none;
     margin-left:2vh;
+    font-weight:200;
+    margin-bottom:2vh;
     li{
       padding-bottom:.25em;
     }
   }
-`
+`;
 const CustOff = Offerings.extend`
   margin: 0 auto;
   @media screen and (max-width:1024px){
@@ -57,12 +59,12 @@ const CustOff = Offerings.extend`
     margin-bottom:1.5vh;
   }
   border:none;
-`
+`;
 const CustSlide = FocusedSlide.extend`
   background-color:${colorsAndFont.blue};
   color:white;
   margin: 0;
-`
+`;
 const CustTitle = styled.div`
   padding-top:3vh;
   padding-bottom:3vh;
@@ -71,7 +73,7 @@ const CustTitle = styled.div`
     width:80%;
     margin: 1vh auto 0 auto;
   }
-`
+`;
 const Customers = data => (
   <CustGrid>
     <CoverHold>
