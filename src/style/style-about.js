@@ -79,15 +79,21 @@ export const WhyBody = styled.div`
 export const EquiptmentFinanced = styled.div`
   grid-area:'Equipt';
 `;
-export const EquiptTitle = styled.div``;
+export const EquiptTitle = styled.div`
+  padding: 2.5vh 5vw;
+  h1{
+    margin-bottom:2vh;
+  }
+`;
 export const EquiptList = CoverHold.extend`
-  height:60vh;
+  height:50vh;
 `;
 export const EquiptText = CoverText.extend`
   grid-template-rows: 50vh;
   grid-template-columns: 1fr 1fr 1fr;
   grid-row-gap: 2vh;
-  grid-column-gap: 5vw;
+  grid-column-gap: 3vw;
+  margin: 0 auto;
   ul{
     display:flex;
     flex-direction:column;
@@ -100,5 +106,19 @@ export const EquiptText = CoverText.extend`
 export const MeetTheTeam = styled.div`
   grid-area:'Meet';
   background-color: ${colorsAndFont.grey};
+  padding: 2.5vh 2vw;
+`;
+
+export const MeetTheTeamTitle = styled.div`
+ display:flex;
+ flex-direction:row;
+ i{
+   font-size:2.75em;
+   margin:auto 0;
+ }
+ text-align:center;
+ p{
+   margin: auto auto;
+ }
 `;
 

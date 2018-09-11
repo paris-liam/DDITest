@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
-import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, EquiptmentFinanced, EquiptTitle, EquiptList, EquiptText, MeetTheTeam, WhoTitle, WhoLetter, WhoList } from '../style/style-about';
+import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, EquiptmentFinanced, EquiptTitle, EquiptList, EquiptText, MeetTheTeam, WhoTitle, WhoLetter, WhoList, MeetTheTeamTitle } from '../style/style-about';
 import { IndexGrid, CoverHold, CoverText, Interested } from '../style/style-index';
 import { gatsbyImgStyle } from '../style/style';
 
@@ -102,7 +102,7 @@ display: 'inline',
           <EquiptTitle>
             <h1>EQUIPMENT FINANCED</h1>
             <p>
-              Because we are aligned with all the major hardware manufacturers and their partners, DDI is able to assist you with a wide range of technology options.
+            &emsp;Because we are aligned with all the major hardware manufacturers and their partners, DDI is able to assist you with a wide range of technology options.
               Select any vendor and we can arrange the leasing program that compliments your technology solution. We also offer specific technical expertise and consultative guidance on a variety of technology alternatives.
             </p>
           </EquiptTitle>
@@ -141,11 +141,11 @@ display: 'inline',
           </EquiptList>
         </EquiptmentFinanced>
         <MeetTheTeam id="Team">
-          <div>
+          <MeetTheTeamTitle>
             <h1>MEET THE TEAM</h1>
-            <div>We deliver high-integrity, convenience-based financing solutions our technology partners can provide to their customers. Here’s the people that make this happen.</div>
-            <div><i className="fa fa-angle-down" /></div>
-          </div>
+            <p>We deliver high-integrity, convenience-based financing solutions our technology partners can provide to their customers. Here’s the people that make this happen.</p>
+            <i className="fa fa-angle-right" />
+          </MeetTheTeamTitle>
         </MeetTheTeam>
         <Interested style={{ gridArea: 'Interested' }}>
           <h1>Interested?<br /> Checkout Specific Information for:</h1>
