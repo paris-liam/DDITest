@@ -155,7 +155,6 @@ export const FocusedBody = styled.div`
       margin-right: 3vw;
     }
     p{
-      padding-top:5vh;
       @media screen and (max-width:1025px){
         padding-top:0;
       }
@@ -254,7 +253,7 @@ export const Offerings = styled.div`
   margin-left: 10%;
   h1{
     font-size:1.75em;
-    margin: auto 0;
+    margin: auto 0 2.5vh 0;
     text-transform: uppercase;
   }
   ul{

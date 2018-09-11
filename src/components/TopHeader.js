@@ -35,6 +35,7 @@ const Logo = styled(Link)`
   grid-area: headImg;
   align-self:center;
   width:90%;
+  padding-top:5px;
 `;
 const HamburgerContent = styled.div`
   /*desktop*/
@@ -279,7 +280,7 @@ class TopHeader extends React.Component {
     left: '30%',
         }}
         />
-                              </div>
+        </div>
         </HamburgerIcon>
         <HamburgerContent>
           <Contact>

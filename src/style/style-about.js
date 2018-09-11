@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { CoverText, CoverHold } from './style-index';
+import { CoverText, CoverHold, FocusedBody } from './style-index';
 import { colorsAndFont } from './style';
 
 export const AboutGrid = styled.div`
@@ -66,14 +66,22 @@ export const WhyDDI = styled.div`
 `;
 export const WhyTitle = styled.div`
 `;
-export const WhyBody = styled.div`
+export const WhyBody = FocusedBody.extend`
   margin-top:2vh;
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: 'experience rates' 'speed creative' 'adapt adapt';
-  grid-row-gap:4vh;
-  grid-column-gap: 4vw;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: 'experience' 'rates' 'speed' 'creative' 'adapt';
+  @media screen and (min-width:1024px){
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 'experience rates' 'speed creative' 'adapt adapt';
+    /* grid-row-gap:4vh;
+    grid-column-gap: 4vw;*/
+  }
+  strong{
+    margin:0;
+  }
 `;
 
 export const EquiptmentFinanced = styled.div`
@@ -84,13 +92,16 @@ export const EquiptTitle = styled.div`
   h1{
     margin-bottom:2vh;
   }
+  grid-area: title;
 `;
 export const EquiptList = CoverHold.extend`
-  height:50vh;
+  height:70vh;
+  grid-area: list;
 `;
 export const EquiptText = CoverText.extend`
-  grid-template-rows: 50vh;
+  grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 'title title title' 'list list list';
   grid-row-gap: 2vh;
   grid-column-gap: 3vw;
   margin: 0 auto;
@@ -100,6 +111,7 @@ export const EquiptText = CoverText.extend`
     justify-content:space-evenly;
     text-align:left;
     list-style:none;
+    width:auto;
   }
 `;
 

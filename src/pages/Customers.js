@@ -34,11 +34,10 @@ const Requirements = styled.div`
   grid-area: reqs;
   ul > ul{
     list-style:none;
-    margin-left:2vh;
     font-weight:200;
-    margin-bottom:2vh;
+    margin:2vh 2vh 2vh 0;
     li{
-      padding-bottom:.25em;
+      padding-bottom:.5em;
     }
   }
 `;
@@ -53,7 +52,7 @@ const CustOff = Offerings.extend`
   grid-template-rows: min-content auto;
   h1{
     margin-top:0;
-    margin-bottom: 1vh;
+    margin-bottom: 3.5vh;
   }
   li{
     margin-bottom:1.5vh;
@@ -95,32 +94,31 @@ const Customers = data => (
       <CustBody>
         <Requirements>
           <ul className="fa-ul">
-            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Software Only Financing</li>
+            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span> Competitive Lease Rates with Highly Flexible Terms and Conditions</li>
             <ul>
               <li>Multiple Lease Structures – Defer payments, Step Leases, Tech Upgrades</li>
               <li>Mid-Lease Options – Upgrade, Add On, Refinance, Restructure or Swap</li>
               <li>End of Lease Options – Purchase, Renew or Return Equipment</li>
             </ul>
-            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Capital and Operating Leases</li>
+            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Independent Financial Consultant with Industry Expertise</li>
             <ul>
-              <li>Multiple Lease Structures – Defer payments, Step Leases, Tech Upgrades</li>
-              <li>Mid-Lease Options – Upgrade, Add On, Refinance, Restructure or Swap</li>
-              <li>End of Lease Options – Purchase, Renew or Return Equipment</li>
+              <li>Marketing and Consulting During Life of the Lease</li>
+              <li>Aligned with All Major Hardware Manufacturers and Their Partners to Provide a Wide Range of Technology Options</li>
             </ul>
-            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Master Lease Agreements</li>
+            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Proactive – Adaptable – Collaborative</li>
             <ul>
-              <li>Multiple Lease Structures – Defer payments, Step Leases, Tech Upgrades</li>
-              <li>Mid-Lease Options – Upgrade, Add On, Refinance, Restructure or Swap</li>
-              <li>End of Lease Options – Purchase, Renew or Return Equipment</li>
+              <li>Match Terms to Unique Business Requirements</li>
+              <li>Ability to Finance All Technology Needs</li>
+              <li>Account Managers are pragmatic, hands-on and share your operating vision</li>
             </ul>
           </ul>
         </Requirements>
         <CustOff>
           <h1>Offerings Include:</h1>
           <ul className="fa-ul">
-            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Software Only Financing</li>
-            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Capital and Operating Leases</li>
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Master Lease Agreements</li>
+            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Capital and Operating Leases</li>
+            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Software Only Financing</li>
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Lease Lines</li>
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Purchase Leaseback Structures</li>
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Asset Management</li>
