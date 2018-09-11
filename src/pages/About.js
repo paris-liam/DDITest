@@ -61,11 +61,41 @@ class About extends React.Component {
         <WhyDDI id="Why">
           <WhyTitle><h1>Why</h1></WhyTitle>
           <WhyBody>
-            <div style={{ gridArea: 'experience' }}><strong>Experience:</strong> DDI has been an innovator in the leasing industry for over 25 years. Our professionals are experts in technology and have extensive relationships to help you source the right solution for your needs.</div>
-            <div style={{ gridArea: 'rates' }}><strong>Rates:</strong> DDI consistently delivers the lowest rates in the industry. Our payment solutions are affordable, flexible and easy to manage.</div>
-            <div style={{ gridArea: 'speed' }}><strong>Speed and Convenience:</strong> We turn around proposals, approvals and lease documents in hours, not days. From start to finish, no leasing firm is more efficient than DDI.</div>
-            <div style={{ gridArea: 'creative' }}><strong>Creativity:</strong> Every end-user is unique: your leasing solution should be too. DDI works side by side with our partners to design the most effective and efficient financing plans to fit your business model and help your company grow.</div>
-            <div style={{ gridArea: 'adapt', textAlign: 'center' }}><strong>Adaptability:</strong> From the design of your financing solution, to mid-lease options to end-of-term flexibility, DDI works with you to adapt your financing program as your budget, cash flow and technology requirements change over time.</div>
+            <div style={{ gridArea: 'experience' }}><h1 style={{
+ display: 'inline',
+    marginRight: '2vh',
+}}
+            ><i className="fa fa-clock" />
+                                                    </h1><strong>Experience:</strong> DDI has been an innovator in the leasing industry for over 25 years. Our professionals are experts in technology and have extensive relationships to help you source the right solution for your needs.
+            </div>
+            <div style={{ gridArea: 'rates' }}><h1 style={{
+display: 'inline',
+    marginRight: '2vh',
+}}
+            ><i className="fa fa-money-bill-wave" />
+                                               </h1><strong>Rates:</strong> DDI consistently delivers the lowest rates in the industry. Our payment solutions are affordable, flexible and easy to manage.
+            </div>
+            <div style={{ gridArea: 'speed' }}><h1 style={{
+ display: 'inline',
+    marginRight: '2vh',
+}}
+            ><i className="fa fa-shipping-fast" />
+                                               </h1><strong>Speed and Convenience:</strong> We turn around proposals, approvals and lease documents in hours, not days. From start to finish, no leasing firm is more efficient than DDI.
+            </div>
+            <div style={{ gridArea: 'creative' }}><h1 style={{
+display: 'inline',
+    marginRight: '2vh',
+}}
+            ><i className="fa fa-paint-brush" />
+                                                  </h1><strong>Creativity:</strong> Every end-user is unique: your leasing solution should be too. DDI works side by side with our partners to design the most effective and efficient financing plans to fit your business model and help your company grow.
+            </div>
+            <div style={{ gridArea: 'adapt', textAlign: 'center' }}><h1 style={{
+ display: 'inline',
+    marginRight: '2vh',
+}}
+            ><i className="fa fa-people-carry" />
+                                                                    </h1><strong>Adaptability:</strong> From the design of your financing solution, to mid-lease options to end-of-term flexibility, DDI works with you to adapt your financing program as your budget, cash flow and technology requirements change over time.
+            </div>
           </WhyBody>
         </WhyDDI>
         <EquiptmentFinanced id="Equipt">
