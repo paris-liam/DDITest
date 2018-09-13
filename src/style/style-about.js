@@ -135,6 +135,9 @@ export const MeetTheTeam = styled.div`
   grid-area:'Meet';
   background-color: ${colorsAndFont.grey};
   padding: 2.5vh 2vw;
+  display:grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto;
 `;
 
 export const MeetTheTeamTitle = styled.div`
@@ -148,6 +151,11 @@ export const MeetTheTeamTitle = styled.div`
  p{
    margin: auto auto;
  }
+`;
+
+export const MeetTheTeamList = styled.div`
+
+
 `;
 
 export const AboutInterestedSlide = styled.div`

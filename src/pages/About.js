@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
-import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, EquiptmentFinanced, EquiptTitle, EquiptList, EquiptText, MeetTheTeam, WhoTitle, WhoLetter, WhoList, MeetTheTeamTitle, AboutInterested, AboutInterestedSlide } from '../style/style-about';
+import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, EquiptmentFinanced, EquiptTitle, EquiptList, EquiptText, MeetTheTeam, WhoTitle, WhoLetter, WhoList, MeetTheTeamTitle, AboutInterested, AboutInterestedSlide, MeetTheTeamList } from '../style/style-about';
 import { IndexGrid, CoverHold, CoverText, Interested } from '../style/style-index';
+import { TeamMember } from '../components/TeamMember';
 import { gatsbyImgStyle } from '../style/style';
 
 class About extends React.Component {
@@ -147,6 +148,7 @@ class About extends React.Component {
             <p>We deliver high-integrity, convenience-based financing solutions our technology partners can provide to their customers. Here’s the people that make this happen.</p>
             <i className="fa fa-angle-right" />
           </MeetTheTeamTitle>
+          <MeetTheTeamList />
         </MeetTheTeam>
         <AboutInterestedSlide >
           <AboutInterested>

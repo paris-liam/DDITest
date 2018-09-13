@@ -1,80 +1,12 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
-import styled from 'styled-components';
-import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, Offerings } from '../style/style-index';
-import { colorsAndFont, gatsbyImgStyle } from '../style/style';
+import { gatsbyImgStyle } from '../style/style';
+import { CoverHold } from '../style/style-index';
+import { SingleGrid, SingleCoverText, SingleSlide, CustBody, Requirements, CustOff, CustTitle } from '../style/style-single-page';
 
-const CustGrid = IndexGrid.extend`
-  grid-template-rows: 45vh auto;
-`;
-const CustCoverText = CoverText.extend`
-  grid-template-rows: auto auto;
-  h1{
-    width:100%;
-  }
-`;
-const CustBody = styled.div`
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: 'reqs custOff';
-  text-align:left;
-  padding-bottom:1vh;
-  width:90%;
-  margin: 0 auto;
-  @media screen and (max-width:1024px){
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: 'reqs' 'custOff';
-  }
-`;
-
-const Requirements = styled.div`
-  grid-area: reqs;
-  ul > ul{
-    list-style:none;
-    font-weight:200;
-    margin:2vh 2vh 2vh 0;
-    li{
-      padding-bottom:.5em;
-    }
-  }
-`;
-const CustOff = Offerings.extend`
-  margin: 0 auto;
-  @media screen and (max-width:1024px){
-    padding-top:4vh;
-    margin:0 0 0 3vw;
-  }
-  grid-area: custOff;
-  font-size:1.1em;
-  grid-template-rows: min-content auto;
-  h1{
-    margin-top:0;
-    margin-bottom: 3.5vh;
-  }
-  li{
-    margin-bottom:1.5vh;
-  }
-  border:none;
-`;
-const CustSlide = FocusedSlide.extend`
-  background-color:${colorsAndFont.blue};
-  color:white;
-  margin: 0;
-`;
-const CustTitle = styled.div`
-  padding-top:3vh;
-  padding-bottom:3vh;
-  text-align:center;
-  *{
-    width:80%;
-    margin: 1vh auto 0 auto;
-  }
-`;
 const Customers = data => (
-  <CustGrid>
+  <SingleGrid>
     <CoverHold>
       <IMG
         sizes={data.data.cover.sizes}
@@ -82,12 +14,12 @@ const Customers = data => (
         position="absolute"
         style={gatsbyImgStyle}
       />
-      <CustCoverText>
+      <SingleCoverText>
         <h1>Focused on You – Where you work</h1>
         <p>Our professionals know more than leasing – they are familiar with the technology that you use – and they are willing to spend the time with you to put it to maximum advantage.</p>
-      </CustCoverText>
+      </SingleCoverText>
     </CoverHold>
-    <CustSlide>
+    <SingleSlide>
       <CustTitle>
         <h1>DDI will work closely with you to customize a financing plan that best suits your budget, cash flow and technology requirements.</h1>
       </CustTitle>
@@ -127,8 +59,8 @@ const Customers = data => (
           </ul>
         </CustOff>
       </CustBody>
-    </CustSlide>
-  </CustGrid>
+    </SingleSlide>
+  </SingleGrid>
 );
 export default Customers;
 
