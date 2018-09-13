@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
-import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, EquiptmentFinanced, EquiptTitle, EquiptList, EquiptText, MeetTheTeam, WhoTitle, WhoLetter, WhoList, MeetTheTeamTitle } from '../style/style-about';
+import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, EquiptmentFinanced, EquiptTitle, EquiptList, EquiptText, MeetTheTeam, WhoTitle, WhoLetter, WhoList, MeetTheTeamTitle, AboutInterested, AboutInterestedSlide } from '../style/style-about';
 import { IndexGrid, CoverHold, CoverText, Interested } from '../style/style-index';
 import { gatsbyImgStyle } from '../style/style';
 
@@ -17,7 +17,7 @@ class About extends React.Component {
   }
   componentDidMount() {
     this.setState({
-      intervalFunction: setInterval(this.imageCycle, 10000),
+      intervalFunction: setInterval(this.imageCycle, 5000),
     });
   }
   componentWillUnmount() {
@@ -76,25 +76,25 @@ class About extends React.Component {
           <WhyTitle><h1>Why DDI?</h1></WhyTitle>
           <WhyBody>
             <div style={{ gridArea: 'experience' }}>
-              <h1 style={{ display: 'inline', marginRight: '2vw' }}><i className="fa fa-clock" /></h1>
+              <h1 style={{ marginRight: '4.5vw' }}><i className="fa fa-clock" /></h1>
               <p><strong>Experience:</strong> DDI has been an innovator in the leasing industry for over 25 years.
                 Our professionals are experts in technology and have extensive relationships to help you source the right solution for your needs.
               </p>
             </div>
             <div style={{ gridArea: 'rates' }}>
-              <h1 style={{ display: 'inline', marginRight: '2vw' }}><i className="fa fa-money-bill-wave" /></h1>
+              <h1><i className="fa fa-money-bill-wave" /></h1>
               <p><strong>Rates:</strong> DDI consistently delivers the lowest rates in the industry. Our payment solutions are affordable, flexible and easy to manage.</p>
             </div>
             <div style={{ gridArea: 'speed' }}>
-              <h1 style={{ display: 'inline', marginRight: '2vw' }}><i className="fa fa-shipping-fast" /></h1>
+              <h1><i className="fa fa-shipping-fast" /></h1>
               <p><strong>Speed and Convenience:</strong> We turn around proposals, approvals and lease documents in hours, not days. From start to finish, no leasing firm is more efficient than DDI.</p>
             </div>
             <div style={{ gridArea: 'creative' }}>
-              <h1 style={{ display: 'inline', marginRight: '2vw' }}><i className="fa fa-paint-brush" /></h1>
+              <h1 style={{ marginRight: '4.5vw' }}><i className="fa fa-paint-brush" /></h1>
               <p><strong>Creativity:</strong> Every end-user is unique: your leasing solution should be too. DDI works side by side with our partners to design the most effective and efficient financing plans to fit your business model and help your company grow.</p>
             </div>
             <div style={{ gridArea: 'adapt' }}>
-              <h1 style={{ display: 'inline', marginRight: '2vw' }}><i className="fa fa-people-carry" /></h1>
+              <h1 ><i className="fa fa-people-carry" /></h1>
               <p><strong>Adaptability:</strong> From the design of your financing solution, to mid-lease options to end-of-term flexibility, DDI works with you to adapt your financing program as your budget, cash flow and technology requirements change over time.</p>
             </div>
           </WhyBody>
@@ -111,7 +111,7 @@ class About extends React.Component {
               <EquiptTitle>
                 <h1>EQUIPMENT FINANCED</h1>
                 <p>
-            &emsp;Because we are aligned with all the major hardware manufacturers and their partners, DDI is able to assist you with a wide range of technology options.
+            Because we are aligned with all the major hardware manufacturers and their partners, DDI is able to assist you with a wide range of technology options.
               Select any vendor and we can arrange the leasing program that compliments your technology solution. We also offer specific technical expertise and consultative guidance on a variety of technology alternatives.
                 </p>
               </EquiptTitle>
@@ -148,11 +148,13 @@ class About extends React.Component {
             <i className="fa fa-angle-right" />
           </MeetTheTeamTitle>
         </MeetTheTeam>
-        <Interested style={{ gridArea: 'Interested' }}>
-          <h1>Interested?<br /> Checkout Specific Information for:</h1>
-          <div><Link to="/Vendors"><button>Vendors</button></Link></div>
-          <div><Link to="/Customers"><button> Customers</button></Link></div>
-        </Interested>
+        <AboutInterestedSlide >
+          <AboutInterested>
+            <h1>Interested?<br /> Checkout Specific Information for:</h1>
+            <div><Link to="/Vendors"><button>Vendors</button></Link></div>
+            <div><Link to="/Customers"><button> Customers</button></Link></div>
+          </AboutInterested>
+        </AboutInterestedSlide>
       </AboutGrid>
     );
   }

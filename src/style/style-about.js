@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { CoverText, CoverHold, FocusedBody } from './style-index';
+import { CoverText, CoverHold, FocusedBody, Interested, InterestedSlide } from './style-index';
 import { colorsAndFont } from './style';
 
 export const AboutGrid = styled.div`
@@ -88,30 +88,46 @@ export const EquiptmentFinanced = styled.div`
   grid-area:'Equipt';
 `;
 export const EquiptTitle = styled.div`
-  padding: 2.5vh 5vw;
+  margin-left: 10%;
   h1{
     margin-bottom:2vh;
   }
   grid-area: title;
 `;
-export const EquiptList = CoverHold.extend`
-  height:70vh;
-  grid-area: list;
+export const EquiptList = styled.div`
+  height:80vh;
+  grid-area: 'list';
+  position:relative;
+  background-color:black;
+  display:grid;
+  grid-template-rows:1px 99%;
 `;
-export const EquiptText = CoverText.extend`
-  grid-template-rows: auto auto;
+export const EquiptText = styled.div`
+  grid-template-rows: 1fr 5fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 'title title title' 'list list list';
-  grid-row-gap: 2vh;
-  grid-column-gap: 3vw;
   margin: 0 auto;
   ul{
     display:flex;
     flex-direction:column;
     justify-content:space-evenly;
-    text-align:left;
+    text-align:center;
     list-style:none;
     width:auto;
+    fon
+  }
+  position:relative;
+  z-index:2;
+  display:grid;
+  text-align:left;
+  h1{
+    width: 95%;
+    font-size:2.5em;
+  }
+  p{
+    width:80%;
+    text-align:left;
+    font-size:1.25em;
   }
 `;
 
@@ -134,3 +150,16 @@ export const MeetTheTeamTitle = styled.div`
  }
 `;
 
+export const AboutInterestedSlide = styled.div`
+ grid-area: Interested;
+ grid-template-columns:auto;
+ margin: auto auto;
+ padding: 4vh 2vw;
+`;
+
+export const AboutInterested = Interested.extend`
+  grid-template-rows: 1fr 1fr 1fr;
+  button{
+    margin-bottom: 2em;
+  }
+`;
