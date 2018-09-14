@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import TopHeader from '../components/TopHeader'; import './index.css';
-import favicon from '../images/favicon.ico';
+import favicon from '../pages/images/favicon.ico';
 import Link from 'gatsby-link';
 import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact } from '../style/style';
 

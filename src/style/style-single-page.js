@@ -114,6 +114,8 @@ export const ContactBody = styled.div`
   display:grid;
   grid-template-rows:auto;
   grid-template-columns: 1fr 1fr;
+  margin: 4vh 3vw;
+
 `;
 
 export const ContactInfo = styled.div`
@@ -121,5 +123,28 @@ export const ContactInfo = styled.div`
  grid-template-columns: 1fr 1fr;
  grid-template-rows: auto auto auto auto;
  grid-row-gap: 1vh;
+ grid-template-areas: 'Corporate .' 'bedminster north' 'ponte charlotte' 'spring .';
+ ul{
+   list-style:none;
+   text-align:left;
+ }
 `;
-export const ContactForm = styled.div``;
+export const ContactForm = styled.form`
+display:grid;
+grid-template-columns: auto auto;
+grid-template-rows: auto auto auto auto;
+grid-row-gap: 1vh;
+div{
+  grid-column-start: 2;
+  grid-row-start: 4;
+  button{
+  width: 25%;
+  background-color: ${colorsAndFont.lightPurp};
+  outline:none;
+  border:none;
+  color:white;
+  border-radius: 5vh;
+}
+}
+
+`;

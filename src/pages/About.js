@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
 import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, EquiptmentFinanced, EquiptTitle, EquiptList, EquiptText, MeetTheTeam, WhoTitle, WhoLetter, WhoList, MeetTheTeamTitle, AboutInterested, AboutInterestedSlide, MeetTheTeamList } from '../style/style-about';
 import { IndexGrid, CoverHold, CoverText, Interested } from '../style/style-index';
-import { TeamMember } from '../components/TeamMember';
+import { Membertile } from '../components/Membertile';
 import { gatsbyImgStyle } from '../style/style';
 
 class About extends React.Component {

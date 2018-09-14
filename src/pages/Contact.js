@@ -21,46 +21,44 @@ const Contact = data => (
     <SingleSlide>
       <ContactBody>
         <ContactInfo>
-          <ul>
+          <ul style={{ gridArea: 'Corporate' }}>
             <li>DDI Capital Corporate Headquarters</li>
             <li>221 Somerville Road</li>
             <li>Bedminster, NJ 07921</li>
           </ul>
-          <ul>
+          <ul style={{ gridArea: 'bedminster' }}>
             <li>Bedminster, NJ</li>
             <li>Tel: 908-781-9300</li>
             <li>Fax: 908-781-7906</li>
           </ul>
-          <ul>
+          <ul style={{ gridArea: 'north' }}>
             <li>North Haven, CT</li>
             <li>Tel: 203-821-7825</li>
           </ul>
-          <ul>
+          <ul style={{ gridArea: 'ponte' }}>
             <li>Ponte Vedra, FL</li>
             <li>Tel: 904-280-4464</li>
             <li>Fax: 904-280- 4431</li>
           </ul>
-          <ul>
+          <ul style={{ gridArea: 'charlotte' }}>
             <li>Charlotte, NC</li>
             <li>Tel: 704-843-9363</li>
             <li>Fax: 704-843-9462</li>
           </ul>
-          <ul>
+          <ul style={{ gridArea: 'spring' }}>
             <li>Spring Lake, NJ</li>
             <li>Tel: 732-449-6108</li>
             <li>Fax: 732-449-6128</li>
           </ul>
         </ContactInfo>
         <ContactForm>
-          <form>
-            <label>Name</label>
-            <input />
-            <label>Email</label>
-            <input />
-            <label>Message</label>
-            <input />
-            <button>Send</button>
-          </form>
+          <label>Name</label>
+          <input />
+          <label>Email</label>
+          <input />
+          <label>Message</label>
+          <textarea />
+          <div><button>Send</button></div>
         </ContactForm>
       </ContactBody>
     </SingleSlide>
