@@ -73,9 +73,14 @@ const Contact = styled.div`
 `;
 
 const Envelope = styled.li`
-  &:hover{
-    color:${colorsAndFont.grey};
+  a{
+    text-decoration:none;
+    color:inherit;
+    &:hover{
+      color:${colorsAndFont.grey};
+    }
   }
+
 `;
 const PhoneNumber = styled.li``;
 const PayBillsButton = styled.li`
@@ -280,11 +285,11 @@ class TopHeader extends React.Component {
     left: '30%',
         }}
         />
-        </div>
+                              </div>
         </HamburgerIcon>
         <HamburgerContent>
           <Contact>
-            <Envelope><i className="fa fa-envelope" /><p>&nbsp;&nbsp; Test@DDILeasing.com</p></Envelope>
+            <Envelope><a href="mailto:g.nappi@ddileasing.com"><i className="fa fa-envelope" /><p>&nbsp;&nbsp; Email Us!</p></a></Envelope>
             <PhoneNumber><i className="fa fa-phone-square" /><p>&nbsp;&nbsp;(908)-781-9300</p></PhoneNumber>
             <PayBillsButton>
               <button>Pay Bills Online</button>

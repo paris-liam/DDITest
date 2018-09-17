@@ -25,9 +25,6 @@ const Contact = data => (
             <li>DDI Capital Corporate Headquarters</li>
             <li>221 Somerville Road</li>
             <li>Bedminster, NJ 07921</li>
-          </ul>
-          <ul style={{ gridArea: 'bedminster' }}>
-            <li>Bedminster, NJ</li>
             <li>Tel: 908-781-9300</li>
             <li>Fax: 908-781-7906</li>
           </ul>

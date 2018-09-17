@@ -95,7 +95,7 @@ export const EquiptTitle = styled.div`
   grid-area: title;
 `;
 export const EquiptList = styled.div`
-  height:80vh;
+  height:60vh;
   grid-area: 'list';
   position:relative;
   background-color:black;

@@ -121,9 +121,9 @@ export const ContactBody = styled.div`
 export const ContactInfo = styled.div`
  display:grid;
  grid-template-columns: 1fr 1fr;
- grid-template-rows: auto auto auto auto;
+ grid-template-rows: auto auto auto;
  grid-row-gap: 1vh;
- grid-template-areas: 'Corporate .' 'bedminster north' 'ponte charlotte' 'spring .';
+ grid-template-areas: 'Corporate .' 'north ponte' 'charlotte spring';
  ul{
    list-style:none;
    text-align:left;

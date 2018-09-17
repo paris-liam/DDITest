@@ -11,6 +11,8 @@ const responsiveArray = [
       slidesToScroll: 1,
       infinite: true,
       swipeToSlide: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
     },
@@ -84,7 +86,7 @@ const info = [
   },
 ];
 const SimpleSlider = () => (
-  <Slider infinite slidesToShow={2} slidesToScroll={1} responsive={responsiveArray} nextArrow={<SampleNextArrow />} prevArrow={<SamplePrevArrow />}>
+  <Slider infinite slidesToShow={2} slidesToScroll={1} responsive={responsiveArray} nextArrow={<SampleNextArrow />} prevArrow={<SamplePrevArrow />} autoplay autoplaySpeed={2000}>
     {
     info.map(solution => <Solution key={solution.title} solution={solution} />)
     }

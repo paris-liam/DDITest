@@ -118,26 +118,27 @@ class About extends React.Component {
               </EquiptTitle>
               <ul>
                 <li>Storage Products</li>
-                <li>Cloud Financing</li>
-                <li>Furniture</li>
-                <li>Point of Sale Equipment</li>
-                <li>Warehouse Equipment</li>
-                <li>Tape Libraries</li>
-              </ul>
-              <ul>
-                <li>Desktop/Network Computers</li>
-                <li>Telecommunications Equipment</li>
-                <li>ERP Projects</li>
-                <li>Manufacturing and Other Capital Equipment</li>
-                <li>Enterprise Servers</li>
-                <li>Printers and Associated Peripherals</li>
-              </ul>
-              <ul>
+                <li>Desktop/Laptop Computers</li>
+                <li>Telecommunications Products</li>
+                <li>Tablets/iPads</li>
+                <li>Enterprise Servers/Switches</li>
                 <li>LAN/WAN Infrastructure</li>
-                <li>Software-Only Financing</li>
-                <li>Multimedia Systems</li>
+              </ul>
+              <ul>
+                <li>Software/Maintenance-Only Financing</li>
+                <li>Unified Communications Equipment</li>
+                <li>Cloud Financing</li>
                 <li>Medical Equipment</li>
-                <li>Telephone Systems</li>
+                <li>Furniture</li>
+                <li>Handheld Devices/Barcode Scanners</li>
+              </ul>
+              <ul>
+                <li>Point-of-Sale Equipment</li>
+                <li>ERP Software Projects</li>
+                <li>Manufacturing and Other Capital Equipment</li>
+                <li>Printing Systems and Associated Peripherals</li>
+                <li>Warehouse Equipment</li>
+                <li>Non-Traditional Assets</li>
               </ul>
             </EquiptText>
           </EquiptList>

@@ -49,6 +49,7 @@ const Customers = data => (
           <h1>Offerings Include:</h1>
           <ul className="fa-ul">
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Master Lease Agreements</li>
+            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Installment Payment Agreements</li>
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Capital and Operating Leases</li>
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Software Only Financing</li>
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Lease Lines</li>

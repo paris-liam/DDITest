@@ -139,6 +139,7 @@ export const FocusedBody = styled.div`
   grid-row-gap: 5vh;
   grid-template-rows: max-content max-content;
   padding: 1vh .5vh;
+  text-align:center;
   @media screen and (max-width:1025px){
     display:grid;
     grid-template-columns: auto;
@@ -147,8 +148,7 @@ export const FocusedBody = styled.div`
   & > div{
     display:flex;
     *{
-      margin-top:auto;
-      margin-bottom:auto;
+      margin-top:2vh;
     }
     h1{
       font-size:4.5em;
