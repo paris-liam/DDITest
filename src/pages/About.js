@@ -11,11 +11,14 @@ class About extends React.Component {
   constructor(props) {
     super(props);
     this.imageCycle = this.imageCycle.bind(this);
+    this.accordianTeam = this.accordianTeam.bind(this);
+    const parsedTeamInfo = this.teamInfoParse(teamInfo, this.props.data.memberPhotos.edges);
     this.state = {
       equiptmentImages: [this.props.data.equipt1.sizes, this.props.data.equipt2.sizes, this.props.data.equipt3.sizes],
       equiptmentCurrent: 0,
       intervalFunction: null,
-      teamInfo,
+      showAccordian: false,
+      teamInfo: parsedTeamInfo,
     };
   }
   componentDidMount() {
@@ -36,6 +39,26 @@ class About extends React.Component {
       equiptmentCurrent: newImage,
     }));
     console.log(this.state.equiptmentCurrent);
+  }
+  accordianTeam() {
+    if (!this.state.showAccordian) {
+      this.state.showAccordian = true;
+    }
+    const arrow = document.querySelector('.meetTeamArrow');
+    arrow.classList.toggle('animateArrow');
+  }
+
+  teamInfoParse(info, images) {
+    images.forEach((member) => {
+      const memberId = member.node.id.split('/');
+      const MemberName = memberId[memberId.length - 1].split('.')[0];
+      if (info[MemberName]) {
+        info[MemberName].image = member.node.sizes;
+      }
+    },
+    );
+    console.log(info);
+    return info;
   }
   render() {
     return (
@@ -146,17 +169,16 @@ class About extends React.Component {
           </EquiptList>
         </EquiptmentFinanced>
         <MeetTheTeam id="Team">
-          <MeetTheTeamTitle>
+          <MeetTheTeamTitle onClick={this.accordianTeam}>
             <h1>MEET THE TEAM</h1>
             <p>We deliver high-integrity, convenience-based financing solutions our technology partners can provide to their customers. Here’s the people that make this happen.</p>
-            <i className="fa fa-angle-right" />
+            <i className="fa fa-angle-right meetTeamArrow" />
           </MeetTheTeamTitle>
           <MeetTheTeamAccordian>
             {
-              this.state.teamInfo.map(member => <Membertile key={member.name} info={member} />)
+             //  Object.keys(this.state.teamInfo).map(member => <Membertile key={this.state.teamInfo[member].name} info={this.state.teamInfo[member]} />)
             }
           </MeetTheTeamAccordian>
-          <Membertile />
           <MeetTheTeamList />
         </MeetTheTeam>
         <AboutInterestedSlide >
@@ -195,19 +217,17 @@ export const query = graphql`
         ... GatsbyImageSharpSizes
       }
     }
-    memberShots: allFile(filter: {relativeDirectory: {eq: "memberPhotos"}}) {
+    memberPhotos: allImageSharp(filter: {id: {regex: "/memberPhotos/"}}){
     edges {
       node {
         id
-        name
-        relativePath
+        sizes(maxWidth:1900){
+        ... GatsbyImageSharpSizes
+        }
       }
     }
-  }
+   }
 
-  }
+}
 `;
-/*
-get the other images
-*/
 

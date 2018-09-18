@@ -41,23 +41,71 @@ export const sliderInfo = [
   },
 ];
 
-export const teamInfo = [
-  {
+export const teamInfo = {
+  'Christian-Mosiciki': {
     image: null,
-    name: 'christian-mosiciki',
+    name: 'Christian Mosiciki',
     body: 'blahblahblahblahblahblahblahblahbl',
     email: 'blahb lshblabhal bhalb',
   },
-  {
+  'Christopher-Flammer': {
     image: null,
-    name: 'Christopher-Flammer',
+    name: 'Christopher Flammer',
     body: 'blahblahblahblahblahblahblahblahbl',
     email: 'blahb lshblabhal bhalb',
   },
-  {
+  'Ellen-Arlauskas': {
     image: null,
-    name: 'Ellen-Arlauskas',
+    name: 'Ellen Arlauskas',
     body: 'blahblahblahblahblahblahblahblahbl',
     email: 'blahb lshblabhal bhalb',
   },
-];
+  'Greg-Nappi': {
+    image: null,
+    name: 'Greg Nappi',
+    body: 'blahblahblahblahblahblahblahblahbl',
+    email: 'blahb lshblabhal bhalb',
+  },
+  'Kevin-Moran': {
+    image: null,
+    name: 'Kevin Moran',
+    body: 'blahblahblahblahblahblahblahblahbl',
+    email: 'blahb lshblabhal bhalb',
+  },
+  'Mike-Dolan': {
+    image: null,
+    name: 'Mike Dolan',
+    body: 'blahblahblahblahblahblahblahblahbl',
+    email: 'blahb lshblabhal bhalb',
+  },
+  'Mike-Moran': {
+    image: null,
+    name: 'Mike Moran',
+    body: 'blahblahblahblahblahblahblahblahbl',
+    email: 'blahb lshblabhal bhalb',
+  },
+  'Nick-Giglio': {
+    image: null,
+    name: 'Nick Giglio',
+    body: 'blahblahblahblahblahblahblahblahbl',
+    email: 'blahb lshblabhal bhalb',
+  },
+  'Steve-Case': {
+    image: null,
+    name: 'Steve Case',
+    body: 'blahblahblahblahblahblahblahblahbl',
+    email: 'blahb lshblabhal bhalb',
+  },
+  'Terry-Moran': {
+    image: null,
+    name: 'Terry Moran',
+    body: 'blahblahblahblahblahblahblahblahbl',
+    email: 'blahb lshblabhal bhalb',
+  },
+  'Tom-Tensfeldt': {
+    image: null,
+    name: 'Tom Tensfeldt',
+    body: 'blahblahblahblahblahblahblahblahbl',
+    email: 'blahb lshblabhal bhalb',
+  },
+};

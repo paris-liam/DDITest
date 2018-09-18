@@ -429,3 +429,17 @@ li{
   margin: 0;
   padding:0;
 }
+
+.animateArrow{
+  -webkit-transition-duration: .25s;
+  -moz-transition-duration: .25s;
+  -o-transition-duration: .25s;
+   transition-duration: .25s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+   transition-property: transform;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+   transform: rotate(90deg);
+}

@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'DDI Capital',
   },
+  pathPrefix: `${__dirname}/src/pages/images/`,
   plugins: ['gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',

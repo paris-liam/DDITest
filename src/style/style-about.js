@@ -88,14 +88,14 @@ export const EquiptmentFinanced = styled.div`
   grid-area:'Equipt';
 `;
 export const EquiptTitle = styled.div`
-  margin-left: 10%;
+  margin-left: 5%;
   h1{
     margin-bottom:2vh;
   }
   grid-area: title;
 `;
 export const EquiptList = styled.div`
-  height:60vh;
+  height:80vh;
   grid-area: 'list';
   position:relative;
   background-color:black;
@@ -141,15 +141,15 @@ export const MeetTheTeam = styled.div`
 `;
 
 export const MeetTheTeamTitle = styled.div`
- display:flex;
- flex-direction:row;
- i{
-   font-size:2.75em;
-   margin:auto 0;
- }
+ display:grid;
+ grid-template-columns: auto auto auto;
+   i{
+    font-size:2.75em;
+    margin:auto 4vw auto 0vw;
+   }
  text-align:center;
  p{
-   margin: auto auto;
+   margin: auto 10%;
  }
 `;
 
@@ -157,6 +157,8 @@ export const MeetTheTeamList = styled.div`
 
 
 `;
+
+export const MeetTheTeamAccordian = styled.div``;
 
 export const AboutInterestedSlide = styled.div`
  grid-area: Interested;
@@ -171,4 +173,3 @@ export const AboutInterested = Interested.extend`
   }
 `;
 
-export const MeetTheTeamAccordian = styled.div``;
