@@ -166,8 +166,9 @@ export const AboutInterestedSlide = styled.div`
 `;
 
 export const AboutInterested = Interested.extend`
-  grid-template-rows: 1fr 1fr 1fr;
   button{
     margin-bottom: 2em;
   }
 `;
+
+export const MeetTheTeamAccordian = styled.div``;

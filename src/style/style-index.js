@@ -282,13 +282,15 @@ export const Interested = styled.div`
   text-align:center;
   display:grid;
   grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: min-content min-content min-content;
   text-transform:uppercase;
   h1{
     font-size:1.75em;
+    margin-bottom: 1.5em;
   }
   div{
     display:grid;
+    margin-bottom: 1.25em;
     a{
       align-self:center;
       justify-self:center;

@@ -123,7 +123,7 @@ export const ContactInfo = styled.div`
  grid-template-columns: 1fr 1fr;
  grid-template-rows: auto auto auto;
  grid-row-gap: 1vh;
- grid-template-areas: 'Corporate .' 'north ponte' 'charlotte spring';
+ grid-template-areas: 'Corporate CorporatePhone' 'north ponte' 'charlotte spring';
  ul{
    list-style:none;
    text-align:left;
@@ -134,6 +134,10 @@ display:grid;
 grid-template-columns: auto auto;
 grid-template-rows: auto auto auto auto;
 grid-row-gap: 1vh;
+input{
+  width:75%;
+  height:50%;
+}
 div{
   grid-column-start: 2;
   grid-row-start: 4;

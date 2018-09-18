@@ -1,20 +1,22 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
-import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, EquiptmentFinanced, EquiptTitle, EquiptList, EquiptText, MeetTheTeam, WhoTitle, WhoLetter, WhoList, MeetTheTeamTitle, AboutInterested, AboutInterestedSlide, MeetTheTeamList } from '../style/style-about';
+import Membertile from '../components/Membertile';
+import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, EquiptmentFinanced, EquiptTitle, EquiptList, EquiptText, MeetTheTeam, WhoTitle, WhoLetter, WhoList, MeetTheTeamTitle, AboutInterested, AboutInterestedSlide, MeetTheTeamList, MeetTheTeamAccordian } from '../style/style-about';
 import { IndexGrid, CoverHold, CoverText, Interested } from '../style/style-index';
-import { Membertile } from '../components/Membertile';
+import { teamInfo } from '../style/dataAndCopy';
 import { gatsbyImgStyle } from '../style/style';
 
 class About extends React.Component {
   constructor(props) {
     super(props);
+    this.imageCycle = this.imageCycle.bind(this);
     this.state = {
       equiptmentImages: [this.props.data.equipt1.sizes, this.props.data.equipt2.sizes, this.props.data.equipt3.sizes],
       equiptmentCurrent: 0,
       intervalFunction: null,
+      teamInfo,
     };
-    this.imageCycle = this.imageCycle.bind(this);
   }
   componentDidMount() {
     this.setState({
@@ -149,6 +151,12 @@ class About extends React.Component {
             <p>We deliver high-integrity, convenience-based financing solutions our technology partners can provide to their customers. Here’s the people that make this happen.</p>
             <i className="fa fa-angle-right" />
           </MeetTheTeamTitle>
+          <MeetTheTeamAccordian>
+            {
+              this.state.teamInfo.map(member => <Membertile key={member.name} info={member} />)
+            }
+          </MeetTheTeamAccordian>
+          <Membertile />
           <MeetTheTeamList />
         </MeetTheTeam>
         <AboutInterestedSlide >
@@ -187,6 +195,15 @@ export const query = graphql`
         ... GatsbyImageSharpSizes
       }
     }
+    memberShots: allFile(filter: {relativeDirectory: {eq: "memberPhotos"}}) {
+    edges {
+      node {
+        id
+        name
+        relativePath
+      }
+    }
+  }
 
   }
 `;
