@@ -5,6 +5,8 @@ import IMG from 'gatsby-image';
 import { gatsbyImgStyle } from '../style/style.js';
 
 const Member = styled.div`
+    overflow: hidden;
+    transition: max-height 0.2s ease;
 `;
 const MemberShot = styled.div``;
 const MemberInfo = styled.div``;
@@ -14,10 +16,28 @@ const MemberContact = styled.div``;
 
 
 class Membertile extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      maxHeight: '0px',
+    };
+  }
+  componentDidMount() {
+    const thisPanel = document.getElementById(this.props.info.name);
+    console.log(thisPanel.scrollHeight);
+    this.setState({
+      maxHeight: `${thisPanel.scrollHeight}px`,
+    });
+  }
   render() {
-    console.log(this.props);
     return (
-      <Member>
+      <Member
+        id={this.props.info.name}
+        className="accordianPanel"
+        style={{
+        maxHeight: (this.props.show) ? (this.state.maxHeight) : ('0px'),
+      }}
+      >
         <MemberShot>
           <IMG
             sizes={this.props.info.image}

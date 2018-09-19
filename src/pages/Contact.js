@@ -25,24 +25,26 @@ const Contact = data => (
             <li>DDI Capital Corporate Headquarters</li>
             <li>221 Somerville Road</li>
             <li>Bedminster, NJ 07921</li>
-          </ul>
-          <ul style={{ gridArea: 'CorporatePhone', margin: 'auto 0' }}>
             <li>Tel: 908-781-9300</li>
             <li>Fax: 908-781-7906</li>
-          </ul>
-          <ul style={{ gridArea: 'north' }}>
-            <li>North Haven, CT</li>
-            <li>Tel: 203-821-7825</li>
           </ul>
           <ul style={{ gridArea: 'ponte' }}>
             <li>Ponte Vedra, FL</li>
             <li>Tel: 904-280-4464</li>
             <li>Fax: 904-280- 4431</li>
           </ul>
+          <ul style={{ gridArea: 'north' }}>
+            <li>North Haven, CT</li>
+            <li>Tel: 203-821-7825</li>
+          </ul>
           <ul style={{ gridArea: 'charlotte' }}>
             <li>Charlotte, NC</li>
             <li>Tel: 704-843-9363</li>
             <li>Fax: 704-843-9462</li>
+          </ul>
+          <ul style={{ gridArea: 'quogue' }}>
+            <li>East Quogue, NY</li>
+            <li>Tel: 631-996-2675</li>
           </ul>
           <ul style={{ gridArea: 'spring' }}>
             <li>Spring Lake, NJ</li>
@@ -50,14 +52,14 @@ const Contact = data => (
             <li>Fax: 732-449-6128</li>
           </ul>
         </ContactInfo>
-        <ContactForm>
-          <label>Name</label>
-          <input />
-          <label>Email</label>
-          <input />
-          <label>Message</label>
-          <textarea />
-          <div><button>Send</button></div>
+        <ContactForm action="mailto:cmoscicki@ddicapital.com" method="post" enctype="text/plain">
+          <label htmlFor="name">Name</label>
+          <input type="text" name="name" />
+          <label htmlFor="email">Email</label>
+          <input type="text" name="email" />
+          <label htmlFor="message">Message</label>
+          <textarea name="message" />
+          <div><input type="submit" value="Send" /></div>
         </ContactForm>
       </ContactBody>
     </SingleSlide>

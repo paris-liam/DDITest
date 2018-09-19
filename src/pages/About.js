@@ -38,14 +38,20 @@ class About extends React.Component {
     this.setState(state => ({
       equiptmentCurrent: newImage,
     }));
-    console.log(this.state.equiptmentCurrent);
   }
   accordianTeam() {
-    if (!this.state.showAccordian) {
-      this.state.showAccordian = true;
-    }
-    const arrow = document.querySelector('.meetTeamArrow');
-    arrow.classList.toggle('animateArrow');
+    this.setState(state => ({
+      showAccordian: !state.showAccordian,
+    }));
+    console.log(this.state.showAccordian);
+    const panels = document.getElementsByClassName('accordianPanel');
+    /* for (let i = 0; i < panels.length; i++) {
+      if (panels[i].style.maxHeight) {
+        panels[i].style.maxHeight = null;
+      } else {
+        panels[i].style.maxHeight = `${panels[i].scrollHeight}px`;
+      }
+    } */
   }
 
   teamInfoParse(info, images) {
@@ -57,7 +63,6 @@ class About extends React.Component {
       }
     },
     );
-    console.log(info);
     return info;
   }
   render() {
@@ -121,7 +126,7 @@ class About extends React.Component {
             </div>
             <div style={{ gridArea: 'adapt' }}>
               <h1 ><i className="fa fa-people-carry" /></h1>
-              <p><strong>Adaptability:</strong> From the design of your financing solution, to mid-lease options to end-of-term flexibility, DDI works with you to adapt your financing program as your budget, cash flow and technology requirements change over time.</p>
+              <p className="adaptCopy"><strong>Adaptability:</strong> From the design of your financing solution, to mid-lease options to end-of-term flexibility, DDI works with you to adapt your financing program as your budget, cash flow and technology requirements change over time.</p>
             </div>
           </WhyBody>
         </WhyDDI>
@@ -172,11 +177,16 @@ class About extends React.Component {
           <MeetTheTeamTitle onClick={this.accordianTeam}>
             <h1>MEET THE TEAM</h1>
             <p>We deliver high-integrity, convenience-based financing solutions our technology partners can provide to their customers. Here’s the people that make this happen.</p>
-            <i className="fa fa-angle-right meetTeamArrow" />
+            <i className={`fa fa-angle-right meetTeamArrow ${this.state.showAccordian && 'animateArrow'}`} />
           </MeetTheTeamTitle>
-          <MeetTheTeamAccordian>
+          <MeetTheTeamAccordian
+            className="accordian"
+            style={{
+            height: (this.state.showAccordian) ? ('60vh') : ('0px'),
+          }}
+          >
             {
-             //  Object.keys(this.state.teamInfo).map(member => <Membertile key={this.state.teamInfo[member].name} info={this.state.teamInfo[member]} />)
+               Object.keys(this.state.teamInfo).map(member => <Membertile key={this.state.teamInfo[member].name} info={this.state.teamInfo[member]} show={this.state.showAccordian} />)
             }
           </MeetTheTeamAccordian>
           <MeetTheTeamList />

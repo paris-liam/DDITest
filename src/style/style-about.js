@@ -73,6 +73,9 @@ export const WhyBody = FocusedBody.extend`
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas: 'experience' 'rates' 'speed' 'creative' 'adapt';
   @media screen and (min-width:1024px){
+    .adaptCopy{
+      margin-top:3vh;
+    }
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas: 'experience rates' 'speed creative' 'adapt adapt';
@@ -88,6 +91,7 @@ export const EquiptmentFinanced = styled.div`
   grid-area:'Equipt';
 `;
 export const EquiptTitle = styled.div`
+  text-align:center;
   margin-left: 5%;
   h1{
     margin-bottom:2vh;
@@ -95,7 +99,7 @@ export const EquiptTitle = styled.div`
   grid-area: title;
 `;
 export const EquiptList = styled.div`
-  height:80vh;
+  height:70vh;
   grid-area: 'list';
   position:relative;
   background-color:black;
@@ -107,6 +111,7 @@ export const EquiptText = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 'title title title' 'list list list';
   margin: 0 auto;
+  font-size:1.25em;
   ul{
     display:flex;
     flex-direction:column;
@@ -114,7 +119,6 @@ export const EquiptText = styled.div`
     text-align:center;
     list-style:none;
     width:auto;
-    fon
   }
   position:relative;
   z-index:2;
@@ -127,7 +131,6 @@ export const EquiptText = styled.div`
   p{
     width:80%;
     text-align:left;
-    font-size:1.25em;
   }
 `;
 
@@ -158,7 +161,9 @@ export const MeetTheTeamList = styled.div`
 
 `;
 
-export const MeetTheTeamAccordian = styled.div``;
+export const MeetTheTeamAccordian = styled.div`
+  overflow:scroll;
+`;
 
 export const AboutInterestedSlide = styled.div`
  grid-area: Interested;

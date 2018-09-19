@@ -42,6 +42,12 @@ export const sliderInfo = [
 ];
 
 export const teamInfo = {
+  'Mike-Moran': {
+    image: null,
+    name: 'Mike Moran',
+    body: 'blahblahblahblahblahblahblahblahbl',
+    email: 'blahb lshblabhal bhalb',
+  },
   'Christian-Mosiciki': {
     image: null,
     name: 'Christian Mosiciki',
@@ -75,12 +81,6 @@ export const teamInfo = {
   'Mike-Dolan': {
     image: null,
     name: 'Mike Dolan',
-    body: 'blahblahblahblahblahblahblahblahbl',
-    email: 'blahb lshblabhal bhalb',
-  },
-  'Mike-Moran': {
-    image: null,
-    name: 'Mike Moran',
     body: 'blahblahblahblahblahblahblahblahbl',
     email: 'blahb lshblabhal bhalb',
   },

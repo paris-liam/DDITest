@@ -147,14 +147,12 @@ export const FocusedBody = styled.div`
   }
   & > div{
     display:flex;
-    *{
-      margin-top:2vh;
-    }
     h1{
       font-size:4.5em;
       margin-right: 3vw;
     }
     p{
+      margin-top:2vh;
       @media screen and (max-width:1025px){
         padding-top:0;
       }
@@ -282,7 +280,7 @@ export const Interested = styled.div`
   text-align:center;
   display:grid;
   grid-template-columns: auto;
-  grid-template-rows: min-content min-content min-content;
+  grid-template-rows: min-content 10vh 10vh;
   text-transform:uppercase;
   h1{
     font-size:1.75em;

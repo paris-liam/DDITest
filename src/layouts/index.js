@@ -72,7 +72,8 @@ const Layout = ({ data, children }) => (
             <Link to="/Contact" onClick={toggleNav}><h3>Contact</h3></Link>
           </SidebarItem>
           <SidebarContact>
-            <li className="sideenv"><i className="fa fa-envelope" />&nbsp;test@ddi.com</li>
+            <li className="sideenv"><a href="mailto:g.nappi@ddileasing.com"><i className="fa fa-envelope" />&nbsp;&nbsp; Email us</a></li>
+
             <li className="sidephone"><i className="fa fa-phone-square" />  (908)-781-9300</li>
             <li>
               <button className="sidebill">Pay Bills Online</button>

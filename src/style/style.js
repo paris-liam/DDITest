@@ -60,8 +60,12 @@ export const SidebarContact = styled.ul`
     & > *{
       padding-bottom: .75vh;
     }
-    & > .sideenv:hover{
-      color:${colorsAndFont.grey};
+    & > .sideenv > a{
+      text-decoration:none;
+      color:inherit;
+      &:hover{
+        color:${colorsAndFont.grey};
+      }
     }
     & > li:nth-child(3){
       padding-top: 1vh;

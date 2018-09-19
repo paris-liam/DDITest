@@ -67,7 +67,7 @@ export const CustOff = Offerings.extend`
 
 export const CustTitle = styled.div`
   padding-top:3vh;
-  padding-bottom:3vh;
+  padding-bottom:7vh;
   text-align:center;
   *{
     width:80%;
@@ -123,25 +123,35 @@ export const ContactInfo = styled.div`
  grid-template-columns: 1fr 1fr;
  grid-template-rows: auto auto auto;
  grid-row-gap: 1vh;
- grid-template-areas: 'Corporate CorporatePhone' 'north ponte' 'charlotte spring';
+ grid-template-areas: 'Corporate .' 'ponte north ' 'charlotte quogue' 'spring .';
  ul{
    list-style:none;
    text-align:left;
  }
+ ul:first-of-type{
+   margin-bottom:2vh;
+   font-size: 1.2em;
+ }
 `;
 export const ContactForm = styled.form`
+margin:4vh 0;
+text-align:left;
 display:grid;
-grid-template-columns: auto auto;
+grid-template-columns: min-content auto;
+grid-column-gap: 3vw;
 grid-template-rows: auto auto auto auto;
 grid-row-gap: 1vh;
 input{
   width:75%;
   height:50%;
 }
+textarea{
+  resize:none;
+}
 div{
   grid-column-start: 2;
   grid-row-start: 4;
-  button{
+  input{
   width: 25%;
   background-color: ${colorsAndFont.lightPurp};
   outline:none;
