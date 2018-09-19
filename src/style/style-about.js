@@ -137,7 +137,6 @@ export const EquiptText = styled.div`
 export const MeetTheTeam = styled.div`
   grid-area:'Meet';
   background-color: ${colorsAndFont.grey};
-  padding: 2.5vh 2vw;
   display:grid;
   grid-template-rows: auto auto;
   grid-template-columns: auto;
@@ -146,19 +145,16 @@ export const MeetTheTeam = styled.div`
 export const MeetTheTeamTitle = styled.div`
  display:grid;
  grid-template-columns: auto auto auto;
+ padding: 2.5vh 2vw;
    i{
     font-size:2.75em;
     margin:auto 4vw auto 0vw;
    }
  text-align:center;
+ margin-bottom:2vh;
  p{
    margin: auto 10%;
  }
-`;
-
-export const MeetTheTeamList = styled.div`
-
-
 `;
 
 export const MeetTheTeamAccordian = styled.div`

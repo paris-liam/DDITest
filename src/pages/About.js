@@ -189,7 +189,6 @@ class About extends React.Component {
                Object.keys(this.state.teamInfo).map(member => <Membertile key={this.state.teamInfo[member].name} info={this.state.teamInfo[member]} show={this.state.showAccordian} />)
             }
           </MeetTheTeamAccordian>
-          <MeetTheTeamList />
         </MeetTheTeam>
         <AboutInterestedSlide >
           <AboutInterested>
@@ -231,7 +230,7 @@ export const query = graphql`
     edges {
       node {
         id
-        sizes(maxWidth:1900){
+        sizes(maxWidth:800){
         ... GatsbyImageSharpSizes
         }
       }
