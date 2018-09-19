@@ -52,7 +52,7 @@ const Contact = data => (
             <li>Fax: 732-449-6128</li>
           </ul>
         </ContactInfo>
-        <ContactForm action="mailto:cmoscicki@ddicapital.com" method="post" enctype="text/plain" netlify>
+        <ContactForm method="post" enctype="text/plain" netlify>
           <label htmlFor="name">Name</label>
           <input type="text" name="name" />
           <label htmlFor="email">Email</label>
