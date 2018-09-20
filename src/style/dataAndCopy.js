@@ -102,7 +102,7 @@ export const teamInfo = {
     image: null,
     name: 'Christian Mosiciki',
     title: 'Managing Director',
-    location: 'Quogue, NJ',
+    location: 'Quogue, NY',
     body: 'Christian joined DDI Capital in mid-2015 after 8 successful years as an institutional equity salesperson at several broker-dealers and banks (most recently FBR, Inc.). Christian graduated from Middlebury College with a degree in English in 2006 and has lived in New York City ever since. He initially spent 3 years in public/investor relations before pursuing a career in financial product/services sales.',
     email: 'cmoscicki@ddicapitalinc.com',
   },
