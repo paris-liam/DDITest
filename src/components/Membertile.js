@@ -5,7 +5,7 @@ import IMG from 'gatsby-image';
 import { gatsbyImgStyle, colorsAndFont } from '../style/style.js';
 
 const Member = styled.div`
-    transition: height 0.2s ease;
+    transition: height 0.2s ease-in-out;
     border-top: 4px solid ${colorsAndFont.magenta};
     padding: 1vh 3vw;
     display:grid;
@@ -28,7 +28,7 @@ const MemberTitle = styled.div`
   margin-bottom:2vh;
 `;
 const MemberBio = styled.div`
-   font-size: 1.25em;
+   font-size: 1em;
    font-weight:200;
 `;
 const MemberContact = styled.div`
@@ -72,16 +72,16 @@ class Membertile extends React.Component {
             position="absolute"
             style={{
               borderRadius: '20vh',
-              width: '25vh',
-              height: '35vh',
+              width: '15vh',
+              height: '25vh',
             }}
           />
         </MemberShot>
         <MemberInfo>
           <MemberTitle>
-            <h3>{this.props.info.name}</h3>
-            <h3>{this.props.info.title}</h3>
-            <h3>{this.props.info.location}</h3>
+            <h5>{this.props.info.name}</h5>
+            <h5>{this.props.info.title}</h5>
+            <h5>{this.props.info.location}</h5>
           </MemberTitle>
           <MemberBio>
             {this.props.info.body}
