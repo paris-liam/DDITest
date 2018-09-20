@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { colorsAndFont } from '../style/style.js';
+import { accordianTeam } from '../style/dataAndCopy';
 
 const toggleNav = function () {
   const siteWrap = document.querySelector('#site-wrapper');
@@ -85,7 +86,7 @@ const Envelope = styled.li`
 const PhoneNumber = styled.li``;
 const PayBillsButton = styled.li`
   /*desktop*/
-  & > button{
+  & > a > button{
     background-color:${colorsAndFont.blue};
     color:white;
     outline:none;
@@ -285,14 +286,14 @@ class TopHeader extends React.Component {
     left: '30%',
         }}
         />
-        </div>
+                              </div>
         </HamburgerIcon>
         <HamburgerContent>
           <Contact>
             <Envelope><a href="mailto:g.nappi@ddileasing.com"><i className="fa fa-envelope" /><p>&nbsp;&nbsp; Email us</p></a></Envelope>
             <PhoneNumber><i className="fa fa-phone-square" /><p>&nbsp;&nbsp;(908)-781-9300</p></PhoneNumber>
             <PayBillsButton>
-              <button>Pay Bills Online</button>
+              <a href="https://smartpay.profitstars.com/express/DDICPP"><button>Pay Bills Online</button></a>
             </PayBillsButton>
           </Contact>
           <Nav>

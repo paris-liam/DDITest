@@ -6,12 +6,13 @@ import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, Equiptm
 import { IndexGrid, CoverHold, CoverText, Interested } from '../style/style-index';
 import { teamInfo } from '../style/dataAndCopy';
 import { gatsbyImgStyle } from '../style/style';
+import { accordianTeam } from '../style/dataAndCopy.js';
 
 class About extends React.Component {
   constructor(props) {
     super(props);
     this.imageCycle = this.imageCycle.bind(this);
-    this.accordianTeam = this.accordianTeam.bind(this);
+    this.accordianTeam = accordianTeam.bind(this);
     const parsedTeamInfo = this.teamInfoParse(teamInfo, this.props.data.memberPhotos.edges);
     this.state = {
       equiptmentImages: [this.props.data.equipt1.sizes, this.props.data.equipt2.sizes, this.props.data.equipt3.sizes],
@@ -39,12 +40,6 @@ class About extends React.Component {
       equiptmentCurrent: newImage,
     }));
   }
-  accordianTeam() {
-    this.setState(state => ({
-      showAccordian: !state.showAccordian,
-    }));
-  }
-
   teamInfoParse(info, images) {
     images.forEach((member) => {
       const memberId = member.node.id.split('/');

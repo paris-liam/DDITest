@@ -5,6 +5,7 @@ import TopHeader from '../components/TopHeader'; import './index.css';
 import favicon from '../pages/images/favicon.ico';
 import Link from 'gatsby-link';
 import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact } from '../style/style';
+import { accordianTeam } from '../style/dataAndCopy';
 
 const toggleNav = function () {
   const siteWrap = document.querySelector('#site-wrapper');
@@ -76,7 +77,9 @@ const Layout = ({ data, children }) => (
 
             <li className="sidephone"><i className="fa fa-phone-square" />  (908)-781-9300</li>
             <li>
-              <button className="sidebill">Pay Bills Online</button>
+              <a href="https://smartpay.profitstars.com/express/DDICPP">
+                <button className="sidebill">Pay Bills Online</button>
+              </a>
             </li>
           </SidebarContact>
         </Sidebar>

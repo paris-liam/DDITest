@@ -11,6 +11,9 @@ export const SingleCoverText = CoverText.extend`
   h1{
     width:100%;
   }
+  p{
+    width:95%;
+  }
 `;
 export const SingleSlide = FocusedSlide.extend`
   background-color:${colorsAndFont.blue};
@@ -149,6 +152,7 @@ input{
 }
 textarea{
   resize:none;
+  margin-bottom:1vh;
 }
 div{
   grid-column-start: 2;

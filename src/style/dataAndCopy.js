@@ -131,3 +131,9 @@ export const teamInfo = {
     email: 'brettu@ddicapitalinc.com',
   },
 };
+
+export function accordianTeam() {
+  this.setState(state => ({
+    showAccordian: !state.showAccordian,
+  }));
+}

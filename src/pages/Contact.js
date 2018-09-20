@@ -15,7 +15,7 @@ const Contact = data => (
       />
       <SingleCoverText>
         <h1>CONTACT US</h1>
-        <p>We'd Love to hear from you!</p>
+        <p>We'd love to hear from you!</p>
       </SingleCoverText>
     </CoverHold>
     <SingleSlide>
