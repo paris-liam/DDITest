@@ -7,19 +7,38 @@ import { gatsbyImgStyle, colorsAndFont } from '../style/style.js';
 const Member = styled.div`
     transition: height 0.2s ease;
     border-top: 4px solid ${colorsAndFont.magenta};
-    display:grid;
-    grid-template-columns:auto auto;
-    grid-auto-rows:auto;
     padding: 1vh 3vw;
-    overflow:hidden;
+    display:grid;
+    grid-template-columns: auto auto;
 `;
 const MemberShot = styled.div`
-  position:relative;
+  margin: auto auto;
+  .coverOuter{
+  }
 `;
-const MemberInfo = styled.div``;
-const MemberTitle = styled.div``;
-const MemberBio = styled.div``;
-const MemberContact = styled.div``;
+const MemberInfo = styled.div`
+  margin-left: 3vh;
+  margin-top:5vh;
+  display:grid;
+  grid-template-columns:auto;
+  grid-template-rows: auto auto auto;
+`;
+const MemberTitle = styled.div`
+  line-height: 1.25;
+  margin-bottom:2vh;
+`;
+const MemberBio = styled.div`
+   font-size: 1.25em;
+   font-weight:200;
+`;
+const MemberContact = styled.div`
+ margin-top:2vh;
+ margin-bottom:5vh;
+a{
+  text-decoration:none;
+  color:inherit;
+}
+`;
 
 
 class Membertile extends React.Component {
@@ -48,28 +67,27 @@ class Membertile extends React.Component {
       >
         <MemberShot>
           <IMG
-            sizes={this.props.info.image}
+            resolutions={this.props.info.image}
             outerWrapperClassName="coverOuter"
             position="absolute"
             style={{
-              top: 0,
-              left: 0,
-              position: 'absolute',
-              width: '40%',
-              borderRadius: '15vh',
-              margin: 'auto auto',
+              borderRadius: '20vh',
+              width: '25vh',
+              height: '35vh',
             }}
           />
         </MemberShot>
         <MemberInfo>
           <MemberTitle>
-            {this.props.info.title}
+            <h3>{this.props.info.name}</h3>
+            <h3>{this.props.info.title}</h3>
+            <h3>{this.props.info.location}</h3>
           </MemberTitle>
           <MemberBio>
             {this.props.info.body}
           </MemberBio>
           <MemberContact>
-            {this.props.info.email}
+            <a href={`mailto:${this.props.info.email}`} >{this.props.info.email}</a>
           </MemberContact>
         </MemberInfo>
       </Member>

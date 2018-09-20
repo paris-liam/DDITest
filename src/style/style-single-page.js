@@ -115,7 +115,10 @@ export const ContactBody = styled.div`
   grid-template-rows:auto;
   grid-template-columns: 1fr 1fr;
   margin: 4vh 3vw;
-
+  @media screen and (max-width:1024px)  {
+    grid-template-rows:auto auto;
+  grid-template-columns: auto;
+  }
 `;
 
 export const ContactInfo = styled.div`
@@ -130,7 +133,6 @@ export const ContactInfo = styled.div`
  }
  ul:first-of-type{
    margin-bottom:2vh;
-   font-size: 1.2em;
  }
 `;
 export const ContactForm = styled.form`

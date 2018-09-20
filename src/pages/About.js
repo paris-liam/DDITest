@@ -43,15 +43,6 @@ class About extends React.Component {
     this.setState(state => ({
       showAccordian: !state.showAccordian,
     }));
-    console.log(this.state.showAccordian);
-    const panels = document.getElementsByClassName('accordianPanel');
-    /* for (let i = 0; i < panels.length; i++) {
-      if (panels[i].style.maxHeight) {
-        panels[i].style.maxHeight = null;
-      } else {
-        panels[i].style.maxHeight = `${panels[i].scrollHeight}px`;
-      }
-    } */
   }
 
   teamInfoParse(info, images) {
@@ -59,7 +50,7 @@ class About extends React.Component {
       const memberId = member.node.id.split('/');
       const MemberName = memberId[memberId.length - 1].split('.')[0];
       if (info[MemberName]) {
-        info[MemberName].image = member.node.sizes;
+        info[MemberName].image = member.node.resolutions;
       }
     },
     );
@@ -230,8 +221,8 @@ export const query = graphql`
     edges {
       node {
         id
-        sizes(maxWidth:800){
-        ... GatsbyImageSharpSizes
+        resolutions{
+        ... GatsbyImageSharpResolutions
         }
       }
     }

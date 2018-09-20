@@ -91,8 +91,8 @@ export const EquiptmentFinanced = styled.div`
   grid-area:'Equipt';
 `;
 export const EquiptTitle = styled.div`
+  margin-top: 3vh;
   text-align:center;
-  margin-left: 5%;
   h1{
     margin-bottom:2vh;
   }
@@ -129,8 +129,9 @@ export const EquiptText = styled.div`
     font-size:2.5em;
   }
   p{
-    width:80%;
-    text-align:left;
+    width: 95%;
+    margin:0 auto;
+    text-align:center;
   }
 `;
 

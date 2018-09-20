@@ -22,7 +22,7 @@ const Contact = data => (
       <ContactBody>
         <ContactInfo>
           <ul style={{ gridArea: 'Corporate' }}>
-            <li>DDI Capital Corporate Headquarters</li>
+            <li>DDI Capital Headquarters</li>
             <li>221 Somerville Road</li>
             <li>Bedminster, NJ 07921</li>
             <li>Tel: 908-781-9300</li>
@@ -43,7 +43,7 @@ const Contact = data => (
             <li>Fax: 704-843-9462</li>
           </ul>
           <ul style={{ gridArea: 'quogue' }}>
-            <li>East Quogue, NY</li>
+            <li>Quogue, NY</li>
             <li>Tel: 631-996-2675</li>
           </ul>
           <ul style={{ gridArea: 'spring' }}>
