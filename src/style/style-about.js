@@ -159,7 +159,7 @@ export const MeetTheTeamTitle = styled.div`
 `;
 
 export const MeetTheTeamAccordian = styled.div`
-  overflow:scroll;
+  overflow-y:scroll;
 `;
 
 export const AboutInterestedSlide = styled.div`
