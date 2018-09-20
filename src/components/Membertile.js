@@ -50,11 +50,9 @@ class Membertile extends React.Component {
   }
   componentDidMount() {
     const thisPanel = document.getElementById(this.props.info.name);
-    console.log(thisPanel.scrollHeight);
     this.setState({
       height: `${thisPanel.scrollHeight}px`,
     });
-    console.log(this.state.height);
   }
   render() {
     return (

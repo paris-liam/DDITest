@@ -6,13 +6,12 @@ import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, Equiptm
 import { IndexGrid, CoverHold, CoverText, Interested } from '../style/style-index';
 import { teamInfo } from '../style/dataAndCopy';
 import { gatsbyImgStyle } from '../style/style';
-import { accordianTeam } from '../style/dataAndCopy.js';
 
 class About extends React.Component {
   constructor(props) {
     super(props);
     this.imageCycle = this.imageCycle.bind(this);
-    this.accordianTeam = accordianTeam.bind(this);
+    this.accordianTeam = this.accordianTeam.bind(this);
     const parsedTeamInfo = this.teamInfoParse(teamInfo, this.props.data.memberPhotos.edges);
     this.state = {
       equiptmentImages: [this.props.data.equipt1.sizes, this.props.data.equipt2.sizes, this.props.data.equipt3.sizes],
@@ -21,6 +20,11 @@ class About extends React.Component {
       showAccordian: false,
       teamInfo: parsedTeamInfo,
     };
+    if (this.props.location.hash == 'Team') {
+      this.setState({
+        showAccordian: true,
+      });
+    }
   }
   componentDidMount() {
     this.setState({
@@ -29,16 +33,6 @@ class About extends React.Component {
   }
   componentWillUnmount() {
     clearInterval(this.intervalFunction);
-  }
-
-  imageCycle() {
-    let newImage = this.state.equiptmentCurrent + 1;
-    if (newImage >= this.state.equiptmentImages.length) {
-      newImage = 0;
-    }
-    this.setState(state => ({
-      equiptmentCurrent: newImage,
-    }));
   }
   teamInfoParse(info, images) {
     images.forEach((member) => {
@@ -50,6 +44,20 @@ class About extends React.Component {
     },
     );
     return info;
+  }
+  accordianTeam() {
+    this.setState(state => ({
+      showAccordian: !state.showAccordian,
+    }));
+  }
+  imageCycle() {
+    let newImage = this.state.equiptmentCurrent + 1;
+    if (newImage >= this.state.equiptmentImages.length) {
+      newImage = 0;
+    }
+    this.setState({
+      equiptmentCurrent: newImage,
+    });
   }
   render() {
     return (

@@ -3,7 +3,6 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { colorsAndFont } from '../style/style.js';
-import { accordianTeam } from '../style/dataAndCopy';
 
 const toggleNav = function () {
   const siteWrap = document.querySelector('#site-wrapper');
@@ -303,7 +302,14 @@ class TopHeader extends React.Component {
                 <li><Link to="/About">Who We Are</Link></li>
                 <li><Link to="/About#Why">Why DDI</Link></li>
                 <li><Link to="/About#Equipt">Equipment Financed</Link></li>
-                <li><Link to="/About#Team">Meet The Team</Link></li>
+                <li><Link to={{
+                      pathname: '/About',
+                      hash: '#Team',
+                      state: { accordian: true },
+                    }}
+                >Meet The Team
+                    </Link>
+                </li>
               </ul>
             </DropdownContent>
             <li className="leasingDrop">Leasing Solutions</li>

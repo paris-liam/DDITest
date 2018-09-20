@@ -5,7 +5,6 @@ import TopHeader from '../components/TopHeader'; import './index.css';
 import favicon from '../pages/images/favicon.ico';
 import Link from 'gatsby-link';
 import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact } from '../style/style';
-import { accordianTeam } from '../style/dataAndCopy';
 
 const toggleNav = function () {
   const siteWrap = document.querySelector('#site-wrapper');
