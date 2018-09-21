@@ -13,7 +13,6 @@ export const CoverHold = styled.div`
   background-color:black;
   display:grid;
   grid-template-rows:1px 99%;
-
 `;
 export const CoverText = styled.div`
   position:relative;
@@ -52,56 +51,6 @@ export const LearnMore = styled.div`
     }
 `;
 
-/*
-export const IndexGrid = styled.div`
-  display:grid;
-  grid-template-rows: 45vh auto auto 30vh auto;
-  grid-template-columns: auto;
-  color:white;
-`;
-export const CoverHold = styled.div`
-  position:relative;
-  background-color:black;
-  display:grid;
-  grid-template-rows:1px 99%;
-
-`;
-export const CoverText = styled.div`
-  position:relative;
-  z-index:2;
-  display:grid;
-  text-align:left;
-  align-self:left;
-  justify-self:center;
-  grid-template-columns:auto;
-  grid-template-rows:auto auto 10vh;
-  margin-left: 5vw;
-  h1{
-    width: 100%;
-    margin: 10vh auto 0 auto;
-    font-size:2.25em;
-  }
-  p{
-    width:80%;
-    text-align:justify;
-    margin-right:auto;
-  }
-`;
-export const LearnMore = styled.div`
-    button{
-      margin-top: 2vh;
-      border-radius:3em;
-      background-color:${colorsAndFont.blue};
-      color:white;
-      outline:none;
-      border:none;
-      padding:.5em 1em;
-      &:hover{
-          background-color:${colorsAndFont.grey}
-      }
-    }
-`;
-*/
 export const FocusedSlide = styled.div`
   color:${colorsAndFont.grey};
   background-color:white;
@@ -122,10 +71,10 @@ export const FocusedTitle = styled.div`
     display:flex;
     justify-content:center;
     margin: 1.5vh auto 1.5vh auto;
-    width:60%;
-      @media screen and (max-width:1025px){
-        width:80%;
-      }
+    width:80%;
+    @media screen and (min-width:1025px){
+        width:60%;
+    }
     font-size:1.25em;
    }
 `;
@@ -134,16 +83,15 @@ export const FocusedBody = styled.div`
   color:${colorsAndFont.blue};
   text-align:left;
   display:grid;
-  grid-template-columns: auto auto;
   grid-column-gap: 5vh;
   grid-row-gap: 5vh;
-  grid-template-rows: max-content max-content;
   padding: 1vh .5vh;
   text-align:center;
-  @media screen and (max-width:1025px){
-    display:grid;
-    grid-template-columns: auto;
-    grid-template-rows: max-content max-content max-content max-content;
+  grid-template-columns: auto;
+  grid-template-rows: max-content max-content max-content max-content;
+  @media screen and (min-width:1025px){
+    grid-template-columns: auto auto;
+    grid-template-rows: max-content max-content;
   }
   & > div{
     display:flex;
@@ -153,12 +101,12 @@ export const FocusedBody = styled.div`
     }
     p{
       margin-top:2vh;
-      @media screen and (max-width:1025px){
-        padding-top:0;
+      padding-top:0;
+      @media screen and (min-width:1025px){
+        padding-top:inherit
       }
     }
   }
-
 `;
 export const SolutionsSlide = styled.div`
     background-color: ${colorsAndFont.blue};
@@ -177,10 +125,10 @@ export const SolutionsSlide = styled.div`
       justify-self:center;
       align-self:center;
       position:relative;
-      width:90vw;
+      width:80vw;
       height:max-content;
-      @media screen and (max-width: 1025px){
-        width:80vw;
+      @media screen and (min-width: 1025px){
+        width:90vw;
       }
       @media screen and (max-width: 700px) and (orientation: landscape){
         width:60vw;
@@ -221,19 +169,19 @@ export const NefaSlide = CoverHold.extend`
 `;
 
 export const InterestedSlide = styled.div`
-  padding: 2vh 5vh 0 5vh;
   background-color:${colorsAndFont.blue};
   height:auto;
   color:white;
   display:grid;
   grid-template-columns:1fr 1fr;
-  @media screen and (max-width: 1024px){
-    padding: 2vh .5vw 0 .5vw;
+  padding: 2vh .5vw 0 .5vw;
+  /*desktop*/
+  @media screen and (min-width: 1024px){
+    padding: 2vh 5vh 0 5vh;
   }
   grid-template-rows: auto 2vh;
   grid-row-gap: 1vh;
   grid-template-areas: 'offerings interested ' 'copyright copyright';
-  /*phone*/
   p.copyright{
     grid-area:copyright;
     text-align:center;
@@ -250,29 +198,28 @@ export const Offerings = styled.div`
   border-right: 1px solid white;
   margin-left: 10%;
   h1{
-    font-size:1.75em;
-    margin: auto 0 2.5vh 0;
-    text-transform: uppercase;
-  }
+      font-size: 1.5em;
+      margin: auto 0 2.5vh 0;
+      text-transform: uppercase;
+    }
   ul{
+    font-size:.75em;
     margin-left: 2em;
-    font-size:1em;
     li{
-      padding-bottom: .5vh;
+    padding-bottom: 1vh;
     }
   }
-  @media screen and (max-width:1024px){
+  @media screen and (min-width:1024px){
     h1{
-      font-size: 1.5em;
+      font-size:1.75em;
     }
     ul{
-      font-size:.75em;
+      font-size:1em;
       li{
-      padding-bottom: 1vh;
+        padding-bottom: .5vh;
       }
     }
   }
-
 `;
 
 export const Interested = styled.div`
@@ -315,5 +262,5 @@ export const Interested = styled.div`
         padding: 1vh;
         font-size: 1.25em;
     }
-      }
+  }
 `;

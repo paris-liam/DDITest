@@ -1,5 +1,5 @@
 import React from 'react';
-
+// custom arrows for slick carousel
 export function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (

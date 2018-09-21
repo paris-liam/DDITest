@@ -3,30 +3,25 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { colorsAndFont } from '../style/style.js';
-
-const toggleNav = function () {
-  const siteWrap = document.querySelector('#site-wrapper');
-  siteWrap.classList.toggle('show-nav');
-  const ham = document.querySelector('.hamburger-menu');
-  ham.classList.toggle('animate');
-};
+import { toggleNav } from '../style/dataAndCopy';
 
 const HeadGrid = styled.div`
   color: ${colorsAndFont.blue};
   display:grid;
-  /*desktop*/
-  grid-template-rows:auto;
-  grid-template-columns: 2fr 1fr 3fr;
-  grid-template-areas: 'headImg . hamburgercontent';
-  margin: 1.5em 2em .5em 4em;
   /*phone*/
-  @media screen and (max-width: 1025px){
-    grid-template-rows:10vh;
-    grid-template-columns: 4fr 2fr;
-    grid-template-areas: 'headImg hamburgericon';
-    margin-top:2vh;
-    margin-left: 2em;
+  grid-template-rows:10vh;
+  grid-template-columns: 4fr 2fr;
+  grid-template-areas: 'headImg hamburgericon';
+  margin-top:2vh;
+  margin-left: 2em;
+  /*desktop*/
+  @media screen and (min-width: 1025px){
+    grid-template-rows:auto;
+    grid-template-columns: 2fr 1fr 3fr;
+    grid-template-areas: 'headImg . hamburgercontent';
+    margin: 1.5em 2em .5em 4em;
   }
+  /* phone landscape*/
   @media screen and (max-width: 1025px) and (orientation: landscape){
     grid-template-rows:auto;
   }
@@ -38,33 +33,32 @@ const Logo = styled(Link)`
   padding-top:5px;
 `;
 const HamburgerContent = styled.div`
-  /*desktop*/
-  display:grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows:1fr 2fr;
-  grid-row-gap:3vh;
-  grid-area:hamburgercontent;
-  grid-template-areas: '. contact' '. nav';
   /*phone*/
-  @media screen and (max-width: 1025px){
-    display:none;
+  display:none;
+  /*desktop*/
+  @media screen and (min-width: 1025px){
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows:1fr 2fr;
+    grid-row-gap:3vh;
+    grid-area:hamburgercontent;
+    grid-template-areas: '. contact' '. nav';
   }
 `;
 
 const Contact = styled.div`
-  font-size:.75em;
-
-  @media screen and (max-width:1200px){
-    font-size:.55em;
-  }
   list-style:none;
   grid-area: contact;
   text-align:right;
   display:flex;
   justify-content:space-around;
+
+  font-size:.55em;
+  /*desktop*/
+  @media screen and (min-width:1200px){
+    font-size:.75em;
+  }
   li{
-    i{
-    }
     p{
       display:inline;
       font-weight:400 !important;
@@ -80,29 +74,18 @@ const Envelope = styled.li`
       color:${colorsAndFont.grey};
     }
   }
-
 `;
 const PhoneNumber = styled.li``;
+
 const PayBillsButton = styled.li`
-  /*desktop*/
-  & > a > button{
+  a > button{
     background-color:${colorsAndFont.blue};
     color:white;
     outline:none;
     border:none;
     border-radius:30em;
-    /*font-family: ${colorsAndFont.font};*/
     &:hover{
       background-color:${colorsAndFont.grey};
-    }
-  }
-  /*phone*/
-  @media screen and (max-width: 1025px){
-    & > button{
-      background-color:${colorsAndFont.grey};
-    }
-    & > button:hover{
-      background-color:${colorsAndFont.magenta};
     }
   }
 `;
@@ -120,12 +103,12 @@ const Nav = styled.div`
   }
   li{
     font-size:1.25em;
-      a{
-        color:black;
+    a{
+      color:black;
+      &:hover{
+        color:${colorsAndFont.lightPurp};
       }
-      a:hover{
-       color:${colorsAndFont.lightPurp};
-      }
+    }
   }
   li:hover{
     color:${colorsAndFont.lightPurp};
@@ -270,20 +253,20 @@ class TopHeader extends React.Component {
     const ham = document.querySelector('.hamburger-menu');
     ham.classList.remove('animate');
   }
-
   render() {
     return (
       <HeadGrid>
         <Logo to="/">
           <Img sizes={this.props.logo.sizes} />
         </Logo>
-        <HamburgerIcon><div /><div className="burger-container" onClick={toggleNav}><div
-          className="hamburger-menu"
+        <HamburgerIcon><div /><div className="burger-container" onClick={toggleNav}>
+          <div
+className="hamburger-menu"
           style={{
-    position: 'absolute',
-    top: '30%',
-    left: '30%',
-        }}
+ position: 'absolute',
+                     top: '30%',
+                     left: '30%',
+                  }} 
         />
                               </div>
         </HamburgerIcon>

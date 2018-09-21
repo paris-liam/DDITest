@@ -23,28 +23,28 @@ export const gatsbyImgStyle = {
 
 /* hamburger sidebar */
 export const Sidebar = styled.div`
-&:first-child{
-  padding-top:2vh;
-}
-font-size:1.25rem;
+  &:first-child{
+    padding-top:2vh;
+  }
+  font-size:1.25rem;
 `;
 export const SidebarItem = styled.ul`
-list-style:none;
-padding-top:1vh;
-padding-left:2vw;
-padding-bottom: .25vh;
-a{
-  text-decoration:none;
-  color:white;
-}
-a:hover{
-  color:${colorsAndFont.grey};
-}
+  list-style:none;
+  padding-top:1vh;
+  padding-left:2vw;
+  padding-bottom: .25vh;
+  a{
+    text-decoration:none;
+    color:white;
+  }
+  a:hover{
+    color:${colorsAndFont.grey};
+  }
 `;
 export const SidebarDropdown = styled.ul`
-list-style:none;
-padding-left:2vw;
-margin-bottom:3vh;
+  list-style:none;
+  padding-left:2vw;
+  margin-bottom:3vh;
   & > *:hover{
     color:${colorsAndFont.grey};
   }
@@ -53,34 +53,34 @@ margin-bottom:3vh;
   }
 `;
 export const SidebarContact = styled.ul`
-    list-style:none;
-    margin-top:3vh;
-    padding-top:1vh;
-    padding-left:2vw;
-    & > *{
-      padding-bottom: .75vh;
+  list-style:none;
+  margin-top:3vh;
+  padding-top:1vh;
+  padding-left:2vw;
+  & > *{
+    padding-bottom: .75vh;
+  }
+  & > .sideenv > a{
+    text-decoration:none;
+    color:inherit;
+    &:hover{
+      color:${colorsAndFont.grey};
     }
-    & > .sideenv > a{
-      text-decoration:none;
-      color:inherit;
-      &:hover{
-        color:${colorsAndFont.grey};
-      }
-    }
-    & > li:nth-child(3){
-      padding-top: 1vh;
-    }
-    .sidebill{
-      padding:.5em;
-      border-radius:30px;
-      color:white;
-      background-color:${colorsAndFont.grey};
-      outline:none;
-      border:none;
-    }
-    .sidebill:hover{
-      background-color:${colorsAndFont.magenta};
-    }
+  }
+  & > li:nth-child(3){
+    padding-top: 1vh;
+  }
+  .sidebill{
+    padding:.5em;
+    border-radius:30px;
+    color:white;
+    background-color:${colorsAndFont.grey};
+    outline:none;
+    border:none;
+  }
+  .sidebill:hover{
+    background-color:${colorsAndFont.magenta};
+  }
 
 `;
 

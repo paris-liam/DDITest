@@ -171,7 +171,7 @@ class About extends React.Component {
           <MeetTheTeamTitle onClick={this.accordianTeam}>
             <h1>MEET THE TEAM</h1>
             <p>We deliver high-integrity, convenience-based financing solutions our technology partners can provide to their customers. Here’s the people that make this happen.</p>
-            <i className={`fa fa-angle-right meetTeamArrow ${this.state.showAccordian && 'animateArrow'}`} />
+            <i className={`fa fa-angle-right meetTeamArrow ${this.state.showAccordian ? ('animateArrow') : ('resetArrow')}`} />
           </MeetTheTeamTitle>
           <MeetTheTeamAccordian
             className="accordian"

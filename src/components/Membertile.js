@@ -13,8 +13,6 @@ const Member = styled.div`
 `;
 const MemberShot = styled.div`
   margin: auto auto;
-  .coverOuter{
-  }
 `;
 const MemberInfo = styled.div`
   margin-left: 3vh;
@@ -34,10 +32,10 @@ const MemberBio = styled.div`
 const MemberContact = styled.div`
  margin-top:2vh;
  margin-bottom:5vh;
-a{
-  text-decoration:none;
-  color:inherit;
-}
+  a{
+    text-decoration:none;
+    color:inherit;
+  }
 `;
 
 

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-import { CoverText, CoverHold, FocusedBody, Interested, InterestedSlide } from './style-index';
+import { CoverText, FocusedBody, Interested } from './style-index';
 import { colorsAndFont } from './style';
 
 export const AboutGrid = styled.div`
  display:grid;
  grid-template-rows: 45vh auto auto auto auto auto;
- grid-template-columns:auto;
+ grid-template-columns:100%;
  background-color: ${colorsAndFont.blue};
  color:white;
  grid-template-areas: 'AboutCover' 'Who' 'Why' 'Equipt' 'Meet' 'Interested';
@@ -18,13 +18,13 @@ export const WhoWeAre = styled.div`
   grid-area:'Who';
   padding: 2.5vh 5vw;
   display:grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: 3fr 2fr;
-  grid-template-areas: 'title .' 'letter list';
-  @media screen and (max-width: 1024px){
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto;
-    grid-template-areas: 'title' 'letter' 'list';
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
+  grid-template-areas: 'title' 'letter' 'list';
+  @media screen and (min-width: 1024px){
+    grid-template-rows: auto auto;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: 'title .' 'letter list';
   }
 `;
 
@@ -105,13 +105,14 @@ export const EquiptList = styled.div`
   background-color:black;
   display:grid;
   grid-template-rows:1px 99%;
+  overflow:hidden;
 `;
 export const EquiptText = styled.div`
   grid-template-rows: 1fr 5fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 'title title title' 'list list list';
   margin: 0 auto;
-  font-size:1.25em;
+  font-size:1em;
   ul{
     display:flex;
     flex-direction:column;

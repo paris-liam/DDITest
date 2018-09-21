@@ -16,7 +16,7 @@
 }
 @media screen and (max-width:1200px){
   html{
-    font-size: calc(1vw + 10px);
+    font-size: calc(1vw + 8px);
   }
 }
 
@@ -442,4 +442,9 @@ li{
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
    transform: rotate(90deg);
+}
+
+.resetArrow{
+  transform: rotate(0deg);
+  transition: .3s;
 }

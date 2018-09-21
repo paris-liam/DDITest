@@ -24,17 +24,17 @@ export const SingleSlide = FocusedSlide.extend`
 /* Customer Page */
 export const CustBody = styled.div`
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: 'reqs custOff';
   text-align:left;
   padding-bottom:1vh;
   width:90%;
   margin: 0 auto;
-  @media screen and (max-width:1024px){
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: 'reqs' 'custOff';
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'reqs' 'custOff';
+  @media screen and (min-width:1024px){
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'reqs custOff';
   }
 `;
 
@@ -50,14 +50,16 @@ export const Requirements = styled.div`
   }
 `;
 export const CustOff = Offerings.extend`
-  margin: 0 auto;
-  @media screen and (max-width:1024px){
-    padding-top:4vh;
-    margin:0 0 0 3vw;
-  }
+  padding-top:4vh;
+  margin:0 0 0 3vw;
+  border:none;
   grid-area: custOff;
   font-size:1.1em;
   grid-template-rows: min-content auto;
+  @media screen and (min-width:1024px){
+    padding-top:inherit;
+    margin: 0 auto;
+  }
   h1{
     margin-top:0;
     margin-bottom: 3.5vh;
@@ -65,7 +67,7 @@ export const CustOff = Offerings.extend`
   li{
     margin-bottom:1.5vh;
   }
-  border:none;
+
 `;
 
 export const CustTitle = styled.div`
@@ -81,23 +83,24 @@ export const CustTitle = styled.div`
 /* Vendor Page */
 export const VendorBody = styled.div`
   display:grid;
-  grid-template-columns: 3fr 2fr;
   grid-column-gap:5vw;
-  grid-template-rows: auto;
   color:white;
   padding: 2vh 1vh;
-  margin: 2vh 3vw 0 1vw;
-  .handshakeImage{
-      margin: 0 auto;
-      width:100%;
-    }
-  @media screen and (max-width:1025px){
-    grid-template-columns: auto;
+
+  grid-template-columns: auto;
     grid-template-rows: auto 30vh;
     margin:0;
     .handshakeImage{
       margin: 0 auto;
       width:70%;
+    }
+  @media screen and (min-width:1024px){
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto;
+    margin: 2vh 3vw 0 1vw;
+    .handshakeImage{
+      margin: 0 auto;
+      width:100%;
     }
   }
 `;
@@ -115,12 +118,12 @@ export const Following = styled.div`
 /* Contact Page */
 export const ContactBody = styled.div`
   display:grid;
-  grid-template-rows:auto;
-  grid-template-columns: 1fr 1fr;
   margin: 4vh 3vw;
-  @media screen and (max-width:1024px)  {
-    grid-template-rows:auto auto;
-  grid-template-columns: auto;
+  grid-template-rows:auto auto;
+    grid-template-columns: auto;
+  @media screen and (min-width:1024px)  {
+    grid-template-rows:auto;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 

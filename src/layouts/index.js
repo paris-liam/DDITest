@@ -5,13 +5,7 @@ import TopHeader from '../components/TopHeader'; import './index.css';
 import favicon from '../pages/images/favicon.ico';
 import Link from 'gatsby-link';
 import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact } from '../style/style';
-
-const toggleNav = function () {
-  const siteWrap = document.querySelector('#site-wrapper');
-  siteWrap.classList.toggle('show-nav');
-  const ham = document.querySelector('.hamburger-menu');
-  ham.classList.toggle('animate');
-};
+import { toggleNav } from '../style/dataAndCopy';
 
 const Layout = ({ data, children }) => (
   <div>
@@ -91,6 +85,7 @@ const Layout = ({ data, children }) => (
 
 Layout.propTypes = {
   children: PropTypes.func,
+  data: PropTypes.shape,
 };
 
 export default Layout;

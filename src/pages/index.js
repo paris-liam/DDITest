@@ -5,9 +5,6 @@ import SimpleSlider from '../components/SimpleSlider';
 import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide, Offerings, Interested } from '../style/style-index';
 import { gatsbyImgStyle } from '../style/style';
 
-const learnScroll = function () {
-  window.scrollTo({ top: 690, behavior: 'smooth' });
-};
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
@@ -36,6 +33,9 @@ class IndexPage extends React.Component {
       currentPhoto: newImage,
     }));
   }
+  learnScroll() {
+    window.scrollTo({ top: 690, behavior: 'smooth' });
+  }
   render() {
     return (
       <IndexGrid>
@@ -49,7 +49,7 @@ class IndexPage extends React.Component {
           <CoverText>
             <h1>DDI Capital is your Independent Trusted Advisor </h1>
             <p>Whether you are just starting out, or ready to bring your current organization to a new level of growth DDI Capital offers you the most innovative financial strategies allowing you to acquire and finance technology solutions at the best possible price.</p>
-            <LearnMore><button onClick={learnScroll}> Learn More &nbsp;&nbsp;<i className="fa fa-arrow-alt-circle-down" /></button></LearnMore>
+            <LearnMore><button onClick={this.learnScroll}> Learn More &nbsp;&nbsp;<i className="fa fa-arrow-alt-circle-down" /></button></LearnMore>
           </CoverText>
         </CoverHold>
         <FocusedSlide>

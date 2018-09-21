@@ -1,3 +1,4 @@
+// info for solutions page
 export const sliderInfo = [
   {
     icon: 'first-aid',
@@ -40,7 +41,7 @@ export const sliderInfo = [
     body: 'Leading hospitality brands depend on DDI to help them connect with guests and improve operational efficiencies so they can deliver the best possible experiences to their customers.',
   },
 ];
-
+// info for meet the team dropdown
 export const teamInfo = {
   'Ellen-Arlauskas': {
     image: null,
@@ -130,4 +131,11 @@ export const teamInfo = {
     body: 'Brett has been in the leasing industry since 1986, holding various operations and sales positions with Bell Atlantic Tricon Leasing. After moving to Copelco Capital, Brett joined DDI in 2000 and is responsible for banking relationships and customer credit.',
     email: 'brettu@ddicapitalinc.com',
   },
+};
+
+export const toggleNav = function () {
+  const siteWrap = document.querySelector('#site-wrapper');
+  siteWrap.classList.toggle('show-nav');
+  const ham = document.querySelector('.hamburger-menu');
+  ham.classList.toggle('animate');
 };
