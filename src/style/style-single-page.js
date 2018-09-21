@@ -86,14 +86,14 @@ export const VendorBody = styled.div`
   grid-column-gap:5vw;
   color:white;
   padding: 2vh 1vh;
-
+  text-align:left;
   grid-template-columns: auto;
-    grid-template-rows: auto 30vh;
-    margin:0;
-    .handshakeImage{
-      margin: 0 auto;
-      width:70%;
-    }
+  grid-template-rows: auto 30vh;
+  margin:0;
+  .handshakeImage{
+    margin: 0 auto;
+    width:70%;
+  }
   @media screen and (min-width:1024px){
     grid-template-columns: 3fr 2fr;
     grid-template-rows: auto;
@@ -120,7 +120,7 @@ export const ContactBody = styled.div`
   display:grid;
   margin: 4vh 3vw;
   grid-template-rows:auto auto;
-    grid-template-columns: auto;
+  grid-template-columns: auto;
   @media screen and (min-width:1024px)  {
     grid-template-rows:auto;
     grid-template-columns: 1fr 1fr;
