@@ -14,7 +14,7 @@ const responsiveArray = [
       infinite: true,
       swipeToSlide: true,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 4000,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
     },

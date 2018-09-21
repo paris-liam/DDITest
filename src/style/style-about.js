@@ -10,6 +10,12 @@ export const AboutGrid = styled.div`
  background-color: ${colorsAndFont.blue};
  color:white;
  grid-template-areas: 'AboutCover' 'Who' 'Why' 'Equipt' 'Meet' 'Interested';
+ /*phone landscape mode*/
+ @media screen and (max-width: 900px) and (orientation: landscape){
+  grid-template-rows: 60vh auto auto auto auto auto;
+
+      }
+
 `;
 export const AboutCoverText = CoverText.extend`
   grid-template-rows: auto auto;
@@ -72,6 +78,7 @@ export const WhyBody = FocusedBody.extend`
   grid-template-columns: auto;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas: 'experience' 'rates' 'speed' 'creative' 'adapt';
+  /*desktop*/
   @media screen and (min-width:1024px){
     .adaptCopy{
       margin-top:3vh;
@@ -79,8 +86,6 @@ export const WhyBody = FocusedBody.extend`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas: 'experience rates' 'speed creative' 'adapt adapt';
-    /* grid-row-gap:4vh;
-    grid-column-gap: 4vw;*/
   }
   strong{
     margin:0;
@@ -106,6 +111,10 @@ export const EquiptList = styled.div`
   display:grid;
   grid-template-rows:1px 99%;
   overflow:hidden;
+  /*landscape mode*/
+  @media screen and (max-width: 900px) and (orientation: landscape){
+   height:90vh;
+  }
 `;
 export const EquiptText = styled.div`
   grid-template-rows: 1fr 5fr;

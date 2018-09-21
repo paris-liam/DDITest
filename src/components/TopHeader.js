@@ -24,6 +24,7 @@ const HeadGrid = styled.div`
   /* phone landscape*/
   @media screen and (max-width: 1025px) and (orientation: landscape){
     grid-template-rows:auto;
+    margin-bottom: 4vh;
   }
 `;
 const Logo = styled(Link)`
@@ -261,14 +262,14 @@ class TopHeader extends React.Component {
         </Logo>
         <HamburgerIcon><div /><div className="burger-container" onClick={toggleNav}>
           <div
-className="hamburger-menu"
-          style={{
+            className="hamburger-menu"
+            style={{
  position: 'absolute',
                      top: '30%',
                      left: '30%',
-                  }} 
-        />
-                              </div>
+                  }}
+          />
+        </div>
         </HamburgerIcon>
         <HamburgerContent>
           <Contact>
@@ -291,7 +292,7 @@ className="hamburger-menu"
                       state: { accordian: true },
                     }}
                 >Meet The Team
-                    </Link>
+                </Link>
                 </li>
               </ul>
             </DropdownContent>

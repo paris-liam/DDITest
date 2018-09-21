@@ -7,6 +7,9 @@ export const IndexGrid = styled.div`
   grid-template-rows: 70vh auto auto 25vh auto;
   grid-template-columns: auto;
   color:white;
+  @media screen and (max-width: 900px) and (orientation: landscape){
+    grid-template-rows: 90vh auto auto 35vh auto;
+  }
 `;
 export const CoverHold = styled.div`
   position:relative;
