@@ -46,6 +46,10 @@ export const Requirements = styled.div`
     margin:2vh 2vh 2vh 0;
     li{
       padding-bottom:.5em;
+      font-size:.85em;
+    }
+    li:before{
+      content:'-  '
     }
   }
 `;
@@ -133,6 +137,7 @@ export const ContactInfo = styled.div`
  grid-template-rows: auto auto auto;
  grid-row-gap: 1vh;
  grid-template-areas: 'Corporate .' 'ponte north ' 'charlotte quogue' 'spring .';
+ font-size:.75em;
  ul{
    list-style:none;
    text-align:left;
@@ -161,12 +166,14 @@ div{
   grid-column-start: 2;
   grid-row-start: 4;
   input{
-  width: 25%;
+  width: auto;
   background-color: ${colorsAndFont.lightPurp};
   outline:none;
   border:none;
   color:white;
   border-radius: 5vh;
+  padding-top: .5vh;
+  padding-bottom:.5vh;
 }
 }
 

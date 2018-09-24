@@ -14,7 +14,7 @@
   font-size: calc(1vw + 5px);
   font-family:'Lato', 'sans-serif';
 }
-@media screen and (max-width:1200px){
+@media screen and (max-width:1024px){
   html{
     font-size: calc(1vw + 8px);
   }

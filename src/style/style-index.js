@@ -4,7 +4,7 @@ import { colorsAndFont } from './style';
 /* Index Page Slides */
 export const IndexGrid = styled.div`
   display:grid;
-  grid-template-rows: 70vh auto auto 25vh auto;
+  grid-template-rows: 60vh auto auto 25vh auto;
   grid-template-columns: auto;
   color:white;
   @media screen and (max-width: 900px) and (orientation: landscape){
@@ -245,11 +245,11 @@ export const Interested = styled.div`
     }
     button{
       background-color: ${colorsAndFont.grey};
-      font-size:1em;
+      font-size:.75em;
       color:white;
       outline:none;
       border:none;
-      padding: 1em;
+      padding: .75em;
       border-radius: 3em;
     }
     button:hover{

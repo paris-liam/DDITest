@@ -121,7 +121,6 @@ export const EquiptText = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 'title title title' 'list list list';
   margin: 0 auto;
-  font-size:1em;
   ul{
     display:flex;
     flex-direction:column;
@@ -129,6 +128,7 @@ export const EquiptText = styled.div`
     text-align:center;
     list-style:none;
     width:auto;
+    font-weight:bolder
   }
   position:relative;
   z-index:2;
@@ -160,6 +160,10 @@ export const MeetTheTeamTitle = styled.div`
    i{
     font-size:2.75em;
     margin:auto 4vw auto 0vw;
+    &:hover{
+      color:${colorsAndFont.lightPurp};
+      cursor:pointer;
+    }
    }
  text-align:center;
  margin-bottom:2vh;

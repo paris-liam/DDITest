@@ -40,7 +40,7 @@ const HamburgerContent = styled.div`
   @media screen and (min-width: 1025px){
     display:grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows:1fr 2fr;
+    grid-template-rows:1fr 1fr;
     grid-row-gap:3vh;
     grid-area:hamburgercontent;
     grid-template-areas: '. contact' '. nav';
@@ -103,12 +103,14 @@ const Nav = styled.div`
     font-size:.8em;
   }
   li{
-    font-size:1.25em;
+    font-size:1em;
+    font-weight:300;
     a{
       color:black;
       &:hover{
         color:${colorsAndFont.lightPurp};
       }
+
     }
   }
   li:hover{
@@ -139,11 +141,11 @@ const DropdownContent = styled.div`
   background-color:${colorsAndFont.grey};
   border-radius:.5em;
   &.aboutContent{
-    top: 100%;
-    left:-4%;
+    top: 3.75vh;
+    left:5%;
   }
   &.leasingContent{
-    top:100%;
+    top:3.75vh;
     left:35%;
   }
   &:before {
@@ -171,9 +173,8 @@ const DropdownContent = styled.div`
       border-bottom-right-radius: .5em;
     }
     & > li{
-    width:100%;
-    text-align:center;
-    padding: .5em .1em;
+    text-align:left;
+    padding: .75em .3em;
     a{
       color: white;
     }

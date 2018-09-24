@@ -83,7 +83,7 @@ class IndexPage extends React.Component {
         </NefaSlide>
         <InterestedSlide>
           <Interested>
-            <h1>Interested?<br /> Let's Talk!</h1>
+            <h1>Interested?<br /> Let's Talk</h1>
             <div><Link to="/Vendors"><button>Vendor Opportunities</button></Link></div>
             <div><Link to="/Customers"><button> Customer Information</button></Link></div>
           </Interested>
