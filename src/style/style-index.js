@@ -206,6 +206,7 @@ export const Offerings = styled.div`
       text-transform: uppercase;
     }
   ul{
+    font-weight:200;
     font-size:.75em;
     margin-left: 2em;
     li{
@@ -217,6 +218,7 @@ export const Offerings = styled.div`
       font-size:1.75em;
     }
     ul{
+      font-weight:200;
       font-size:1em;
       li{
         padding-bottom: .5vh;
