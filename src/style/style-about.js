@@ -128,7 +128,7 @@ export const EquiptText = styled.div`
     text-align:center;
     list-style:none;
     width:auto;
-    font-weight:bolder
+    font-weight:bold;
   }
   position:relative;
   z-index:2;

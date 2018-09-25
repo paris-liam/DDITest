@@ -171,7 +171,7 @@ export const NefaLogoGrid = CoverText.extend`
     padding-top:2vh;
   }
   img{
-    width:50%;
+    width: calc(30% + 10vh);
     text-align:center;
     margin-left:auto;
     margin-right:auto;
