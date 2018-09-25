@@ -95,14 +95,14 @@ export const VendorBody = styled.div`
   padding: 2vh 1vh;
   text-align:left;
   grid-template-columns: auto;
-  grid-template-rows: auto 30vh;
+  grid-template-rows: auto 40vh;
   margin:0;
   .handshakeImage{
     margin: 0 auto;
     width:70%;
   }
   @media screen and (min-width:1024px){
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 2fr 3fr;
     grid-template-rows: auto;
     margin: 2vh 3vw 0 1vw;
     .handshakeImage{
@@ -118,6 +118,15 @@ export const Following = styled.div`
       padding-bottom:2em;
       line-height:1.5;
       font-weight:300;
+    }
+    @media screen and (max-width:1024px){
+      display:flex;
+      justify-content:space-evenly;
+      li{
+        width:30%;
+        font-size:.75em;
+        margin-left:2vh;
+      }
     }
   }
 `;
