@@ -4,7 +4,7 @@ import { colorsAndFont } from './style';
 /* Index Page Slides */
 export const IndexGrid = styled.div`
   display:grid;
-  grid-template-rows: 70vh auto auto 35vh auto;
+  grid-template-rows: 70vh auto auto 40vh auto;
   grid-template-columns: auto;
   color:white;
   @media screen and (max-width: 900px) and (orientation: landscape){
