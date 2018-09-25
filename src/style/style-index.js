@@ -4,7 +4,7 @@ import { colorsAndFont } from './style';
 /* Index Page Slides */
 export const IndexGrid = styled.div`
   display:grid;
-  grid-template-rows: 60vh auto auto 25vh auto;
+  grid-template-rows: 70vh auto auto 35vh auto;
   grid-template-columns: auto;
   color:white;
   @media screen and (max-width: 900px) and (orientation: landscape){
@@ -154,24 +154,29 @@ export const SolIcon = styled.div`
   font-size:2.25em;
 
 `;
-export const NefaSlide = CoverHold.extend`
+export const NefaSlide = styled.div`
+  position:relative;
+  background-color:black;
+  display:grid;
+  grid-template-rows:1px auto;
+`;
+export const NefaLogoGrid = CoverText.extend`
+  grid-template-rows: auto auto;
   h1{
+    width:100%;
     color:white;
-    align-self:center;
-    justify-self:center;
-    z-index:2;
-    position:absolute;
     text-align:center;
     line-height:1;
-    font-size:2em;
-    span{
-      font-family:'Ubuntu Mono';
-      display:block;
-      font-size:3em;
-    }
+    font-size:2.5em;
+    padding-top:2vh;
+  }
+  img{
+    width:50%;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
   }
 `;
-
 export const InterestedSlide = styled.div`
   background-color:${colorsAndFont.blue};
   height:auto;

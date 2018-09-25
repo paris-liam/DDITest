@@ -20,6 +20,10 @@ export const gatsbyImgStyle = {
   width: '100%',
   height: '100%',
 };
+export const nefaCoverStyle = {
+  width: '25vh',
+  height: '25vh',
+};
 
 /* hamburger sidebar */
 export const Sidebar = styled.div`

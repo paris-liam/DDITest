@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import SimpleSlider from '../components/SimpleSlider';
-import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, SolutionsSlide, NefaSlide, NefaDiv, InterestedSlide, Offerings, Interested } from '../style/style-index';
-import { gatsbyImgStyle } from '../style/style';
+import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, SolutionsSlide, NefaSlide, InterestedSlide, Offerings, Interested, NefaLogoGrid, NefaLogo } from '../style/style-index';
+import { gatsbyImgStyle, nefaLogoStyle } from '../style/style';
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class IndexPage extends React.Component {
       currentPhoto: 0,
       intervalFunction: null,
       nefa: this.props.data.nefa.sizes,
-      nefaLogo: this.props.data.nefaLogo.sizes,
+      nefaLogo: this.props.data.nefaLogo.original.src,
     };
   }
   componentDidMount() {
@@ -80,13 +80,13 @@ class IndexPage extends React.Component {
             position="absolute"
             style={gatsbyImgStyle}
           />
-          <h1>Proud Members of <span><Img
-            sizes={this.state.nefaLogo}
-            position="absolute"
-            style={gatsbyImgStyle}
-          />
-          </span>
-          </h1>
+          <NefaLogoGrid>
+            <h1>Proud Members of </h1>
+            <img
+              src={this.state.nefaLogo}
+              alt="nefa logo"
+            />
+          </NefaLogoGrid>
         </NefaSlide>
         <InterestedSlide>
           <Interested>
@@ -130,9 +130,9 @@ export const query = graphql`
         ... GatsbyImageSharpSizes
       }
     }
-    nefaLogo:  imageSharp(id:{regex: "/nefaLogo.jpg/"}){
-      sizes(maxWidth:900){
-        ... GatsbyImageSharpSizes
+    nefaLogo:  imageSharp(id:{regex: "/nefaLogo.png/"}){
+      original{
+        src
       }
     }
     equipt1: imageSharp(id:{regex: "/AboutEquipt1.jpg/"}){
