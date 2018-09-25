@@ -14,6 +14,7 @@ class IndexPage extends React.Component {
       currentPhoto: 0,
       intervalFunction: null,
       nefa: this.props.data.nefa.sizes,
+      nefaLogo: this.props.data.nefaLogo.sizes,
     };
   }
   componentDidMount() {
@@ -79,7 +80,13 @@ class IndexPage extends React.Component {
             position="absolute"
             style={gatsbyImgStyle}
           />
-          <h1>Proud Members of <span>NEFA</span></h1>
+          <h1>Proud Members of <span><Img
+            sizes={this.state.nefaLogo}
+            position="absolute"
+            style={gatsbyImgStyle}
+          />
+          </span>
+          </h1>
         </NefaSlide>
         <InterestedSlide>
           <Interested>
@@ -120,6 +127,11 @@ export const query = graphql`
     }
     nefa: imageSharp(id:{regex: "/CoverNefa.jpg/"}){
       sizes(maxWidth:1900){
+        ... GatsbyImageSharpSizes
+      }
+    }
+    nefaLogo:  imageSharp(id:{regex: "/nefaLogo.jpg/"}){
+      sizes(maxWidth:900){
         ... GatsbyImageSharpSizes
       }
     }

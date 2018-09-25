@@ -137,7 +137,6 @@ export const ContactInfo = styled.div`
  grid-template-rows: auto auto auto;
  grid-row-gap: 1vh;
  grid-template-areas: 'Corporate .' 'ponte north ' 'charlotte quogue' 'spring .';
- font-size:.75em;
  ul{
    list-style:none;
    text-align:left;
@@ -174,6 +173,9 @@ div{
   border-radius: 5vh;
   padding-top: .5vh;
   padding-bottom:.5vh;
+  &:hover{
+    background-color:${colorsAndFont.grey};
+  }
 }
 }
 

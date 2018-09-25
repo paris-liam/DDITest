@@ -24,6 +24,7 @@ const MemberInfo = styled.div`
 const MemberTitle = styled.div`
   line-height: 1.25;
   margin-bottom:2vh;
+  font-weight:300;
 `;
 const MemberBio = styled.div`
    font-size: 1em;

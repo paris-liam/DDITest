@@ -141,6 +141,7 @@ export const SolutionsSlide = styled.div`
 export const SolTitle = styled.div`
   font-size:1.5em;
   padding:2vh 0;
+  font-weight:300;
 `;
 export const SolBody = styled.div`
   color:white;

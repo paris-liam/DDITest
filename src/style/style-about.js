@@ -161,7 +161,7 @@ export const MeetTheTeamTitle = styled.div`
     font-size:2.75em;
     margin:auto 4vw auto 0vw;
     &:hover{
-      color:${colorsAndFont.lightPurp};
+      color:${colorsAndFont.magenta};
       cursor:pointer;
     }
    }
