@@ -52,8 +52,7 @@ const Contact = styled.div`
   grid-area: contact;
   text-align:right;
   display:flex;
-  justify-content:space-around;
-
+  justify-content:space-evenly;
   font-size:.55em;
   /*desktop*/
   @media screen and (min-width:1200px){
@@ -116,10 +115,10 @@ const Nav = styled.div`
   li:hover{
     color:${colorsAndFont.lightPurp};
   }
-  li.aboutDrop:hover + div.aboutContent{
+  li.aboutDrop:hover > div.aboutContent{
     visibility:visible;
   };
-  li.leasingDrop:hover + div.leasingContent{
+  li.leasingDrop:hover > div.leasingContent{
     visibility:visible;
   };
   div.aboutContent:hover{
@@ -139,26 +138,12 @@ const DropdownContent = styled.div`
   background-color: #f9f9f9;
   z-index: 100;
   background-color:${colorsAndFont.grey};
-  border-radius:.5em;
+  border-radius:.5em .5em .5em .5em;
   &.aboutContent{
-    top: 3.75vh;
-    left:5%;
+    top:120%;
   }
   &.leasingContent{
-    top:3.75vh;
-    left:35%;
-  }
-  &:before {
-      content:"";
-      position: absolute;
-      right: 50%;
-      top: -.5vw;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 .5vw .5vw .5vw;
-      border-color: transparent transparent ${colorsAndFont.grey} transparent;
-      z-index:999;
+    top:120%;
   }
   ul{
     list-style:none;
@@ -167,7 +152,23 @@ const DropdownContent = styled.div`
     & > li:first-child:hover{
       border-top-left-radius: .5em;
       border-top-right-radius: .5em;
+      &:before{
+        border-color: transparent transparent ${colorsAndFont.lightPurp} transparent;
+      }
     }
+    & > li:first-child:before{
+      content:"";
+      position: absolute;
+      left: 1px;
+      top: -.45vw;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 .5vw .75vw .5vw;
+      border-color: transparent transparent ${colorsAndFont.grey} transparent;
+      z-index:999;
+    }
+
     & > li:last-child:hover{
       border-bottom-left-radius: .5em;
       border-bottom-right-radius: .5em;
@@ -270,7 +271,7 @@ class TopHeader extends React.Component {
                      left: '30%',
                   }}
           />
-        </div>
+                              </div>
         </HamburgerIcon>
         <HamburgerContent>
           <Contact>
@@ -281,8 +282,7 @@ class TopHeader extends React.Component {
             </PayBillsButton>
           </Contact>
           <Nav>
-            <li className="aboutDrop"><Link to="/About">About</Link></li>
-            <DropdownContent className="aboutContent">
+            <li className="aboutDrop"><Link to="/About">About</Link><DropdownContent className="aboutContent">
               <ul>
                 <li><Link to="/About">Who We Are</Link></li>
                 <li><Link to="/About#Why">Why DDI</Link></li>
@@ -293,17 +293,21 @@ class TopHeader extends React.Component {
                       state: { accordian: true },
                     }}
                 >Meet The Team
-                </Link>
+                    </Link>
                 </li>
               </ul>
-            </DropdownContent>
-            <li className="leasingDrop">Leasing Solutions</li>
-            <DropdownContent className="leasingContent">
-              <ul>
-                <li><Link to="/Customers">Client Offerings</Link></li>
-                <li><Link to="/Vendors">Vendor Programs</Link></li>
-              </ul>
-            </DropdownContent>
+                                                                    </DropdownContent>
+            </li>
+
+            <li className="leasingDrop">Leasing Solutions
+              <DropdownContent className="leasingContent">
+                <ul>
+                  <li><Link to="/Customers">Client Offerings</Link></li>
+                  <li><Link to="/Vendors">Vendor Programs</Link></li>
+                </ul>
+              </DropdownContent>
+            </li>
+
             <li><Link to="/Contact">Contact</Link></li>
           </Nav>
         </HamburgerContent>
