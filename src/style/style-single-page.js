@@ -49,7 +49,10 @@ export const Requirements = styled.div`
       font-size:.85em;
     }
     li:before{
-      content:'-  '
+      display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
     }
   }
 `;
