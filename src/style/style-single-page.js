@@ -105,7 +105,7 @@ export const VendorBody = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     margin: 2vh 3vw 0 1vw;
-    font-size:.75em;
+    font-size:.85em;
     .handshakeImage{
       margin: 0 auto;
       width:100%;
@@ -119,6 +119,10 @@ export const Following = styled.div`
       padding-bottom:2em;
       line-height:1.5;
       font-weight:300;
+      span.following{
+        text-decoration:underline;
+        font-style:normal;
+      }
       p{
         display:inline;
         &:before{
@@ -138,8 +142,10 @@ export const Following = styled.div`
           display:none;
         }
         text-align:center;
-        i{
-          font-size:1.25em;
+        span.following{
+        text-decoration:none;
+        font-style:italic;
+          ont-size:1.25em;
         }
         p{
           display:block;
