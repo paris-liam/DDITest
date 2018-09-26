@@ -137,6 +137,7 @@ export const Following = styled.div`
         .fa-li{
           display:none;
         }
+        text-align:center;
         i{
           font-size:1.25em;
         }
