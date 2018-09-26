@@ -102,9 +102,10 @@ export const VendorBody = styled.div`
     width:70%;
   }
   @media screen and (min-width:1024px){
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     margin: 2vh 3vw 0 1vw;
+    font-size:.75em;
     .handshakeImage{
       margin: 0 auto;
       width:100%;
@@ -118,14 +119,33 @@ export const Following = styled.div`
       padding-bottom:2em;
       line-height:1.5;
       font-weight:300;
+      p{
+        display:inline;
+        &:before{
+          content:' - '
+        }
+      }
     }
     @media screen and (max-width:1024px){
       display:flex;
       justify-content:space-evenly;
+      margin-left:0;
       li{
-        width:30%;
+        width:25%;
         font-size:.75em;
         margin-left:2vh;
+        .fa-li{
+          display:none;
+        }
+        i{
+          font-size:1.25em;
+        }
+        p{
+          display:block;
+          &:before{
+            content:''
+          }
+        }
       }
     }
   }

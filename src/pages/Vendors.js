@@ -25,9 +25,9 @@ const Vendors = data => (
       <VendorBody>
         <Following>
           <ul className="fa-ul">
-            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span><strong>Flexibility</strong> – DDI Capital will help you structure deals of any size and with multiple suppliers. We are a truly independent lessor and we will make your offering more attractive by structuring either operating and / or capital leases for your client.</li>
-            <li><span className="fa-li"><i className="fas fa-check-circle" /></span><strong>Creativity </strong>– In today’s complex IT environment, not all deals are easy to close. DDI’s extensive experience, aggressive funding resources and creative leasing professionals can help you overcome the toughest challenges. We’ll get the deal done.</li>
-            <li><span className="fa-li"><i className="fas fa-check-circle" /></span><strong>Convenience</strong> – Our ability to bundle hard and soft costs together into one low monthly payment not only simplifies the acquisition process for your customers – it makes doing business more affordable.</li>
+            <li><span className="fa-li" ><i className="fas fa-check-circle" /></span><i>Flexibility</i><p>DDI Capital will help you structure deals of any size and with multiple suppliers. We are a truly independent lessor and we will make your offering more attractive by structuring either operating and / or capital leases for your client.</p></li>
+            <li><span className="fa-li"><i className="fas fa-check-circle" /></span><i>Creativity </i><p>In today’s complex IT environment, not all deals are easy to close. DDI’s extensive experience, aggressive funding resources and creative leasing professionals can help you overcome the toughest challenges. We’ll get the deal done.</p></li>
+            <li><span className="fa-li"><i className="fas fa-check-circle" /></span><i>Convenience</i><p>Our ability to bundle hard and soft costs together into one low monthly payment not only simplifies the acquisition process for your customers – it makes doing business more affordable.</p></li>
           </ul>
         </Following>
         <div className="handshakeImage" style={{ position: 'relative' }}>

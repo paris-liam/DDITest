@@ -51,7 +51,7 @@ class IndexPage extends React.Component {
           />
           <CoverText>
             <h1>DDI Capital is your Independent Trusted Advisor </h1>
-            <p>Whether you are just starting out, or ready to bring your current organization to a new level of growth DDI Capital offers you the most innovative financial strategies allowing you to acquire and finance technology solutions at the best possible price.</p>
+            <p>Whether you are just starting out or ready to bring your current organization to a new level of growth, DDI Capital offers you the most innovative financial strategies allowing you to acquire and finance technology solutions at the best possible price.</p>
             <LearnMore><button onClick={this.learnScroll}> Learn More &nbsp;&nbsp;<i className="fa fa-arrow-alt-circle-down" /></button></LearnMore>
           </CoverText>
         </CoverHold>
