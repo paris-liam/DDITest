@@ -62,7 +62,7 @@ class IndexPage extends React.Component {
           </FocusedTitle>
           <FocusedBody>
             <div><h1><i className="fa fa-money-check-alt" /></h1><p>DDI will work closely with you to customize a financing plan that  best suits your budget, cash flow and technology requirements.</p></div>
-            <div><h1><i className="fa fa-anchor" /></h1><p>Our team’s collective experience, industry contacts and collaborative,  consultative work process insure that you will get the best possible solution with each lease transaction.</p></div>
+            <div><h1><i className="fa fa-users" /></h1><p>Our team’s collective experience, industry contacts and collaborative,  consultative work process ensure that you will get the best possible solution with each lease transaction.</p></div>
             <div><h1><i className="fa fa-hands-helping" /></h1><p>We view our clients as business partners and approach each deal with a long-term focus.  Each and every one of our DDI professionals is acutely aware of the relationship between the growth of your business and ours.</p></div>
             <div><h1><i className="fa fa-hdd" /></h1><p>Our professionals know more than leasing – they are familiar with the technology that you use and they are willing to spend the time with you to put it to maximum advantage.</p></div>
           </FocusedBody>
