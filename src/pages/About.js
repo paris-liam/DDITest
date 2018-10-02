@@ -20,16 +20,19 @@ class About extends React.Component {
       showAccordian: false,
       teamInfo: parsedTeamInfo,
     };
-    if (this.props.location.hash == 'Team') {
-      this.setState({
-        showAccordian: true,
-      });
-    }
   }
   componentDidMount() {
     this.setState({
       intervalFunction: setInterval(this.imageCycle, 5000),
     });
+    if(this.props.location.state){
+      const focused = document.getElementById('Team');
+      const focused_location = focused.getBoundingClientRect();
+      window.scrollTo({ top: focused_location.top + window.pageYOffset, behavior: 'smooth' });
+      this.setState(state => ({
+        showAccordian: true,
+      }));
+    }
   }
   componentWillUnmount() {
     clearInterval(this.intervalFunction);

@@ -52,7 +52,12 @@ const Layout = ({ data, children }) => (
               <li><Link to="/About#Who" onClick={toggleNav}>Who We Are</Link></li>
               <li><Link to="/About#Why" onClick={toggleNav}>Why DDI</Link></li>
               <li><Link to="/About#Equipt" onClick={toggleNav}>Equiptment Financed</Link></li>
-              <li><Link to="/About#Team" onClick={toggleNav}>Meet The Team</Link></li>
+              <li><Link to={{
+                      pathname: '/About',
+                      hash: '#Team',
+                      state: { accordian: true },
+                    }}
+                onClick={toggleNav}>Meet The Team</Link></li>
             </SidebarDropdown>
           </SidebarItem>
           <SidebarItem>

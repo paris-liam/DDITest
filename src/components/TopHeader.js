@@ -249,12 +249,17 @@ const HamburgerIcon = styled.div`
 class TopHeader extends React.Component {
   constructor(props) {
     super(props);
+    this.onpageAccordian = this.onpageAccordian.bind(this);
   }
   componentDidMount() {
     const siteWrap = document.querySelector('#site-wrapper');
     siteWrap.classList.remove('show-nav');
     const ham = document.querySelector('.hamburger-menu');
     ham.classList.remove('animate');
+
+  }
+  onpageAccordian(){
+    console.log(this.props);
   }
   render() {
     return (
@@ -265,13 +270,8 @@ class TopHeader extends React.Component {
         <HamburgerIcon><div /><div className="burger-container" onClick={toggleNav}>
           <div
             className="hamburger-menu"
-            style={{
- position: 'absolute',
-                     top: '30%',
-                     left: '30%',
-                  }}
-          />
-                              </div>
+            style={{position: 'absolute',top: '30%',left: '30%',}}/>
+          </div>
         </HamburgerIcon>
         <HamburgerContent>
           <Contact>
@@ -284,14 +284,15 @@ class TopHeader extends React.Component {
           <Nav>
             <li className="aboutDrop"><Link to="/About">About</Link><DropdownContent className="aboutContent">
               <ul>
-                <li><Link to="/About">Who We Are</Link></li>
-                <li><Link to="/About#Why">Why DDI</Link></li>
-                <li><Link to="/About#Equipt">Equipment Financed</Link></li>
+                <li><Link to="/About" onClick={this.onpageAccordian}>Who We Are</Link></li>
+                <li><Link to="/About#Why" onClick={this.onpageAccordian}>Why DDI</Link></li>
+                <li><Link to="/About#Equipt" onClick={this.onpageAccordian}>Equipment Financed</Link></li>
                 <li><Link to={{
                       pathname: '/About',
                       hash: '#Team',
                       state: { accordian: true },
                     }}
+                    onClick={this.onpageAccordian}
                 >Meet The Team
                     </Link>
                 </li>

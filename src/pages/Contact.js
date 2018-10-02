@@ -52,7 +52,7 @@ const Contact = data => (
             <li>Fax: 732-449-6128</li>
           </ul>
         </ContactInfo>
-        <ContactForm name="contact form" method="post" enctype="text/plain" data-netlify="true">
+        <ContactForm><form name="contact form" method="post" enctype="text/plain" data-netlify="true">
           <label htmlFor="name">Name</label>
           <input type="text" name="name" />
           <label htmlFor="email">Email</label>
@@ -60,6 +60,7 @@ const Contact = data => (
           <label htmlFor="message">Message</label>
           <textarea name="message" />
           <div><input type="submit" value="Send" /></div>
+          </form>
         </ContactForm>
       </ContactBody>
     </SingleSlide>

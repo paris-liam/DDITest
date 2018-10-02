@@ -184,7 +184,8 @@ export const ContactInfo = styled.div`
    margin-bottom:2vh;
  }
 `;
-export const ContactForm = styled.form`
+export const ContactForm = styled.div`
+form{
 margin:4vh 0;
 text-align:left;
 display:grid;
@@ -215,6 +216,7 @@ div{
   &:hover{
     background-color:${colorsAndFont.grey};
   }
+}
 }
 }
 
