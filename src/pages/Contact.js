@@ -52,7 +52,9 @@ const Contact = data => (
             <li>Fax: 732-449-6128</li>
           </ul>
         </ContactInfo>
-        <ContactForm><form name="contact form" method="post" enctype="text/plain" data-netlify="true">
+        <ContactForm>
+          <form name='contact' method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="bot-field" />
           <label htmlFor="name">Name</label>
           <input type="text" name="name" />
           <label htmlFor="email">Email</label>
