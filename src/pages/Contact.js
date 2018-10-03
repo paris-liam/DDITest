@@ -53,8 +53,9 @@ const Contact = data => (
           </ul>
         </ContactInfo>
         <ContactForm>
-          <form name='contact' method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form name='contact' form-name='contact' method="post" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
           <label htmlFor="name">Name</label>
           <input type="text" name="name" />
           <label htmlFor="email">Email</label>
