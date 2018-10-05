@@ -1,32 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colorsAndFont } from '../style/style';
 const PageGrid = styled.div`
     display:grid;
+    height:88vh;
     grid-template-columns:auto;
     grid-template-rows:auto auto;
+    background-color:${colorsAndFont.blue};
+    color:white;
+    h1{
+        text-align:center;
+    }
 `
 const CalculatorGrid = styled.div`
     display:grid;
     grid-template-columns:auto auto;
-    grid-template-rows:auto;
+    grid-template-rows:auto auto;
+    width:80%;
+    justify-self:center;
+    align-self: center;
+    grid-row-gap:3rem;
+    grid-template-areas: 'labels input' 'final final';
 `;
 const Labels = styled.div`
+    grid-area:labels;
     display:grid;
     grid-template-columns:auto;
+    grid-row-gap:2em;
 `;
-const InputGrid = styled.div`
+const InputGrid = styled.form`
+    grid-area:input;
     display:grid;
     grid-template-columns:auto;
+    grid-row-gap:2em;
     input, select{
         border: 1px black solid;
         width:min-content;
     }
 `;
 const Final = styled.div`
+    grid-area:final;
     display:grid;
     grid-template-columns:auto auto;
+    grid-template-rows: 1fr 1fr;
 `
-
 
 class Section179 extends React.Component{
     constructor(props){
@@ -35,39 +52,37 @@ class Section179 extends React.Component{
             taxBrack:.1,
             purchaseAmount: 1,
             deducation: 0,
-            bonus:0,
-            firstYearDep:0,
+            bonus:'  -',
             firstYearDeduction:0,
             CashSavings:0,
             LoweredCost:0,
         }
         this.calculator = this.calculator.bind(this);
+        this.checkAmount = this.checkAmount.bind(this);
+    }
+    checkAmount(event){
+        if(event.target.value > 2500000){
+            event.target.value = 2500000;
+        }
     }
     calculator(event) {
-        if(event.target.name === 'tax'){
-            this.setState({
-                taxBrack: event.target.value,
-            })
-        }
-        else if (event.target.name === 'amount'){
-            this.setState({
-                purchaseAmount: event.target.value,
-            })
-        }
-        let calcDeduction = (this.state.purchaseAmount >= 1000000 ? (1000000):(this.state.purchaseAmount))
-        let bonus = calcDeduction;
-        let firstYearDep = calcDeduction;
-        let firstYearDeduction = calcDeduction;
-        let CashSavings = calcDeduction;
-        let LoweredCost = calcDeduction;
+        let taxBrack = document.getElementById('taxBrack').value;
+        let purchaseAmount = document.getElementById('purchaseAmount').value;
+        let deduction = (purchaseAmount >= 1000000 ? (1000000):(purchaseAmount))
+        let bonus = (deduction > 1000000 ? (purchaseAmount - 1000000):('-'));
+        let firstYearDeduction = deduction;
+        let CashSavings = purchaseAmount * taxBrack;
+        let LoweredCost = purchaseAmount - CashSavings;
         this.setState({
-            deducation:calcDeduction,
+            taxBrack: taxBrack,
+            purchaseAmount: purchaseAmount,
+            deducation:deduction,
             bonus:bonus,
-            firstYearDep:firstYearDep,
             firstYearDeduction:firstYearDeduction,
             CashSavings:CashSavings,
             LoweredCost:LoweredCost,
-        },()=>{console.log('new state')});
+        });
+        this.forceUpdate();
     }
     render(){ return(
         <PageGrid>
@@ -81,9 +96,13 @@ class Section179 extends React.Component{
                 <div>Normal First Year Depreciation:</div>
                 <div>Total First Year Deduction</div>
                 <div>Cash Savings on your Purchase</div>
+                <div>
+                <p>Lowered Cost of Equiptment:</p>
+                <p>(After Tax Savings)</p>
+            </div>
             </Labels>
             <InputGrid>
-                <select name='tax' value={this.state.taxBrack} onChange={this.calculator}>
+                <select name='tax' id='taxBrack'  onInput={this.calculator}>
                     <option value='.1'>10%</option>
                     <option value='.12'>12%</option>
                     <option value='.21'>21%</option>
@@ -93,23 +112,17 @@ class Section179 extends React.Component{
                     <option value='.35'>35%</option>
                     <option value='.37'>37%</option>
                 </select>
-                <input name='amount' style={{display:'block'}} type='number'  value={this.state.purchaseAmount} onChange={this.calculator}></input>
-                <div>${this.state.deduction}</div>
+                <input id='purchaseAmount' name='amount' style={{display:'block'}} type='number' onInput={this.calculator}></input>
+                <div>${this.state.deducation}</div>
                 <div>${this.state.bonus}</div>
-                <div>${this.state.firstYearDep}</div>
+                <div>$0</div>
                 <div>${this.state.firstYearDeduction}</div>
                 <div>${this.state.CashSavings}</div>
-            </InputGrid>
-            <Final>
-            <div>
-                <p>Lowered Cost of Equiptment:</p>
-                <p>(After Tax Savings)</p>
-            </div>
-            <div>
+                <div>
                 ${this.state.LoweredCost}
             </div>
+            </InputGrid>
             <p>*Information provided is for illustrative purpose only and accuracy is not guaranteed.</p>
-            </Final>
         </CalculatorGrid>
         </PageGrid>)
     }
