@@ -69,7 +69,7 @@ class Section179 extends React.Component{
         let taxBrack = document.getElementById('taxBrack').value;
         let purchaseAmount = document.getElementById('purchaseAmount').value;
         let deduction = (purchaseAmount >= 1000000 ? (1000000):(purchaseAmount))
-        let bonus = (deduction > 1000000 ? (purchaseAmount - 1000000):('-'));
+        let bonus = (deduction >= 1000000 ? (purchaseAmount - 1000000):('-'));
         let firstYearDeduction = deduction;
         let CashSavings = purchaseAmount * taxBrack;
         let LoweredCost = purchaseAmount - CashSavings;
