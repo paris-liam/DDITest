@@ -14,7 +14,7 @@ const PageGrid = styled.div`
 `
 const CalculatorGrid = styled.div`
     display:grid;
-    grid-template-columns:auto auto;
+    grid-template-columns:1fr 1fr;
     grid-template-rows:auto auto;
     width:80%;
     justify-self:center;
