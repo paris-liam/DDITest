@@ -66,6 +66,11 @@ class Section179 extends React.Component{
         }
     }
     calculator(event) {
+        if(event.target.name == 'amount'){
+            if(event.target.value > 2500000){
+                event.target.value = 2500000
+            }
+        }
         let taxBrack = document.getElementById('taxBrack').value;
         let purchaseAmount = document.getElementById('purchaseAmount').value;
         let deduction = (purchaseAmount >= 1000000 ? (1000000):(purchaseAmount))
