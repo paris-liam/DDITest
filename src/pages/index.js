@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import SimpleSlider from '../components/SimpleSlider';
 import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, SolutionsSlide, NefaSlide, InterestedSlide, Offerings, Interested, NefaLogoGrid, NefaLogo } from '../style/style-index';
 import { gatsbyImgStyle, nefaLogoStyle } from '../style/style';
-
+// test
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
