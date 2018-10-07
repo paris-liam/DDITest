@@ -18,6 +18,7 @@ const PageGrid = styled.div`
         font-size:1.25em;
     }
 `;
+
 const CalculatorGrid = styled.div`
     display:grid;
     grid-template-columns:1fr;
