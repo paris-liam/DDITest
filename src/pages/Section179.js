@@ -71,8 +71,30 @@ class Section179 extends React.Component {
     this.checkAmount = this.checkAmount.bind(this);
     this.preventEnter = this.preventEnter.bind(this);
     this.errorAdd = this.errorAdd.bind(this);
+    this.arrowCounter = this.arrowCounter.bind(this);
+  }
+  arrowCounter(event){
+    if(event.keyCode == 38 || event.keyCode == 40){
+      let noCom = parseInt(event.target.value.replace(/\,/g, ''), 10);
+      if(isNaN(noCom)){
+        noCom = 0;
+      }
+      let changed = 0
+      if(event.keyCode == 38){
+        changed = noCom + 1;
+      }
+      else{
+        changed = noCom -1;
+      }
+      changed = changed.toString();
+      let number1 = changed.replace(/,/gi, '');
+      let number2 = number1.split(/(?=(?:\d{3})+$)/).join(',');
+      event.target.value = number2;
+      this.calculator(event);
+    }
   }
   preventEnter(event) {
+    console.log(event.which);
     const coolKeys = (event.which != 13 && (event.which >= 48 && event.which <= 57));
     if (!coolKeys) {
       event.preventDefault();
@@ -171,7 +193,7 @@ class Section179 extends React.Component {
               <option value=".35" selected>35%</option>
               <option value=".37">37%</option>
             </select>
-            <span>$<input id="purchaseAmount" name="amount" style={{ display: 'inline-block', marginLeft: '5px' }} onChange={this.calculator} onKeyPress={this.preventEnter} />
+            <span>$<input id="purchaseAmount" name="amount" style={{ display: 'inline-block', marginLeft: '5px' }} onChange={this.calculator} onKeyPress={this.preventEnter} onKeyDown={this.arrowCounter} />
               <WarningText id="warningText">for amounts higher than 2.5 million, please contact DDI directly</WarningText>
             </span>
             <div>${this.state.deducation}</div>
