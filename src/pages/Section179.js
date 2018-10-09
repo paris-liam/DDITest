@@ -73,7 +73,8 @@ class Section179 extends React.Component {
     this.errorAdd = this.errorAdd.bind(this);
   }
   preventEnter(event) {
-    if (event.which == 13) {
+    const coolKeys = (event.which != 13 && (event.which >= 48 && event.which <= 57));
+    if (!coolKeys) {
       event.preventDefault();
     }
   }
@@ -96,22 +97,32 @@ class Section179 extends React.Component {
       warningText.style.display = 'none';
     }
   }
+
   calculator(event) {
+    event.preventDefault();
     this.errorAdd(false);
     let goodValue = true;
-    event.preventDefault();
+    // turn to commas
+    let purchaseAmount = event.target.value;
+    const noCommas = parseInt(event.target.value.replace(/\,/g, ''), 10);
+    const num = purchaseAmount.replace(/,/gi, '');
+    const num2 = num.split(/(?=(?:\d{3})+$)/).join(',');
+    purchaseAmount = noCommas;
+    event.target.value = num2;
     if (event.target.name == 'amount') {
-      const value = this.checkAmount(event.target.value);
+      console.log(purchaseAmount);
+      const value = this.checkAmount(purchaseAmount);
       if (value === -1) {
         goodValue = false;
       } else {
-        event.target.value = value;
+        if (value == 0) {
+          event.target.value = value;
+        }
         goodValue = true;
       }
     }
     if (goodValue) {
       const taxBrack = document.getElementById('taxBrack').value;
-      const purchaseAmount = parseInt(document.getElementById('purchaseAmount').value);
       const deduction = (purchaseAmount >= 1000000 ? (1000000) : (purchaseAmount));
       const bonus = (deduction >= 1000000 ? (purchaseAmount - 1000000) : ('-'));
       const firstYearDeduction = deduction;
@@ -160,7 +171,7 @@ class Section179 extends React.Component {
               <option value=".35" selected>35%</option>
               <option value=".37">37%</option>
             </select>
-            <span>$<input id="purchaseAmount" name="amount" style={{ display: 'inline-block', marginLeft: '5px' }} type="number" onChange={this.calculator} onKeyPress={this.preventEnter} />
+            <span>$<input id="purchaseAmount" name="amount" style={{ display: 'inline-block', marginLeft: '5px' }} onChange={this.calculator} onKeyPress={this.preventEnter} />
               <WarningText id="warningText">for amounts higher than 2.5 million, please contact DDI directly</WarningText>
             </span>
             <div>${this.state.deducation}</div>
