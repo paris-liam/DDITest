@@ -44,6 +44,15 @@ const InputGrid = styled.form`
         border: 1px black solid;
         width:min-content;
     }
+    input#purchaseAmount.error{
+      border: 3px red solid;
+    }
+`;
+const WarningText = styled.div`
+    display:none;
+    color:red;
+    font-size:.6em;
+    margin-top:5px;
 `;
 
 class Section179 extends React.Component {
@@ -61,6 +70,7 @@ class Section179 extends React.Component {
     this.calculator = this.calculator.bind(this);
     this.checkAmount = this.checkAmount.bind(this);
     this.preventEnter = this.preventEnter.bind(this);
+    this.errorAdd = this.errorAdd.bind(this);
   }
   preventEnter(event) {
     if (event.which == 13) {
@@ -68,35 +78,58 @@ class Section179 extends React.Component {
     }
   }
   checkAmount(value) {
-    if (value > 1000000000) {
-      value = 1000000000;
+    if (value > 2500000) {
+      value = -1;
     } else if (value < 0 || value == NaN) {
       value = 0;
     }
     return value;
   }
+  errorAdd(flag) {
+    const input = document.getElementById('purchaseAmount');
+    const warningText = document.getElementById('warningText');
+    if (flag) {
+      input.classList.add('error');
+      warningText.style.display = 'block';
+    } else {
+      if (input.classList.contains('error')) { input.classList.remove('error'); }
+      warningText.style.display = 'none';
+    }
+  }
   calculator(event) {
+    this.errorAdd(false);
+    let goodValue = true;
     event.preventDefault();
     if (event.target.name == 'amount') {
-      event.target.value = this.checkAmount(event.target.value);
+      const value = this.checkAmount(event.target.value);
+      if (value === -1) {
+        goodValue = false;
+      } else {
+        event.target.value = value;
+        goodValue = true;
+      }
     }
-    const taxBrack = document.getElementById('taxBrack').value;
-    const purchaseAmount = parseInt(document.getElementById('purchaseAmount').value);
-    const deduction = (purchaseAmount >= 1000000 ? (1000000) : (purchaseAmount));
-    const bonus = (deduction >= 1000000 ? (purchaseAmount - 1000000) : ('-'));
-    const firstYearDeduction = deduction;
-    const CashSavings = purchaseAmount * taxBrack;
-    const LoweredCost = purchaseAmount - CashSavings;
-    this.setState({
-      taxBrack,
-      purchaseAmount,
-      deducation: (isNaN(deduction)) ? (0) : (deduction.toLocaleString(undefined, { maximumFractionDigits: 2 })),
-      bonus: (isNaN(bonus)) ? (0) : (bonus.toLocaleString(undefined, { maximumFractionDigits: 2 })),
-      firstYearDeduction: (isNaN(firstYearDeduction)) ? (0) : (firstYearDeduction.toLocaleString(undefined, { maximumFractionDigits: 2 })),
-      CashSavings: (isNaN(CashSavings)) ? (0) : (CashSavings.toLocaleString(undefined, { maximumFractionDigits: 2 })),
-      LoweredCost: (isNaN(LoweredCost)) ? (0) : (LoweredCost.toLocaleString(undefined, { maximumFractionDigits: 2 })),
-    });
-    this.forceUpdate();
+    if (goodValue) {
+      const taxBrack = document.getElementById('taxBrack').value;
+      const purchaseAmount = parseInt(document.getElementById('purchaseAmount').value);
+      const deduction = (purchaseAmount >= 1000000 ? (1000000) : (purchaseAmount));
+      const bonus = (deduction >= 1000000 ? (purchaseAmount - 1000000) : ('-'));
+      const firstYearDeduction = deduction;
+      const CashSavings = purchaseAmount * taxBrack;
+      const LoweredCost = purchaseAmount - CashSavings;
+      this.setState({
+        taxBrack,
+        purchaseAmount,
+        deducation: (isNaN(deduction)) ? (0) : (deduction.toLocaleString(undefined, { maximumFractionDigits: 2 })),
+        bonus: (isNaN(bonus)) ? (0) : (bonus.toLocaleString(undefined, { maximumFractionDigits: 2 })),
+        firstYearDeduction: (isNaN(firstYearDeduction)) ? (0) : (firstYearDeduction.toLocaleString(undefined, { maximumFractionDigits: 2 })),
+        CashSavings: (isNaN(CashSavings)) ? (0) : (CashSavings.toLocaleString(undefined, { maximumFractionDigits: 2 })),
+        LoweredCost: (isNaN(LoweredCost)) ? (0) : (LoweredCost.toLocaleString(undefined, { maximumFractionDigits: 2 })),
+      });
+      this.forceUpdate();
+    } else {
+      this.errorAdd(true);
+    }
   }
   render() {
     return (
@@ -112,22 +145,24 @@ class Section179 extends React.Component {
             <div>Total First Year Deduction:</div>
             <div>Cash Savings on your Purchase:</div>
             <div style={{ fontSize: '1.5em' }}>
-           <p>Lowered Cost of Equipment:</p>
-           <p>(After Tax Savings)</p>
-         </div>
+              <p>Lowered Cost of Equipment:</p>
+              <p>(After Tax Savings)</p>
+            </div>
           </Labels>
           <InputGrid onSubmit={(e) => { e.preventDefault(); }}>
             <select name="tax" id="taxBrack" onChange={this.calculator}>
-           <option value=".1">10%</option>
-           <option value=".12">12%</option>
-           <option value=".21">21%</option>
-           <option value=".22">22%</option>
-           <option value=".24">24%</option>
-           <option value=".32">32%</option>
-           <option value=".35" selected>35%</option>
-           <option value=".37">37%</option>
-         </select>
-            <span>$<input id="purchaseAmount" name="amount" style={{ display: 'inline-block', marginLeft:'5px' }} type="number" onChange={this.calculator} onKeyPress={this.preventEnter} /></span>
+              <option value=".1">10%</option>
+              <option value=".12">12%</option>
+              <option value=".21">21%</option>
+              <option value=".22">22%</option>
+              <option value=".24">24%</option>
+              <option value=".32">32%</option>
+              <option value=".35" selected>35%</option>
+              <option value=".37">37%</option>
+            </select>
+            <span>$<input id="purchaseAmount" name="amount" style={{ display: 'inline-block', marginLeft: '5px' }} type="number" onChange={this.calculator} onKeyPress={this.preventEnter} />
+              <WarningText id="warningText">for amounts higher than 2.5 million, please contact DDI directly</WarningText>
+            </span>
             <div>${this.state.deducation}</div>
             <div>${this.state.bonus}</div>
             <div>$0</div>
@@ -135,7 +170,7 @@ class Section179 extends React.Component {
             <div>${this.state.CashSavings}</div>
             <div style={{ fontSize: '1.5em' }}>
                 ${this.state.LoweredCost}
-         </div>
+            </div>
           </InputGrid>
           <p style={{ fontSize: '.75em' }}>*Information provided is for illustrative purpose only and accuracy is not guaranteed.</p>
         </CalculatorGrid>
