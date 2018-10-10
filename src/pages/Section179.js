@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colorsAndFont } from '../style/style';
-import {InterestedSlide,Interested,Offerings} from '../style/style-index';
+import { InterestedSlide, Interested, Offerings } from '../style/style-index';
 import Link from 'gatsby-link';
 
 const PageGrid = styled.div`
@@ -200,7 +200,8 @@ class Section179 extends React.Component {
     return (
       <PageGrid>
         <Copy>
-          <p><h2>Use the Below Calculator to Check Your Tax Write Off for 2018</h2>
+          <h2>Use the Below Calculator to Check Your Tax Write Off for 2018</h2>
+          <p>
           The Section 179 Tax Deduction is meant to encourage businesses to stay competitive by purchasing needed equipment, and writing off the full amount on their taxes for the current year. This free Section 179 calculator is fully updated for 2018 – go ahead, run some numbers and see how much you can actually save in real dollars this year.
           </p>
         </Copy>
@@ -219,7 +220,7 @@ class Section179 extends React.Component {
               <option value={0.37}>37%</option>
             </select>
             <div>Equipment Purchase Amount:</div>
-            <span>$<input id="purchaseAmount" name="amount" style={{ display: 'inline-block', outline:'none', border:'none'}} onChange={this.calculator} onKeyPress={this.preventEnter} onKeyDown={this.arrowCounter} />
+            <span>$<input id="purchaseAmount" name="amount" style={{ display: 'inline-block', outline: 'none', border: 'none' }} onChange={this.calculator} onKeyPress={this.preventEnter} onKeyDown={this.arrowCounter} />
               <WarningText id="warningText">for amounts higher than 2.5 million, please contact DDI directly</WarningText>
             </span>
             <div>Section 179 Deduction:</div>
@@ -242,8 +243,8 @@ class Section179 extends React.Component {
           </InputGrid>
           <p style={{ fontSize: '.75em' }}>*Information provided is for illustrative purpose only and accuracy is not guaranteed.</p>
         </CalculatorGrid>
-        <Copy><p style={{fontSize:'1.25em'}}>To take advantage of these high Section 179 limits for 2018, the equipment must be purchased and put into service by midnight 12/31/2018. Use Form 4562 to claim your deduction.</p></Copy>
-        <InterestedSlide style={{borderTop:'2px solid white',marginTop:'4vh'}}>
+        <Copy><p style={{ fontSize: '1.25em' }}>To take advantage of these high Section 179 limits for 2018, the equipment must be purchased and put into service by midnight 12/31/2018. Use Form 4562 to claim your deduction.</p></Copy>
+        <InterestedSlide style={{ borderTop: '2px solid white', marginTop: '4vh' }}>
           <Interested>
             <h1>Interested in DDI?<br /> Let's Talk</h1>
             <div><Link to="/Vendors"><button>Vendor Opportunities</button></Link></div>
