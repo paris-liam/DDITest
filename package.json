@@ -28,7 +28,8 @@
     "typography": "^0.16.17",
     "typography-theme-de-young": "^0.16.9",
     "typography-theme-funston": "^0.15.10",
-    "typography-theme-twin-peaks": "^0.15.11"
+    "typography-theme-twin-peaks": "^0.15.11",
+    "yarn": "^1.10.1"
   },
   "keywords": [
     "gatsby"
