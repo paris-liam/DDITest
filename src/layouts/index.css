@@ -367,7 +367,9 @@ template {
 }
 #site-canvas {
   width: 100%;
-  height: 100%;
+  height: max-content;
+  display:grid;
+  grid-template-rows:auto auto;
   position: relative;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -383,6 +385,7 @@ template {
   right: -300px;
   background: #585B8C;
   color:white;
+  margin-top:2vh;
 
 }
 #site-wrapper.show-nav #site-canvas {
