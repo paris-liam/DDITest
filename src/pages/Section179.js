@@ -167,6 +167,8 @@ class Section179 extends React.Component {
     return (
       <PageGrid>
         <h1>Section179 Calculator</h1>
+        <p></PageGrid>Use the Below Calculator to Check Your Tax Write Off for 2018
+          The Section 179 Tax Deduction is meant to encourage businesses to stay competitive by purchasing needed equipment, and writing off the full amount on their taxes for the current year. This free Section 179 calculator is fully updated for 2018 – go ahead, run some numbers and see how much you can actually save in real dollars this year.</p>
         <CalculatorGrid>
           <Labels>
             <div>Tax Bracket:</div>
