@@ -59,8 +59,8 @@ class Section179 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      taxBrack: 0.1,
-      purchaseAmount: 1,
+      taxBrack: 0.35,
+      purchaseAmount: 0,
       deducation: 0,
       bonus: '  -',
       firstYearDeduction: 0,
@@ -119,20 +119,19 @@ class Section179 extends React.Component {
       warningText.style.display = 'none';
     }
   }
-
   calculator(event) {
     event.preventDefault();
     this.errorAdd(false);
+    let purchaseAmount = document.getElementById('purchaseAmount').value
+    let taxBrack = document.getElementById('taxBrack').value
     let goodValue = true;
     // turn to commas
-    let purchaseAmount = event.target.value;
-    const noCommas = parseInt(event.target.value.replace(/\,/g, ''), 10);
+    const noCommas = parseInt(purchaseAmount.replace(/\,/g, ''), 10);
     const num = purchaseAmount.replace(/,/gi, '');
     const num2 = num.split(/(?=(?:\d{3})+$)/).join(',');
     purchaseAmount = noCommas;
-    event.target.value = num2;
     if (event.target.name == 'amount') {
-      console.log(purchaseAmount);
+      event.target.value = num2;
       const value = this.checkAmount(purchaseAmount);
       if (value === -1) {
         goodValue = false;
