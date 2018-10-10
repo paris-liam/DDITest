@@ -17,15 +17,15 @@ const PageGrid = styled.div`
 `;
 
 const Copy = styled.div`
-  margin-top:5vh;
+  width:80%;
+  text-align:left;
+  margin: 0 auto;
   h2{
     font-weight:400;
-    margin-bottom: 2vh;
+    margin: 5vh 0 2vh 0;
   }
   p{
-    width:80%;
-    text-align:left;
-    margin: 0 auto;
+
   }
 `;
 const CalculatorGrid = styled.div`
