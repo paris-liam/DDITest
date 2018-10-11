@@ -1,47 +1,70 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colorsAndFont } from '../style/style';
+import { InterestedSlide, Interested, Offerings } from '../style/style-index';
+import Link from 'gatsby-link';
 
 const PageGrid = styled.div`
     display:grid;
-    height:88vh;
+    height:max-content;
     grid-template-columns:auto;
-    grid-template-rows: 5rem auto;
+    grid-template-rows: auto auto auto;
+    grid-row-gap:3vh;
     background-color:${colorsAndFont.blue};
     color:white;
-    h1{
-        margin-top:3vh;
-        text-align:center;
-        font-weight:bolder;
-    }
     @media screen and (max-width: 1000){
         font-size:1.25em;
     }
 `;
 
-const CalculatorGrid = styled.div`
-    display:grid;
-    grid-template-columns:1fr;
-    grid-template-rows:auto auto;
-    justify-self:center;
-    align-self:baseline;
-        margin-top:2vh;
-    grid-row-gap:3rem;
-    grid-template-areas: 'labels input' 'final final';
+const Copy = styled.div`
+  width:80%;
+  text-align:left;
+  margin: 0 auto;
+  h2{
+    font-weight:400;
+    margin: 5vh 0 2vh 0;
+  }
+  p{
+    font-size:.8em;
+  }
 `;
-const Labels = styled.div`
-    grid-area:labels;
-    display:grid;
-    grid-template-columns:auto;
-    grid-row-gap:2em;
+const CalculatorGrid = styled.div`
+  font-size:1em;
+  background-color:white;
+  color:${colorsAndFont.blue};
+  box-shadow: 5px 5px 20px #4c4e51;
+  border-radius: 30px;
+  padding:1vh 4vh 1vh 4vh ;
+  h2{
+    margin:3vh 0;
+    text-align:center;
+    font-weight:bolder;
+    grid-area:title;
+  }
+  display:grid;
+  width: 50%;
+  height:auto;
+  grid-template-columns:auto;
+  grid-template-rows: auto auto auto;
+  justify-self:center;
+  align-self:baseline;
+      margin-top:2vh;
+  grid-template-areas:'title' 'labels' 'final';
+  grid-row-gap:2vh;
+  margin-bottom:3vh;
 `;
 const InputGrid = styled.form`
-    grid-area:input;
+    align-self:center;
+    justify-self:center;
+    grid-area:labels;
     display:grid;
-    grid-template-columns:auto;
-    grid-row-gap:2em;
+    grid-template-columns:auto auto;
+    grid-row-gap: 3vh;
+    grid-column-gap: 2vw;
     input, select{
         border: 1px black solid;
+        display:inline;
         width:min-content;
     }
     input#purchaseAmount.error{
@@ -60,7 +83,7 @@ class Section179 extends React.Component {
     super(props);
     this.state = {
       taxBrack: 0.35,
-      purchaseAmount: 0,
+      purchaseAmount: 50000,
       deducation: 0,
       bonus: '  -',
       firstYearDeduction: 0,
@@ -73,22 +96,29 @@ class Section179 extends React.Component {
     this.errorAdd = this.errorAdd.bind(this);
     this.arrowCounter = this.arrowCounter.bind(this);
   }
-  arrowCounter(event){
-    if(event.keyCode == 38 || event.keyCode == 40){
+
+  componentDidMount() {
+    const purchaseAmount = document.getElementById('purchaseAmount');
+    const taxBrack = document.getElementById('taxBrack');
+    purchaseAmount.value = this.state.purchaseAmount;
+    taxBrack.value = this.state.taxBrack;
+    this.calculator(null, true);
+  }
+  arrowCounter(event) {
+    if (event.keyCode == 38 || event.keyCode == 40) {
       let noCom = parseInt(event.target.value.replace(/\,/g, ''), 10);
-      if(isNaN(noCom)){
+      if (isNaN(noCom)) {
         noCom = 0;
       }
-      let changed = 0
-      if(event.keyCode == 38){
+      let changed = 0;
+      if (event.keyCode == 38) {
         changed = noCom + 1;
-      }
-      else{
-        changed = noCom -1;
+      } else {
+        changed = noCom - 1;
       }
       changed = changed.toString();
-      let number1 = changed.replace(/,/gi, '');
-      let number2 = number1.split(/(?=(?:\d{3})+$)/).join(',');
+      const number1 = changed.replace(/,/gi, '');
+      const number2 = number1.split(/(?=(?:\d{3})+$)/).join(',');
       event.target.value = number2;
       this.calculator(event);
     }
@@ -119,18 +149,20 @@ class Section179 extends React.Component {
       warningText.style.display = 'none';
     }
   }
-  calculator(event) {
-    event.preventDefault();
+  calculator(event, initial = false) {
+    if (!initial) {
+      event.preventDefault();
+    }
     this.errorAdd(false);
-    let purchaseAmount = document.getElementById('purchaseAmount').value
-    let taxBrack = document.getElementById('taxBrack').value
+    let purchaseAmount = document.getElementById('purchaseAmount').value;
+    const taxBrack = document.getElementById('taxBrack').value;
     let goodValue = true;
     // turn to commas
     const noCommas = parseInt(purchaseAmount.replace(/\,/g, ''), 10);
     const num = purchaseAmount.replace(/,/gi, '');
     const num2 = num.split(/(?=(?:\d{3})+$)/).join(',');
     purchaseAmount = noCommas;
-    if (event.target.name == 'amount') {
+    if (event != null && event.target.name == 'amount') {
       event.target.value = num2;
       const value = this.checkAmount(purchaseAmount);
       if (value === -1) {
@@ -141,6 +173,9 @@ class Section179 extends React.Component {
         }
         goodValue = true;
       }
+    }
+    if (initial) {
+      document.getElementById('purchaseAmount').value = num2;
     }
     if (goodValue) {
       const taxBrack = document.getElementById('taxBrack').value;
@@ -166,46 +201,72 @@ class Section179 extends React.Component {
   render() {
     return (
       <PageGrid>
-        <h1>Section179 Calculator</h1>
+        <Copy>
+          <h2>Use the Below Calculator to Check Your Tax Write Off for 2018</h2>
+          <p>
+          The Section 179 Tax Deduction is meant to encourage businesses to stay competitive by purchasing needed equipment, and writing off the full amount on their taxes for the current year. This free Section 179 calculator is fully updated for 2018 – go ahead, run some numbers and see how much you can actually save in real dollars this year.
+          </p>
+        </Copy>
         <CalculatorGrid>
-          <Labels>
+          <h2>Section179 Calculator</h2>
+          <InputGrid onSubmit={(e) => { e.preventDefault(); }}>
             <div>Tax Bracket:</div>
+            <select name="tax" id="taxBrack" onChange={this.calculator}>
+              <option value={0.1}>10%</option>
+              <option value={0.12}>12%</option>
+              <option value={0.21}>21%</option>
+              <option value={0.22}>22%</option>
+              <option value={0.24}>24%</option>
+              <option value={0.32}>32%</option>
+              <option value={0.35} selected>35%</option>
+              <option value={0.37}>37%</option>
+            </select>
             <div>Equipment Purchase Amount:</div>
+            <span>$<input id="purchaseAmount" name="amount" style={{ display: 'inline-block', outline: 'none', border: 'none' }} onChange={this.calculator} onKeyPress={this.preventEnter} onKeyDown={this.arrowCounter} />
+              <WarningText id="warningText">for amounts higher than 2.5 million, please contact DDI directly</WarningText>
+            </span>
             <div>Section 179 Deduction:</div>
+            <div>${this.state.deducation}</div>
             <div><p>Bonus Depreciation:</p><p>(100% in 2018)</p></div>
+            <div>${this.state.bonus}</div>
             <div>Normal First Year Depreciation:</div>
+            <div>$0</div>
             <div>Total First Year Deduction:</div>
+            <div>${this.state.firstYearDeduction}</div>
             <div>Cash Savings on your Purchase:</div>
-            <div style={{ fontSize: '1.5em' }}>
+            <div>${this.state.CashSavings}</div>
+            <div style={{ fontSize: '1.25em' }}>
               <p>Lowered Cost of Equipment:</p>
               <p>(After Tax Savings)</p>
             </div>
-          </Labels>
-          <InputGrid onSubmit={(e) => { e.preventDefault(); }}>
-            <select name="tax" id="taxBrack" onChange={this.calculator}>
-              <option value=".1">10%</option>
-              <option value=".12">12%</option>
-              <option value=".21">21%</option>
-              <option value=".22">22%</option>
-              <option value=".24">24%</option>
-              <option value=".32">32%</option>
-              <option value=".35" selected>35%</option>
-              <option value=".37">37%</option>
-            </select>
-            <span>$<input id="purchaseAmount" name="amount" style={{ display: 'inline-block', marginLeft: '5px' }} onChange={this.calculator} onKeyPress={this.preventEnter} onKeyDown={this.arrowCounter} />
-              <WarningText id="warningText">for amounts higher than 2.5 million, please contact DDI directly</WarningText>
-            </span>
-            <div>${this.state.deducation}</div>
-            <div>${this.state.bonus}</div>
-            <div>$0</div>
-            <div>${this.state.firstYearDeduction}</div>
-            <div>${this.state.CashSavings}</div>
-            <div style={{ fontSize: '1.5em' }}>
+            <div style={{ fontSize: '1.25em' }}>
                 ${this.state.LoweredCost}
             </div>
           </InputGrid>
           <p style={{ fontSize: '.75em' }}>*Information provided is for illustrative purpose only and accuracy is not guaranteed.</p>
         </CalculatorGrid>
+        <Copy><p style={{ fontSize: '.8em' }}>To take advantage of these high Section 179 limits for 2018, the equipment must be purchased and put into service by midnight 12/31/2018. Use Form 4562 to claim your deduction.</p></Copy>
+        <InterestedSlide style={{ borderTop: '2px solid white', marginTop: '4vh', fontSize: '.8em' }}>
+          <Interested>
+            <h1>Interested in DDI?<br /> Let's Talk</h1>
+            <div><Link to="/Vendors"><button>Vendor Opportunities</button></Link></div>
+            <div><Link to="/Customers"><button> Customer Information</button></Link></div>
+          </Interested>
+          <Offerings>
+            <h1>Offerings Include:</h1>
+            <ul className="fa-ul">
+              <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Master Lease Agreements</li>
+              <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Installment Payment Agreements</li>
+              <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Capital and Operating Leases</li>
+              <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Software Only Financing</li>
+              <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Lease Lines</li>
+              <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Purchase Leaseback Structures</li>
+              <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Asset Management</li>
+              <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Network Integration and Consulting</li>
+              <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Project Management</li>
+            </ul>
+          </Offerings>
+        </InterestedSlide>
       </PageGrid>);
   }
 }
