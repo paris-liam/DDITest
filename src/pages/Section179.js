@@ -9,6 +9,7 @@ const PageGrid = styled.div`
     height:max-content;
     grid-template-columns:auto;
     grid-template-rows: auto auto auto;
+    grid-row-gap:3vh;
     background-color:${colorsAndFont.blue};
     color:white;
     @media screen and (max-width: 1000){
@@ -25,7 +26,7 @@ const Copy = styled.div`
     margin: 5vh 0 2vh 0;
   }
   p{
-
+    font-size:.8em;
   }
 `;
 const CalculatorGrid = styled.div`
@@ -51,6 +52,7 @@ const CalculatorGrid = styled.div`
       margin-top:2vh;
   grid-template-areas:'title' 'labels' 'final';
   grid-row-gap:2vh;
+  margin-bottom:3vh;
 `;
 const InputGrid = styled.form`
     align-self:center;
@@ -243,8 +245,8 @@ class Section179 extends React.Component {
           </InputGrid>
           <p style={{ fontSize: '.75em' }}>*Information provided is for illustrative purpose only and accuracy is not guaranteed.</p>
         </CalculatorGrid>
-        <Copy><p style={{ fontSize: '1.25em' }}>To take advantage of these high Section 179 limits for 2018, the equipment must be purchased and put into service by midnight 12/31/2018. Use Form 4562 to claim your deduction.</p></Copy>
-        <InterestedSlide style={{ borderTop: '2px solid white', marginTop: '4vh' }}>
+        <Copy><p style={{ fontSize: '.8em' }}>To take advantage of these high Section 179 limits for 2018, the equipment must be purchased and put into service by midnight 12/31/2018. Use Form 4562 to claim your deduction.</p></Copy>
+        <InterestedSlide style={{ borderTop: '2px solid white', marginTop: '4vh', fontSize: '.8em' }}>
           <Interested>
             <h1>Interested in DDI?<br /> Let's Talk</h1>
             <div><Link to="/Vendors"><button>Vendor Opportunities</button></Link></div>
