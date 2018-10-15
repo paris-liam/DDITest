@@ -48,7 +48,7 @@ const Contact = data => (
           </ul>
           <ul style={{ gridArea: 'spring' }}>
             <li>Spring Lake, NJ</li>
-            <li>Tel: 732-449-6108</li>
+            <li>Tel: 732-449-1999</li>
             <li>Fax: 732-449-6128</li>
           </ul>
         </ContactInfo>
