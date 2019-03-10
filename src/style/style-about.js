@@ -4,32 +4,42 @@ import { CoverText, FocusedBody, Interested } from './style-index';
 import { colorsAndFont } from './style';
 
 export const AboutGrid = styled.div`
- display:grid;
- grid-template-rows: 45vh auto auto auto auto auto;
- grid-template-columns:100%;
+ display:grid; 
+display:-ms-grid; 
+ -ms-grid-rows:45vh auto auto auto auto auto;
+grid-template-rows: 45vh auto auto auto auto auto;
+ -ms-grid-columns:100%;
+grid-template-columns:100%;
  background-color: ${colorsAndFont.blue};
  color:white;
  grid-template-areas: 'AboutCover' 'Who' 'Why' 'Equipt' 'Meet' 'Interested';
  /*phone landscape mode*/
  @media screen and (max-width: 900px) and (orientation: landscape){
-  grid-template-rows: 60vh auto auto auto auto auto;
+  -ms-grid-rows:60vh auto auto auto auto auto;
+grid-template-rows: 60vh auto auto auto auto auto;
 
       }
 
 `;
 export const AboutCoverText = CoverText.extend`
-  grid-template-rows: auto auto;
+  -ms-grid-rows: auto auto;
+grid-template-rows: auto auto;
 `;
 export const WhoWeAre = styled.div`
   grid-area:'Who';
   padding: 2.5vh 5vw;
-  display:grid;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: auto;
+  display:grid; 
+display:-ms-grid; 
+  -ms-grid-rows: auto auto auto;
+grid-template-rows: auto auto auto;
+  -ms-grid-columns: auto;
+grid-template-columns: auto;
   grid-template-areas: 'title' 'letter' 'list';
   @media screen and (min-width: 1024px){
-    grid-template-rows: auto auto;
-    grid-template-columns: 3fr 2fr;
+    -ms-grid-rows: auto auto;
+grid-template-rows: auto auto;
+    -ms-grid-columns: 3fr 2fr;
+grid-template-columns: 3fr 2fr;
     grid-template-areas: 'title .' 'letter list';
   }
 `;
@@ -65,26 +75,34 @@ export const WhyDDI = styled.div`
   grid-area:'Why';
   color:${colorsAndFont.blue};
   background-color:white;
-  display:grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
+  display:grid; 
+display:-ms-grid; 
+  -ms-grid-columns: auto;
+grid-template-columns: auto;
+  -ms-grid-rows:  auto auto;
+grid-template-rows: auto auto;
   padding: 2.5vh 5vw;
 `;
 export const WhyTitle = styled.div`
 `;
 export const WhyBody = FocusedBody.extend`
   margin-top:2vh;
-  display:grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto auto auto;
+  display:grid; 
+display:-ms-grid; 
+  -ms-grid-columns: auto;
+grid-template-columns: auto;
+  -ms-grid-rows: auto auto auto auto auto;
+grid-template-rows: auto auto auto auto auto;
   grid-template-areas: 'experience' 'rates' 'speed' 'creative' 'adapt';
   /*desktop*/
   @media screen and (min-width:1024px){
     .adaptCopy{
       margin-top:3vh;
     }
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    -ms-grid-columns: 1fr 1fr;
+grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto auto;
+grid-template-rows: auto auto auto;
     grid-template-areas: 'experience rates' 'speed creative' 'adapt adapt';
   }
   strong{
@@ -108,8 +126,10 @@ export const EquiptList = styled.div`
   grid-area: 'list';
   position:relative;
   background-color:black;
-  display:grid;
-  grid-template-rows:1px 99%;
+  display:grid; 
+display:-ms-grid; 
+  -ms-grid-rows: 1px 99%;
+grid-template-rows:1px 99%;
   overflow:hidden;
   /*landscape mode*/
   @media screen and (max-width: 900px) and (orientation: landscape){
@@ -117,8 +137,10 @@ export const EquiptList = styled.div`
   }
 `;
 export const EquiptText = styled.div`
-  grid-template-rows: 1fr 5fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 5fr;
+grid-template-rows: 1fr 5fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 'title title title' 'list list list';
   margin: 0 auto;
   ul{
@@ -132,7 +154,8 @@ export const EquiptText = styled.div`
   }
   position:relative;
   z-index:2;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   text-align:left;
   h1{
     width: 95%;
@@ -148,14 +171,19 @@ export const EquiptText = styled.div`
 export const MeetTheTeam = styled.div`
   grid-area:'Meet';
   background-color: ${colorsAndFont.grey};
-  display:grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto;
+  display:grid; 
+display:-ms-grid; 
+  -ms-grid-rows: auto auto; 
+grid-template-rows: auto auto;
+  -ms-grid-columns: auto; 
+grid-template-columns: auto;
 `;
 
 export const MeetTheTeamTitle = styled.div`
- display:grid;
- grid-template-columns: auto auto auto;
+ display:grid; 
+display:-ms-grid; 
+ -ms-grid-columns: auto auto auto;
+grid-template-columns: auto auto auto;
  padding: 2.5vh 2vw;
    i{
     font-size:2.75em;
@@ -178,7 +206,8 @@ export const MeetTheTeamAccordian = styled.div`
 
 export const AboutInterestedSlide = styled.div`
  grid-area: Interested;
- grid-template-columns:auto;
+ -ms-grid-columns: auto;
+grid-template-columns:auto;
  margin: auto auto;
  padding: 4vh 2vw;
 `;

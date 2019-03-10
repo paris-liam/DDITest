@@ -4,10 +4,12 @@ import { IndexGrid, CoverText, FocusedSlide, Offerings } from './style-index';
 
 /* All pages */
 export const SingleGrid = IndexGrid.extend`
-  grid-template-rows: 45vh auto;
+  -ms-grid-rows: 45vh auto; 
+grid-template-rows: 45vh auto;
 `;
 export const SingleCoverText = CoverText.extend`
-  grid-template-rows: auto auto;
+  -ms-grid-rows: auto auto; 
+grid-template-rows: auto auto;
   h1{
     width:100%;
   }
@@ -23,17 +25,22 @@ export const SingleSlide = FocusedSlide.extend`
 
 /* Customer Page */
 export const CustBody = styled.div`
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   text-align:left;
   padding-bottom:1vh;
   width:90%;
   margin: 0 auto;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
+  -ms-grid-columns: auto;
+grid-template-columns: auto;
+  -ms-grid-rows: auto auto;
+grid-template-rows: auto auto;
   grid-template-areas: 'reqs' 'custOff';
   @media screen and (min-width:1024px){
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    -ms-grid-columns: 1fr 1fr;
+grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+grid-template-rows: auto;
     grid-template-areas: 'reqs custOff';
   }
 `;
@@ -62,7 +69,8 @@ export const CustOff = Offerings.extend`
   border:none;
   grid-area: custOff;
   font-size:1.1em;
-  grid-template-rows: min-content auto;
+  -ms-grid-rows: min-content auto;
+grid-template-rows: min-content auto;
   @media screen and (min-width:1024px){
     padding-top:inherit;
     margin: 0 auto;
@@ -89,21 +97,26 @@ export const CustTitle = styled.div`
 
 /* Vendor Page */
 export const VendorBody = styled.div`
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-column-gap:5vw;
   color:white;
   padding: 2vh 1vh;
   text-align:left;
-  grid-template-columns: auto;
-  grid-template-rows: auto 40vh;
+  -ms-grid-columns: auto;
+grid-template-columns: auto;
+  -ms-grid-rows: auto 40vh;
+grid-template-rows: auto 40vh;
   margin:0;
   .handshakeImage{
     margin: 0 auto;
     width:70%;
   }
   @media screen and (min-width:1024px){
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    -ms-grid-columns: 1fr 1fr;
+grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+grid-template-rows: auto;
     margin: 2vh 3vw 0 1vw;
     font-size:.85em;
     .handshakeImage{
@@ -160,20 +173,28 @@ export const Following = styled.div`
 
 /* Contact Page */
 export const ContactBody = styled.div`
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   margin: 4vh 3vw;
-  grid-template-rows:auto auto;
-  grid-template-columns: auto;
+  -ms-grid-rows: auto auto;
+grid-template-rows:auto auto;
+  -ms-grid-columns: auto; 
+grid-template-columns: auto;
   @media screen and (min-width:1024px)  {
-    grid-template-rows:auto;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+grid-template-rows:auto;
+    -ms-grid-columns: 1fr 1fr;
+grid-template-columns: 1fr 1fr;
   }
 `;
 
 export const ContactInfo = styled.div`
- display:grid;
- grid-template-columns: 1fr 1fr;
- grid-template-rows: auto auto auto;
+ display:grid; 
+display:-ms-grid; 
+ -ms-grid-columns: 1fr 1fr; 
+grid-template-columns: 1fr 1fr;
+ -ms-grid-rows: auto auto auto;
+grid-template-rows: auto auto auto;
  grid-row-gap: 1vh;
  grid-template-areas: 'Corporate .' 'ponte north ' 'charlotte quogue' 'spring .';
  ul{
@@ -188,9 +209,12 @@ export const ContactForm = styled.div`
 form{
 margin:4vh 0;
 text-align:left;
-display:grid;
+display:grid; 
+display:-ms-grid; 
+-ms-grid-columns: min-content auto;
 grid-template-columns: min-content auto;
 grid-column-gap: 3vw;
+-ms-grid-rows: auto auto auto auto;
 grid-template-rows: auto auto auto auto;
 grid-row-gap: 1vh;
 input{

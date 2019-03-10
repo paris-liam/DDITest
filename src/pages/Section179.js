@@ -5,10 +5,13 @@ import { InterestedSlide, Interested, Offerings } from '../style/style-index';
 import Link from 'gatsby-link';
 
 const PageGrid = styled.div`
-    display:grid;
+    display:grid; 
+display:-ms-grid; 
     height:max-content;
-    grid-template-columns:auto;
-    grid-template-rows: auto auto auto;
+    -ms-grid-columns: auto;
+grid-template-columns:auto;
+    -ms-grid-rows: auto auto auto;
+grid-template-rows: auto auto auto;
     grid-row-gap:3vh;
     background-color:${colorsAndFont.blue};
     color:white;
@@ -42,11 +45,14 @@ const CalculatorGrid = styled.div`
     font-weight:bolder;
     grid-area:title;
   }
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   width: 50%;
   height:auto;
-  grid-template-columns:auto;
-  grid-template-rows: auto auto auto;
+  -ms-grid-columns: auto;
+grid-template-columns:auto;
+  -ms-grid-rows:  auto auto auto;
+grid-template-rows: auto auto auto;
   justify-self:center;
   align-self:baseline;
       margin-top:2vh;
@@ -58,8 +64,10 @@ const InputGrid = styled.form`
     align-self:center;
     justify-self:center;
     grid-area:labels;
-    display:grid;
-    grid-template-columns:auto auto;
+    display:grid; 
+display:-ms-grid; 
+    -ms-grid-columns: auto auto;
+grid-template-columns:auto auto;
     grid-row-gap: 3vh;
     grid-column-gap: 2vw;
     input, select{
