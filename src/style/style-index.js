@@ -3,7 +3,8 @@ import { colorsAndFont } from './style';
 
 /* Index Page Slides */
 export const IndexGrid = styled.div`
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-rows: 70vh auto auto 40vh auto;
   grid-template-columns: auto;
   color:white;
@@ -14,13 +15,15 @@ export const IndexGrid = styled.div`
 export const CoverHold = styled.div`
   position:relative;
   background-color:black;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-rows:1px 99%;
 `;
 export const CoverText = styled.div`
   position:relative;
   z-index:2;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   text-align:center;
   align-self:center;
   justify-self:center;
@@ -57,7 +60,8 @@ export const LearnMore = styled.div`
 export const FocusedSlide = styled.div`
   color:${colorsAndFont.grey};
   background-color:white;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-columns: auto;
   height:auto;
   grid-template-rows: 2fr auto;
@@ -85,7 +89,8 @@ export const FocusedBody = styled.div`
   border-top: 1px solid ${colorsAndFont.blue};
   color:${colorsAndFont.blue};
   text-align:left;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-column-gap: 5vh;
   grid-row-gap: 5vh;
   padding: 1vh .5vh;
@@ -113,7 +118,8 @@ export const FocusedBody = styled.div`
 `;
 export const SolutionsSlide = styled.div`
     background-color: ${colorsAndFont.blue};
-    display:grid;
+    display:grid; 
+display:-ms-grid; 
     grid-template-columns: auto;
     grid-template-rows: 1fr 3fr;
     padding: 3vh 2vh;
@@ -157,7 +163,8 @@ export const SolIcon = styled.div`
 export const NefaSlide = styled.div`
   position:relative;
   background-color:black;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-rows:1px auto;
 `;
 export const NefaLogoGrid = CoverText.extend`
@@ -181,7 +188,8 @@ export const InterestedSlide = styled.div`
   background-color:${colorsAndFont.blue};
   height:auto;
   color:white;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-columns:1fr 1fr;
   padding: 2vh .5vw 0 .5vw;
   /*desktop*/
@@ -202,7 +210,8 @@ export const InterestedSlide = styled.div`
 
 export const Offerings = styled.div`
   grid-area:offerings;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-rows: auto auto;
   border-right: 1px solid white;
   margin-left: 10%;
@@ -236,7 +245,8 @@ export const Offerings = styled.div`
 export const Interested = styled.div`
   grid-area: interested;
   text-align:center;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-columns: auto;
   grid-template-rows: min-content 8vh 8vh;
   text-transform:uppercase;
@@ -245,7 +255,8 @@ export const Interested = styled.div`
     margin-bottom:.75em
   }
   div{
-    display:grid;
+    display:grid; 
+display:-ms-grid; 
     a{
       align-self:center;
       justify-self:center;

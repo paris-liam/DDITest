@@ -368,7 +368,8 @@ template {
 #site-canvas {
   width: 100%;
   height: max-content;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-rows:auto auto;
   position: relative;
   -webkit-transform: translateX(0);

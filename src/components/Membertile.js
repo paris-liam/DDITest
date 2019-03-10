@@ -8,7 +8,9 @@ const Member = styled.div`
     transition: height 0.2s ease-in-out;
     border-top: 4px solid ${colorsAndFont.magenta};
     padding: 1vh 3vw;
-    display:grid;
+    display:grid; 
+display:-ms-grid; 
+    
     grid-template-columns: auto auto;
 `;
 const MemberShot = styled.div`
@@ -17,7 +19,8 @@ const MemberShot = styled.div`
 const MemberInfo = styled.div`
   margin-left: 3vh;
   margin-top:5vh;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-columns:auto;
   grid-template-rows: auto auto auto;
 `;

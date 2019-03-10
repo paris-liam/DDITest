@@ -5,7 +5,8 @@ import { InterestedSlide, Interested, Offerings } from '../style/style-index';
 import Link from 'gatsby-link';
 
 const PageGrid = styled.div`
-    display:grid;
+    display:grid; 
+display:-ms-grid; 
     height:max-content;
     grid-template-columns:auto;
     grid-template-rows: auto auto auto;
@@ -42,7 +43,8 @@ const CalculatorGrid = styled.div`
     font-weight:bolder;
     grid-area:title;
   }
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   width: 50%;
   height:auto;
   grid-template-columns:auto;
@@ -58,7 +60,8 @@ const InputGrid = styled.form`
     align-self:center;
     justify-self:center;
     grid-area:labels;
-    display:grid;
+    display:grid; 
+display:-ms-grid; 
     grid-template-columns:auto auto;
     grid-row-gap: 3vh;
     grid-column-gap: 2vw;

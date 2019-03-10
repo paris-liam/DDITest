@@ -7,7 +7,8 @@ import { toggleNav } from '../style/dataAndCopy';
 
 const HeadGrid = styled.div`
   color: ${colorsAndFont.blue};
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   /*phone*/
   grid-template-rows:10vh;
   grid-template-columns: 4fr 2fr;
@@ -38,7 +39,8 @@ const HamburgerContent = styled.div`
   display:none;
   /*desktop*/
   @media screen and (min-width: 1025px){
-    display:grid;
+    display:grid; 
+display:-ms-grid; 
     grid-template-columns: 1fr 3fr;
     grid-template-rows:1fr 1fr;
     grid-row-gap:3vh;
@@ -190,13 +192,15 @@ const DropdownContent = styled.div`
 `;
 
 const HamburgerIcon = styled.div`
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-columns:1fr 1fr;
   grid-template-rows:100%;
   color: ${colorsAndFont.blue};
   grid-area:hamburgericon;
   .burger-container{
-    display:grid;
+    display:grid; 
+display:-ms-grid; 
     align-content:center;
     justify-content:center;
     position:relative

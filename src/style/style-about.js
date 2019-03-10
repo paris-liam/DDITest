@@ -4,7 +4,8 @@ import { CoverText, FocusedBody, Interested } from './style-index';
 import { colorsAndFont } from './style';
 
 export const AboutGrid = styled.div`
- display:grid;
+ display:grid; 
+display:-ms-grid; 
  grid-template-rows: 45vh auto auto auto auto auto;
  grid-template-columns:100%;
  background-color: ${colorsAndFont.blue};
@@ -23,7 +24,8 @@ export const AboutCoverText = CoverText.extend`
 export const WhoWeAre = styled.div`
   grid-area:'Who';
   padding: 2.5vh 5vw;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-rows: auto auto auto;
   grid-template-columns: auto;
   grid-template-areas: 'title' 'letter' 'list';
@@ -65,7 +67,8 @@ export const WhyDDI = styled.div`
   grid-area:'Why';
   color:${colorsAndFont.blue};
   background-color:white;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-columns: auto;
   grid-template-rows: auto auto;
   padding: 2.5vh 5vw;
@@ -74,7 +77,8 @@ export const WhyTitle = styled.div`
 `;
 export const WhyBody = FocusedBody.extend`
   margin-top:2vh;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-columns: auto;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas: 'experience' 'rates' 'speed' 'creative' 'adapt';
@@ -108,7 +112,8 @@ export const EquiptList = styled.div`
   grid-area: 'list';
   position:relative;
   background-color:black;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-rows:1px 99%;
   overflow:hidden;
   /*landscape mode*/
@@ -132,7 +137,8 @@ export const EquiptText = styled.div`
   }
   position:relative;
   z-index:2;
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   text-align:left;
   h1{
     width: 95%;
@@ -148,13 +154,15 @@ export const EquiptText = styled.div`
 export const MeetTheTeam = styled.div`
   grid-area:'Meet';
   background-color: ${colorsAndFont.grey};
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-template-rows: auto auto;
   grid-template-columns: auto;
 `;
 
 export const MeetTheTeamTitle = styled.div`
- display:grid;
+ display:grid; 
+display:-ms-grid; 
  grid-template-columns: auto auto auto;
  padding: 2.5vh 2vw;
    i{

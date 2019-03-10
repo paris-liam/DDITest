@@ -23,7 +23,8 @@ export const SingleSlide = FocusedSlide.extend`
 
 /* Customer Page */
 export const CustBody = styled.div`
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   text-align:left;
   padding-bottom:1vh;
   width:90%;
@@ -89,7 +90,8 @@ export const CustTitle = styled.div`
 
 /* Vendor Page */
 export const VendorBody = styled.div`
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   grid-column-gap:5vw;
   color:white;
   padding: 2vh 1vh;
@@ -160,7 +162,8 @@ export const Following = styled.div`
 
 /* Contact Page */
 export const ContactBody = styled.div`
-  display:grid;
+  display:grid; 
+display:-ms-grid; 
   margin: 4vh 3vw;
   grid-template-rows:auto auto;
   grid-template-columns: auto;
@@ -171,7 +174,8 @@ export const ContactBody = styled.div`
 `;
 
 export const ContactInfo = styled.div`
- display:grid;
+ display:grid; 
+display:-ms-grid; 
  grid-template-columns: 1fr 1fr;
  grid-template-rows: auto auto auto;
  grid-row-gap: 1vh;
@@ -188,7 +192,8 @@ export const ContactForm = styled.div`
 form{
 margin:4vh 0;
 text-align:left;
-display:grid;
+display:grid; 
+display:-ms-grid; 
 grid-template-columns: min-content auto;
 grid-column-gap: 3vw;
 grid-template-rows: auto auto auto auto;
