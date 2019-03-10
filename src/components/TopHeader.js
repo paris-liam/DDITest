@@ -10,21 +10,26 @@ const HeadGrid = styled.div`
   display:grid; 
 display:-ms-grid; 
   /*phone*/
-  grid-template-rows:10vh;
-  grid-template-columns: 4fr 2fr;
+  -ms-grid-rows: 10vh;
+grid-template-rows:10vh;
+  -ms-grid-columns: 4fr 2fr;
+grid-template-columns: 4fr 2fr;
   grid-template-areas: 'headImg hamburgericon';
   margin-top:2vh;
   margin-left: 2em;
   /*desktop*/
   @media screen and (min-width: 1025px){
-    grid-template-rows:auto;
-    grid-template-columns: 2fr 1fr 3fr;
+    -ms-grid-rows:auto;
+grid-template-rows:auto;
+    -ms-grid-columns: 2fr 1fr 3fr;
+grid-template-columns: 2fr 1fr 3fr;
     grid-template-areas: 'headImg . hamburgercontent';
     margin: 1.5em 2em .5em 4em;
   }
   /* phone landscape*/
   @media screen and (max-width: 1025px) and (orientation: landscape){
-    grid-template-rows:auto;
+    -ms-grid-rows: auto;
+grid-template-rows:auto;
     margin-bottom: 4vh;
   }
 `;
@@ -41,8 +46,10 @@ const HamburgerContent = styled.div`
   @media screen and (min-width: 1025px){
     display:grid; 
 display:-ms-grid; 
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows:1fr 1fr;
+    -ms-grid-columns:1fr 3fr;
+grid-template-columns: 1fr 3fr;
+    -ms-grid-rows: 1fr 1fr;
+grid-template-rows:1fr 1fr;
     grid-row-gap:3vh;
     grid-area:hamburgercontent;
     grid-template-areas: '. contact' '. nav';
@@ -194,8 +201,10 @@ const DropdownContent = styled.div`
 const HamburgerIcon = styled.div`
   display:grid; 
 display:-ms-grid; 
-  grid-template-columns:1fr 1fr;
-  grid-template-rows:100%;
+  -ms-grid-columns: 1fr 1fr;
+grid-template-columns:1fr 1fr;
+  -ms-grid-rows: 100%;
+grid-template-rows:100%;
   color: ${colorsAndFont.blue};
   grid-area:hamburgericon;
   .burger-container{

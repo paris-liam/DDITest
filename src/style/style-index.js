@@ -5,11 +5,14 @@ import { colorsAndFont } from './style';
 export const IndexGrid = styled.div`
   display:grid; 
 display:-ms-grid; 
-  grid-template-rows: 70vh auto auto 40vh auto;
-  grid-template-columns: auto;
+  -ms-grid-rows: 70vh auto auto 40vh auto;
+grid-template-rows: 70vh auto auto 40vh auto;
+  -ms-grid-columns: auto;
+grid-template-columns: auto;
   color:white;
   @media screen and (max-width: 900px) and (orientation: landscape){
-    grid-template-rows: 90vh auto auto 35vh auto;
+    -ms-grid-rows: 90vh auto auto 35vh auto;
+grid-template-rows: 90vh auto auto 35vh auto;
   }
 `;
 export const CoverHold = styled.div`
@@ -17,7 +20,8 @@ export const CoverHold = styled.div`
   background-color:black;
   display:grid; 
 display:-ms-grid; 
-  grid-template-rows:1px 99%;
+  -ms-grid-rows:1px 99%;
+grid-template-rows:1px 99%;
 `;
 export const CoverText = styled.div`
   position:relative;
@@ -27,8 +31,10 @@ display:-ms-grid;
   text-align:center;
   align-self:center;
   justify-self:center;
-  grid-template-columns:auto;
-  grid-template-rows:auto auto 10vh;
+  -ms-grid-columns: auto;
+grid-template-columns:auto;
+  -ms-grid-rows: auto auto 10vh;
+grid-template-rows:auto auto 10vh;
   h1{
     width: 95%;
     margin: 0 auto .5em auto;
@@ -62,9 +68,11 @@ export const FocusedSlide = styled.div`
   background-color:white;
   display:grid; 
 display:-ms-grid; 
-  grid-template-columns: auto;
+  -ms-grid-columns: auto;
+grid-template-columns: auto;
   height:auto;
-  grid-template-rows: 2fr auto;
+  -ms-grid-rows: 2fr auto;
+grid-template-rows: 2fr auto;
   padding-bottom: 5vh;
   text-align:center;
   margin: 3vh 6vw;
@@ -95,11 +103,15 @@ display:-ms-grid;
   grid-row-gap: 5vh;
   padding: 1vh .5vh;
   text-align:center;
-  grid-template-columns: auto;
-  grid-template-rows: max-content max-content max-content max-content;
+  -ms-grid-columns:  auto;
+grid-template-columns: auto;
+  -ms-grid-rows: max-content max-content max-content max-content;
+grid-template-rows: max-content max-content max-content max-content;
   @media screen and (min-width:1025px){
-    grid-template-columns: auto auto;
-    grid-template-rows: max-content max-content;
+    -ms-grid-columns: auto auto;
+grid-template-columns: auto auto;
+    -ms-grid-rows: max-content max-content;
+grid-template-rows: max-content max-content;
   }
   & > div{
     display:flex;
@@ -120,8 +132,10 @@ export const SolutionsSlide = styled.div`
     background-color: ${colorsAndFont.blue};
     display:grid; 
 display:-ms-grid; 
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 3fr;
+    -ms-grid-columns: auto;
+grid-template-columns: auto;
+    -ms-grid-rows: 1fr 3fr;
+grid-template-rows: 1fr 3fr;
     padding: 3vh 2vh;
     height:auto;
     h1.title{
@@ -165,10 +179,12 @@ export const NefaSlide = styled.div`
   background-color:black;
   display:grid; 
 display:-ms-grid; 
-  grid-template-rows:1px auto;
+  -ms-grid-rows: 1px auto;
+grid-template-rows:1px auto;
 `;
 export const NefaLogoGrid = CoverText.extend`
-  grid-template-rows: auto auto;
+  -ms-grid-rows: auto auto; 
+grid-template-rows: auto auto;
   h1{
     width:100%;
     color:white;
@@ -190,13 +206,15 @@ export const InterestedSlide = styled.div`
   color:white;
   display:grid; 
 display:-ms-grid; 
-  grid-template-columns:1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+grid-template-columns:1fr 1fr;
   padding: 2vh .5vw 0 .5vw;
   /*desktop*/
   @media screen and (min-width: 1024px){
     padding: 2vh 5vh 0 5vh;
   }
-  grid-template-rows: auto 2vh;
+  -ms-grid-rows: auto 2vh; 
+grid-template-rows: auto 2vh;
   grid-row-gap: 1vh;
   grid-template-areas: 'offerings interested ' 'copyright copyright';
   p.copyright{
@@ -212,7 +230,8 @@ export const Offerings = styled.div`
   grid-area:offerings;
   display:grid; 
 display:-ms-grid; 
-  grid-template-rows: auto auto;
+  -ms-grid-rows: auto auto;
+grid-template-rows: auto auto;
   border-right: 1px solid white;
   margin-left: 10%;
   h1{
@@ -247,8 +266,10 @@ export const Interested = styled.div`
   text-align:center;
   display:grid; 
 display:-ms-grid; 
-  grid-template-columns: auto;
-  grid-template-rows: min-content 8vh 8vh;
+  -ms-grid-columns: auto;
+grid-template-columns: auto;
+  -ms-grid-rows: min-content 8vh 8vh;
+grid-template-rows: min-content 8vh 8vh;
   text-transform:uppercase;
   h1{
     font-size:1.75em;

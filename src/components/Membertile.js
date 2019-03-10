@@ -9,8 +9,8 @@ const Member = styled.div`
     border-top: 4px solid ${colorsAndFont.magenta};
     padding: 1vh 3vw;
     display:grid; 
-display:-ms-grid; 
-    
+    display:-ms-grid; 
+    -ms-grid-columns: auto auto;
     grid-template-columns: auto auto;
 `;
 const MemberShot = styled.div`
@@ -21,8 +21,10 @@ const MemberInfo = styled.div`
   margin-top:5vh;
   display:grid; 
 display:-ms-grid; 
-  grid-template-columns:auto;
-  grid-template-rows: auto auto auto;
+  -ms-grid-columns: auto;
+grid-template-columns:auto;
+  -ms-grid-rows: auto auto auto;
+grid-template-rows: auto auto auto;
 `;
 const MemberTitle = styled.div`
   line-height: 1.25;
