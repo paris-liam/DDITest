@@ -46,7 +46,10 @@ grid-template-rows: auto;
 `;
 
 export const Requirements = styled.div`
-  grid-area: reqs;
+    -ms-grid-row:1; 
+   -ms-grid-column:1; 
+   -ms-grid-column-span:1;
+   grid-area: reqs;
   ul > ul{
     list-style:none;
     font-weight:200;
@@ -67,7 +70,10 @@ export const CustOff = Offerings.extend`
   padding-top:4vh;
   margin:0 0 0 3vw;
   border:none;
-  grid-area: custOff;
+   -ms-grid-row:1; 
+   -ms-grid-column:2; 
+   -ms-grid-column-span:1;
+   grid-area: custOff;
   font-size:1.1em;
   -ms-grid-rows: min-content auto;
 grid-template-rows: min-content auto;
@@ -204,6 +210,41 @@ grid-template-rows: auto auto auto;
  ul:first-of-type{
    margin-bottom:2vh;
  }
+ & > ul#corporate { 
+  -ms-grid-row: 1
+  -ms-grid-column: 1
+  -ms-grid-column-span: 1
+ }
+ & > ul#ponte {
+  -ms-grid-row: 2
+  -ms-grid-column: 1
+  -ms-grid-column-span: 1
+   
+}
+& > ul#north {
+  -ms-grid-row: 2
+  -ms-grid-column: 2
+  -ms-grid-column-span: 1
+   
+}
+& > ul#charlotte {
+  -ms-grid-row: 3
+  -ms-grid-column: 1
+  -ms-grid-column-span: 1
+   
+}
+& > ul#quogue {
+  -ms-grid-row: 3
+  -ms-grid-column: 2
+  -ms-grid-column-span: 1
+   
+}
+& > ul#spring {
+  -ms-grid-row: 4
+  -ms-grid-column: 1
+  -ms-grid-column-span: 1
+   
+}
 `;
 export const ContactForm = styled.div`
 form{

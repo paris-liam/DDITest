@@ -43,7 +43,10 @@ const CalculatorGrid = styled.div`
     margin:3vh 0;
     text-align:center;
     font-weight:bolder;
-    grid-area:title;
+    -ms-grid-row:1; 
+   -ms-grid-column:1; 
+   -ms-grid-column-span:1;
+   grid-area:title;
   }
   display:grid; 
 display:-ms-grid; 
@@ -63,7 +66,10 @@ grid-template-rows: auto auto auto;
 const InputGrid = styled.form`
     align-self:center;
     justify-self:center;
-    grid-area:labels;
+       -ms-grid-row:2; 
+   -ms-grid-column:1; 
+   -ms-grid-column-span:1;
+   grid-area:labels;
     display:grid; 
 display:-ms-grid; 
     -ms-grid-columns: auto auto;

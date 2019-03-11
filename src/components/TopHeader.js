@@ -8,32 +8,35 @@ import { toggleNav } from '../style/dataAndCopy';
 const HeadGrid = styled.div`
   color: ${colorsAndFont.blue};
   display:grid; 
-display:-ms-grid; 
+  display:-ms-grid; 
   /*phone*/
-  -ms-grid-rows: 10vh;
-grid-template-rows:10vh;
+  -ms-grid-rows: 10vh;  
+  grid-template-rows:10vh;
   -ms-grid-columns: 4fr 2fr;
-grid-template-columns: 4fr 2fr;
+  grid-template-columns: 4fr 2fr;
   grid-template-areas: 'headImg hamburgericon';
   margin-top:2vh;
   margin-left: 2em;
   /*desktop*/
   @media screen and (min-width: 1025px){
     -ms-grid-rows:auto;
-grid-template-rows:auto;
+    grid-template-rows:auto;
     -ms-grid-columns: 2fr 1fr 3fr;
-grid-template-columns: 2fr 1fr 3fr;
+    grid-template-columns: 2fr 1fr 3fr;
     grid-template-areas: 'headImg . hamburgercontent';
     margin: 1.5em 2em .5em 4em;
   }
   /* phone landscape*/
   @media screen and (max-width: 1025px) and (orientation: landscape){
     -ms-grid-rows: auto;
-grid-template-rows:auto;
+    grid-template-rows:auto;
     margin-bottom: 4vh;
   }
 `;
 const Logo = styled(Link)`
+  -ms-grid-row:1; 
+  -ms-grid-column:1; 
+  -ms-grid-column-span:1;
   grid-area: headImg;
   align-self:center;
   width:90%;
@@ -45,12 +48,15 @@ const HamburgerContent = styled.div`
   /*desktop*/
   @media screen and (min-width: 1025px){
     display:grid; 
-display:-ms-grid; 
+    display:-ms-grid; 
     -ms-grid-columns:1fr 3fr;
-grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 3fr;
     -ms-grid-rows: 1fr 1fr;
-grid-template-rows:1fr 1fr;
+    grid-template-rows:1fr 1fr;
     grid-row-gap:3vh;
+    -ms-grid-row:1; 
+    -ms-grid-column:-1; 
+    -ms-grid-column-span:1;
     grid-area:hamburgercontent;
     grid-template-areas: '. contact' '. nav';
   }
@@ -58,6 +64,9 @@ grid-template-rows:1fr 1fr;
 
 const Contact = styled.div`
   list-style:none;
+  -ms-grid-row:1; 
+  -ms-grid-column:2; 
+  -ms-grid-column-span:1;
   grid-area: contact;
   text-align:right;
   display:flex;
@@ -100,6 +109,9 @@ const PayBillsButton = styled.li`
 `;
 
 const Nav = styled.div`
+  -ms-grid-row:2; 
+  -ms-grid-column:2; 
+  -ms-grid-column-span:1;
   grid-area: nav;
   display:flex;
   justify-content:space-evenly;
@@ -206,7 +218,10 @@ grid-template-columns:1fr 1fr;
   -ms-grid-rows: 100%;
 grid-template-rows:100%;
   color: ${colorsAndFont.blue};
-  grid-area:hamburgericon;
+  -ms-grid-row:1; 
+   -ms-grid-column:2; 
+   -ms-grid-column-span:1;
+   grid-area:hamburgericon;
   .burger-container{
     display:grid; 
 display:-ms-grid; 

@@ -21,32 +21,32 @@ const Contact = data => (
     <SingleSlide>
       <ContactBody>
         <ContactInfo>
-          <ul style={{ gridArea: 'Corporate' }}>
+          <ul id='corporate'>
             <li>DDI Capital Headquarters</li>
             <li>221 Somerville Road</li>
             <li>Bedminster, NJ 07921</li>
             <li>Tel: 908-781-9300</li>
             <li>Fax: 908-781-7906</li>
           </ul>
-          <ul style={{ gridArea: 'ponte' }}>
+          <ul id='ponte'>
             <li>Ponte Vedra, FL</li>
             <li>Tel: 904-280-4464</li>
             <li>Fax: 904-280- 4431</li>
           </ul>
-          <ul style={{ gridArea: 'north' }}>
+          <ul id='north'>
             <li>North Haven, CT</li>
             <li>Tel: 203-821-7825</li>
           </ul>
-          <ul style={{ gridArea: 'charlotte' }}>
+          <ul id='charlotte'>
             <li>Charlotte, NC</li>
             <li>Tel: 704-843-9363</li>
             <li>Fax: 704-843-9462</li>
           </ul>
-          <ul style={{ gridArea: 'quogue' }}>
+          <ul id='quogue'>
             <li>Quogue, NY</li>
             <li>Tel: 631-996-2675</li>
           </ul>
-          <ul style={{ gridArea: 'spring' }}>
+          <ul id='spring'>
             <li>Spring Lake, NJ</li>
             <li>Tel: 732-449-1999</li>
             <li>Fax: 732-449-6128</li>

@@ -22,6 +22,10 @@ export const CoverHold = styled.div`
 display:-ms-grid; 
   -ms-grid-rows:1px 99%;
 grid-template-rows:1px 99%;
+-ms-grid-row:1; 
+-ms-grid-column:1; 
+-ms-grid-column-span:1;
+grid-area: 'AboutCover'
 `;
 export const CoverText = styled.div`
   position:relative;
@@ -218,7 +222,9 @@ grid-template-rows: auto 2vh;
   grid-row-gap: 1vh;
   grid-template-areas: 'offerings interested ' 'copyright copyright';
   p.copyright{
-    grid-area:copyright;
+       -ms-grid-row:2; 
+   -ms-grid-column:1/-1; 
+   grid-area:copyright;
     text-align:center;
     vertical-align:bottom;
     text-transform:uppercase;
@@ -227,7 +233,10 @@ grid-template-rows: auto 2vh;
 `;
 
 export const Offerings = styled.div`
-  grid-area:offerings;
+     -ms-grid-row:1; 
+   -ms-grid-column:1; 
+   -ms-grid-column-span:1;
+   grid-area:offerings;
   display:grid; 
 display:-ms-grid; 
   -ms-grid-rows: auto auto;
@@ -262,7 +271,10 @@ grid-template-rows: auto auto;
 `;
 
 export const Interested = styled.div`
-  grid-area: interested;
+     -ms-grid-row:1; 
+   -ms-grid-column:2; 
+   -ms-grid-column-span:1;
+   grid-area: interested;
   text-align:center;
   display:grid; 
 display:-ms-grid; 
