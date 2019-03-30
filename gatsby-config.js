@@ -1,3 +1,4 @@
+
 module.exports = {
   siteMetadata: {
     title: 'DDI Capital',
@@ -9,6 +10,11 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-netlify',
     'gatsby-plugin-netlify-cache',
+    {
+      resolve: `gatsby-plugin-postcss-sass`,
+      options: {
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {

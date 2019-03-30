@@ -1,30 +1,27 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
-import { gatsbyImgStyle } from '../style/style';
-import { CoverHold } from '../style/style-index';
-import { SingleGrid, SingleCoverText, SingleSlide, CustBody, Requirements, CustOff, CustTitle } from '../style/style-single-page';
+import { gatsbyImgStyle } from '../style/dataAndCopy';
 
 const Customers = data => (
-  <SingleGrid>
-    <CoverHold>
+  <div className='indexGrid' id='SingleGrid'>
+    <div className='CoverHold'>
       <IMG
         sizes={data.data.cover.sizes}
         outerWrapperClassName="coverOuter"
         position="absolute"
         style={gatsbyImgStyle}
       />
-      <SingleCoverText>
+      <div className='CoverText' id='SingleCoverText'>
         <h1>Focused on You – Where you work</h1>
         <p>Our professionals know more than leasing – they are familiar with the technology that you use – and they are willing to spend the time with you to put it to maximum advantage.</p>
-      </SingleCoverText>
-    </CoverHold>
-    <SingleSlide>
-      <CustTitle>
+      </div>
+    </div>
+    <div className='FocusedSlide' id='SingleSlide'>
+      <div className='CustTitle'>
         <h1>DDI will work closely with you to customize a financing plan that best suits your budget, cash flow and technology requirements.</h1>
-      </CustTitle>
-      <CustBody>
-        <Requirements>
+      </div>
+      <div className='CustBody'>
+        <div className='Requirements'>
           <ul className="fa-ul">
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span> Competitive Lease Rates with Highly Flexible Terms and Conditions</li>
             <ul>
@@ -44,8 +41,8 @@ const Customers = data => (
               <li>Account Managers are pragmatic, hands-on and share your operating vision</li>
             </ul>
           </ul>
-        </Requirements>
-        <CustOff>
+        </div>
+        <div className='Offerings' id='CustOff'>
           <h1>Offerings Include:</h1>
           <ul className="fa-ul">
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Master Lease Agreements</li>
@@ -58,10 +55,10 @@ const Customers = data => (
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Network Integration and Consulting</li>
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Project Management</li>
           </ul>
-        </CustOff>
-      </CustBody>
-    </SingleSlide>
-  </SingleGrid>
+        </div>
+      </div>
+    </div>
+  </div>
 );
 export default Customers;
 
@@ -73,4 +70,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

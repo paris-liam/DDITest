@@ -2,10 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
 import Membertile from '../components/Membertile';
-import { AboutGrid, AboutCoverText, WhoWeAre, WhyDDI, WhyTitle, WhyBody, EquiptmentFinanced, EquiptTitle, EquiptList, EquiptText, MeetTheTeam, WhoTitle, WhoLetter, WhoList, MeetTheTeamTitle, AboutInterested, AboutInterestedSlide, MeetTheTeamList, MeetTheTeamAccordian } from '../style/style-about';
-import { IndexGrid, CoverHold, CoverText, Interested } from '../style/style-index';
 import { teamInfo } from '../style/dataAndCopy';
-import { gatsbyImgStyle } from '../style/style';
+import { gatsbyImgStyle } from '../style/dataAndCopy';
 
 class About extends React.Component {
   constructor(props) {
@@ -64,32 +62,32 @@ class About extends React.Component {
   }
   render() {
     return (
-      <AboutGrid>
-        <CoverHold>
+      <div className='AboutGrid'>
+        <div className='CoverHold'>
           <IMG
             sizes={this.props.data.cover.sizes}
             outerWrapperClassName="coverOuter"
             position="absolute"
             style={gatsbyImgStyle}
           />
-          <AboutCoverText>
+          <div className='CoverText' id='AboutCoverText'>
             <h1>
             Independent Trusted Advisor
             </h1>
             <p>
             With so many financing options, it’s not always easy to know which solution will work best for your organization. For more than 25 years, we’ve delivered independent and innovative technology leasing and financing solutions designed to meet the specific needs of our clients. Reach out to DDI: we will make your decision easy.
             </p>
-          </AboutCoverText>
-        </CoverHold>
-        <WhoWeAre id="Who">
-          <WhoTitle><h1>WHO WE ARE</h1></WhoTitle>
-          <WhoLetter>
+          </div>
+        </div>
+        <div className='WhoWeAre' id="Who">
+          <div className='WhoTitle'><h1>WHO WE ARE</h1></div>
+          <div className='WhoLetter'>
             <p>&emsp;To Our Valued Partners – When we founded DDI Capital in 1993, we wanted to create a company that valued honest work and genuine customer interaction. We wanted to create a place where employees understand their clients and the business challenges they face, and collaborate to find the best solutions. 25 years later, DDI Capital has grown into a company that accomplishes all this and much more.</p>
             <p>&emsp;Our philosophy over the last two decades has been to always put our clients’ needs above our own. While we pride ourselves on being financial consultants to our customers, we strive to make each business interaction much more than that. Our employees create a personal relationship with each customer, allowing us to better understand your needs and wants. We work with our clients every step of the way in order to offer best of breed solutions aimed at allowing partners to continue their growth, and create financial programs that will fit each partner’s budget. DDI knows that your business is not like anyone else’s: your financial program shouldn’t be either.</p>
             <p>&emsp;Adaptability is what DDI does best. We are not satisfied until we find a solution that fits the ethos of your business and allows your company grow and prosper.   Welcome to DDI Capital, we’re happy you’re here.</p>
             <p>Sincerely,<br />Mike Moran<br />Founder and CEO</p>
-          </WhoLetter>
-          <WhoList>
+          </div>
+          <div className='WhoList'>
             <ul className="fa-ul">
               <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Over 25-years of experience</li>
               <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Specialized leasing solutions for all industries and customer types</li>
@@ -98,11 +96,11 @@ class About extends React.Component {
               <li><span className="fa-li"><i className="fas fa-check-circle" /></span>Headquartered in Bedminster, New Jersey with satellite offices located in Spring Lake, New Jersey; New Haven, Connecticut; Ponte Vedra, Florida; and Charlotte, North Carolina.</li>
               <li><span className="fa-li"><i className="fas fa-check-circle" /></span>Proud members of the National Equipment Finance Association (NEFA)</li>
             </ul>
-          </WhoList>
-        </WhoWeAre>
-        <WhyDDI id="Why">
-          <WhyTitle><h1>Why DDI?</h1></WhyTitle>
-          <WhyBody>
+          </div>
+        </div>
+        <div className='WhyDDI' id="Why">
+          <div className='WhyTitle'><h1>Why DDI?</h1></div>
+          <div className='FocusedBody' id='WhyBody'>
             <div id='experience'>
               <h1 style={{ marginRight: '4.5vw' }}><i className="fa fa-clock" /></h1>
               <p><strong>Experience:</strong> DDI has been an innovator in the leasing industry for over 25 years.
@@ -125,24 +123,24 @@ class About extends React.Component {
               <h1 ><i className="fa fa-people-carry" /></h1>
               <p className="adaptCopy"><strong>Adaptability:</strong> From the design of your financing solution, to mid-lease options to end-of-term flexibility, DDI works with you to adapt your financing program as your budget, cash flow and technology requirements change over time.</p>
             </div>
-          </WhyBody>
-        </WhyDDI>
-        <EquiptmentFinanced id="Equipt">
-          <EquiptList>
+          </div>
+        </div>
+        <div className='EquiptmentFinanced' id="Equipt">
+          <div className='EquiptList'>
             <IMG
               sizes={this.state.equiptmentImages[this.state.equiptmentCurrent]}
               outerWrapperClassName="coverOuter"
               position="absolute"
               style={gatsbyImgStyle}
             />
-            <EquiptText>
-              <EquiptTitle>
+            <div className='EquiptText'>
+              <div className='EquiptTitle'>
                 <h1>EQUIPMENT FINANCED</h1>
                 <p>
             Because we are aligned with all the major hardware manufacturers and their partners, DDI is able to assist you with a wide range of technology options.
               Select any vendor and we can arrange the leasing program that compliments your technology solution. We also offer specific technical expertise and consultative guidance on a variety of technology alternatives.
                 </p>
-              </EquiptTitle>
+              </div>
               <ul>
                 <li>Storage Products</li>
                 <li>Desktop/Laptop Computers</li>
@@ -167,16 +165,16 @@ class About extends React.Component {
                 <li>Warehouse Equipment</li>
                 <li>Non-Traditional Assets</li>
               </ul>
-            </EquiptText>
-          </EquiptList>
-        </EquiptmentFinanced>
-        <MeetTheTeam id="Team">
-          <MeetTheTeamTitle onClick={this.accordianTeam}>
+            </div>
+          </div>
+        </div>
+        <div className='MeetTheTeam' id="Team">
+          <div className='MeetTheTeamTitle' onClick={this.accordianTeam}>
             <h1>MEET THE TEAM</h1>
             <p>We deliver high-integrity, convenience-based financing solutions our technology partners can provide to their customers. Here’s the people that make this happen.</p>
             <i className={`fa fa-angle-right meetTeamArrow ${this.state.showAccordian ? ('animateArrow') : ('resetArrow')}`} />
-          </MeetTheTeamTitle>
-          <MeetTheTeamAccordian
+          </div>
+          <div className='MeetTheTeamAccordian'
             className="accordian"
             style={{
             height: (this.state.showAccordian) ? ('60vh') : ('0px'),
@@ -185,16 +183,16 @@ class About extends React.Component {
             {
                Object.keys(this.state.teamInfo).map(member => <Membertile key={this.state.teamInfo[member].name} info={this.state.teamInfo[member]} show={this.state.showAccordian} />)
             }
-          </MeetTheTeamAccordian>
-        </MeetTheTeam>
-        <AboutInterestedSlide >
-          <AboutInterested>
+          </div>
+        </div>
+        <div className='AboutInterestedSlide' >
+          <div className='Interested' id='AboutInterested'>
             <h1>Interested?<br /> Checkout Specific Information for:</h1>
             <div><Link to="/Vendors"><button>Vendors</button></Link></div>
             <div><Link to="/Customers"><button> Customers</button></Link></div>
-          </AboutInterested>
-        </AboutInterestedSlide>
-      </AboutGrid>
+          </div>
+        </div>
+      </div>
     );
   }
 }
@@ -233,7 +231,6 @@ export const query = graphql`
       }
     }
    }
-
-}
-`;
+  }
+`
 

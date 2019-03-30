@@ -1,26 +1,24 @@
 import React from 'react';
-import { SingleGrid, SingleCoverText, SingleSlide, ContactBody, ContactInfo, ContactForm } from '../style/style-single-page';
-import { CoverHold } from '../style/style-index';
-import { gatsbyImgStyle } from '../style/style';
+import { gatsbyImgStyle } from '../style/dataAndCopy';
 import IMG from 'gatsby-image';
 
 const Contact = data => (
-  <SingleGrid>
-    <CoverHold>
+  <div className='indexGrid' id='Singlegrid'>
+    <div className='CoverHold'>
       <IMG
         sizes={data.data.cover.sizes}
         outerWrapperClassName="coverOuter"
         position="absolute"
         style={gatsbyImgStyle}
       />
-      <SingleCoverText>
+      <div className='CoverText' id='SingleCoverText'>
         <h1>CONTACT US</h1>
         <p>We'd love to hear from you!</p>
-      </SingleCoverText>
-    </CoverHold>
-    <SingleSlide>
-      <ContactBody>
-        <ContactInfo>
+      </div>
+    </div>
+    <div className='FocusedSlide' id='singleSlide'>
+      <div className='ContactBody'>
+        <div className='ContactInfo'>
           <ul id='corporate'>
             <li>DDI Capital Headquarters</li>
             <li>221 Somerville Road</li>
@@ -51,8 +49,8 @@ const Contact = data => (
             <li>Tel: 732-449-1999</li>
             <li>Fax: 732-449-6128</li>
           </ul>
-        </ContactInfo>
-        <ContactForm>
+        </div>
+        <div className='ContactForm'>
           <form name='contact' form-name='contact' method="post" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
@@ -64,10 +62,10 @@ const Contact = data => (
           <textarea name="message" />
           <div><input type="submit" value="Send" /></div>
           </form>
-        </ContactForm>
-      </ContactBody>
-    </SingleSlide>
-  </SingleGrid>
+        </div>
+      </div>
+    </div>
+  </div>
 );
 
 export default Contact;
@@ -81,4 +79,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

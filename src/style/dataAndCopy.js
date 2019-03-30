@@ -133,6 +133,16 @@ export const teamInfo = {
   },
 };
 
+export const gatsbyImgStyle = {
+  top: 0,
+  left: 0,
+  position: 'absolute',
+  width: '100%',
+  height: '100%',
+};
+
+
+
 export const toggleNav = function () {
   const siteWrap = document.querySelector('#site-wrapper');
   siteWrap.classList.toggle('show-nav');
