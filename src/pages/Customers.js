@@ -3,7 +3,7 @@ import IMG from 'gatsby-image';
 import { gatsbyImgStyle } from '../style/dataAndCopy';
 
 const Customers = data => (
-  <div className='indexGrid' id='SingleGrid'>
+  <div className='indexGrid' id='singlegrid'>
     <div className='CoverHold'>
       <IMG
         sizes={data.data.cover.sizes}
@@ -16,7 +16,7 @@ const Customers = data => (
         <p>Our professionals know more than leasing – they are familiar with the technology that you use – and they are willing to spend the time with you to put it to maximum advantage.</p>
       </div>
     </div>
-    <div className='FocusedSlide' id='SingleSlide'>
+    <div className='focusedslide' id='singleslide'>
       <div className='CustTitle'>
         <h1>DDI will work closely with you to customize a financing plan that best suits your budget, cash flow and technology requirements.</h1>
       </div>

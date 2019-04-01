@@ -3,7 +3,7 @@ import { gatsbyImgStyle } from '../style/dataAndCopy';
 import IMG from 'gatsby-image';
 
 const Contact = data => (
-  <div className='indexGrid' id='Singlegrid'>
+  <div className='indexGrid' id='singlegrid'>
     <div className='CoverHold'>
       <IMG
         sizes={data.data.cover.sizes}
@@ -16,7 +16,7 @@ const Contact = data => (
         <p>We'd love to hear from you!</p>
       </div>
     </div>
-    <div className='FocusedSlide' id='singleSlide'>
+    <div className='focusedslide' id='singleslide'>
       <div className='ContactBody'>
         <div className='ContactInfo'>
           <ul id='corporate'>

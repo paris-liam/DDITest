@@ -40,7 +40,7 @@ class IndexPage extends React.Component {
     }));
   }
   learnScroll() {
-    const focused = document.getElementById('focusedSlide');
+    const focused = document.getElementById('focusedslide');
     const focused_location = focused.getBoundingClientRect();
     window.scrollTo({ top: focused_location.top + window.pageYOffset, behavior: 'smooth' });
   }
@@ -60,7 +60,7 @@ class IndexPage extends React.Component {
             <div className='LearnMore'><button onClick={this.learnScroll}> Learn More &nbsp;&nbsp;<i className="fa fa-arrow-alt-circle-down" /></button></div>
           </div>
         </div>
-        <div className='FocusedSlide' id="focusedSlide">
+        <div className='focusedslide' id="focusedslide">
           <div className='FocusedTitle'>
             <h1>Focused on You – Where you work</h1>
             <p>We know your challenges, understand your technology options and aren’t satisfied  until we recommend a solution that exceeds your expectations.</p>

@@ -1,6 +1,6 @@
 
-.indexGrid#SingleGrid{
-  grid-template-rows: 45vh auto;
+.indexGrid#singlegrid{
+  grid-template-rows: 45vh 1fr;
 }
 .CoverText#SingleCoverText {
   grid-template-rows: auto auto;
@@ -11,7 +11,7 @@
     width:95%;
   }
 }
-.FocusedSlide#SingleSlide {
+.focusedslide#singleslide {
   background-color:#585B8C;
   color:white;
   margin: 0;
