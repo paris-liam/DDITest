@@ -2,7 +2,7 @@
   transition: height 0.2s ease-in-out;
   border-top: 4px solid #775997;
   padding: 1vh 3vw;
-  display:grid; 
+  display:flex; /*changing*/; 
   grid-template-columns: auto auto;
 }
 .MemberShot{
@@ -11,7 +11,7 @@
 .MemberInfo{
   margin-left: 3vh;
   margin-top:5vh;
-  display:grid; 
+  display:flex; /*changing*/; 
   grid-template-columns:auto;
   grid-template-rows: auto auto auto;
 }

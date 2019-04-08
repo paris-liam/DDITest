@@ -1,5 +1,5 @@
 .AboutGrid {
-  display:grid; 
+  display:flex; /*changing*/; 
   grid-template-rows: 45vh auto auto auto auto auto;
   grid-template-columns:100%;
   background-color: #585B8C;
@@ -18,7 +18,7 @@
 .WhoWeAre{
   grid-area:'Who';
   padding: 2.5vh 5vw;
-  display:grid; 
+  display:flex; /*changing*/; 
   grid-template-rows: auto auto auto;
   grid-template-columns: auto;
   grid-template-areas: 'title' 'letter' 'list';
@@ -63,7 +63,7 @@
   grid-area:'Why';
   color:#585B8C;
   background-color:white;
-  display:grid; 
+  display:flex; /*changing*/; 
   grid-template-columns: auto;
   grid-template-rows: auto auto;
   padding: 2.5vh 5vw;
@@ -71,7 +71,7 @@
 
 .FocusedBody#WhyBody {
   margin-top:2vh;
-  display:grid; 
+  display:flex; /*changing*/; 
   grid-template-columns: auto;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas: 'experience' 'rates' 'speed' 'creative' 'adapt';
@@ -107,7 +107,7 @@
   grid-area: 'list';
   position:relative;
   background-color:black;
-  display:grid; 
+  display:flex; /*changing*/; 
   grid-template-rows:1px 99%;
   overflow:hidden;
   /*landscape mode*/
@@ -132,7 +132,7 @@
   }
   position:relative;
   z-index:2;
-  display:grid; 
+  display:flex; /*changing*/; 
   text-align:left;
   h1{
     width: 95%;
@@ -148,12 +148,12 @@
 .MeetTheTeam{
   grid-area:'Meet';
   background-color: #292A3E;
-  display:grid; 
+  display:flex; /*changing*/; 
   grid-template-rows: auto auto;
   grid-template-columns: auto;
 }
 .MeetTheTeamTitle{
-  display:grid; 
+  display:flex; /*changing*/; 
   grid-template-columns: auto auto auto;
   padding: 2.5vh 2vw;
   i{

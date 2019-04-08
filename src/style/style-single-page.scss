@@ -3,7 +3,8 @@
   grid-template-rows: 45vh 1fr;
 }
 .CoverText#SingleCoverText {
-  grid-template-rows: auto auto;
+  font-size: 1.25em;
+  margin: auto auto;
   h1{
     width:100%;
   }
@@ -19,7 +20,7 @@
 
 /* Customer Page */
 .CustBody{
-  display:grid; 
+  display:flex; /*changing*/; 
   text-align:left;
   padding-bottom:1vh;
   width:90%;
@@ -53,7 +54,6 @@
   }
 }
 .Offerings#CustOff {
-  padding-top:4vh;
   margin:0 0 0 3vw;
   border:none;
   grid-area: custOff;
@@ -84,21 +84,18 @@
 
 /* Vendor Page */
 .VendorBody{
-  display:grid; 
-  grid-column-gap:5vw;
+  display:flex; /*changing*/; 
+  flex-direction: column;
   color:white;
   padding: 2vh 1vh;
   text-align:left;
-  grid-template-columns: auto;
-  grid-template-rows: auto 40vh;
   margin:0;
   .handshakeImage{
     margin: 0 auto;
     width:70%;
   }
   @media screen and (min-width:1024px){
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    flex-direction: row;
     margin: 2vh 3vw 0 1vw;
     font-size:.85em;
     .handshakeImage{
@@ -143,7 +140,7 @@
           font-size:1.25em;
         }
         p{
-          display:block;
+          display: block;
           &:before{
             content:''
           }
@@ -155,7 +152,7 @@
 
 /* Contact Page */
 .ContactBody{
-  display:grid; 
+  display:flex; /*changing*/; 
   margin: 4vh 3vw;
   grid-template-rows:auto auto;
   grid-template-columns: auto;
@@ -166,12 +163,15 @@
 }
 
 .ContactInfo{
-  display:grid; 
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-row-gap: 1vh;
-  grid-template-areas: 'Corporate .' 'ponte north ' 'charlotte quogue' 'spring .';
+  width: 50%;
+  display:flex; /*changing*/; 
+  flex-direction: column;
+  & > div {
+    display: flex;
+    flex-direction: row;
+  }
   ul{
+    width: 50%;
     list-style:none;
     text-align:left;
   }
@@ -180,14 +180,12 @@
   }
 }
 .ContactForm{
+  width:50%;
   form{
     margin:4vh 0;
     text-align:left;
-    display:grid; 
-    grid-template-columns: min-content auto;
-    grid-column-gap: 3vw;
-    grid-template-rows: auto auto auto auto;
-    grid-row-gap: 1vh;
+    display:flex; /*changing*/; 
+    flex-direction: column;
     input{
       width:75%;
       height:50%;

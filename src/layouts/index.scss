@@ -335,7 +335,7 @@ textarea {
  */
 
 details {
-  display:block;
+  display: block;
 }
 
 /*
@@ -373,10 +373,7 @@ template {
 #site-canvas {
   width: 100%;
   height: max-content;
-  display:grid; 
- 
-   
-grid-template-rows:auto auto;
+  display: block; 
   position: relative;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -429,7 +426,7 @@ grid-template-rows:auto auto;
   outline: 0;
   background: 0 0;
   position: absolute;
-  display:block;
+  display: block;
   padding: 0;
 }
 
@@ -529,31 +526,33 @@ li{
 }
 
 .indexGrid {
-  display:grid; 
-  grid-template-rows: 70vh auto auto 40vh auto;
+  //display:grid;
+  //flex-direction: column;
+  grid-template-rows: 70vh 50vh 50vh 40vh 50vh;
   grid-template-columns: auto;
   color:white;
   @media screen and (max-width: 900px) and (orientation: landscape){
-    grid-template-rows: 90vh auto auto 35vh auto;
+    grid-template-rows: 90vh 60vh 60vh 35vh 60vh;
   }
 }
 
 .CoverHold {
   position:relative;
   background-color:black;
-  display:grid; 
-  grid-template-rows:1px 99%;
+  display:flex;
+  height: 70vh;
 }
 
 .CoverText {
   position:relative;
   z-index:2;
-  display:grid; 
+  display:flex;
+  flex-direction: column;
   text-align:center;
   align-self:center;
   justify-self:center;
-  grid-template-columns:auto;
-  grid-template-rows:auto auto 10vh;
+  //grid-template-columns:auto;
+  //grid-template-rows:auto auto 10vh;
   h1{
     width: 95%;
     margin: 0 auto .5em auto;
@@ -569,7 +568,7 @@ li{
 }
 
 .CoverText#NefaLogoGrid {
-  grid-template-rows: auto auto;
+  //grid-template-rows: auto auto;
   h1{
     width:100%;
     color:white;
@@ -601,13 +600,14 @@ li{
   }
 }
 
-.FocusedSlide {
+.focusedslide {
   color:#292A3E;
   background-color:white;
-  display:grid; 
-  grid-template-columns: auto;
+  display:flex;
+  flex-direction: column;
+  //grid-template-columns: auto;
   height:auto;
-  grid-template-rows: 2fr auto;
+  //grid-template-rows: 2fr auto;
   padding-bottom: 5vh;
   text-align:center;
   margin: 3vh 6vw;
@@ -634,19 +634,28 @@ li{
   border-top: 1px solid #585B8C;
   color:#585B8C;
   text-align:left;
-  display:grid; 
+  display: flex;
+  flex-direction: column;
   grid-column-gap: 5vh;
   grid-row-gap: 5vh;
   padding: 1vh .5vh;
   text-align:center;
-  grid-template-columns: auto;
-  grid-template-rows: max-content max-content max-content max-content;
-  @media screen and (min-width:1025px){
-    grid-template-columns: auto auto;
-    grid-template-rows: max-content max-content;
+  & > div.focusedRow { 
+    display: flex; 
+    flex-direction: column;
+    @media screen and (min-width:1025px){
+      flex-direction: row;
+    }
+    & > div {
+      margin-bottom:5vh;
+      display: flex;
+      @media screen and (min-width:1025px){
+        width:50%;
+        margin-right: 2vw;
+      }
+    }
   }
-  & > div{
-    display:flex;
+  & > div > div{
     h1{
       font-size:4.5em;
       margin-right: 3vw;
@@ -663,9 +672,8 @@ li{
 
 .SolutionsSlide {
   background-color: #585B8C;
-  display:grid; 
-  grid-template-columns: auto;
-  grid-template-rows: 1fr 3fr;
+  display:flex;
+  flex-direction: column;
   padding: 3vh 2vh;
   height:auto;
   h1.title{
@@ -710,17 +718,19 @@ li{
 .NefaSlide{
   position:relative;
   background-color:black;
-  display:grid; 
+  display:flex;
   grid-template-rows:1px auto;
+  height: 40vh;
 }
 
 .InterestedSlide {
   background-color:#585B8C;
   height:auto;
   color:white;
-  display:grid; 
+  display:flex;
+  flex-direction:row;
   grid-template-columns:1fr 1fr;
-  padding: 2vh .5vw 0 .5vw;
+  padding: 2vh .5vw 2vh .5vw;
   /*desktop*/
   @media screen and (min-width: 1024px){
     padding: 2vh 5vh 0 5vh;
@@ -739,10 +749,12 @@ li{
 
 .Offerings{
   grid-area:offerings;
-  display:grid; 
+  width: 50%;
+  display:flex;
+  flex-direction: column;
   grid-template-rows: auto auto;
   border-right: 1px solid white;
-  margin-left: 10%;
+  margin-left: 5%;
   h1{
     font-size: 1.5em;
     margin: auto 0 2.5vh 0;
@@ -771,34 +783,40 @@ li{
 }
 
 .Interested{
+  width: 50%;
   grid-area: interested;
   text-align:center;
-  display:grid; 
-  grid-template-columns: auto;
-  grid-template-rows: min-content 8vh 8vh;
+  display:flex;
+  flex-direction: column;
+
   text-transform:uppercase;
   h1{
     font-size:1.75em;
     margin-bottom:.75em
   }
   div{
-    display:grid; 
+    display:flex;
+    align-self:center;
+    justify-self:center;
     a{
       align-self:center;
       justify-self:center;
     }
     button{
       background-color: #292A3E;
-      font-size:.75em;
       color:white;
       outline:none;
       border:none;
-      padding: .75em;
       border-radius: 3em;
+      margin-bottom:3vh;
+      padding: 1vh;
+      font-size: 1.25em;
+
     }
     button:hover{
       background-color:#775997;
     }
+    margin-bottom:2vh;
   }
   @media screen and (max-width:1024px){
     padding: 0 .25vh;
@@ -806,8 +824,7 @@ li{
       font-size: 1.75em;
     }
     div > a > button{
-      padding: 1vh;
-      font-size: 1.25em;
+
     }
   }
 }

@@ -24,6 +24,7 @@ class TopHeader extends React.Component {
         <Link className='Logo' to="/">
           <Img sizes={this.props.logo.sizes} />
         </Link>
+        <div className='headerPlaceholder'> </div>
         <div className='HamburgerIcon'><div /><div className="burger-container" onClick={toggleNav}>
           <div
             className="hamburger-menu"
