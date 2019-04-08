@@ -81,6 +81,7 @@ class About extends React.Component {
         </div>
         <div className='WhoWeAre' id="Who">
           <div className='WhoTitle'><h1>WHO WE ARE</h1></div>
+          <div className='WhoContainer'>
           <div className='WhoLetter'>
             <p>&emsp;To Our Valued Partners – When we founded DDI Capital in 1993, we wanted to create a company that valued honest work and genuine customer interaction. We wanted to create a place where employees understand their clients and the business challenges they face, and collaborate to find the best solutions. 25 years later, DDI Capital has grown into a company that accomplishes all this and much more.</p>
             <p>&emsp;Our philosophy over the last two decades has been to always put our clients’ needs above our own. While we pride ourselves on being financial consultants to our customers, we strive to make each business interaction much more than that. Our employees create a personal relationship with each customer, allowing us to better understand your needs and wants. We work with our clients every step of the way in order to offer best of breed solutions aimed at allowing partners to continue their growth, and create financial programs that will fit each partner’s budget. DDI knows that your business is not like anyone else’s: your financial program shouldn’t be either.</p>
@@ -96,6 +97,7 @@ class About extends React.Component {
               <li><span className="fa-li"><i className="fas fa-check-circle" /></span>Headquartered in Bedminster, New Jersey with satellite offices located in Spring Lake, New Jersey; New Haven, Connecticut; Ponte Vedra, Florida; and Charlotte, North Carolina.</li>
               <li><span className="fa-li"><i className="fas fa-check-circle" /></span>Proud members of the National Equipment Finance Association (NEFA)</li>
             </ul>
+          </div>
           </div>
         </div>
         <div className='WhyDDI' id="Why">
@@ -175,7 +177,6 @@ class About extends React.Component {
             <i className={`fa fa-angle-right meetTeamArrow ${this.state.showAccordian ? ('animateArrow') : ('resetArrow')}`} />
           </div>
           <div className='MeetTheTeamAccordian'
-            className="accordian"
             style={{
             height: (this.state.showAccordian) ? ('60vh') : ('0px'),
           }}

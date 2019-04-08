@@ -1,14 +1,9 @@
 .AboutGrid {
   display:flex; /*changing*/; 
-  grid-template-rows: 45vh auto auto auto auto auto;
-  grid-template-columns:100%;
+  flex-direction: column;
   background-color: #585B8C;
   color:white;
-  grid-template-areas: 'AboutCover' 'Who' 'Why' 'Equipt' 'Meet' 'Interested';
   /*phone landscape mode*/
-  @media screen and (max-width: 900px) and (orientation: landscape){ 
-    grid-template-rows: 60vh auto auto auto auto auto;
-  }
 }
 
 .CoverText#AboutCoverText {
@@ -16,25 +11,27 @@
 }
 
 .WhoWeAre{
-  grid-area:'Who';
   padding: 2.5vh 5vw;
   display:flex; /*changing*/; 
-  grid-template-rows: auto auto auto;
-  grid-template-columns: auto;
-  grid-template-areas: 'title' 'letter' 'list';
-  @media screen and (min-width: 1024px){
-    grid-template-rows: auto auto;
-    grid-template-columns: 3fr 2fr;
-    grid-template-areas: 'title .' 'letter list';
-  }
+  flex-direction: column;
 }
 
 .WhoTitle{
   grid-area: title;
 }
 
+.WhoContainer { 
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 1024px){
+    flex-direction: row;
+  }
+}
+
 .WhoLetter {
+  width: 100%;
   grid-area: letter;
+  margin-right: 5vh;
   p:first-child{
     margin-top:1em;
   }
@@ -64,6 +61,7 @@
   color:#585B8C;
   background-color:white;
   display:flex; /*changing*/; 
+  flex-direction: column;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
   padding: 2.5vh 5vw;
