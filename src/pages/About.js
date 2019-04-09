@@ -103,6 +103,7 @@ class About extends React.Component {
         <div className='WhyDDI' id="Why">
           <div className='WhyTitle'><h1>Why DDI?</h1></div>
           <div className='FocusedBody' id='WhyBody'>
+          <div className='focusedrow'>
             <div id='experience'>
               <h1 style={{ marginRight: '4.5vw' }}><i className="fa fa-clock" /></h1>
               <p><strong>Experience:</strong> DDI has been an innovator in the leasing industry for over 25 years.
@@ -113,6 +114,8 @@ class About extends React.Component {
               <h1><i className="fa fa-money-bill-wave" /></h1>
               <p><strong>Rates:</strong> DDI consistently delivers the lowest rates in the industry. Our payment solutions are affordable, flexible and easy to manage.</p>
             </div>
+          </div>
+          <div className='focusedrow'>
             <div id='speed'>
               <h1><i className="fa fa-shipping-fast" /></h1>
               <p><strong>Speed and Convenience:</strong> We turn around proposals, approvals and lease documents in hours, not days. From start to finish, no leasing firm is more efficient than DDI.</p>
@@ -121,6 +124,7 @@ class About extends React.Component {
               <h1 style={{ marginRight: '4.5vw' }}><i className="fa fa-paint-brush" /></h1>
               <p><strong>Creativity:</strong> Every end-user is unique: your leasing solution should be too. DDI works side by side with our partners to design the most effective and efficient financing plans to fit your business model and help your company grow.</p>
             </div>
+          </div>
             <div id='adapt'>
               <h1 ><i className="fa fa-people-carry" /></h1>
               <p className="adaptCopy"><strong>Adaptability:</strong> From the design of your financing solution, to mid-lease options to end-of-term flexibility, DDI works with you to adapt your financing program as your budget, cash flow and technology requirements change over time.</p>
