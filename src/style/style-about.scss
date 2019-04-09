@@ -29,7 +29,7 @@
 }
 
 .WhoLetter {
-  width: 100%;
+  width: 50%;
   grid-area: letter;
   margin-right: 5vh;
   p:first-child{
@@ -42,8 +42,7 @@
 }
 
 .WhoList {
-  @media screen and (min-width: 1024px){
-  }
+  width:50%;
   grid-area:list;
   margin-top:1em;
   ul{
