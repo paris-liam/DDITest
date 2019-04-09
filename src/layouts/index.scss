@@ -539,8 +539,9 @@ li{
 .CoverHold {
   position:relative;
   background-color:black;
-  display:flex;
+  display:block;
   height: 70vh;
+  width: 100vw;
 }
 
 .CoverText {
@@ -551,6 +552,7 @@ li{
   text-align:center;
   align-self:center;
   justify-self:center;
+  padding-top: 15vh;
   //grid-template-columns:auto;
   //grid-template-rows:auto auto 10vh;
   h1{
@@ -569,6 +571,8 @@ li{
 
 .CoverText#NefaLogoGrid {
   //grid-template-rows: auto auto;
+  display:block;
+  padding-top:4vh;
   h1{
     width:100%;
     color:white;
@@ -718,8 +722,7 @@ li{
 .NefaSlide{
   position:relative;
   background-color:black;
-  display:flex;
-  grid-template-rows:1px auto;
+  display:block;
   height: 40vh;
 }
 
@@ -733,7 +736,7 @@ li{
   padding: 2vh .5vw 2vh .5vw;
   /*desktop*/
   @media screen and (min-width: 1024px){
-    padding: 2vh 5vh 0 5vh;
+    padding: 2vh 5vh 5vh 5vh;
   }
   grid-template-rows: auto 2vh;
   grid-row-gap: 1vh;
