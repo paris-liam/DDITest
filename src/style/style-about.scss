@@ -68,6 +68,16 @@
 
 .whyItem {
   display:flex;
+  @media screen and (min-width: 1024px){
+    width: 50%;
+  }
+  margin-bottom:2vh;
+  margin-right: 5vh;
+  
+}
+.whyItem#adapt{
+  width:100%;
+  margin-right: 0;
 }
 .FocusedBody#WhyBody {
   margin-top:2vh;
