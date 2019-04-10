@@ -537,7 +537,7 @@ li{
   position:relative;
   background-color:black;
   display:block;
-  height: 70vh;
+  height: 50vh;
   width: 100vw;
 }
 
@@ -550,8 +550,6 @@ li{
   align-self:center;
   justify-self:center;
   padding-top: 15vh;
-  // 
-  // 
   h1{
     width: 95%;
     margin: 0 auto .5em auto;
@@ -588,7 +586,7 @@ li{
 
 .LearnMore{
   button{
-    margin-top: 10vh;
+    margin-top: 5vh;
     border-radius:3em;
     background-color:#585B8C;
     color:white;

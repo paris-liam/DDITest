@@ -21,8 +21,8 @@ class Membertile extends React.Component {
         id={this.props.info.name}
         className="accordianPanel"
         style={{
-        height: (this.props.show) ? (this.state.height) : ('0px'),
-      }}
+          height: (this.props.show) ? (this.state.height) : ('0px'),
+        }}
       >
         <div className='MemberShot'>
           <IMG
