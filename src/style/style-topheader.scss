@@ -1,32 +1,26 @@
 .headGrid {
   color: #585B8C;
-  display:flex; /*changing*/; 
+  display:flex; ;   
   /*phone*/
-  grid-template-rows: 10vh;
    
-  grid-template-columns: 4fr 2fr;
-  grid-template-areas: 'headImg hamburgericon';
+   
+   
+   
   margin-top: 2vh;
   margin-left: 2em;
   margin-bottom: 2vh;
   /*desktop*/
   @media screen and (min-width: 1025px){
-     
-    grid-template-rows:auto;
-     
-    grid-template-columns: 2fr 1fr 3fr;
-    grid-template-areas: 'headImg . hamburgercontent';
     margin: 1.5em 2em .5em 4em;
   }
   /* phone landscape*/
   @media screen and (max-width: 1025px) and (orientation: landscape){
-     
-    grid-template-rows:auto;
+      
   }
 }
 
 .Logo {
-  grid-area: headImg;
+   
   align-self:center;
   width:40%;
   padding-top:5px;
@@ -45,13 +39,8 @@
   display:none;
   /*desktop*/
   @media screen and (min-width: 1025px){
-    display:flex; /*changing*/; 
+    display:flex; ;   
     flex-direction: column;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows:1fr 1fr;
-    grid-row-gap:3vh;
-    grid-area:hamburgercontent;
-    grid-template-areas: '. contact' '. nav';
     & > div{
       height: 50%;
       align-content: center;
@@ -61,7 +50,7 @@
 
 .contact {
   list-style:none;
-  grid-area: contact;
+   
   text-align:right;
   display:flex;
   justify-content:space-around;
@@ -103,7 +92,7 @@
 }
 
 .nav {
-  grid-area: nav;
+   
   display:flex;
   justify-content:space-around;
   align-items: flex-end;
@@ -203,16 +192,11 @@
 }
 
 .HamburgerIcon {
-  display:flex; /*changing*/; 
- 
-   
-grid-template-columns:1fr 1fr;
-   
-grid-template-rows:100%;
+  display:flex; ;   
   color: #585B8C;
-   grid-area:hamburgericon;
+    
   .burger-container{
-    display:flex; /*changing*/; 
+    display:flex; ;   
  
     align-content:center;
     justify-content:center;

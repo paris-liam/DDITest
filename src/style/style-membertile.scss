@@ -2,8 +2,9 @@
   transition: height 0.2s ease-in-out;
   border-top: 4px solid #775997;
   padding: 1vh 3vw;
-  display:flex; /*changing*/; 
-  grid-template-columns: auto auto;
+  display:flex;
+  flex-direction: column;  
+   
 }
 .MemberShot{
   margin: auto auto;
@@ -11,9 +12,10 @@
 .MemberInfo{
   margin-left: 3vh;
   margin-top:5vh;
-  display:flex; /*changing*/; 
-  grid-template-columns:auto;
-  grid-template-rows: auto auto auto;
+  display:flex;
+  flex-direction: row;   
+   
+   
 }
 .MemberTitle{
   line-height: 1.25;

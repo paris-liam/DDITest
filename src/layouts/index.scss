@@ -526,13 +526,10 @@ li{
 }
 
 .indexGrid {
-  //display:grid;
   //flex-direction: column;
-  grid-template-rows: 70vh 50vh 50vh 40vh 50vh;
-  grid-template-columns: auto;
   color:white;
   @media screen and (max-width: 900px) and (orientation: landscape){
-    grid-template-rows: 90vh 60vh 60vh 35vh 60vh;
+     
   }
 }
 
@@ -553,8 +550,8 @@ li{
   align-self:center;
   justify-self:center;
   padding-top: 15vh;
-  //grid-template-columns:auto;
-  //grid-template-rows:auto auto 10vh;
+  // 
+  // 
   h1{
     width: 95%;
     margin: 0 auto .5em auto;
@@ -570,7 +567,7 @@ li{
 }
 
 .CoverText#NefaLogoGrid {
-  //grid-template-rows: auto auto;
+  // 
   display:block;
   padding-top:4vh;
   h1{
@@ -609,12 +606,13 @@ li{
   background-color:white;
   display:flex;
   flex-direction: column;
-  //grid-template-columns: auto;
+  // 
   height:auto;
-  //grid-template-rows: 2fr auto;
+  // 
   padding-bottom: 5vh;
   text-align:center;
   margin: 3vh 6vw;
+
 }
 
 .FocusedTitle {
@@ -640,8 +638,8 @@ li{
   text-align:left;
   display: flex;
   flex-direction: column;
-  grid-column-gap: 5vh;
-  grid-row-gap: 5vh;
+   
+   
   padding: 1vh .5vh;
   text-align:center;
   & > div.focusedRow { 
@@ -732,17 +730,17 @@ li{
   color:white;
   display:flex;
   flex-direction:row;
-  grid-template-columns:1fr 1fr;
+   
   padding: 2vh .5vw 2vh .5vw;
   /*desktop*/
   @media screen and (min-width: 1024px){
     padding: 2vh 5vh 5vh 5vh;
   }
-  grid-template-rows: auto 2vh;
-  grid-row-gap: 1vh;
-  grid-template-areas: 'offerings interested ' 'copyright copyright';
+   
+   
+   
   p.copyright{
-    grid-area:copyright;
+     
     text-align:center;
     vertical-align:bottom;
     text-transform:uppercase;
@@ -751,11 +749,11 @@ li{
 }
 
 .Offerings{
-  grid-area:offerings;
+   
   width: 50%;
   display:flex;
   flex-direction: column;
-  grid-template-rows: auto auto;
+   
   border-right: 1px solid white;
   margin-left: 5%;
   h1{
@@ -787,7 +785,7 @@ li{
 
 .Interested{
   width: 50%;
-  grid-area: interested;
+   
   text-align:center;
   display:flex;
   flex-direction: column;

@@ -1,9 +1,9 @@
 .pageGrid {
-    display:flex; /*changing*/; 
+    display:flex; ;   
     height:max-content;
-    grid-template-columns:auto;  
-    grid-template-rows: auto auto auto;
-    grid-row-gap:3vh;
+       
+     
+     
     background-color:#585B8C;
     color:white;
     @media screen and (max-width: 1000){
@@ -35,29 +35,29 @@
     margin:3vh 0;
     text-align:center;
     font-weight:bolder;
-    grid-area:title;
+     
   }
-  display:flex; /*changing*/; 
+  display:flex; ;   
   width: 50%;
   height:auto;
-  grid-template-columns:auto;
-  grid-template-rows: auto auto auto;
+   
+   
   justify-self:center;
   align-self:baseline;
   margin-top:2vh;
-  grid-template-areas:'title' 'labels' 'final';
-  grid-row-gap:2vh;
+   
+   
   margin-bottom:3vh;
 }
 
 .InputGrid  {
   align-self:center;
   justify-self:center;
-  grid-area:labels;
-  display:flex; /*changing*/; 
-  grid-template-columns:auto auto;
-  grid-row-gap: 3vh;
-  grid-column-gap: 2vw;
+   
+  display:flex; ;   
+   
+   
+   
   input, select{
     border: 1px black solid;
     display:inline;

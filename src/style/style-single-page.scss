@@ -1,6 +1,6 @@
 
 .indexGrid#singlegrid{
-  grid-template-rows: 45vh 1fr;
+   
 }
 .CoverText#SingleCoverText {
   font-size: 1.25em;
@@ -20,23 +20,23 @@
 
 /* Customer Page */
 .CustBody{
-  display:flex; /*changing*/; 
+  display:flex; ;   
   text-align:left;
   padding-bottom:1vh;
   width:90%;
   margin: 0 auto;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  grid-template-areas: 'reqs' 'custOff';
+   
+   
+   
   @media screen and (min-width:1024px){
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 'reqs custOff';
+     
+     
+     
   }
 }
 
 .Requirements{
-  grid-area: reqs;
+   
   ul > ul{
     list-style:none;
     font-weight:200;
@@ -56,7 +56,7 @@
 .Offerings#CustOff {
   margin:0 0 0 3vw;
   border:none;
-  grid-area: custOff;
+   
   font-size:1.1em;
   grid-template-rows: min-content auto;
   @media screen and (min-width:1024px){
@@ -84,7 +84,7 @@
 
 /* Vendor Page */
 .VendorBody{
-  display:flex; /*changing*/; 
+  display:flex; ;   
   flex-direction: column;
   color:white;
   padding: 2vh 1vh;
@@ -160,19 +160,19 @@
 
 /* Contact Page */
 .ContactBody{
-  display:flex; /*changing*/; 
+  display:flex; ;   
   margin: 4vh 3vw;
-  grid-template-rows:auto auto;
-  grid-template-columns: auto;
+   
+   
   @media screen and (min-width:1024px)  {
-    grid-template-rows:auto;
-    grid-template-columns: 1fr 1fr;
+     
+     
   }
 }
 
 .ContactInfo{
   width: 50%;
-  display:flex; /*changing*/; 
+  display:flex; ;   
   flex-direction: column;
   & > div {
     display: flex;
@@ -192,7 +192,7 @@
   form{
     margin:4vh 0;
     text-align:left;
-    display:flex; /*changing*/; 
+    display:flex; ;   
     flex-direction: column;
     input{
       width:75%;
@@ -203,8 +203,8 @@
       margin-bottom:1vh;
     }
     div{
-      grid-column-start: 2;
-      grid-row-start: 4;
+       
+       
       input{
         width: auto;
         background-color: #888DD8;;
