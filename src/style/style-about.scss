@@ -48,7 +48,6 @@
     height:100%;
     display:flex;
     flex-direction:column;
-    justify-content: space-evenly;
     li{
       margin-bottom: 3vh;
     }
@@ -121,11 +120,12 @@
   h1{
     margin-bottom:2vh;
   }
+  margin-bottom:2vh;
    
 }
 
 .EquiptList {
-  height:70vh;
+  height:80vh;
   position:relative;
   background-color:black;
   overflow:hidden;
@@ -158,6 +158,9 @@
     list-style:none;
     width:auto;
     font-weight:bold;
+    & > li {
+      height: 15%;
+    }
   }
   position:relative;
   z-index:2;
