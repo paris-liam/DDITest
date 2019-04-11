@@ -126,7 +126,7 @@ export const teamInfo = {
   'Brett-Ugles': {
     image: null,
     name: 'Brett Ugles',
-    title: 'Vice President, Captial Markets',
+    title: 'Vice President, Capital Markets',
     location: 'Jacksonville, FL',
     body: 'Brett has been in the leasing industry since 1986, holding various operations and sales positions with Bell Atlantic Tricon Leasing. After moving to Copelco Capital, Brett joined DDI in 2000 and is responsible for banking relationships and customer credit.',
     email: 'brettu@ddicapitalinc.com',
