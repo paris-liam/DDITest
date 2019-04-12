@@ -12,7 +12,7 @@ class Membertile extends React.Component {
   componentDidMount() {
     const thisPanel = document.getElementById(this.props.info.name);
     let temp = thisPanel.scrollHeight;
-    temp += 100;
+    temp += 120;
     this.setState({
       height: `${temp}px`,
     });
@@ -33,8 +33,8 @@ class Membertile extends React.Component {
             position="absolute"
             style={{
               borderRadius: '20vh',
-              width: '15vh',
-              height: '25vh',
+              width: '12vh',
+              height: '22vh',
             }}
           />
         </div>
