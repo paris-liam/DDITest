@@ -1,90 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-import { colorsAndFont } from '../style/style';
-import { InterestedSlide, Interested, Offerings } from '../style/style-index';
 import Link from 'gatsby-link';
-
-const PageGrid = styled.div`
-    display:grid; 
-display:-ms-grid; 
-    height:max-content;
-    -ms-grid-columns: auto;
-grid-template-columns:auto;
-    -ms-grid-rows: auto auto auto;
-grid-template-rows: auto auto auto;
-    grid-row-gap:3vh;
-    background-color:${colorsAndFont.blue};
-    color:white;
-    @media screen and (max-width: 1000){
-        font-size:1.25em;
-    }
-`;
-
-const Copy = styled.div`
-  width:80%;
-  text-align:left;
-  margin: 0 auto;
-  h2{
-    font-weight:400;
-    margin: 5vh 0 2vh 0;
-  }
-  p{
-    font-size:.8em;
-  }
-`;
-const CalculatorGrid = styled.div`
-  font-size:1em;
-  background-color:white;
-  color:${colorsAndFont.blue};
-  box-shadow: 5px 5px 20px #4c4e51;
-  border-radius: 30px;
-  padding:1vh 4vh 1vh 4vh ;
-  h2{
-    margin:3vh 0;
-    text-align:center;
-    font-weight:bolder;
-    grid-area:title;
-  }
-  display:grid; 
-display:-ms-grid; 
-  width: 50%;
-  height:auto;
-  -ms-grid-columns: auto;
-grid-template-columns:auto;
-  -ms-grid-rows:  auto auto auto;
-grid-template-rows: auto auto auto;
-  justify-self:center;
-  align-self:baseline;
-      margin-top:2vh;
-  grid-template-areas:'title' 'labels' 'final';
-  grid-row-gap:2vh;
-  margin-bottom:3vh;
-`;
-const InputGrid = styled.form`
-    align-self:center;
-    justify-self:center;
-    grid-area:labels;
-    display:grid; 
-display:-ms-grid; 
-    -ms-grid-columns: auto auto;
-grid-template-columns:auto auto;
-    grid-row-gap: 3vh;
-    grid-column-gap: 2vw;
-    input, select{
-        border: 1px black solid;
-        display:inline;
-        width:min-content;
-    }
-    input#purchaseAmount.error{
-      border: 3px red solid;
-    }
-`;
-const WarningText = styled.div`
-    display:none;
-    color:red;
-    font-size:.6em;
-    margin-top:5px;
-`;
 
 class Section179 extends React.Component {
   constructor(props) {
@@ -208,16 +123,16 @@ class Section179 extends React.Component {
   }
   render() {
     return (
-      <PageGrid>
-        <Copy>
+      <div className='pageGrid'>
+        <div className='copy'>
           <h2>Use the Below Calculator to Check Your Tax Write Off for 2018</h2>
           <p>
           The Section 179 Tax Deduction is meant to encourage businesses to stay competitive by purchasing needed equipment, and writing off the full amount on their taxes for the current year. This free Section 179 calculator is fully updated for 2018 – go ahead, run some numbers and see how much you can actually save in real dollars this year.
           </p>
-        </Copy>
-        <CalculatorGrid>
+        </div>
+        <div className='calculatorGrid'>
           <h2>Section179 Calculator</h2>
-          <InputGrid onSubmit={(e) => { e.preventDefault(); }}>
+          <form className='inputGrid' onSubmit={(e) => { e.preventDefault(); }}>
             <div>Tax Bracket:</div>
             <select name="tax" id="taxBrack" onChange={this.calculator}>
               <option value={0.1}>10%</option>
@@ -230,8 +145,8 @@ class Section179 extends React.Component {
               <option value={0.37}>37%</option>
             </select>
             <div>Equipment Purchase Amount:</div>
-            <span>$<input id="purchaseAmount" name="amount" style={{ display: 'inline-block', outline: 'none', border: 'none' }} onChange={this.calculator} onKeyPress={this.preventEnter} onKeyDown={this.arrowCounter} />
-              <WarningText id="warningText">for amounts higher than 2.5 million, please contact DDI directly</WarningText>
+            <span>$<input id="purchaseAmount" name="amount" style={{ display:'inline-block', outline: 'none', border: 'none' }} onChange={this.calculator} onKeyPress={this.preventEnter} onKeyDown={this.arrowCounter} />
+              <div className='warningText' id="warningText">for amounts higher than 2.5 million, please contact DDI directly</div>
             </span>
             <div>Section 179 Deduction:</div>
             <div>${this.state.deducation}</div>
@@ -250,17 +165,17 @@ class Section179 extends React.Component {
             <div style={{ fontSize: '1.25em' }}>
                 ${this.state.LoweredCost}
             </div>
-          </InputGrid>
+          </form>
           <p style={{ fontSize: '.75em' }}>*Information provided is for illustrative purpose only and accuracy is not guaranteed.</p>
-        </CalculatorGrid>
-        <Copy><p style={{ fontSize: '.8em' }}>To take advantage of these high Section 179 limits for 2018, the equipment must be purchased and put into service by midnight 12/31/2018. Use Form 4562 to claim your deduction.</p></Copy>
-        <InterestedSlide style={{ borderTop: '2px solid white', marginTop: '4vh', fontSize: '.8em' }}>
-          <Interested>
+        </div>
+        <div className='copy'><p style={{ fontSize: '.8em' }}>To take advantage of these high Section 179 limits for 2018, the equipment must be purchased and put into service by midnight 12/31/2018. Use Form 4562 to claim your deduction.</p></div>
+        <div className='InterestedSlide' style={{ borderTop: '2px solid white', marginTop: '4vh', fontSize: '.8em' }}>
+          <div className='Interested'>
             <h1>Interested in DDI?<br /> Let's Talk</h1>
             <div><Link to="/Vendors"><button>Vendor Opportunities</button></Link></div>
             <div><Link to="/Customers"><button> Customer Information</button></Link></div>
-          </Interested>
-          <Offerings>
+          </div>
+          <div className='Offerings'>
             <h1>Offerings Include:</h1>
             <ul className="fa-ul">
               <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Master Lease Agreements</li>
@@ -273,9 +188,9 @@ class Section179 extends React.Component {
               <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Network Integration and Consulting</li>
               <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Project Management</li>
             </ul>
-          </Offerings>
-        </InterestedSlide>
-      </PageGrid>);
+          </div>
+        </div>
+      </div>);
   }
 }
 

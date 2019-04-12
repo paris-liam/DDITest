@@ -2,8 +2,13 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import SimpleSlider from '../components/SimpleSlider';
-import { IndexGrid, CoverHold, CoverText, LearnMore, FocusedBody, FocusedTitle, FocusedSlide, SolutionsSlide, NefaSlide, InterestedSlide, Offerings, Interested, NefaLogoGrid, NefaLogo } from '../style/style-index';
-import { gatsbyImgStyle, nefaLogoStyle } from '../style/style';
+import { gatsbyImgStyle } from '../style/dataAndCopy';
+
+export const nefaCoverStyle = {
+  width: '25vh',
+  height: '25vh',
+};
+
 // test
 class IndexPage extends React.Component {
   constructor(props) {
@@ -35,66 +40,65 @@ class IndexPage extends React.Component {
     }));
   }
   learnScroll() {
-    const focused = document.getElementById('focusedSlide');
+    const focused = document.getElementById('focusedslide');
     const focused_location = focused.getBoundingClientRect();
     window.scrollTo({ top: focused_location.top + window.pageYOffset, behavior: 'smooth' });
   }
   render() {
     return (
-      <IndexGrid>
-        <CoverHold>
+      <div className='indexGrid'>
+        <div className='CoverHold'>
           <Img
             sizes={this.state.indexImages[this.state.currentPhoto]}
             outerWrapperClassName="coverOuter"
             position="absolute"
             style={gatsbyImgStyle}
           />
-          <CoverText>
+          <div className='CoverText'>
             <h1>DDI Capital is your Independent Trusted Advisor </h1>
             <p>Whether you are just starting out or ready to bring your current organization to a new level of growth, DDI Capital offers you the most innovative financial strategies allowing you to acquire and finance technology solutions at the best possible price.</p>
-            <LearnMore><button onClick={this.learnScroll}> Learn More &nbsp;&nbsp;<i className="fa fa-arrow-alt-circle-down" /></button></LearnMore>
-          </CoverText>
-        </CoverHold>
-        <FocusedSlide id="focusedSlide">
-          <FocusedTitle>
+            <div className='LearnMore'><button onClick={this.learnScroll}> Learn More &nbsp;&nbsp;<i className="fa fa-arrow-alt-circle-down" /></button></div>
+          </div>
+        </div>
+        <div className='focusedslide' id="focusedslide">
+          <div className='FocusedTitle'>
             <h1>Focused on You – Where you work</h1>
             <p>We know your challenges, understand your technology options and aren’t satisfied  until we recommend a solution that exceeds your expectations.</p>
-          </FocusedTitle>
-          <FocusedBody>
-            <div><h1><i className="fa fa-money-check-alt" /></h1><p>DDI will work closely with you to customize a financing plan that  best suits your budget, cash flow and technology requirements.</p></div>
-            <div><h1><i className="fa fa-users" /></h1><p>Our team’s collective experience, industry contacts and collaborative,  consultative work process ensure that you will get the best possible solution with each lease transaction.</p></div>
-            <div><h1><i className="fa fa-hands-helping" /></h1><p>We view our clients as business partners and approach each deal with a long-term focus.  Each and every one of our DDI professionals is acutely aware of the relationship between the growth of your business and ours.</p></div>
-            <div><h1><i className="fa fa-hdd" /></h1><p>Our professionals know more than leasing – they are familiar with the technology that you use and they are willing to spend the time with you to put it to maximum advantage.</p></div>
-          </FocusedBody>
-        </FocusedSlide>
-        <SolutionsSlide>
+          </div>
+          <div className='FocusedBody'>
+            <div className='focusedRow'>
+              <div><h1><i className="fa fa-money-check-alt" /></h1><p>DDI will work closely with you to customize a financing plan that  best suits your budget, cash flow and technology requirements.</p></div>
+              <div><h1><i className="fa fa-users" /></h1><p>Our team’s collective experience, industry contacts and collaborative,  consultative work process ensure that you will get the best possible solution with each lease transaction.</p></div>
+            </div>
+            <div className='focusedRow'>
+              <div><h1><i className="fa fa-hands-helping" /></h1><p>We view our clients as business partners and approach each deal with a long-term focus.  Each and every one of our DDI professionals is acutely aware of the relationship between the growth of your business and ours.</p></div>
+              <div><h1><i className="fa fa-hdd" /></h1><p>Our professionals know more than leasing – they are familiar with the technology that you use and they are willing to spend the time with you to put it to maximum advantage.</p></div>
+            </div>
+          </div>
+        </div>
+        <div className='SolutionsSlide'>
           <h1 className="title">
         Whether you’re a startup or a Fortune 100 company
         DDI has the appropriate solutions to help you finance your growth
           </h1>
           <SimpleSlider />
-        </SolutionsSlide>
-        <NefaSlide>
+        </div>
+        <div className='NefaSlide'>
           <Img
             sizes={this.state.nefa}
             position="absolute"
             style={gatsbyImgStyle}
           />
-          <NefaLogoGrid>
+          <div className='CoverText' id='NefaLogoGrid'>
             <h1>Proud Members of </h1>
             <img
               src={this.state.nefaLogo}
               alt="nefa logo"
             />
-          </NefaLogoGrid>
-        </NefaSlide>
-        <InterestedSlide>
-          <Interested>
-            <h1>Interested?<br /> Let's Talk</h1>
-            <div><Link to="/Vendors"><button>Vendor Opportunities</button></Link></div>
-            <div><Link to="/Customers"><button> Customer Information</button></Link></div>
-          </Interested>
-          <Offerings>
+          </div>
+        </div>
+        <div className='InterestedSlide'>
+          <div className='Offerings'>
             <h1>Offerings Include:</h1>
             <ul className="fa-ul">
               <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Master Lease Agreements</li>
@@ -107,10 +111,15 @@ class IndexPage extends React.Component {
               <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Network Integration and Consulting</li>
               <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Project Management</li>
             </ul>
-          </Offerings>
-          <p className="copyright">site designed by Liam Paris</p>
-        </InterestedSlide>
-      </IndexGrid>
+          </div>
+          <div className='Interested'>
+            <h1>Interested?<br /> 
+            Let's Talk</h1>
+            <div><Link to="/Vendors"><button>Vendor Opportunities</button></Link></div>
+            <div><Link to="/Customers"><button> Customer Information</button></Link></div>
+          </div>
+        </div>
+      </div>
 
     );
   }
@@ -151,4 +160,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

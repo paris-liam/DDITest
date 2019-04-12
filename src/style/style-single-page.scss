@@ -1,0 +1,223 @@
+
+.indexGrid#singlegrid{
+   
+}
+.CoverText#SingleCoverText {
+  font-size: 1.25em;
+  margin: auto auto;
+  h1{
+    width:100%;
+  }
+  p{
+    width:95%;
+  }
+}
+.focusedslide#singleslide {
+  background-color:#585B8C;
+  color:white;
+  margin: 0;
+}
+
+/* Customer Page */
+.CustBody{
+  display:flex; ;   
+  text-align:left;
+  padding-bottom:1vh;
+  width:90%;
+  margin: 0 auto;
+   
+   
+   
+  @media screen and (min-width:1024px){
+     
+     
+     
+  }
+}
+
+.Requirements{
+   
+  ul > ul{
+    list-style:none;
+    font-weight:200;
+    margin:2vh 2vh 2vh 0;
+    li{
+      padding-bottom:.5em;
+      font-size:.85em;
+    }
+    li:before{
+      display:inline-block;
+      content: "-";
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+}
+.Offerings#CustOff {
+  margin:0 0 0 3vw;
+  border:none;
+   
+  font-size:1.1em;
+  grid-template-rows: min-content auto;
+  @media screen and (min-width:1024px){
+    padding-top:inherit;
+    margin: 0 auto;
+  }
+  h1{
+    margin-top:0;
+    margin-bottom: 3.5vh;
+  }
+  li{
+    margin-bottom:1.5vh;
+  }
+}
+
+.CustTitle{
+  padding-top:3vh;
+  padding-bottom:7vh;
+  text-align:center;
+  *{
+    width:80%;
+    margin: 1vh auto 0 auto;
+  }
+}
+
+/* Vendor Page */
+.VendorBody{
+  display:flex; ;   
+  flex-direction: column;
+  color:white;
+  padding: 2vh 1vh;
+  text-align:left;
+  margin:0;
+  & > .handshakeImage{
+    margin: 0 auto;
+   height: 20vh;
+   width: 60%;
+  }
+  @media screen and (min-width:1024px){
+    flex-direction: row;
+    margin: 2vh 3vw 0 1vw;
+    font-size:.85em;
+    .handshakeImage{
+      margin: 0 auto;
+      width:50%;
+      height: auto;
+    }
+  }
+}
+
+.Following{
+  margin-left: 1vh;
+  margin-right: 5vh;
+  width: 50%;
+  ul{
+    li{
+      padding-bottom:2em;
+      line-height:1.5;
+      font-weight:300;
+      span.following{
+        text-decoration:underline;
+        font-style:normal;
+      }
+      p{
+        display:inline;
+        &:before{
+          content:' - '
+        }
+      }
+    }
+  }
+    @media screen and (max-width:1024px){
+      width: 100%;
+      ul{
+      display:flex;
+      justify-content:space-evenly;
+      margin-left:0;
+      li{
+        width:25%;
+        font-size:.75em;
+        margin-left:2vh;
+        .fa-li{
+          display:none;
+        }
+        text-align:center;
+        span.following{
+          text-decoration:none;
+          font-style:italic;
+          font-size:1.25em;
+        }
+        p{
+          display: block;
+          &:before{
+            content:''
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Contact Page */
+.ContactBody{
+  display:flex; ;   
+  margin: 4vh 3vw;
+   
+   
+  @media screen and (min-width:1024px)  {
+     
+     
+  }
+}
+
+.ContactInfo{
+  width: 50%;
+  display:flex; ;   
+  flex-direction: column;
+  & > div {
+    display: flex;
+    flex-direction: row;
+  }
+  ul{
+    width: 50%;
+    list-style:none;
+    text-align:left;
+  }
+  ul:first-of-type{
+    margin-bottom:2vh;
+  }
+}
+.ContactForm{
+  width:50%;
+  form{
+    margin:4vh 0;
+    text-align:left;
+    display:flex; ;   
+    flex-direction: column;
+    input{
+      width:75%;
+      height:50%;
+    }
+    textarea{
+      resize:none;
+      margin-bottom:1vh;
+    }
+    div{
+       
+       
+      input{
+        width: auto;
+        background-color: #888DD8;;
+        outline:none;
+        border:none;
+        color:white;
+        border-radius: 5vh;
+        padding-top: .5vh;
+        padding-bottom:.5vh;
+        &:hover{
+          background-color:#292A3E;
+        }
+      }
+    }
+  }
+}

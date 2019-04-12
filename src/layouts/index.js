@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import TopHeader from '../components/TopHeader'; import './index.css';
+import TopHeader from '../components/TopHeader'; 
+import './index.scss';
 import favicon from '../pages/images/favicon.ico';
 import Link from 'gatsby-link';
-import { Sidebar, SidebarItem, SidebarDropdown, SidebarContact } from '../style/style';
 import { toggleNav } from '../style/dataAndCopy';
 
 const Layout = ({ data, children }) => (
@@ -45,10 +45,10 @@ const Layout = ({ data, children }) => (
     />
     <div id="site-wrapper">
       <div id="site-canvas">
-        <Sidebar id="site-menu">
-          <SidebarItem>
+        <div className='Sidebar' id="site-menu">
+          <ul className='SidebarItem'>
             <Link to="/About" onClick={toggleNav}><h3>About</h3></Link>
-            <SidebarDropdown>
+            <ul className='SidebarDropdown'>
               <li><Link to="/About#Who" onClick={toggleNav}>Who We Are</Link></li>
               <li><Link to="/About#Why" onClick={toggleNav}>Why DDI</Link></li>
               <li><Link to="/About#Equipt" onClick={toggleNav}>Equiptment Financed</Link></li>
@@ -58,19 +58,19 @@ const Layout = ({ data, children }) => (
                       state: { accordian: true },
                     }}
                 onClick={toggleNav}>Meet The Team</Link></li>
-            </SidebarDropdown>
-          </SidebarItem>
-          <SidebarItem>
+            </ul>
+          </ul>
+          <ul className='SidebarItem'>
             <h3>Leasing Solutions </h3>
-            <SidebarDropdown>
+            <ul className='SidebarDropdown'>
               <li><Link to="/Customers" onClick={toggleNav}>Client Offerings</Link></li>
               <li><Link to="/Vendors" onClick={toggleNav}>Vendor Programs</Link></li>
-            </SidebarDropdown>
-          </SidebarItem>
-          <SidebarItem>
+            </ul>
+          </ul>
+          <ul className='SidebarItem'>
             <Link to="/Contact" onClick={toggleNav}><h3>Contact</h3></Link>
-          </SidebarItem>
-          <SidebarContact>
+          </ul>
+          <ul className='SidebarContact'>
             <li className="sideenv"><a href="mailto:g.nappi@ddileasing.com"><i className="fa fa-envelope" />&nbsp;&nbsp; Email us</a></li>
 
             <li className="sidephone"><i className="fa fa-phone-square" />  (908)-781-9300</li>
@@ -79,8 +79,8 @@ const Layout = ({ data, children }) => (
                 <button className="sidebill">Pay Bills Online</button>
               </a>
             </li>
-          </SidebarContact>
-        </Sidebar>
+          </ul>
+        </div>
         <TopHeader siteTitle={data.site.siteMetadata.title} logo={data.head} />
         {children()}
       </div>
@@ -108,4 +108,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

@@ -1,0 +1,37 @@
+.Member {
+  transition: height 0.2s ease-in-out;
+  border-top: 4px solid #775997;
+  padding: 1vh 3vw;
+  display:flex;
+  flex-direction: column;  
+   
+}
+.MemberShot{
+  margin: auto auto;
+  padding-left: 15px;
+}
+.MemberInfo{
+  margin-left: 3vh;
+  margin-top:5vh;
+  display:flex;
+  flex-direction: column;   
+   
+   
+}
+.MemberTitle{
+  line-height: 1.25;
+  margin-bottom:2vh;
+  font-weight:300;
+}
+.MemberBio{
+  font-size: 1em;
+  font-weight:200;
+}
+.MemberContact{
+  margin-top:2vh;
+  margin-bottom:5vh;
+  a{
+    text-decoration:none;
+    color:inherit;
+  }
+}

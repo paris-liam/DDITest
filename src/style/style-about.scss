@@ -1,0 +1,231 @@
+.AboutGrid {
+  display:flex; ;   
+  flex-direction: column;
+  background-color: #585B8C;
+  color:white;
+  /*phone landscape mode*/
+}
+
+.CoverText#AboutCoverText {
+   
+}
+
+.WhoWeAre{
+  padding: 2.5vh 5vw;
+  display:flex; ;   
+  flex-direction: column;
+}
+
+.WhoTitle{
+   
+}
+
+.WhoContainer { 
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 1024px){
+    flex-direction: row;
+  }
+}
+
+.WhoLetter {
+  margin-right: 5vh;
+  p:first-child{
+    margin-top:1em;
+  }
+  p{
+    margin-bottom: 1em;
+    line-height:1.5;
+  }
+  @media screen and (min-width: 1024px){
+    width: 50%;
+  }
+}
+
+.WhoList {   
+  margin-top:1em;
+  ul{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    li{
+      margin-bottom: 3vh;
+    }
+  }
+  @media screen and (min-width: 1024px){
+    width: 50%;
+  }
+}
+
+.WhyDDI {
+   
+  color:#585B8C;
+  background-color:white;
+  display:flex; ;   
+  flex-direction: column;
+   
+   
+  padding: 2.5vh 5vw;
+}
+
+.whyItem {
+  display:flex;
+  @media screen and (min-width: 1024px){
+    width: 50%;
+  }
+  margin-bottom:2vh;
+  margin-right: 5vh;
+  
+}
+.whyItem#adapt{
+  width:100%;
+  margin-right: 0;
+}
+.FocusedBody#WhyBody {
+  margin-top:2vh;
+  display:flex;   
+  flex-direction: column;
+  & > .focusedrow {
+    display:flex;
+    flex-direction: column;
+  }
+
+   
+  /*desktop*/
+  @media screen and (min-width:1024px){
+    .adaptCopy{
+      margin-top:3vh;
+    }
+    & > .focusedrow {
+      display:flex;
+      flex-direction: row;
+    }
+     
+     
+     
+    strong{
+      margin:0;
+    }
+  }
+}
+
+.EquiptmentFinanced {
+   
+}
+
+.EquiptTitle {
+  margin-top: 3vh;
+  text-align:center;
+  height: 25%;
+  h1{
+    margin-bottom:2vh;
+  }
+  margin-bottom:2vh;
+   
+}
+
+.EquiptList {
+  height:80vh;
+  position:relative;
+  background-color:black;
+  overflow:hidden;
+  /*landscape mode*/
+  @media screen and (max-width: 900px) and (orientation: landscape){
+    height:90vh;
+  }
+}
+
+.EquiptTextLists {
+  height: 75%;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  ul {
+    flex-grow: 1;
+  }
+}
+
+.EquiptText {
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  margin: 0;
+  ul{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    text-align:center;
+    list-style:none;
+    width:auto;
+    font-weight:bold;
+    & > li {
+      height: 15%;
+    }
+  }
+  position:relative;
+  z-index:2;
+  text-align:left;
+  h1{
+    width: 95%;
+    font-size:2.5em;
+  }
+  p{
+    width: 95%;
+    margin:0 auto;
+    text-align:center;
+  }
+}
+
+.MeetTheTeam{
+  background-color: #292A3E;
+}
+.MeetTheTeamTitle{
+  display:flex; ;   
+  flex-direction: row;
+  width: 100%;
+  padding: 2.5vh 2vw;
+  i{
+    font-size:2.75em;
+    margin:auto 4vw auto 0vw;
+    width: 10%;
+    &:hover{
+    color:#775997;
+    cursor:pointer;
+    }
+  }
+  text-align:center;
+  margin-bottom:2vh;
+  p{
+    margin: auto 0;
+    width: 60%;
+  }
+  h1 {
+    width: 30%;
+  }
+
+}
+.MeetTheTeamAccordian{
+  
+  overflow-y:scroll;
+}
+.accordianPanel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 4px solid rgb(119, 89, 151);
+}
+
+.AboutInterestedSlide{
+   
+   
+  margin: auto auto;
+  padding: 4vh 2vw;
+}
+
+.Interested#AboutInterested {
+  width: 100%;
+  button{
+    margin-bottom: 2em;
+  }
+}
+
