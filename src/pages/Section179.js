@@ -11,7 +11,8 @@ class Section179 extends React.Component {
             bonus: '  -',
             firstYearDeduction: 0,
             CashSavings: 0,
-            LoweredCost: 0
+            LoweredCost: 0,
+            date: new Date()
         };
         this.calculator = this.calculator.bind(this);
         this.checkAmount = this.checkAmount.bind(this);
@@ -137,13 +138,16 @@ class Section179 extends React.Component {
         return (
             <div className="pageGrid">
                 <div className="copy">
-                    <h2>Use the Below Calculator to Check Your Tax Write Off for 2018</h2>
+                    <h2>
+                        Use the Below Calculator to Check Your Tax Write Off for{' '}
+                        {this.state.date.getFullYear()}
+                    </h2>
                     <p>
                         The Section 179 Tax Deduction is meant to encourage businesses to stay
                         competitive by purchasing needed equipment, and writing off the full amount
                         on their taxes for the current year. This free Section 179 calculator is
-                        fully updated for 2018 – go ahead, run some numbers and see how much you can
-                        actually save in real dollars this year.
+                        fully updated for {this.state.date.getFullYear()} – go ahead, run some
+                        numbers and see how much you can actually save in real dollars this year.
                     </p>
                 </div>
                 <div className="calculatorGrid">
@@ -216,16 +220,17 @@ class Section179 extends React.Component {
                 </div>
                 <div className="copy">
                     <p style={{ fontSize: '.8em' }}>
-                        To take advantage of these high Section 179 limits for 2018, the equipment
-                        must be purchased and put into service by midnight 12/31/2018. Use Form 4562
-                        to claim your deduction.
+                        To take advantage of these high Section 179 limits for{' '}
+                        {this.state.date.getFullYear()}, the equipment must be purchased and put
+                        into service by midnight 12/31/{this.state.date.getFullYear()}. Use Form
+                        4562 to claim your deduction.
                     </p>
                 </div>
 
                 <div
                     style={{ display: 'flex', flexDirection: 'row', borderTop: '2px solid white' }}
                 >
-                    <div className="Offerings" style={{ padding: '3vh 0 3vh'}}>
+                    <div className="Offerings" style={{ padding: '3vh 0 3vh' }}>
                         <h1>Offerings Include:</h1>
                         <ul className="fa-ul">
                             <li>
@@ -284,8 +289,8 @@ class Section179 extends React.Component {
                             </li>
                         </ul>
                     </div>
-                    <div className="InterestedSlideCalculator" style={{ fontSize: '.8em'}}>
-                        <div className="Interested" style={{ width: '100%', margin:'auto' }}>
+                    <div className="InterestedSlideCalculator" style={{ fontSize: '.8em' }}>
+                        <div className="Interested" style={{ width: '100%', margin: 'auto' }}>
                             <h1>
                                 Interested in DDI?
                                 <br /> Let's Talk
