@@ -139,7 +139,7 @@ class Section179 extends React.Component {
             <div className="pageGrid">
                 <div className="copy">
                     <h2>
-                        Use the Below Calculator to Check Your Tax Write Off for{' '}
+                        Use the Below Calculator to Check Your Tax Write Off for
                         {this.state.date.getFullYear()}
                     </h2>
                     <p>
@@ -185,6 +185,7 @@ class Section179 extends React.Component {
                                         outline: 'none',
                                         border: 'none'
                                     }}
+                                    className="numberInput"
                                     onChange={this.calculator}
                                     onKeyPress={this.preventEnter}
                                     onKeyDown={this.arrowCounter}
@@ -197,7 +198,7 @@ class Section179 extends React.Component {
                             <div>${this.state.deducation}</div>
                             <div>
                                 <p>Bonus Depreciation:</p>
-                                <p>(100% in 2018)</p>
+                                <p>(100% in {this.state.date.getFullYear()})</p>
                             </div>
                             <div>${this.state.bonus}</div>
                             <div>Normal First Year Depreciation:</div>
