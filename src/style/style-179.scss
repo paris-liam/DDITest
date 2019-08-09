@@ -1,90 +1,93 @@
 .pageGrid {
-    display: flex;
-    flex-direction: column;
-    height: max-content;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
 
-    background-color: #585b8c;
-    color: white;
-    @media screen and (max-width: 1000) {
-        font-size: 1.25em;
-    }
+  background-color: #585b8c;
+  color: white;
+  @media screen and (max-width: 1000) {
+    font-size: 1.25em;
+  }
 }
 
 .copy {
-    width: 80%;
-    text-align: left;
-    margin: 0 auto;
-    h2 {
-        font-weight: 400;
-        margin: 5vh 0 2vh 0;
-    }
-    p {
-        font-size: 0.8em;
-    }
-    margin-bottom: 2vh;
+  width: 80%;
+  text-align: left;
+  margin: 0 auto;
+  h2 {
+    font-weight: 400;
+    margin: 5vh 0 2vh 0;
+  }
+  p {
+    font-size: 0.8em;
+  }
+  margin-bottom: 2vh;
 }
 
 .calculatorGrid {
-    font-size: 1em;
-    background-color: white;
-    color: #585b8c;
-    box-shadow: 5px 5px 20px #4c4e51;
-    border-radius: 30px;
-    padding: 1vh 4vh 1vh 4vh;
-    h2 {
-        margin: 3vh 0;
-        text-align: center;
-        font-weight: bolder;
-    }
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: auto;
+  font-size: 1em;
+  background-color: white;
+  color: #585b8c;
+  box-shadow: 5px 5px 20px #4c4e51;
+  border-radius: 30px;
+  padding: 1vh 4vh 1vh 4vh;
+  h2 {
+    margin: 3vh 0;
+    text-align: center;
+    font-weight: bolder;
+  }
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
 
-    justify-self: center;
-    align-self: baseline;
-    margin-top: 2vh;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3vh;
+  justify-self: center;
+  align-self: baseline;
+  margin-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3vh;
 }
 
 .inputGrid {
-    width: 80%;
-    margin: auto;
-    margin-left: 15%;
-    & > .inputColumn {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-items: space-evenly;
-    }
-    & > .inputColumn > * {
-        width: 60%;
-        display: inline-block;
-        padding-bottom: 20px;
-    }
-    & > .inputColumn > *:nth-child(even) {
-        width: 40%;
-    }
+  width: 80%;
+  margin: auto;
+  margin-left: 15%;
+  & > .inputColumn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: space-evenly;
+  }
+  & > .inputColumn > * {
+    width: 60%;
+    display: inline-block;
+    padding-bottom: 20px;
+  }
+  & > .inputColumn > *:nth-child(even) {
+    width: 40%;
+  }
 
-    input,
-    select {
-        border: 1px black solid;
-        display: inline;
-    }
-    input#purchaseAmount.error {
-        border: 3px red solid;
-    }
+  input,
+  select {
+    border: 1px black solid;
+    display: inline;
+  }
+  input#purchaseAmount.error {
+    border: 3px red solid;
+  }
 }
 .WarningText {
-    display: none;
-    color: red;
-    font-size: 0.6em;
-    margin-top: 5px;
+  display: none;
+  color: red;
+  font-size: 0.6em;
+  margin-top: 5px;
 }
 
 .InterestedSlideCalculator {
-    padding: 2vh 0 3vh 3vw;
-    margin: auto;
+  padding: 2vh 0 3vh 3vw;
+  margin: auto;
+}
+.numberInput {
+  width: 70%;
 }
