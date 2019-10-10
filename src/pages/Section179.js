@@ -139,7 +139,7 @@ class Section179 extends React.Component {
             <div className="pageGrid">
                 <div className="copy">
                     <h2>
-                        Use the Below Calculator to Check Your Tax Write Off for 
+                        Use the Below Calculator to Check Your Tax Write Off for&nbsp; 
                         {this.state.date.getFullYear()}
                     </h2>
                     <p>
