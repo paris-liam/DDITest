@@ -43,22 +43,6 @@ export const sliderInfo = [
 ];
 // info for meet the team dropdown
 export const teamInfo = {
-  'Ellen-Arlauskas': {
-    image: null,
-    name: 'Ellen Arlauskas',
-    title: 'Director of Leasing Administration',
-    location: 'Bedminster, NJ',
-    body: 'Ellen joined DDI Capital, Inc. in 1997 after working for Capital Guardian Trust Company, part of the Capital Group Companies, an investment services organization for corporate pension and retirement plans and Andersen Consulting, an IT consulting and services firm.  Ellen comes with over 30 years experience in the finance, investment services, and consulting industries.  As Director of Leasing Administration, her primary responsibilities include the management of all in-house leasing administration support as well as client relations and vendor support.  Ellen is a graduate of Berkeley College.',
-    email: 'ellena@ddicapitalinc.com',
-  },
-  'Steve-Case': {
-    image: null,
-    name: 'Steve Case',
-    title: 'Managing Director',
-    location: 'Charlotte, NC',
-    body: 'Steve has been successfully working in the equipment finance industry for over 30 years with various customers, vendors and manufacturers. Growing up in New York he graduated with an Electrical Technology degree then moved to the Carolina’s where he has lived since. During his career, he has worked both the marketing side and the financial side of the financial/sales product industry.',
-    email: 'stevec@ddicapitalinc.com',
-  },
   'Mike-Dolan': {
     image: null,
     name: 'Mike Dolan',
@@ -67,6 +51,13 @@ export const teamInfo = {
     body: 'Mike began his career at DDI in January 2015. He has over 22 years of experience in finance. Prior to joining DDI, Mike spent 13 years running equity research sales operations at Instinet and Axiom Capital. His focus was in the Oil and Gas and Biotechnology industries, providing alternative and customized research to multi-billion dollar Hedge Funds and Investment Advisors. Prior to that, Mike was a Sales Trader at Sanford Bernstein and an Institutional Wholesaler for Goldman Sachs Asset Management.  Mike graduated from St. Joseph’s University in Philadelphia in 1993 and lives in Fair Haven, NJ.',
     email: 'mdolan@ddicapitalinc.com',
   },
+  'Tina-': {
+    image: null,
+    name: 'Tina ___',
+    title: '',
+    location: '',
+    body: 'Tina joined DDI Capital in December 2014 after working in the banking industry for 4 years.  As the Operations Specialist, Tina’s primary responsibilities include managing the accounts receivable reporting, bank account reconciliations, and various tax processes including sales tax and business personal property tax.  In addition to that, she is also the payroll and billing administrator for Stonehenge Resources LLC, a DDI owned company.  Tina is a graduate of West Chester University of Pennsylvania.',
+  },
   'Christopher-Flammer': {
     image: null,
     name: 'Christopher Flammer',
@@ -74,14 +65,6 @@ export const teamInfo = {
     location: 'Spring Lake, NJ',
     body: 'Chris has worked at DDI Capital since 1998.  He started the “vendor” relationship program as a sales representative and is now Managing Director of the Spring Lake office.  Chris is a graduate of Saint Joseph’s University, resides in Fair Haven, NJ and enjoys spending time playing golf with his clients.',
     email: 'chrisf@ddicapitalinc.com',
-  },
-  'Kevin-Moran': {
-    image: null,
-    name: 'Kevin Moran',
-    title: 'Manager, Wholesale & Retail Sales',
-    location: 'Bedminster, NJ',
-    body: 'Kevin joined DDI Capital in 2013 after working 30+ years in the steamship industry.  As the Senior Manager of Wholesale / Retail Sales, Kevin is responsible for the reselling of computer equipment to consignment centers throughout the country.  Kevin is a graduate of Lycoming College with a BS in Business Administration.',
-    email: 'kevinm@ddicapitalinc.com',
   },
   'Mike-Moran': {
     image: null,
@@ -122,15 +105,7 @@ export const teamInfo = {
     location: 'Jacksonville, FL',
     body: 'Tom began working at DDI Capital in 2001.  Prior to that, he worked in the leasing industry with ACS Capital Corporation focusing on retail customer relationships.  From that experience, Tom prides himself on being the liaison between his customers and vendors.  Tom lives in Ponte Vedra Beach, Florida.',
     email: 'tomt@ddicapitalinc.com',
-  },
-  'Brett-Ugles': {
-    image: null,
-    name: 'Brett Ugles',
-    title: 'Vice President, Capital Markets',
-    location: 'Jacksonville, FL',
-    body: 'Brett has been in the leasing industry since 1986, holding various operations and sales positions with Bell Atlantic Tricon Leasing. After moving to Copelco Capital, Brett joined DDI in 2000 and is responsible for banking relationships and customer credit.',
-    email: 'brettu@ddicapitalinc.com',
-  },
+  }
 };
 
 export const gatsbyImgStyle = {
