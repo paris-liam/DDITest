@@ -51,12 +51,13 @@ export const teamInfo = {
     body: 'Mike began his career at DDI in January 2015. He has over 22 years of experience in finance. Prior to joining DDI, Mike spent 13 years running equity research sales operations at Instinet and Axiom Capital. His focus was in the Oil and Gas and Biotechnology industries, providing alternative and customized research to multi-billion dollar Hedge Funds and Investment Advisors. Prior to that, Mike was a Sales Trader at Sanford Bernstein and an Institutional Wholesaler for Goldman Sachs Asset Management.  Mike graduated from St. Joseph’s University in Philadelphia in 1993 and lives in Fair Haven, NJ.',
     email: 'mdolan@ddicapitalinc.com',
   },
-  'Tina-': {
+  'Tina-Perna': {
     image: null,
-    name: 'Tina ___',
-    title: '',
-    location: '',
+    name: 'Tina Perna',
+    title: 'Operations Specialist ',
+    location: 'Bedminster, NJ ',
     body: 'Tina joined DDI Capital in December 2014 after working in the banking industry for 4 years.  As the Operations Specialist, Tina’s primary responsibilities include managing the accounts receivable reporting, bank account reconciliations, and various tax processes including sales tax and business personal property tax.  In addition to that, she is also the payroll and billing administrator for Stonehenge Resources LLC, a DDI owned company.  Tina is a graduate of West Chester University of Pennsylvania.',
+    email: 'tinar@ddicapitalinc.com'
   },
   'Christopher-Flammer': {
     image: null,
