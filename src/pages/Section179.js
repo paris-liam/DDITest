@@ -55,7 +55,7 @@ class Section179 extends React.Component {
         }
     }
     checkAmount(value) {
-        if (value > 2500000) {
+        if (value > 2590000) {
             value = -1;
         } else if (value < 0 || value == NaN) {
             value = 0;
@@ -105,8 +105,8 @@ class Section179 extends React.Component {
         }
         if (goodValue) {
             const taxBrack = document.getElementById('taxBrack').value;
-            const deduction = purchaseAmount >= 1000000 ? 1000000 : purchaseAmount;
-            const bonus = deduction >= 1000000 ? purchaseAmount - 1000000 : '-';
+            const deduction = purchaseAmount >= 1040000 ? 1040000 : purchaseAmount;
+            const bonus = deduction >= 1040000 ? purchaseAmount - 1040000 : '-';
             const firstYearDeduction = deduction;
             const CashSavings = purchaseAmount * taxBrack;
             const LoweredCost = purchaseAmount - CashSavings;
@@ -191,7 +191,7 @@ class Section179 extends React.Component {
                                     onKeyDown={this.arrowCounter}
                                 />
                                 <div className="warningText" id="warningText">
-                                    for amounts higher than 2.5 million, please contact DDI directly
+                                    for amounts higher than 2.59 million, please contact DDI directly
                                 </div>
                             </span>
                             <div>Section 179 Deduction:</div>
