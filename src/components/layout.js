@@ -1,13 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import TopHeader from '../components/TopHeader'; 
-import './index.scss';
+import TopHeader from './TopHeader'
+import '../style/index.scss';
 import favicon from '../pages/images/favicon.ico';
 import Link from 'gatsby-link';
+import { StaticQuery } from 'gatsby';
+
 import { toggleNav } from '../style/dataAndCopy';
 
-const Layout = ({ data, children }) => (
+const Layout = ({ children }) => (
+  <StaticQuery
+  query={graphql`
+
+ query SiteTitleQuery {
+   site {
+     siteMetadata {
+       title
+     }
+   }
+   head: imageSharp(fluid: {originalName: {regex: "/HeadLogo.png/"} }){
+     sizes(maxWidth:800){
+       ... GatsbyImageSharpSizes
+     }
+   }
+ }
+  `}
+render={data =>(
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
@@ -52,12 +71,7 @@ const Layout = ({ data, children }) => (
               <li><Link to="/About#Who" onClick={toggleNav}>Who We Are</Link></li>
               <li><Link to="/About#Why" onClick={toggleNav}>Why DDI</Link></li>
               <li><Link to="/About#Equipt" onClick={toggleNav}>Equiptment Financed</Link></li>
-              <li><Link to={{
-                      pathname: '/About',
-                      hash: '#Team',
-                      state: { accordian: true },
-                    }}
-                onClick={toggleNav}>Meet The Team</Link></li>
+              <li><Link to="/About#Team" state={{ accordian: true }}>Meet The Team</Link></li>
             </ul>
           </ul>
           <ul className='SidebarItem'>
@@ -82,30 +96,13 @@ const Layout = ({ data, children }) => (
           </ul>
         </div>
         <TopHeader siteTitle={data.site.siteMetadata.title} logo={data.head} />
-        {children()}
+        {children}
       </div>
     </div>
   </div>
-);
-
+)} />);
 Layout.propTypes = {
   children: PropTypes.func,
-  data: PropTypes.shape,
 };
 
 export default Layout;
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    head: imageSharp(id:{regex: "/HeadLogo.png/"}){
-      sizes(maxWidth:800){
-        ... GatsbyImageSharpSizes
-      }
-    }
-  }
-`

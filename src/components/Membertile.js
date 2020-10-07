@@ -25,8 +25,8 @@ class Membertile extends React.Component {
             position="absolute"
             style={{
               borderRadius: '20vh',
-              width: '17vh',
-              height: '22vh',
+              width: '52%',
+              height: '25vh',
             }}
           />
         </div>

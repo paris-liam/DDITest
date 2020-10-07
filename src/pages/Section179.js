@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Layout from '../components/layout';
 
 class Section179 extends React.Component {
     constructor(props) {
@@ -136,7 +137,7 @@ class Section179 extends React.Component {
     }
     render() {
         return (
-            <div className="pageGrid">
+            <Layout><div className="pageGrid">
                 <div className="copy">
                     <h2>
                         Use the Below Calculator to Check Your Tax Write Off for
@@ -309,7 +310,7 @@ class Section179 extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div></Layout>
         );
     }
 }

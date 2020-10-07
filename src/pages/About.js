@@ -1,71 +1,92 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'gatsby-link';
 import IMG from 'gatsby-image';
 import Membertile from '../components/Membertile';
 import { teamInfo } from '../style/dataAndCopy';
 import { gatsbyImgStyle } from '../style/dataAndCopy';
+import Layout from '../components/layout';
+import { useStaticQuery } from 'gatsby';
 
-class About extends React.Component {
-  constructor(props) {
-    super(props);
-    this.imageCycle = this.imageCycle.bind(this);
-    this.accordianTeam = this.accordianTeam.bind(this);
-    const parsedTeamInfo = this.teamInfoParse(teamInfo, this.props.data.memberPhotos.edges);
-    this.state = {
-      equiptmentImages: [this.props.data.equipt1.sizes, this.props.data.equipt2.sizes, this.props.data.equipt3.sizes],
-      equiptmentCurrent: 0,
-      intervalFunction: null,
-      showAccordian: false,
-      teamInfo: parsedTeamInfo,
-    };
-  }
-  componentDidMount() {
-    this.setState({
-      intervalFunction: setInterval(this.imageCycle, 5000),
-    });
-    if (this.props.location.state) {
-      const focused = document.getElementById('Team');
-      const focused_location = focused.getBoundingClientRect();
-      window.scrollTo({ top: focused_location.top + window.pageYOffset, behavior: 'smooth' });
-      this.setState(state => ({
-        showAccordian: true,
-      }));
-    }
-  }
-  componentWillUnmount() {
-    clearInterval(this.intervalFunction);
-  }
-  teamInfoParse(info, images) {
-    images.forEach((member) => {
-      const memberId = member.node.id.split('/');
-      const MemberName = memberId[memberId.length - 1].split('.')[0];
-      if (info[MemberName]) {
-        info[MemberName].image = member.node.resolutions;
+export default function About() {
+
+  const data = useStaticQuery(graphql`
+  query AboutQuery {
+    cover: imageSharp(fluid: {originalName: {regex: "/CoverAbout.jpg/"}}){
+      sizes(maxWidth:1900){
+        ... GatsbyImageSharpSizes
       }
-    },
-    );
-    return info;
-  }
-  accordianTeam() {
-    this.setState(state => ({
-      showAccordian: !state.showAccordian,
-    }));
-  }
-  imageCycle() {
-    let newImage = this.state.equiptmentCurrent + 1;
-    if (newImage >= this.state.equiptmentImages.length) {
-      newImage = 0;
     }
-    this.setState({
-      equiptmentCurrent: newImage,
-    });
+    equipt1: imageSharp(fluid: {originalName: {regex: "/AboutEquipt1.jpg/"}}){
+      sizes(maxWidth:1900){
+        ... GatsbyImageSharpSizes
+      }
+    }
+    equipt2: imageSharp(fluid: {originalName: {regex: "/AboutEquipt2.jpg/"}}){
+      sizes(maxWidth:1900){
+        ... GatsbyImageSharpSizes
+      }
+    }
+    equipt3: imageSharp(fluid: {originalName: {regex: "/AboutEquipt3.jpg/"}}){
+      sizes(maxWidth:1900){
+        ... GatsbyImageSharpSizes
+      }
+    }
+    memberPhotos: allImageSharp(filter: { original: {src: {regex: "/member/"}}}) {
+      edges {
+        node {
+          resolutions {
+            ... GatsbyImageSharpResolutions
+            originalName
+          }
+        }
+      }
+    }
   }
-  render() {
+`);
+
+/*    
+    } */
+const imageCycle = () => {
+  setEquiptmentCurrent(equiptmentCurrent + 1);
+  console.log(equiptmentCurrent);
+  if(equiptmentCurrent >= 3) {
+    setEquiptmentCurrent(0);
+  }
+}
+
+function teamInfoParse(info, images) {
+  images.forEach((member) => {
+    let memberId = member.node.resolutions.originalName.split('-');
+    memberId.shift();
+    memberId = memberId.join("-");
+    const MemberName = memberId.split('.')[0];
+    console.log(MemberName);
+    if (info[MemberName]) {
+      info[MemberName].image = member.node.resolutions;
+      console.log(info[MemberName].image)
+    }
+  },
+  );
+  return info;
+}
+
+const [showAccordian, setShowAccordian] = useState(false);
+const [equiptmentCurrent, setEquiptmentCurrent] = useState(0);
+const equiptmentImages = [data.equipt1.sizes, data.equipt2.sizes, data.equipt3.sizes];
+const teamInfoParsed = teamInfoParse(teamInfo, data.memberPhotos.edges);
+
+
+useEffect(()=>{
+  setInterval(imageCycle, 5000);
+  return () => clearInterval(imageCycle);
+},[]);
+
     return (
+      <Layout>
       <div className='AboutGrid'>
         <div className='CoverHold'>
           <IMG
-            sizes={this.props.data.cover.sizes}
+            sizes={data.cover.sizes}
             outerWrapperClassName="coverOuter"
             position="absolute"
             style={gatsbyImgStyle}
@@ -136,7 +157,7 @@ class About extends React.Component {
         <div className='EquiptmentFinanced' id="Equipt">
           <div className='EquiptList'>
             <IMG
-              sizes={this.state.equiptmentImages[this.state.equiptmentCurrent]}
+              sizes={equiptmentImages[equiptmentCurrent]}
               outerWrapperClassName="coverOuter"
               position="absolute"
               style={gatsbyImgStyle}
@@ -179,18 +200,18 @@ class About extends React.Component {
           </div>
         </div>
         <div className='MeetTheTeam' id="Team">
-          <div className='MeetTheTeamTitle' onClick={this.accordianTeam}>
+          <div className='MeetTheTeamTitle' onClick={()=>{setShowAccordian(!showAccordian)}}>
           <h1>MEET THE TEAM</h1>
             <p>We deliver high-integrity, convenience-based financing solutions our technology partners can provide to their customers. Here’s the people that make this happen.</p>
-            <i className={`fa fa-angle-right meetTeamArrow ${this.state.showAccordian ? ('animateArrow') : ('resetArrow')}`} />
+            <i className={`fa fa-angle-right meetTeamArrow ${showAccordian ? ('animateArrow') : ('resetArrow')}`} />
           </div>
           <div className='MeetTheTeamAccordian'
             style={{
-              height: (this.state.showAccordian) ? ('60vh') : ('0px'),
+              height: (showAccordian) ? ('60vh') : ('0px'),
             }}
           >
             {
-              Object.keys(this.state.teamInfo).map(member => <Membertile key={this.state.teamInfo[member].name} info={this.state.teamInfo[member]} show={this.state.showAccordian} />)
+              Object.keys(teamInfoParsed).map(member => <Membertile key={teamInfoParsed[member].name} info={teamInfoParsed[member]} show={showAccordian} />)
             }
           </div>
         </div>
@@ -202,44 +223,6 @@ class About extends React.Component {
           </div>
         </div>
       </div>
+     </Layout>
     );
-  }
 }
-
-export default About;
-
-export const query = graphql`
-  query AboutQuery {
-    cover: imageSharp(id:{regex: "/CoverAbout.jpg/"}){
-      sizes(maxWidth:1900){
-        ... GatsbyImageSharpSizes
-      }
-    }
-    equipt1: imageSharp(id:{regex: "/AboutEquipt1.jpg/"}){
-      sizes(maxWidth:1900){
-        ... GatsbyImageSharpSizes
-      }
-    }
-    equipt2: imageSharp(id:{regex: "/AboutEquipt2.jpg/"}){
-      sizes(maxWidth:1900){
-        ... GatsbyImageSharpSizes
-      }
-    }
-    equipt3: imageSharp(id:{regex: "/AboutEquipt3.jpg/"}){
-      sizes(maxWidth:1900){
-        ... GatsbyImageSharpSizes
-      }
-    }
-    memberPhotos: allImageSharp(filter: {id: {regex: "/memberPhotos/"}}){
-    edges {
-      node {
-        id
-        resolutions{
-        ... GatsbyImageSharpResolutions
-        }
-      }
-    }
-   }
-  }
-`
-
