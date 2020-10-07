@@ -1,12 +1,31 @@
 import React from 'react';
 import IMG from 'gatsby-image';
 import { gatsbyImgStyle } from '../style/dataAndCopy';
+import { StaticQuery } from 'gatsby';
+import Layout from '../components/layout';
 
-const Vendors = data => (
-  <div className='indexGrid' id='singlegrid'>
+const Vendors = () => (
+<Layout>
+         <StaticQuery
+       query={graphql`
+       query VendorQuery {
+        cover: imageSharp(fluid: {originalName: {regex: "/CoverVendors.jpg/"}}){
+          sizes(maxWidth:1900){
+            ... GatsbyImageSharpSizes
+          }
+        }
+        body: imageSharp(fluid: {originalName: {regex: "/bodyVendor.jpg/"}}){
+          sizes(maxWidth:900){
+            ... GatsbyImageSharpSizes
+          }
+        }
+      }
+      
+       `}
+    render={data => <div className='indexGrid' id='singlegrid'>
     <div className='CoverHold'>
       <IMG
-        sizes={data.data.cover.sizes}
+        sizes={data.cover.sizes}
         outerWrapperClassName="coverOuter"
         position="absolute"
         style={gatsbyImgStyle}
@@ -29,26 +48,12 @@ const Vendors = data => (
           </ul>
         </div>
         <div className="handshakeImage" style={{ position: 'relative' }}>
-          <IMG sizes={data.data.body.sizes} style={gatsbyImgStyle} />
+          <IMG sizes={data.body.sizes} style={gatsbyImgStyle} />
         </div>
       </div>
     </div>
-  </div>
+  </div>}/>
+  </Layout>
 );
 
 export default Vendors;
-
-export const query = graphql`
-  query VendorQuery {
-    cover: imageSharp(id:{regex: "/CoverVendors.jpg/"}){
-      sizes(maxWidth:1900){
-        ... GatsbyImageSharpSizes
-      }
-    }
-    body: imageSharp(id:{regex: "/bodyVendor.jpg/"}){
-      sizes(maxWidth:900){
-        ... GatsbyImageSharpSizes
-      }
-    }
-  }
-`

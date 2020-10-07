@@ -6,7 +6,6 @@ import { toggleNav } from '../style/dataAndCopy';
 class TopHeader extends React.Component {
   constructor(props) {
     super(props);
-    this.onpageAccordian = this.onpageAccordian.bind(this);
   }
   componentDidMount() {
     const siteWrap = document.querySelector('#site-wrapper');
@@ -14,9 +13,6 @@ class TopHeader extends React.Component {
     const ham = document.querySelector('.hamburger-menu');
     ham.classList.remove('animate');
 
-  }
-  onpageAccordian() {
-    console.log(this.props);
   }
   render() {
     return (
@@ -42,16 +38,10 @@ class TopHeader extends React.Component {
           <div className='nav'>
             <li className="aboutDrop"><Link to="/About">About</Link><div className="DropdownContent aboutContent">
               <ul>
-                <li><Link to="/About" onClick={this.onpageAccordian}>Who We Are</Link></li>
-                <li><Link to="/About#Why" onClick={this.onpageAccordian}>Why DDI</Link></li>
-                <li><Link to="/About#Equipt" onClick={this.onpageAccordian}>Equipment Financed</Link></li>
-                <li><Link to={{
-                  pathname: '/About',
-                  hash: '#Team',
-                  state: { accordian: true },
-                }}
-                  onClick={this.onpageAccordian}
-                >
+                <li><Link to="/About">Who We Are</Link></li>
+                <li><Link to="/About#Why">Why DDI</Link></li>
+                <li><Link to="/About#Equipt">Equipment Financed</Link></li>
+                <li><Link to="/About#Team" state={{ accordian: true }}>
                 Meet The Team
                 </Link>
                 </li>

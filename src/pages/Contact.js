@@ -1,12 +1,21 @@
 import React from 'react';
 import { gatsbyImgStyle } from '../style/dataAndCopy';
 import IMG from 'gatsby-image';
+import Layout from '../components/layout';
+import { StaticQuery } from 'gatsby';
 
-const Contact = data => (
-    <div className="indexGrid" id="singlegrid">
+const Contact = () => (
+    <Layout>
+        <StaticQuery query={graphql`    query ContactQuery {
+        cover: imageSharp(fluid: {originalName: {regex: "/CoverContact.jpg/"}}) {
+            sizes(maxWidth: 1900) {
+                ...GatsbyImageSharpSizes
+            }
+        }
+    }`} render={data => (<div className="indexGrid" id="singlegrid">
         <div className="CoverHold">
             <IMG
-                sizes={data.data.cover.sizes}
+                sizes={data.cover.sizes}
                 outerWrapperClassName="coverOuter"
                 position="absolute"
                 style={gatsbyImgStyle}
@@ -77,17 +86,7 @@ const Contact = data => (
                 </div>
             </div>
         </div>
-    </div>
-);
+    </div>)}/>
+</Layout>);
 
 export default Contact;
-
-export const query = graphql`
-    query ContactQuery {
-        cover: imageSharp(id: { regex: "/CoverContact.jpg/" }) {
-            sizes(maxWidth: 1900) {
-                ...GatsbyImageSharpSizes
-            }
-        }
-    }
-`;

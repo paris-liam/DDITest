@@ -4,12 +4,15 @@
   padding: 1vh 3vw;
   display:flex;
   flex-direction: column;  
+  justify-content: flex-start;
   width: 100%;
 }
 .MemberShot{
   margin: auto auto;
+  display: flex;
   padding-left: 15px;
-  width: 10%;
+  width: 25%;
+  justify-content: center;
 }
 .MemberInfo{
   margin-left: 3vh;

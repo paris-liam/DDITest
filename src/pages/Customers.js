@@ -1,12 +1,23 @@
 import React from 'react';
 import IMG from 'gatsby-image';
 import { gatsbyImgStyle } from '../style/dataAndCopy';
+import Layout from '../components/layout';
+import { StaticQuery } from 'gatsby';
 
-const Customers = data => (
-  <div className='indexGrid' id='singlegrid'>
+const Customers = () => (
+  <Layout>
+    <StaticQuery query={graphql`
+  query CustomerQuery {
+    cover: imageSharp(fluid: {originalName: {regex: "/CoverCustomers.jpg/"}}){
+      sizes(maxWidth:1900){
+        ... GatsbyImageSharpSizes
+      }
+    }
+  }
+`} render={data => (  <div className='indexGrid' id='singlegrid'>
     <div className='CoverHold'>
       <IMG
-        sizes={data.data.cover.sizes}
+        sizes={data.cover.sizes}
         outerWrapperClassName="coverOuter"
         position="absolute"
         style={gatsbyImgStyle}
@@ -58,16 +69,6 @@ const Customers = data => (
         </div>
       </div>
     </div>
-  </div>
-);
+  </div>)} />
+  </Layout>)
 export default Customers;
-
-export const query = graphql`
-  query CustomerQuery {
-    cover: imageSharp(id:{regex: "/CoverCustomers.jpg/"}){
-      sizes(maxWidth:1900){
-        ... GatsbyImageSharpSizes
-      }
-    }
-  }
-`
