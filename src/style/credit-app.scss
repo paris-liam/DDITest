@@ -5,20 +5,61 @@
     margin-left: auto;
 }
 
+.creditAppGrid {
+    font-size: 1em;
+    background-color: white;
+    color: #585b8c;
+    box-shadow: 5px 5px 20px #4c4e51;
+    border-radius: 30px;
+    padding: 1vh 4vh 1vh 4vh;
+    h2 {
+      margin: 3vh 0;
+      text-align: center;
+      font-weight: bolder;
+    }
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: auto;
+  
+    justify-self: center;
+    align-self: baseline;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+  }
+
 .input-section {
     width: 45%;
     border: 1px solid black;
     border-radius: 5px;
     position: relative;
+    padding: 8px 0;
+    padding-left: 2px;
+    margin-bottom: 5px;
     input {
         border: none;
+        display: block;
+        width: 97%;
+        font-size: 12px;
 
         &.mini-label {
-            background-color: red;
+            & ~ label {
+                font-size: 8px;
+                top: 0;
+            }
+        }
+
+        &:focus {
+            outline: none;
+            border: none;
         }
     }
     label {
         position: absolute;
+        top:8px;
+        transition: all .15s ease-in;
     }
 }
 
