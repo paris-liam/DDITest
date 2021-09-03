@@ -1,0 +1,29 @@
+.credit-app-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin-left: auto;
+}
+
+.input-section {
+    width: 45%;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+    input {
+        border: none;
+
+        &.mini-label {
+            background-color: red;
+        }
+    }
+    label {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .input-section {
+        width: 100%;
+    }
+}
