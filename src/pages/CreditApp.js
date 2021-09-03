@@ -28,8 +28,8 @@ class CreditApp extends React.Component {
                 <div className="creditAppGrid">
                     <h2>Credit Application</h2>
                     <form className="inputGrid credit-app-grid"
-                        name="contact"
-                        form-name="contact"
+                        name="credit-app"
+                        form-name="credit-app"
                         method="post"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
