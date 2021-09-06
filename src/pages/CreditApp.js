@@ -33,9 +33,16 @@ class CreditApp extends React.Component {
                     input.classList.remove('mini-label');
                 }
             })
-
-
         })
+
+        let form = document.querySelector('form.credit-app-grid');
+
+        form.addEventListener('onSubmit', () => {
+            form.style.display = 'none';
+            document.querySelector('#thanks-for-submitting').style.display = 'block';
+        })
+
+
     }
 
     render() {
@@ -182,6 +189,10 @@ class CreditApp extends React.Component {
                             <input type="submit" value="Send" />
                         </div>
                     </form>
+                    <div id="thanks-for-submitting">
+                        <h2>Thanks for Submitting!</h2>
+                        <p>We'll get back to you shortly</p>
+                    </div>
                 </div>
                 <div className="copy">
                     <p style={{ fontSize: '.8em' }}>
