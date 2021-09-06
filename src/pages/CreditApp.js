@@ -42,8 +42,6 @@ class CreditApp extends React.Component {
         return (<Layout>
             <div className="pageGrid">
                 <div className="copy">
-                    <h2>title</h2>
-                    <p>body</p>
                 </div>
                 <div className="creditAppGrid">
                     <h2>Credit Application</h2>
@@ -187,7 +185,6 @@ class CreditApp extends React.Component {
                 </div>
                 <div className="copy">
                     <p style={{ fontSize: '.8em' }}>
-                        subtitle
                     </p>
                 </div>
 
