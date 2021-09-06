@@ -4,8 +4,26 @@ import Layout from '../components/layout';
 class CreditApp extends React.Component {
     componentDidMount() {
         let inputs = document.querySelectorAll('input');
-        console.warn(inputs);
+        let typeOfBusiness = document.querySelector('#type_of_business');
+        let publicQuestion = document.querySelector('#are_you_public');
 
+        typeOfBusiness.addEventListener('change', (evt) => {
+            console.warn(evt.target.value)
+            if (evt.target.value === 'other') {
+                document.querySelector('#other-type-section').style.display = "block";
+            } else {
+                document.querySelector('#other-type-section').style.display = "none";
+            }
+        })
+
+        publicQuestion.addEventListener('change', (evt) => {
+            console.warn(evt.target.value)
+            if (evt.target.value === 'yes') {
+                document.querySelector('#ticker-symbol-section').style.display = "block";
+            } else {
+                document.querySelector('#ticker-symbol-section').style.display = "none";
+            }
+        })
         inputs.forEach((input) => {
             input.addEventListener('focus', (evt) => {
                 input.classList.add('mini-label');
@@ -15,6 +33,8 @@ class CreditApp extends React.Component {
                     input.classList.remove('mini-label');
                 }
             })
+
+
         })
     }
 
@@ -69,15 +89,15 @@ class CreditApp extends React.Component {
                         </div>
                         <div className="input-section input-text">
                             <input id="main_business_office_city" name="main_business_office_city" type="text" required></input>
-                            <label for="main_business_office_city">City</label>
+                            <label for="main_business_office_city">Main Office City</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="main_business_office_state" name="main_business_office_state" type="text" required></input>
-                            <label for="main_business_office_state">State</label>
+                            <label for="main_business_office_state">Main Office State</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="main_business_office_zip" name="main_business_office_zip" type="text" required></input>
-                            <label for="main_business_office_zip">Zip</label>
+                            <label for="main_business_office_zip">Main Office Zip</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="proposed_property_address" name="proposed_property_address" type="text"></input>
@@ -85,15 +105,15 @@ class CreditApp extends React.Component {
                         </div>
                         <div className="input-section input-text">
                             <input id="proposed_property_city" name="proposed_property_city" type="text"></input>
-                            <label for="proposed_property_city">City</label>
+                            <label for="proposed_property_city">Property City</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="proposed_property_state" name="proposed_property_state" type="text"></input>
-                            <label for="proposed_property_state">State</label>
+                            <label for="proposed_property_state">Property State</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="proposed_property_zip" name="proposed_property_zip" type="text"></input>
-                            <label for="proposed_property_zip">Zip</label>
+                            <label for="proposed_property_zip">Property Zip</label>
                         </div>
                         <div className="input-section input-number">
                             <input id="years_in_business" name="years_in_business" required type="number"></input>
@@ -110,7 +130,7 @@ class CreditApp extends React.Component {
                                 <option value="other">Other</option>
                             </select>
                         </div>
-                        <div className="input-section input-text other-type">
+                        <div id="other-type-section" className="input-section input-text other-type">
                             <input id="other_type" name="other_type" type="text"></input>
                             <label for="other_type">Other Type:</label>
                         </div>
@@ -133,22 +153,22 @@ class CreditApp extends React.Component {
                         <div className="select-section">
                             <label>Are you public?</label>
                             <select id="are_you_public" name="are_you_public">
-                                <option selected value="yes">yes</option>
-                                <option value="no">no</option>
+                                <option value="yes">yes</option>
+                                <option selected value="no">no</option>
                             </select>
                         </div>
-                        <div className="input-section input-text">
+                        <div id="ticker-symbol-section" className="input-section input-text">
                             <input id="ticker_symbol" name="ticker_symbol" type="text"></input>
                             <label for="ticker_symbol">Ticker Symbol</label>
                         </div>
-                        <p>Deal Summary</p>
+                        <p class='sub-header'>Deal Summary</p>
                         <div className="input-section input-text">
                             <input id="total_size_of_transaction" name="total_size_of_transaction" type="text"></input>
                             <label for="total_size_of_transaction">Total size of transaction</label>
                         </div>
                         <div className="select-section">
                             <label>Length of terms</label>
-                            <select id="leng_of_terms" name="leng_of_terms">
+                            <select id="length_of_terms" name="leng_of_terms">
                                 <option selected value="12">12</option>
                                 <option value="24">24</option>
                                 <option selected value="36">36</option>
@@ -156,7 +176,7 @@ class CreditApp extends React.Component {
                                 <option selected value="60">60</option>
                             </select>
                         </div>
-                        <div className="input-section input-text-area">
+                        <div className="input-text-area">
                             <textarea id="comments" name="comments"></textarea>
                             <label for="comments">General Comments</label>
                         </div>
