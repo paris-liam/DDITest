@@ -35,6 +35,18 @@ class CreditApp extends React.Component {
             })
         })
 
+        /*document.querySelector('#total_size_of_transaction').addEventListener('input', (evt) => {
+            let number = evt.target.value.toString();
+            number.replace('$', '');
+            number.replace(',', '');
+            console.warn(number);
+            let newNum = '';
+            if (number.length > 0) {
+                newNum = number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+            document.querySelector('#total_size_of_transaction').value = `${newNum}`
+        })*/
+
         let form = document.querySelector('form.credit-app-grid');
 
         form.addEventListener('onSubmit', () => {
@@ -62,11 +74,11 @@ class CreditApp extends React.Component {
                         <input type="hidden" name="bot-field" />
                         <div className="input-section input-text">
                             <input id="applicant_name" name="applicant_name" type="text" required></input>
-                            <label for="applicant_name">Applicant (Use exact legal name of entity)</label>
+                            <label for="applicant_name">Applicant (Use Exact Legal Name of Entity)</label>
                         </div>
                         <div className="input-section input-tel">
-                            <input type="tel" id="phone_number" name="phone_number" required></input>
-                            <label for="phone_number">Phone Number</label>
+                            <input type="tel" id="business_phone_number" name="business_phone_number" required></input>
+                            <label for="business_phone_number">Business Phone Number</label>
                         </div>
                         <div className="input-section input-tel">
                             <input id="fax_number" name="fax_number" type="tel"></input>
@@ -90,7 +102,7 @@ class CreditApp extends React.Component {
                         </div>
                         <div className="input-section input-text">
                             <input id="main_business_office_address" name="main_business_office_address" type="text" required></input>
-                            <label for="main_business_office_address">Applicant’s main business office address</label>
+                            <label for="main_business_office_address">Applicant’s Main Business Office Address</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="main_business_office_city" name="main_business_office_city" type="text" required></input>
@@ -106,7 +118,7 @@ class CreditApp extends React.Component {
                         </div>
                         <div className="input-section input-text">
                             <input id="proposed_property_address" name="proposed_property_address" type="text"></input>
-                            <label for="proposed_property_address">Proposed address of equipment/property</label>
+                            <label for="proposed_property_address">Proposed Address of Equipment/Property</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="proposed_property_city" name="proposed_property_city" type="text"></input>
@@ -125,7 +137,7 @@ class CreditApp extends React.Component {
                             <label for="years_in_business">Years In Business</label>
                         </div>
                         <div className="select-section">
-                            <label>select type of business</label>
+                            <label>Select Type of Business</label>
                             <select required id="type_of_business" name="type_of_business">
                                 <option selected value="c_corp">C-Corp</option>
                                 <option value="sub_s_corp">Sub-S Corp</option>
@@ -166,13 +178,13 @@ class CreditApp extends React.Component {
                             <input id="ticker_symbol" name="ticker_symbol" type="text"></input>
                             <label for="ticker_symbol">Ticker Symbol</label>
                         </div>
-                        <p class='sub-header'>Deal Summary</p>
+                        <p className='sub-header'>Deal Summary</p>
                         <div className="input-section input-text">
                             <input id="total_size_of_transaction" name="total_size_of_transaction" type="text"></input>
                             <label for="total_size_of_transaction">Total size of transaction</label>
                         </div>
                         <div className="select-section">
-                            <label>Length of terms</label>
+                            <label>Length of terms (Months)</label>
                             <select id="length_of_terms" name="leng_of_terms">
                                 <option selected value="12">12</option>
                                 <option value="24">24</option>
@@ -180,6 +192,11 @@ class CreditApp extends React.Component {
                                 <option value="48">48</option>
                                 <option selected value="60">60</option>
                             </select>
+                        </div>
+                        <div className="input-text-area">
+                            <input className="file-input" name="equiptment_description_attachment" type="file" />
+                            <textarea id="comments" name="comments"></textarea>
+                            <label for="comments">Equiptment Description</label>
                         </div>
                         <div className="input-text-area">
                             <textarea id="comments" name="comments"></textarea>
@@ -243,7 +260,7 @@ class CreditApp extends React.Component {
                                 <span className="fa-li">
                                     <i className="fas fa-check-circle" />
                                 </span>
-                                Quick, Application-Only Credit Approvals for purchases under $250,000
+                                Quick, Application-Only Credit Approvals for Purchases Under $250,000
                             </li>
                         </ul>
                     </div>
@@ -255,11 +272,6 @@ class CreditApp extends React.Component {
                                     <i className="fas fa-check-circle" />
                                 </span>
                                 No fees due at signing.                            </li>
-                            <li>
-                                <span className="fa-li">
-                                    <i className="fas fa-check-circle" />
-                                </span>
-                                No down payments necessary.                            </li>
                             <li>
                                 <span className="fa-li">
                                     <i className="fas fa-check-circle" />

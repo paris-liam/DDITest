@@ -81,7 +81,11 @@
     margin-top: 5px;
 }
 
-
+.inputGrid {
+    input.file-input {
+        border: none;
+    }
+}
 #other-type-section, #ticker-symbol-section {
     display: none;
   }
