@@ -34,18 +34,16 @@ class CreditApp extends React.Component {
                 }
             })
         })
-
-        /*document.querySelector('#total_size_of_transaction').addEventListener('input', (evt) => {
+        let transactionSize = document.querySelector('#total_size_of_transaction');
+        transactionSize.addEventListener('input', (evt) => {
             let number = evt.target.value.toString();
-            number.replace('$', '');
-            number.replace(',', '');
-            console.warn(number);
-            let newNum = '';
-            if (number.length > 0) {
-                newNum = number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            }
-            document.querySelector('#total_size_of_transaction').value = `${newNum}`
-        })*/
+            let noDollar = number.replace('\$', '');
+            let noComma = noDollar.replace(',', '');
+            let formattedValue = noComma;
+            formattedValue = formattedValue.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            console.warn(formattedValue);
+            transactionSize.value = `$${formattedValue}`;
+        })
 
         let form = document.querySelector('form.credit-app-grid');
 
@@ -74,72 +72,72 @@ class CreditApp extends React.Component {
                         <input type="hidden" name="bot-field" />
                         <div className="input-section input-text">
                             <input id="applicant_name" name="applicant_name" type="text" required></input>
-                            <label for="applicant_name">Applicant (Use Exact Legal Name of Entity)</label>
+                            <label htmlFor="applicant_name">Applicant (Use Exact Legal Name of Entity)</label>
                         </div>
                         <div className="input-section input-tel">
                             <input type="tel" id="business_phone_number" name="business_phone_number" required></input>
-                            <label for="business_phone_number">Business Phone Number</label>
+                            <label htmlFor="business_phone_number">Business Phone Number</label>
                         </div>
                         <div className="input-section input-tel">
                             <input id="fax_number" name="fax_number" type="tel"></input>
-                            <label for="fax_number">Fax Number</label>
+                            <label htmlFor="fax_number">Fax Number</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="contact_persons_name" name="contact_persons_name" type="text" required></input>
-                            <label for="contact_persons_name">Contact Person's Name</label>
+                            <label htmlFor="contact_persons_name">Contact Person's Name</label>
                         </div>
                         <div className="input-section input-tel">
                             <input id="contact_persons_cell_number" name="contact_persons_cell_number" type="tel" required></input>
-                            <label for="contact_persons_cell_number">Contact Person's Cell Number</label>
+                            <label htmlFor="contact_persons_cell_number">Contact Person's Cell Number</label>
                         </div>
                         <div className="input-section input-email">
                             <input id="contact_persons_email" name="contact_persons_email" type="email" required></input>
-                            <label for="contact_persons_email">Contact Person's E-mail Address</label>
+                            <label htmlFor="contact_persons_email">Contact Person's E-mail Address</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="web_address" name="web_address" type="text"></input>
-                            <label for="web_address">Web Address</label>
+                            <label htmlFor="web_address">Web Address</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="main_business_office_address" name="main_business_office_address" type="text" required></input>
-                            <label for="main_business_office_address">Applicant’s Main Business Office Address</label>
+                            <label htmlFor="main_business_office_address">Applicant’s Main Business Office Address</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="main_business_office_city" name="main_business_office_city" type="text" required></input>
-                            <label for="main_business_office_city">Main Office City</label>
+                            <label htmlFor="main_business_office_city">Main Office City</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="main_business_office_state" name="main_business_office_state" type="text" required></input>
-                            <label for="main_business_office_state">Main Office State</label>
+                            <label htmlFor="main_business_office_state">Main Office State</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="main_business_office_zip" name="main_business_office_zip" type="text" required></input>
-                            <label for="main_business_office_zip">Main Office Zip</label>
+                            <label htmlFor="main_business_office_zip">Main Office Zip</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="proposed_property_address" name="proposed_property_address" type="text"></input>
-                            <label for="proposed_property_address">Proposed Address of Equipment/Property</label>
+                            <label htmlFor="proposed_property_address">Proposed Address of Equipment/Property</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="proposed_property_city" name="proposed_property_city" type="text"></input>
-                            <label for="proposed_property_city">Property City</label>
+                            <label htmlFor="proposed_property_city">Property City</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="proposed_property_state" name="proposed_property_state" type="text"></input>
-                            <label for="proposed_property_state">Property State</label>
+                            <label htmlFor="proposed_property_state">Property State</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="proposed_property_zip" name="proposed_property_zip" type="text"></input>
-                            <label for="proposed_property_zip">Property Zip</label>
+                            <label htmlFor="proposed_property_zip">Property Zip</label>
                         </div>
                         <div className="input-section input-number">
                             <input id="years_in_business" name="years_in_business" required type="number"></input>
-                            <label for="years_in_business">Years In Business</label>
+                            <label htmlFor="years_in_business">Years In Business</label>
                         </div>
                         <div className="select-section">
                             <label>Select Type of Business</label>
-                            <select required id="type_of_business" name="type_of_business">
-                                <option selected value="c_corp">C-Corp</option>
+                            <select defaultValue="c_corp" required id="type_of_business" name="type_of_business">
+                                <option value="c_corp">C-Corp</option>
                                 <option value="sub_s_corp">Sub-S Corp</option>
                                 <option value="sole_proprietorship">Sole Proprietorship</option>
                                 <option value="llc">LLC</option>
@@ -149,58 +147,58 @@ class CreditApp extends React.Component {
                         </div>
                         <div id="other-type-section" className="input-section input-text other-type">
                             <input id="other_type" name="other_type" type="text"></input>
-                            <label for="other_type">Other Type:</label>
+                            <label htmlFor="other_type">Other Type:</label>
                         </div>
                         <div className="input-section input-number">
                             <input id="annual_revenue" name="annual_revenue" type="number"></input>
-                            <label for="annual_revenue">Annual Revenue</label>
+                            <label htmlFor="annual_revenue">Annual Revenue</label>
                         </div>
                         <div className="input-section input-number">
                             <input id="number_of_employees" name="number_of_employees" type="number"></input>
-                            <label for="number_of_employees">Number of Employees</label>
+                            <label htmlFor="number_of_employees">Number of Employees</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="federal_ID_number" name="federal_ID_number" type="text"></input>
-                            <label for="federal_ID_number">Federal ID Number</label>
+                            <label htmlFor="federal_ID_number">Federal ID Number</label>
                         </div>
                         <div className="input-section input-text">
                             <input id="d_and_b_number" name="d_and_b_number" type="text"></input>
-                            <label for="d_and_b_number">D&B Number</label>
+                            <label htmlFor="d_and_b_number">D&B Number</label>
                         </div>
                         <div className="select-section">
                             <label>Are you public?</label>
-                            <select id="are_you_public" name="are_you_public">
+                            <select defaultValue="no" id="are_you_public" name="are_you_public">
                                 <option value="yes">yes</option>
-                                <option selected value="no">no</option>
+                                <option value="no">no</option>
                             </select>
                         </div>
                         <div id="ticker-symbol-section" className="input-section input-text">
                             <input id="ticker_symbol" name="ticker_symbol" type="text"></input>
-                            <label for="ticker_symbol">Ticker Symbol</label>
+                            <label htmlFor="ticker_symbol">Ticker Symbol</label>
                         </div>
                         <p className='sub-header'>Deal Summary</p>
                         <div className="input-section input-text">
                             <input id="total_size_of_transaction" name="total_size_of_transaction" type="text"></input>
-                            <label for="total_size_of_transaction">Total size of transaction</label>
+                            <label htmlFor="total_size_of_transaction">Total size of transaction</label>
                         </div>
                         <div className="select-section">
-                            <label>Length of terms (Months)</label>
-                            <select id="length_of_terms" name="leng_of_terms">
-                                <option selected value="12">12</option>
+                            <label>Length of term (Months)</label>
+                            <select defaultValue="12" id="length_of_terms" name="leng_of_terms">
+                                <option value="12">12</option>
                                 <option value="24">24</option>
-                                <option selected value="36">36</option>
+                                <option value="36">36</option>
                                 <option value="48">48</option>
-                                <option selected value="60">60</option>
+                                <option value="60">60</option>
                             </select>
                         </div>
                         <div className="input-text-area">
-                            <input className="file-input" name="equiptment_description_attachment" type="file" />
+                            {/*<input className="file-input" name="equiptment_description_attachment" type="file" />*/}
                             <textarea id="comments" name="comments"></textarea>
-                            <label for="comments">Equiptment Description</label>
+                            <label htmlFor="comments">Equiptment Description</label>
                         </div>
                         <div className="input-text-area">
                             <textarea id="comments" name="comments"></textarea>
-                            <label for="comments">General Comments</label>
+                            <label htmlFor="comments">General Comments</label>
                         </div>
                         <div className="submit-button-area">
                             <input type="submit" value="Send" />
