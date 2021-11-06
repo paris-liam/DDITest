@@ -78,10 +78,6 @@ class CreditApp extends React.Component {
                             <input type="tel" id="business_phone_number" name="business_phone_number" required></input>
                             <label htmlFor="business_phone_number">Business Phone Number</label>
                         </div>
-                        <div className="input-section input-tel">
-                            <input id="fax_number" name="fax_number" type="tel"></input>
-                            <label htmlFor="fax_number">Fax Number</label>
-                        </div>
                         <div className="input-section input-text">
                             <input id="contact_persons_name" name="contact_persons_name" type="text" required></input>
                             <label htmlFor="contact_persons_name">Contact Person's Name</label>
@@ -192,9 +188,9 @@ class CreditApp extends React.Component {
                             </select>
                         </div>
                         <div className="input-text-area">
-                            {/*<input className="file-input" name="equiptment_description_attachment" type="file" />*/}
+                            {/*<input className="file-input" name="equipment_description_attachment" type="file" />*/}
                             <textarea id="comments" name="comments"></textarea>
-                            <label htmlFor="comments">Equiptment Description</label>
+                            <label htmlFor="comments">Equipment Description</label>
                         </div>
                         <div className="input-text-area">
                             <textarea id="comments" name="comments"></textarea>
