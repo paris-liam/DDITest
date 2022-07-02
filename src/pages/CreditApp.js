@@ -67,6 +67,8 @@ class CreditApp extends React.Component {
                         form-name="credit-app"
                         method="post"
                         data-netlify="true"
+                        netlify-honeypot="bot-field"
+                        data-netlify-recaptcha="true"
                     >
                         <input type="hidden" name="bot-field" />
                         <div className="input-section input-text">
