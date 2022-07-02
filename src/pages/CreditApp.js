@@ -69,6 +69,7 @@ class CreditApp extends React.Component {
               form-name="credit-app-ddis"
               method="post"
               data-netlify="true"
+              data-netlify-recaptcha="true"
             >
               <input type="hidden" name="bot-field" />
               <div className="input-section input-text">
@@ -330,6 +331,7 @@ class CreditApp extends React.Component {
                 <textarea id="comments" name="comments"></textarea>
                 <label htmlFor="ddi_comments">General Comments</label>
               </div>
+              <div data-netlify-recaptcha="true"></div>
               <div className="submit-button-area">
                 <input type="submit" value="Send" />
               </div>
