@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
+import ReCAPTCHA from "react-google-recaptcha";
 
 class CreditApp extends React.Component {
   componentDidMount() {
@@ -47,13 +48,6 @@ class CreditApp extends React.Component {
       console.warn(formattedValue);
       transactionSize.value = `$${formattedValue}`;
     });
-
-    let form = document.querySelector("form.credit-app-grid");
-
-    form.addEventListener("onSubmit", () => {
-      form.style.display = "none";
-      document.querySelector("#thanks-for-submitting").style.display = "block";
-    });
   }
 
   render() {
@@ -65,16 +59,16 @@ class CreditApp extends React.Component {
             <h2>Credit Application</h2>
             <form
               className="inputGrid credit-app-grid"
-              name="credit-app"
-              form-name="credit-app-ddis"
+              name="credit-app-ddis"
               method="POST"
               data-netlify="true"
+              data-netlify-recaptcha="true"
             >
               <input type="hidden" name="form-name" value="credit-app-ddis" />
               <div className="input-section input-text">
                 <input
-                  id="applicant_name"
-                  name="applicant_name"
+                  id="ddi_applicant_name"
+                  name="ddi_applicant_name"
                   type="text"
                   required
                 ></input>
@@ -85,8 +79,8 @@ class CreditApp extends React.Component {
               <div className="input-section input-tel">
                 <input
                   type="tel"
-                  id="business_phone_number"
-                  name="business_phone_number"
+                  id="ddi_business_phone_number"
+                  name="ddi_business_phone_number"
                   required
                 ></input>
                 <label htmlFor="ddi_business_phone_number">
@@ -95,8 +89,8 @@ class CreditApp extends React.Component {
               </div>
               <div className="input-section input-text">
                 <input
-                  id="contact_persons_name"
-                  name="contact_persons_name"
+                  id="ddi_contact_persons_name"
+                  name="ddi_contact_persons_name"
                   type="text"
                   required
                 ></input>
@@ -106,8 +100,8 @@ class CreditApp extends React.Component {
               </div>
               <div className="input-section input-tel">
                 <input
-                  id="contact_persons_cell_number"
-                  name="contact_persons_cell_number"
+                  id="ddi_contact_persons_cell_number"
+                  name="ddi_contact_persons_cell_number"
                   type="tel"
                   required
                 ></input>
@@ -117,8 +111,8 @@ class CreditApp extends React.Component {
               </div>
               <div className="input-section input-email">
                 <input
-                  id="contact_persons_email"
-                  name="contact_persons_email"
+                  id="ddi_contact_persons_email"
+                  name="ddi_contact_persons_email"
                   type="email"
                   required
                 ></input>
@@ -127,13 +121,13 @@ class CreditApp extends React.Component {
                 </label>
               </div>
               <div className="input-section input-text">
-                <input id="web_address" name="web_address" type="text"></input>
+                <input id="ddi_web_address" name="ddi_web_address" type="text"></input>
                 <label htmlFor="ddi_web_address">Web Address</label>
               </div>
               <div className="input-section input-text">
                 <input
-                  id="main_business_office_address"
-                  name="main_business_office_address"
+                  id="ddi_main_business_office_address"
+                  name="ddi_main_business_office_address"
                   type="text"
                   required
                 ></input>
@@ -143,8 +137,8 @@ class CreditApp extends React.Component {
               </div>
               <div className="input-section input-text">
                 <input
-                  id="main_business_office_city"
-                  name="main_business_office_city"
+                  id="ddi_main_business_office_city"
+                  name="ddi_main_business_office_city"
                   type="text"
                   required
                 ></input>
@@ -154,8 +148,8 @@ class CreditApp extends React.Component {
               </div>
               <div className="input-section input-text">
                 <input
-                  id="main_business_office_state"
-                  name="main_business_office_state"
+                  id="ddi_main_business_office_state"
+                  name="ddi_main_business_office_state"
                   type="text"
                   required
                 ></input>
@@ -165,8 +159,8 @@ class CreditApp extends React.Component {
               </div>
               <div className="input-section input-text">
                 <input
-                  id="main_business_office_zip"
-                  name="main_business_office_zip"
+                  id="ddi_main_business_office_zip"
+                  name="ddi_main_business_office_zip"
                   type="text"
                   required
                 ></input>
@@ -176,8 +170,8 @@ class CreditApp extends React.Component {
               </div>
               <div className="input-section input-text">
                 <input
-                  id="proposed_property_address"
-                  name="proposed_property_address"
+                  id="ddi_proposed_property_address"
+                  name="ddi_proposed_property_address"
                   type="text"
                 ></input>
                 <label htmlFor="ddi_proposed_property_address">
@@ -186,32 +180,32 @@ class CreditApp extends React.Component {
               </div>
               <div className="input-section input-text">
                 <input
-                  id="proposed_property_city"
-                  name="proposed_property_city"
+                  id="ddi_proposed_property_city"
+                  name="ddi_proposed_property_city"
                   type="text"
                 ></input>
                 <label htmlFor="ddi_proposed_property_city">Property City</label>
               </div>
               <div className="input-section input-text">
                 <input
-                  id="proposed_property_state"
-                  name="proposed_property_state"
+                  id="ddi_proposed_property_state"
+                  name="ddi_proposed_property_state"
                   type="text"
                 ></input>
                 <label htmlFor="ddi_proposed_property_state">Property State</label>
               </div>
               <div className="input-section input-text">
                 <input
-                  id="proposed_property_zip"
-                  name="proposed_property_zip"
+                  id="ddi_proposed_property_zip"
+                  name="ddi_proposed_property_zip"
                   type="text"
                 ></input>
                 <label htmlFor="ddi_proposed_property_zip">Property Zip</label>
               </div>
               <div className="input-section input-number">
                 <input
-                  id="years_in_business"
-                  name="years_in_business"
+                  id="ddi_years_in_business"
+                  name="ddi_years_in_business"
                   required
                   type="number"
                 ></input>
@@ -222,8 +216,8 @@ class CreditApp extends React.Component {
                 <select
                   defaultValue="c_corp"
                   required
-                  id="type_of_business"
-                  name="type_of_business"
+                  id="ddi_type_of_business"
+                  name="ddi_type_of_business"
                 >
                   <option value="c_corp">C-Corp</option>
                   <option value="sub_s_corp">Sub-S Corp</option>
@@ -239,37 +233,37 @@ class CreditApp extends React.Component {
                 id="other-type-section"
                 className="input-section input-text other-type"
               >
-                <input id="other_type" name="other_type" type="text"></input>
+                <input id="ddi_other_type" name="ddi_other_type" type="text"></input>
                 <label htmlFor="ddi_other_type">Other Type:</label>
               </div>
               <div className="input-section input-number">
                 <input
-                  id="annual_revenue"
-                  name="annual_revenue"
+                  id="ddi_annual_revenue"
+                  name="ddi_annual_revenue"
                   type="number"
                 ></input>
                 <label htmlFor="ddi_annual_revenue">Annual Revenue</label>
               </div>
               <div className="input-section input-number">
                 <input
-                  id="number_of_employees"
-                  name="number_of_employees"
+                  id="ddi_number_of_employees"
+                  name="ddi_number_of_employees"
                   type="number"
                 ></input>
                 <label htmlFor="ddi_number_of_employees">Number of Employees</label>
               </div>
               <div className="input-section input-text">
                 <input
-                  id="federal_ID_number"
-                  name="federal_ID_number"
+                  id="ddi_federal_ID_number"
+                  name="ddi_federal_ID_number"
                   type="text"
                 ></input>
                 <label htmlFor="ddi_federal_ID_number">Federal ID Number</label>
               </div>
               <div className="input-section input-text">
                 <input
-                  id="d_and_b_number"
-                  name="d_and_b_number"
+                  id="ddi_d_and_b_number"
+                  name="ddi_d_and_b_number"
                   type="text"
                 ></input>
                 <label htmlFor="ddi_d_and_b_number">D&B Number</label>
@@ -278,8 +272,8 @@ class CreditApp extends React.Component {
                 <label>Are you public?</label>
                 <select
                   defaultValue="no"
-                  id="are_you_public"
-                  name="are_you_public"
+                  id="ddi_are_you_public"
+                  name="ddi_are_you_public"
                 >
                   <option value="yes">yes</option>
                   <option value="no">no</option>
@@ -290,8 +284,8 @@ class CreditApp extends React.Component {
                 className="input-section input-text"
               >
                 <input
-                  id="ticker_symbol"
-                  name="ticker_symbol"
+                  id="ddi_ticker_symbol"
+                  name="ddi_ticker_symbol"
                   type="text"
                 ></input>
                 <label htmlFor="ddi_ticker_symbol">Ticker Symbol</label>
@@ -299,8 +293,8 @@ class CreditApp extends React.Component {
               <p className="sub-header">Deal Summary</p>
               <div className="input-section input-text">
                 <input
-                  id="total_size_of_transaction"
-                  name="total_size_of_transaction"
+                  id="ddi_total_size_of_transaction"
+                  name="ddi_total_size_of_transaction"
                   type="text"
                 ></input>
                 <label htmlFor="ddi_total_size_of_transaction">
@@ -311,8 +305,8 @@ class CreditApp extends React.Component {
                 <label>Length of term (Months)</label>
                 <select
                   defaultValue="12"
-                  id="length_of_terms"
-                  name="leng_of_terms"
+                  id="ddi_length_of_terms"
+                  name="ddi_leng_of_terms"
                 >
                   <option value="12">12</option>
                   <option value="24">24</option>
@@ -323,14 +317,14 @@ class CreditApp extends React.Component {
               </div>
               <div className="input-text-area">
                 {/*<input className="file-input" name="equipment_description_attachment" type="file" />*/}
-                <textarea id="comments" name="comments"></textarea>
+                <textarea id="ddi_comments_equiptment_description" name="ddi_comments_equiptment_description"></textarea>
                 <label htmlFor="ddi_comments_equiptment_description">Equipment Description</label>
               </div>
               <div className="input-text-area">
-                <textarea id="comments" name="comments"></textarea>
+                <textarea id="ddi_comments" name="ddi_comments"></textarea>
                 <label htmlFor="ddi_comments">General Comments</label>
               </div>
-              <div data-netlify-recaptcha="true"></div>
+              <ReCAPTCHA sitekey="6Lfz4cggAAAAAP2ZpL8LHHLCIzv6bfqrRa6VCVhe" />
               <div className="submit-button-area">
                 <input type="submit" value="Send" />
               </div>
