@@ -5,8 +5,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 class CreditApp extends React.Component {
   componentDidMount() {
     let inputs = document.querySelectorAll("input");
-    let typeOfBusiness = document.querySelector("#type_of_business");
-    let publicQuestion = document.querySelector("#are_you_public");
+    let typeOfBusiness = document.querySelector("#ddi_type_of_business");
+    let publicQuestion = document.querySelector("#ddi_are_you_public");
 
     typeOfBusiness.addEventListener("change", (evt) => {
       console.warn(evt.target.value);
