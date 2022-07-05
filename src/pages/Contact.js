@@ -72,6 +72,7 @@ const Contact = () => (
                         data-netlify-honeypot="bot-field"
                         data-netlify-recaptcha="true"
                     >
+                        <input type="hidden" name="bot-field" />
                         <input type="hidden" name="form-name" value="contact" />
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" />

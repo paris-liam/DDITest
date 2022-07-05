@@ -5,8 +5,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 class CreditApp extends React.Component {
   componentDidMount() {
     let inputs = document.querySelectorAll("input");
-    let typeOfBusiness = document.querySelector("#type_of_business");
-    let publicQuestion = document.querySelector("#are_you_public");
+    let typeOfBusiness = document.querySelector("#ddi_type_of_business");
+    let publicQuestion = document.querySelector("#ddi_are_you_public");
 
     typeOfBusiness.addEventListener("change", (evt) => {
       console.warn(evt.target.value);
@@ -36,7 +36,7 @@ class CreditApp extends React.Component {
         }
       });
     });
-    let transactionSize = document.querySelector("#total_size_of_transaction");
+    let transactionSize = document.querySelector("#ddi_total_size_of_transaction");
     transactionSize.addEventListener("input", (evt) => {
       let number = evt.target.value.toString();
       let noDollar = number.replace("$", "");
@@ -62,8 +62,10 @@ class CreditApp extends React.Component {
               name="credit-app-ddis"
               method="POST"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
               data-netlify-recaptcha="true"
             >
+              <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="credit-app-ddis" />
               <div className="input-section input-text">
                 <input
