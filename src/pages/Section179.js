@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'gatsby-link';
+import React from 'react';
 import Layout from '../components/layout';
 
 class Section179 extends React.Component {
@@ -106,7 +106,7 @@ class Section179 extends React.Component {
         }
         if (goodValue) {
             const taxBrack = document.getElementById('taxBrack').value;
-            const deduction = purchaseAmount >= 1040000 ? 1040000 : purchaseAmount;
+            const deduction = purchaseAmount >= 1050000 ? 1050000 : purchaseAmount;
             const bonus = deduction >= 1040000 ? purchaseAmount - 1040000 : '-';
             const firstYearDeduction = deduction;
             const CashSavings = purchaseAmount * taxBrack;
@@ -140,7 +140,7 @@ class Section179 extends React.Component {
             <Layout><div className="pageGrid">
                 <div className="copy">
                     <h2>
-                        Use the Below Calculator to Check Your Tax Write Off for
+                        Use the Below Calculator to Check Your Tax Write Off for&nbsp; 
                         {this.state.date.getFullYear()}
                     </h2>
                     <p>
