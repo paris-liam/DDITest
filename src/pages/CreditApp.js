@@ -36,7 +36,7 @@ class CreditApp extends React.Component {
         }
       });
     });
-    let transactionSize = document.querySelector("#total_size_of_transaction");
+    let transactionSize = document.querySelector("#ddi_total_size_of_transaction");
     transactionSize.addEventListener("input", (evt) => {
       let number = evt.target.value.toString();
       let noDollar = number.replace("$", "");
