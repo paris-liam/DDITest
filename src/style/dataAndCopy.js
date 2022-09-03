@@ -51,14 +51,6 @@ export const teamInfo = {
     body: 'Mike began his career at DDI in January 2015. He has over 22 years of experience in finance. Prior to joining DDI, Mike spent 13 years running equity research sales operations at Instinet and Axiom Capital. His focus was in the Oil and Gas and Biotechnology industries, providing alternative and customized research to multi-billion dollar Hedge Funds and Investment Advisors. Prior to that, Mike was a Sales Trader at Sanford Bernstein and an Institutional Wholesaler for Goldman Sachs Asset Management.  Mike graduated from St. Joseph’s University in Philadelphia in 1993 and lives in Fair Haven, NJ.',
     email: 'mdolan@ddicapitalinc.com',
   },
-  'Tina-Perna': {
-    image: null,
-    name: 'Tina Perna',
-    title: 'Operations Specialist ',
-    location: 'Bedminster, NJ ',
-    body: 'Tina joined DDI Capital in December 2014 after working in the banking industry for 4 years.  As the Operations Specialist, Tina’s primary responsibilities include managing the accounts receivable reporting, bank account reconciliations, and various tax processes including sales tax and business personal property tax.  In addition to that, she is also the payroll and billing administrator for Stonehenge Resources LLC, a DDI owned company.  Tina is a graduate of West Chester University of Pennsylvania.',
-    email: 'tinar@ddicapitalinc.com'
-  },
   'Christopher-Flammer': {
     image: null,
     name: 'Christopher Flammer',
@@ -88,7 +80,7 @@ export const teamInfo = {
     name: 'Christian Mosiciki',
     title: 'Managing Director',
     location: 'Quogue, NY',
-    body: 'Christian joined DDI Capital in mid-2015 after 8 successful years as an institutional equity salesperson at several broker-dealers and banks (most recently FBR, Inc.). Christian graduated from Middlebury College with a degree in English in 2006 and has lived in New York City ever since. He initially spent 3 years in public/investor relations before pursuing a career in financial product/services sales.',
+    body: 'Christian manages DDI’s Westhampton location and specializes in end-user asset management. He joined DDI in 2015 after 8 years in institutional equity sales, providing customized, idea-driven research to a curated group of hedge funds and mutual funds. Christian launched his career at an Omnicom subsidiary, providing issues management and investor relations services to several pharmaceutical clients. Christian graduated from Middlebury College with a degree in English in 2006 and is an avid surfcaster.',
     email: 'cmoscicki@ddicapitalinc.com',
   },
   'Greg-Nappi': {
