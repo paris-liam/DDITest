@@ -105,17 +105,17 @@ useEffect(()=>{
           <div className='WhoContainer'>
             <div className='WhoLetter'>
               <p>&emsp;To Our Valued Partners – When we founded DDI Capital in 1993, we wanted to create a company that valued honest work and genuine customer interaction. We wanted to create a place where employees understand their clients and the business challenges they face, and collaborate to find the best solutions. 25 years later, DDI Capital has grown into a company that accomplishes all this and much more.</p>
-              <p>&emsp;Our philosophy over the last two decades has been to always put our clients’ needs above our own. While we pride ourselves on being financial consultants to our customers, we strive to make each business interaction much more than that. Our employees create a personal relationship with each customer, allowing us to better understand your needs and wants. We work with our clients every step of the way in order to offer best of breed solutions aimed at allowing partners to continue their growth, and create financial programs that will fit each partner’s budget. DDI knows that your business is not like anyone else’s: your financial program shouldn’t be either.</p>
-              <p>&emsp;Adaptability is what DDI does best. We are not satisfied until we find a solution that fits the ethos of your business and allows your company grow and prosper.   Welcome to DDI Capital, we’re happy you’re here.</p>
+              <p>&emsp;Our philosophy has always been to put our clients’ needs above our own. While we pride ourselves on being financial consultants to our customers, we strive to make each business interaction much more than that. Our employees create a personal relationship with each customer, allowing us to better understand your needs and wants. We work with our clients every step of the way in order to offer best of breed solutions aimed at allowing partners to continue their growth, and create financial programs that will fit each partner’s budget. DDI knows that your business is not like anyone else’s: your financial program shouldn’t be either.</p>
+              <p>&emsp;Adaptability is what DDI does best. We are not satisfied until we find a solution that fits the ethos of your business and allows your company to grow and prosper.   Welcome to DDI Capital, we’re happy you’re here.</p>
               <p>Sincerely,<br />Mike Moran<br />Founder and CEO</p>
             </div>
             <div className='WhoList'>
               <ul className="fa-ul">
-                <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Over 25-years of experience</li>
+                <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Over 30 years of experience</li>
                 <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Specialized leasing solutions for all industries and customer types</li>
                 <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Competitive rates and unmatched flexibility</li>
-                <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Over 3,000 end-users including startups and Fortune 100s</li>
-                <li><span className="fa-li"><i className="fas fa-check-circle" /></span>Headquartered in Bedminster, New Jersey with satellite offices located in Spring Lake, New Jersey; New Haven, Connecticut; Ponte Vedra, Florida; and Charlotte, North Carolina.</li>
+                <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Over 5,000 end-users including startups and Fortune 100s</li>
+                <li><span className="fa-li"><i className="fas fa-check-circle" /></span>Headquartered in Parsippany, New Jersey with satellite offices in Spring Lake, NJ; Westhampton, NY; and Ponte Vedra, FL.</li>
                 <li><span className="fa-li"><i className="fas fa-check-circle" /></span>Proud members of the National Equipment Finance Association (NEFA)</li>
               </ul>
             </div>
@@ -127,8 +127,7 @@ useEffect(()=>{
             <div className='focusedrow'>
               <div className='whyItem' id='experience'>
                 <h1 style={{ marginRight: '4.5vw' }}><i className="fa fa-clock" /></h1>
-                <p><strong>Experience:</strong> DDI has been an innovator in the leasing industry for over 25 years.
-                  Our professionals are experts in technology and have extensive relationships to help you source the right solution for your needs.
+                <p><strong>Experience:</strong>DDI has been an innovator in the leasing industry for over 30 years. Our professionals are experts and have extensive relationships to help you source the right solution for your needs.
               </p>
               </div>
               <div className='whyItem' id='rates'>
@@ -143,7 +142,7 @@ useEffect(()=>{
               </div>
               <div className='whyItem' id='creative'>
                 <h1 style={{ marginRight: '4.5vw' }}><i className="fa fa-paint-brush" /></h1>
-                <p><strong>Creativity:</strong> Every end-user is unique: your leasing solution should be too. DDI works side by side with our partners to design the most effective and efficient financing plans to fit your business model and help your company grow.</p>
+                <p><strong>Creativity:</strong> Every end-user is unique. Your leasing solution should be too. DDI works side by side with our partners to design the most effective and efficient financing plans to fit your business model and help your company grow.</p>
               </div>
             </div>
             <div className='focusedrow'>
@@ -167,7 +166,7 @@ useEffect(()=>{
                 <h1>EQUIPMENT FINANCED</h1>
                 <p>
                   Because we are aligned with all the major hardware manufacturers and their partners, DDI is able to assist you with a wide range of technology options.
-                    Select any vendor and we can arrange the leasing program that compliments your technology solution. We also offer specific technical expertise and consultative guidance on a variety of technology alternatives.
+                    Select any vendor and we can arrange the leasing program that compliments your technology solution.
                 </p>
               </div>
               <div className='EquiptTextLists'>

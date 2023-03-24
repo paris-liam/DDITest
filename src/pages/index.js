@@ -78,7 +78,7 @@ return (
                 />
                 <div className='CoverText'>
                     <h1>DDI Capital is your Independent Trusted Advisor </h1>
-                        <p>Whether you are just starting out or ready to bring your current organization to a new level of growth, DDI Capital offers you the most innovative financial strategies allowing you to acquire and finance technology solutions at the best possible price.</p>
+                        <p>DDI Capital offers the most innovative financing strategies and cash-flow solutions, allowing our clients to acquire and consume technology at the best possible price.</p>
                         <div className='LearnMore'><button onClick={() => {learnScroll()}}> Learn More &nbsp;&nbsp;<i className="fa fa-arrow-alt-circle-down" /></button></div>
                 </div>
             </div>
@@ -93,15 +93,15 @@ return (
                 <div><h1><i className="fa fa-users" /></h1><p>Our team’s collective experience, industry contacts and collaborative,  consultative work process ensure that you will get the best possible solution with each lease transaction.</p></div>
                 </div>
                 <div className='focusedRow'>
-                <div><h1><i className="fa fa-hands-helping" /></h1><p>We view our clients as business partners and approach each deal with a long-term focus.  Each and every one of our DDI professionals is acutely aware of the relationship between the growth of your business and ours.</p></div>
-                <div><h1><i className="fa fa-hdd" /></h1><p>Our professionals know more than leasing – they are familiar with the technology that you use and they are willing to spend the time with you to put it to maximum advantage.</p></div>
+                <div><h1><i className="fa fa-hands-helping" /></h1><p>We view our clients as business partners and approach each deal with a long-term outlook. Each of our DDI professionals is laser-focused on strategies to help you grow your business.</p></div>
+                <div><h1><i className="fa fa-hdd" /></h1><p>We work with many of the largest and most diversified corporations in the country. They choose DDI Capital because we offer greater flexibility, more speed and a more customized finance experience than any of our competitors.</p></div>
                 </div>
                 </div>
             </div>
             <div className='SolutionsSlide'>
         <h1 className="title">
-        Whether you’re a startup or a Fortune 100 company
-        DDI has the appropriate solutions to help you finance your growth
+            Whether you’re a small, family-owned business or a Fortune 100 company 
+            DDI has the appropriate solutions to help you finance your growth
         </h1>
         <SimpleSlider />
         </div>

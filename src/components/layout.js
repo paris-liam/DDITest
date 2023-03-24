@@ -86,7 +86,7 @@ render={data =>(
           </ul>
           <ul className='SidebarContact'>
             <li className="sideenv"><a href="mailto:info@ddicapitalinc.com"><i className="fa fa-envelope" />&nbsp;&nbsp; Email us</a></li>
-
+            {/*  TODO: (https://www.linkedin.com/company/ddi-capital-inc/) */}
             <li className="sidephone"><i className="fa fa-phone-square" />  (908)-781-9300</li>
             <li>
               <a href="https://smartpay.profitstars.com/express/DDICPP">
