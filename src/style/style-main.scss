@@ -153,6 +153,9 @@ li {
     &:hover {
       color: #292a3e;
     }
+    svg {
+      width: 25px;
+    }
   }
   & > li:nth-child(3) {
     padding-top: 1vh;
