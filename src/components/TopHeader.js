@@ -30,7 +30,7 @@ class TopHeader extends React.Component {
         <div className='HamburgerContent'>
           <div className='contact'>
             <li className='envelope'><a href="mailto:info@ddicapitalinc.com"><i className="fa fa-envelope" /><p>&nbsp;&nbsp; Email us</p></a></li>
-            {/*          TODO: (https://www.linkedin.com/company/ddi-capital-inc/) */}
+            <li className="linkede"><a href="https://www.linkedin.com/company/ddi-capital-inc/"><i className="fab fa-linkedin-in" /></a></li>
             <li><i className="fa fa-phone-square" /><p>&nbsp;&nbsp;(908)-781-9300</p></li>
             <li className='payBillsButton'>
               <a href="https://smartpay.profitstars.com/express/DDICPP"><button>Pay Bills Online</button></a>
