@@ -85,8 +85,8 @@ render={data =>(
             <Link to="/Contact" onClick={toggleNav}><h3>Contact</h3></Link>
           </ul>
           <ul className='SidebarContact'>
-            <li className="sideenv"><a href="mailto:info@ddicapitalinc.com"><i className="fa fa-envelope" />&nbsp;&nbsp; Email us</a></li>
             <li className="sidelinked"><a href="https://www.linkedin.com/company/ddi-capital-inc/"><i className="fab fa-linkedin-in" /></a></li>
+            <li className="sideenv"><a href="mailto:info@ddicapitalinc.com"><i className="fa fa-envelope" />&nbsp;&nbsp; Email us</a></li>
             <li className="sidephone"><i className="fa fa-phone-square" />  (908)-781-9300</li>
             <li>
               <a href="https://smartpay.profitstars.com/express/DDICPP">
