@@ -29,7 +29,7 @@ class TopHeader extends React.Component {
         </div>
         <div className='HamburgerContent'>
           <div className='contact'>
-            <li className='envelope'><a href="mailto:g.nappi@ddileasing.com"><i className="fa fa-envelope" /><p>&nbsp;&nbsp; Email us</p></a></li>
+            <li className='envelope'><a href="mailto:info@ddicapitalinc.com"><i className="fa fa-envelope" /><p>&nbsp;&nbsp; Email us</p></a></li>
             <li><i className="fa fa-phone-square" /><p>&nbsp;&nbsp;(908)-781-9300</p></li>
             <li className='payBillsButton'>
               <a href="https://smartpay.profitstars.com/express/DDICPP"><button>Pay Bills Online</button></a>
