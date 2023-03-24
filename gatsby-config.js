@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-netlify',
     'gatsby-plugin-netlify-cache',
+    'gatsby-plugin-fontawesome-css',
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
