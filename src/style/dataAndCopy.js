@@ -3,7 +3,7 @@ export const sliderInfo = [
   {
     icon: 'first-aid',
     title: 'Healthcare',
-    body: 'DDI has worked alongside healthcare providers since 1993, easing financial concerns and constraints through our flexible leasing and financing solutions. We are experts at helping you effectively manage cash flow so you can continue to focus on providing quality care.',
+    body: 'DDI has worked alongside healthcare providers for more than three decades, easing financial concerns and constraints through our flexible leasing and financing solutions. We are experts at helping you effectively manage cash flow so you can continue to focus on providing quality care.',
   },
   {
     icon: 'graduation-cap',
