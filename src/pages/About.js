@@ -93,10 +93,10 @@ useEffect(()=>{
           />
           <div className='CoverText' id='AboutCoverText'>
             <h1>
-              Independent Trusted Advisor
+              Trusted Independent Advisor
             </h1>
             <p>
-              With so many financing options, it’s not always easy to know which solution will work best for your organization. For more than 25 years, we’ve delivered independent and innovative technology leasing and financing solutions designed to meet the specific needs of our clients. Reach out to DDI: we will make your decision easy.
+              With so many financing options, it’s not always easy to know which solution will work best for your organization. Since 1993, we’ve delivered independent and innovative technology leasing and financing solutions designed to meet the specific needs of our clients. Reach out to DDI: we will make your decision easy.
             </p>
           </div>
         </div>
