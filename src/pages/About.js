@@ -127,7 +127,7 @@ useEffect(()=>{
             <div className='focusedrow'>
               <div className='whyItem' id='experience'>
                 <h1 style={{ marginRight: '4.5vw' }}><i className="fa fa-clock" /></h1>
-                <p><strong>Experience:</strong>DDI has been an innovator in the leasing industry for over 30 years. Our professionals are experts and have extensive relationships to help you source the right solution for your needs.
+                <p><strong>Experience:</strong> DDI has been an innovator in the leasing industry for over 30 years. Our professionals are experts and have extensive relationships to help you source the right solution for your needs.
               </p>
               </div>
               <div className='whyItem' id='rates'>

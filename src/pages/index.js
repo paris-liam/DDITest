@@ -77,7 +77,7 @@ return (
                 style={gatsbyImgStyle}
                 />
                 <div className='CoverText'>
-                    <h1>DDI Capital is your Independent Trusted Advisor </h1>
+                    <h1>DDI Capital is your Trusted Independent Advisor </h1>
                         <p>DDI Capital offers the most innovative financing strategies and cash-flow solutions, allowing our clients to acquire and consume technology at the best possible price.</p>
                         <div className='LearnMore'><button onClick={() => {learnScroll()}}> Learn More &nbsp;&nbsp;<i className="fa fa-arrow-alt-circle-down" /></button></div>
                 </div>
