@@ -24,6 +24,7 @@ const Customers = () => (
       />
       <div className='CoverText' id='SingleCoverText'>
         <h1>Focused on You – Where you work</h1>
+        <p>Our professionals know more than leasing – they are familiar with financing the technology YOU use – and they are willing to spend the time with you to put it to maximum advantage.</p>
       </div>
     </div>
     <div className='focusedslide' id='singleslide'>

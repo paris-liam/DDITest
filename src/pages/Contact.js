@@ -39,21 +39,15 @@ const Contact = () => (
                             <li>Ponte Vedra, FL</li>
                             <li>Tel: 904-473-5413</li>
                         </ul>
-                        <ul id="north">
-                            <li>North Haven, CT</li>
-                            <li>Tel: 203-821-7825</li>
-                        </ul>
-                    </div>
-                    <div>
                         <ul id="quogue">
                             <li>Westhampton, NY</li>
                             <li>Tel: 631-996-2675</li>
                         </ul>
+                        <ul id="spring">
+                            <li>Spring Lake, NJ</li>
+                            <li>Tel: 732-449-1999</li>
+                        </ul>
                     </div>
-                    <ul id="spring">
-                        <li>Spring Lake, NJ</li>
-                        <li>Tel: 732-449-1999</li>
-                    </ul>
                 </div>
                 <div className="ContactForm">
                     <form
