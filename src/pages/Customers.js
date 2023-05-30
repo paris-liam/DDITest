@@ -24,7 +24,7 @@ const Customers = () => (
       />
       <div className='CoverText' id='SingleCoverText'>
         <h1>Focused on You – Where you work</h1>
-        <p>Our professionals know more than leasing – they are familiar with the technology that you use – and they are willing to spend the time with you to put it to maximum advantage.</p>
+        <p>Our professionals know more than leasing – they are familiar with financing the technology YOU use – and they are willing to spend the time with you to put it to maximum advantage.</p>
       </div>
     </div>
     <div className='focusedslide' id='singleslide'>
@@ -36,14 +36,14 @@ const Customers = () => (
           <ul className="fa-ul">
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span> Competitive Lease Rates with Highly Flexible Terms and Conditions</li>
             <ul>
-              <li>Multiple Lease Structures – Defer payments, Step Leases, Tech Upgrades</li>
+              <li>Multiple Lease Structures – Deferred payments, Step Leases, Tech Upgrades</li>
               <li>Mid-Lease Options – Upgrade, Add On, Refinance, Restructure or Swap</li>
               <li>End of Lease Options – Purchase, Renew or Return Equipment</li>
             </ul>
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Independent Financial Consultant with Industry Expertise</li>
             <ul>
               <li>Marketing and Consulting During Life of the Lease</li>
-              <li>Aligned with All Major Hardware Manufacturers and Their Partners to Provide a Wide Range of Technology Options</li>
+              <li>Aligned with All Major Hardware Manufacturers and Their Partners to Provide a Wide Range of Technology Financing Options</li>
             </ul>
             <li><span className="fa-li" ><i className="fas fa-check-circle" /></span>Proactive – Adaptable – Collaborative</li>
             <ul>

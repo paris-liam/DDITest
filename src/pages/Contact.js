@@ -30,50 +30,36 @@ const Contact = () => (
                 <div className="ContactInfo">
                     <ul id="corporate">
                         <li>DDI Capital Headquarters</li>
-                        <li>221 Somerville Road</li>
-                        <li>Bedminster, NJ 07921</li>
+                        <li>181 New Road, Suite 304</li>
+                        <li>Parsippany, NJ 07054</li>
                         <li>Tel: 908-781-9300</li>
-                        <li>Fax: 908-781-7906</li>
                     </ul>
                     <div>
                         <ul id="ponte">
                             <li>Ponte Vedra, FL</li>
-                            <li>Tel: 904-280-4464</li>
-                            <li>Fax: 904-280- 4431</li>
-                        </ul>
-                        <ul id="north">
-                            <li>North Haven, CT</li>
-                            <li>Tel: 203-821-7825</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul id="charlotte">
-                            <li>Charlotte, NC</li>
-                            <li>Tel: 704-843-9363</li>
-                            <li>Fax: 704-843-9462</li>
+                            <li>Tel: 904-473-5413</li>
                         </ul>
                         <ul id="quogue">
                             <li>Westhampton, NY</li>
                             <li>Tel: 631-996-2675</li>
                         </ul>
+                        <ul id="spring">
+                            <li>Spring Lake, NJ</li>
+                            <li>Tel: 732-449-1999</li>
+                        </ul>
                     </div>
-                    <ul id="spring">
-                        <li>Spring Lake, NJ</li>
-                        <li>Tel: 732-449-1999</li>
-                        <li>Fax: 732-449-6128</li>
-                    </ul>
                 </div>
                 <div className="ContactForm">
                     <form
-                        name="contact"
-                        form-name="contact"
+                        name="contact-new"
+                        form-name="contact-new"
                         method="POST"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
                         data-netlify-recaptcha="true"
                     >
                         <input type="hidden" name="bot-field" />
-                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="hidden" name="form-name" value="contact-new" />
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" />
                         <label htmlFor="email">Email</label>

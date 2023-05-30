@@ -173,17 +173,22 @@
 .ContactInfo{
   width: 50%;
   display:flex; ;   
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
   & > div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+  }
+  & > ul {
+    margin-right: 30px;
+    justify-content: center;
   }
   ul{
-    width: 50%;
     list-style:none;
     text-align:left;
   }
-  ul:first-of-type{
+  ul{
     margin-bottom:2vh;
   }
 }
