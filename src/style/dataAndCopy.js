@@ -73,7 +73,7 @@ export const teamInfo = {
     title: 'Vice President',
     location: 'Parsippany, NJ',
     body: 'Terry began working at DDI Capital in 1995 and was the company’s first employee!  As Vice President, Terry focuses on both corporate and education clients.  Prior to working at DDI, Terry worked for six years at an IBM reseller.  DDI continues to support IBM clients, particularly in the iSeries market.  Terry is also a partner in the DDI Company, Stonehenge Resources – a staffing and recruiting firm.  Terry is a graduate of Fairfield University.',
-    email: 'terrym@ddicapitalinc.com',
+    email: 'terrym@ddileasing.com',
   },
   'Christian-Mosiciki': {
     image: null,
