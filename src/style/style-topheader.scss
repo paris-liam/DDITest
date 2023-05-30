@@ -67,12 +67,16 @@
   }
 }
 
-.envelope {
+.envelope, .linked {
   a{
     text-decoration:none;
     color:inherit;
     &:hover{
       color:#292A3E;
+    }
+
+    svg {
+      width: 1.25em;
     }
   }
 }
