@@ -66,7 +66,7 @@ class CreditApp extends React.Component {
               data-netlify-recaptcha="true"
             >
               <input type="hidden" name="bot-field" />
-              <input type="hidden" name="form-name" value="credit-app-ddis" />
+              <input type="hidden" name="form-name" value="credit-app-ddis-new" />
               <div className="input-section input-text">
                 <input
                   id="ddi_applicant_name"
