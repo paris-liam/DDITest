@@ -3,6 +3,7 @@ import { gatsbyImgStyle } from '../style/dataAndCopy';
 import IMG from 'gatsby-image';
 import Layout from '../components/layout';
 import { StaticQuery } from 'gatsby';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => (
     <Layout>
@@ -55,10 +56,8 @@ const Contact = () => (
                         form-name="contact-new"
                         method="POST"
                         data-netlify="true"
-                        data-netlify-honeypot="bot-field"
                         data-netlify-recaptcha="true"
                     >
-                        <input type="hidden" name="bot-field" />
                         <input type="hidden" name="form-name" value="contact-new" />
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" />
@@ -67,6 +66,8 @@ const Contact = () => (
                         <label htmlFor="message">Message</label>
                         <textarea name="message" />
                         <div data-netlify-recaptcha="true"></div>
+                        <ReCAPTCHA sitekey="6Lfz4cggAAAAAP2ZpL8LHHLCIzv6bfqrRa6VCVhe" />
+
                         <div>
                             <input type="submit" value="Send" />
                         </div>
