@@ -59,7 +59,7 @@ class CreditApp extends React.Component {
             <h2>Credit Application</h2>
             <form
               className="inputGrid credit-app-grid"
-              name="credit-app-ddis"
+              name="credit-app-ddis-new"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
