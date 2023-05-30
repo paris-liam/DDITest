@@ -51,15 +51,15 @@ const Contact = () => (
                 </div>
                 <div className="ContactForm">
                     <form
-                        name="contact"
-                        form-name="contact"
+                        name="contact-new"
+                        form-name="contact-new"
                         method="POST"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
                         data-netlify-recaptcha="true"
                     >
                         <input type="hidden" name="bot-field" />
-                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="hidden" name="form-name" value="contact-new" />
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" />
                         <label htmlFor="email">Email</label>
