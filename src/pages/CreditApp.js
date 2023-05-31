@@ -324,7 +324,7 @@ class CreditApp extends React.Component {
                 <textarea id="ddi_comments" name="ddi_comments"></textarea>
                 <label htmlFor="ddi_comments">General Comments</label>
               </div>
-              <ReCAPTCHA sitekey="6Lfz4cggAAAAAP2ZpL8LHHLCIzv6bfqrRa6VCVhe" />
+              <ReCAPTCHA sitekey="6Lc7mVQmAAAAAKpL8sAYh6GEKFGLSWGQ4ac728Wy" />
               <div className="submit-button-area">
                 <input type="submit" value="Send" />
               </div>
