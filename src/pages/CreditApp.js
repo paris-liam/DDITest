@@ -61,7 +61,13 @@ class CreditApp extends React.Component {
               name="credit-app-ddis-new"
               method="POST"
               data-netlify="true"
+              netlify-honeypot="bot-field"
             >
+              <p style={{visibility: 'hidden'}}>
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </p>
               <input type="hidden" name="form-name" value="credit-app-ddis-new" />
               <div className="input-section input-text">
                 <input
