@@ -199,7 +199,7 @@ class Section179 extends React.Component {
                             <div>${this.state.deducation}</div>
                             <div>
                                 <p>Bonus Depreciation:</p>
-                                <p>(100% in {this.state.date.getFullYear()})</p>
+                                <p>(80% in {this.state.date.getFullYear()})</p>
                             </div>
                             <div>${this.state.bonus}</div>
                             <div>Normal First Year Depreciation:</div>
