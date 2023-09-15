@@ -49,7 +49,6 @@ export default function Section179() {
 
     return (<Layout><div className="pageGrid">
         <div className="copy">
-            <h1>{purchaseAmount}</h1>
             <h2>
                 Use the Below Calculator to Check Your Tax Write Off for&nbsp;
                 {date.getFullYear()}
