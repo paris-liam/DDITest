@@ -110,7 +110,8 @@ export default function Section179() {
                             style={{
                                 display: 'inline-block',
                                 outline: 'none',
-                                border: 'none'
+                                border: '1px #585b8c solid',
+                                width: '50%'
                             }}
                             className="numberInput"
                             onChange={(e) => {
