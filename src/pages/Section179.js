@@ -62,8 +62,6 @@ export default function Section179() {
             </p>
         </div>
 
-
-
         <div className="copy">
             <p style={{ fontSize: '.8em' }}>
                 To take advantage of these high Section 179 limits for{' '}

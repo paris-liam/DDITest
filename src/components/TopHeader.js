@@ -59,6 +59,7 @@ class TopHeader extends React.Component {
                 <ul>
                   <li><Link to="/Customers">Client Offerings</Link></li>
                   <li><Link to="/Vendors">Vendor Programs</Link></li>
+                  <li><Link to="/Section179">Section 179 Calculator</Link></li>
                 </ul>
               </div>
             </li>

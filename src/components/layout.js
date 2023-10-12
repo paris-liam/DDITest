@@ -86,6 +86,7 @@ render={data =>(
             <ul className='SidebarDropdown'>
               <li><Link to="/Customers" onClick={toggleNav}>Client Offerings</Link></li>
               <li><Link to="/Vendors" onClick={toggleNav}>Vendor Programs</Link></li>
+              <li><Link to="/Section179" onClick={toggleNav}>Section 179 Calculator</Link></li>
             </ul>
           </ul>
           <ul className='SidebarItem'>
