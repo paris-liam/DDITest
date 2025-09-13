@@ -5,7 +5,7 @@ import Link from 'gatsby-link';
 
 
 const MAX_DEDUCTION_AMOUNT = 1160000;
-const BONUS_SAVINGS = .8
+const BONUS_SAVINGS = 1
 export default function Section179() {
 
     const [taxBrack, setTaxBrack] = React.useState(0.35)
@@ -140,7 +140,7 @@ export default function Section179() {
                     <div>${deduction}</div>
                     <div>
                         <p>Bonus Depreciation:</p>
-                        <p>(80% in {date.getFullYear()})</p>
+                        <p>(100% in {date.getFullYear()})</p>
                     </div>
                     <div>${bonus}</div>
                     <div>Normal First Year Depreciation:</div>
